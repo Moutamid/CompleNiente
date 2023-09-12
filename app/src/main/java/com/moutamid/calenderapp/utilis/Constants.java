@@ -38,11 +38,14 @@ public class Constants {
     public static final String POLICY = "https://google.com";
     static Dialog dialog;
     public static final String DATE_FORMAT = "dd/MM/yyyy";
+    public static final String KEY = "KEY";
     public static final String MONTH_FORMAT = "MMMM";
+    public static final String MONTH_YEAR= "MM-yyyy";
+    public static final String REQUESTS = "REQUESTS";
+    public static final String SEND_REQUESTS = "SEND_REQUESTS";
     public static final String USER = "USER";
-    public static final String USERNAME = "USERNAME";
-    public static final String EMAIL = "EMAIL";
-    public static final String USER_IMAGE = "USER_IMAGE";
+    public static final String STASH_USER = "STASH_USER";
+    public static final String DATE = "DATE";
 
     public static String getFormattedDate(long date){
         return new SimpleDateFormat(DATE_FORMAT, Locale.getDefault()).format(date);
@@ -51,7 +54,9 @@ public class Constants {
     public static String getDays(Date date) {
         return new SimpleDateFormat("d", Locale.getDefault()).format(date);
     }
-
+    public static String CurrentMonth() {
+        return new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.getDefault()).format(new Date());
+    }
     public static void initDialog(Context context){
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

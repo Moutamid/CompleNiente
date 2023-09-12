@@ -4,23 +4,32 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.github.sundeepk.compactcalendarview.CompactCalendarView;
 import com.github.sundeepk.compactcalendarview.domain.Event;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.activities.AddTaskActivity;
+import com.moutamid.calenderapp.activities.SelectUserActivity;
 import com.moutamid.calenderapp.adapters.CalendarAdapter;
+import com.moutamid.calenderapp.adapters.TaskAdapter;
 import com.moutamid.calenderapp.databinding.FragmentHomeBinding;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.MonthType;
+import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;
 
@@ -34,6 +43,9 @@ import java.util.Locale;
 public class HomeFragment extends Fragment {
     public FragmentHomeBinding binding;
     Context context;
+
+    ArrayList<TaskModel> taskList;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -51,20 +63,66 @@ public class HomeFragment extends Fragment {
         String d = new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.getDefault()).format(new Date());
         binding.month.setText(d);
 
-        if (Stash.getString(Constants.USERNAME, "").isEmpty()){
+        taskList = new ArrayList<>();
+
+        UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
+
+        if (user == null) {
             getUserDetails();
         } else {
-            binding.name.setText(Stash.getString(Constants.USERNAME, ""));
-            Glide.with(context).load(Stash.getString(Constants.USER_IMAGE, "")).placeholder(R.drawable.profile_icon).into(binding.profileImage);
+            binding.name.setText(user.getName());
+            Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
+            getThisMonthTasks();
         }
 
         GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
         binding.calendarRecyclerView.setLayoutManager(layoutManager);
 
+        binding.RC.setLayoutManager(new LinearLayoutManager(context));
+        binding.RC.setHasFixedSize(false);
+
         CalendarAdapter adapter = new CalendarAdapter(context, generateCalendarData(), onDateClickListener);
         binding.calendarRecyclerView.setAdapter(adapter);
 
+
         return binding.getRoot();
+    }
+
+    private void getThisMonthTasks() {
+        Constants.showDialog();
+        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            taskList.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                if (!taskModel.isEnded()){
+                                    taskList.add(taskModel);
+                                }
+                                if (taskList.size() > 0){
+                                    binding.RC.setVisibility(View.VISIBLE);
+                                    binding.noItemLayout.setVisibility(View.GONE);
+                                } else {
+                                    binding.RC.setVisibility(View.GONE);
+                                    binding.noItemLayout.setVisibility(View.VISIBLE);
+                                }
+
+                                TaskAdapter adapter = new TaskAdapter(context, taskList);
+                                binding.RC.setAdapter(adapter);
+
+                            }
+                        }
+                        Constants.dismissDialog();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Constants.dismissDialog();
+                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private List<CalendarDate> generateCalendarData() {
@@ -122,6 +180,8 @@ public class HomeFragment extends Fragment {
         @Override
         public void onDateClick(CalendarDate date) {
             // Handle click events here
+            Stash.put(Constants.DATE, date);
+            startActivity(new Intent(context, SelectUserActivity.class));
         }
     };
 
@@ -132,15 +192,14 @@ public class HomeFragment extends Fragment {
                 .addOnSuccessListener(dataSnapshot -> {
                     if (dataSnapshot.exists()){
                         UserModel userModel = dataSnapshot.getValue(UserModel.class);
-                        Stash.put(Constants.USERNAME, userModel.getName());
-                        Stash.put(Constants.USER_IMAGE, userModel.getImage());
-                        Stash.put(Constants.EMAIL, userModel.getEmail());
+                        Stash.put(Constants.STASH_USER, userModel);
                         binding.name.setText(userModel.getName());
                         Glide.with(context).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
                     } else {
                         Constants.createSnackbar(context, binding.getRoot(), "User data not found");
                     }
                     Constants.dismissDialog();
+                    getThisMonthTasks();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
                     Constants.createSnackbar(context, binding.getRoot(), e.getLocalizedMessage(), "Dismiss");

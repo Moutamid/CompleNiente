@@ -1,66 +1,83 @@
 package com.moutamid.calenderapp.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.adapters.TaskAdapter;
+import com.moutamid.calenderapp.databinding.FragmentListBinding;
+import com.moutamid.calenderapp.models.TaskModel;
+import com.moutamid.calenderapp.utilis.Constants;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ListFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class ListFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    FragmentListBinding binding;
+    Context context;
+    ArrayList<TaskModel> taskList;
     public ListFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ListFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ListFragment newInstance(String param1, String param2) {
-        ListFragment fragment = new ListFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        binding = FragmentListBinding.inflate(getLayoutInflater(), container, false);
+        context = binding.getRoot().getContext();
+        taskList = new ArrayList<>();
+        binding.RC.setLayoutManager(new LinearLayoutManager(context));
+        binding.RC.setHasFixedSize(false);
+
+        getThisMonthTasks();
+
+        return binding.getRoot();
     }
+
+    private void getThisMonthTasks() {
+        Constants.showDialog();
+        Constants.databaseReference().child(Constants.REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            taskList.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                if (!taskModel.isEnded()){
+                                    taskList.add(taskModel);
+                                }
+                                if (taskList.size() > 0){
+                                    binding.RC.setVisibility(View.VISIBLE);
+                                    binding.noItemLayout.setVisibility(View.GONE);
+                                } else {
+                                    binding.RC.setVisibility(View.GONE);
+                                    binding.noItemLayout.setVisibility(View.VISIBLE);
+                                }
+                                TaskAdapter adapter = new TaskAdapter(context, taskList);
+                                binding.RC.setAdapter(adapter);
+                            }
+                        }
+                        Constants.dismissDialog();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Constants.dismissDialog();
+                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
 }

@@ -93,9 +93,14 @@ public class ProfileEditActivity extends AppCompatActivity {
 
     private void updateData(String link) {
         userModel.setImage(link);
-        userModel.setName(binding.username.getEditText().getText().toString().trim());
-        Stash.put(Constants.USERNAME, binding.username.getEditText().getText().toString().trim());
-        Stash.put(Constants.USER_IMAGE, link);
+        userModel.setName(binding.name.getEditText().getText().toString().trim());
+        String day = binding.day.getEditText().getText().toString();
+        String month = binding.month.getEditText().getText().toString();
+        String year = binding.year.getEditText().getText().toString();
+        String dob = day + "/" + month + "/" + year;
+        userModel.setDob(dob);
+        userModel.setBio(binding.bio.getEditText().getText().toString());
+        Stash.put(Constants.STASH_USER, userModel);
         Constants.databaseReference().child(Constants.USER).child(Constants.auth().getCurrentUser().getUid())
                 .setValue(userModel).addOnSuccessListener(unused -> {
                     Constants.dismissDialog();
@@ -114,11 +119,16 @@ public class ProfileEditActivity extends AppCompatActivity {
                 .addOnSuccessListener(dataSnapshot -> {
                     if (dataSnapshot.exists()) {
                         userModel = dataSnapshot.getValue(UserModel.class);
-                        Stash.put(Constants.USERNAME, userModel.getName());
-                        Stash.put(Constants.USER_IMAGE, userModel.getImage());
-                        Stash.put(Constants.EMAIL, userModel.getEmail());
-                        binding.username.getEditText().setText(userModel.getName());
+                        Stash.put(Constants.STASH_USER, userModel);
+                        binding.username.getEditText().setText(userModel.getUsername());
+                        binding.name.getEditText().setText(userModel.getName());
                         binding.email.getEditText().setText(userModel.getEmail());
+                        binding.bio.getEditText().setText(userModel.getBio());
+                        String[] dob = userModel.getDob().split("/");
+                        binding.day.getEditText().setText(dob[0]);
+                        binding.month.getEditText().setText(dob[1]);
+                        binding.year.getEditText().setText(dob[2]);
+
                         Glide.with(ProfileEditActivity.this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
                     } else {
                         Constants.createSnackbar(this, binding.getRoot(), "User data not found");

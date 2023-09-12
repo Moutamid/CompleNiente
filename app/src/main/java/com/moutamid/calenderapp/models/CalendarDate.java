@@ -9,6 +9,9 @@ public class CalendarDate {
     private boolean isToday;
     private MonthType monthType;
 
+    public CalendarDate() {
+    }
+
     public CalendarDate(Date date, boolean isSelected, boolean isToday, MonthType monthType) {
         this.date = date;
         this.isSelected = isSelected;

@@ -19,6 +19,7 @@ import com.moutamid.calenderapp.SplashScreenActivity;
 import com.moutamid.calenderapp.activities.ProfileEditActivity;
 import com.moutamid.calenderapp.databinding.FragmentHomeBinding;
 import com.moutamid.calenderapp.databinding.FragmentSettingsBinding;
+import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;
 
 public class SettingsFragment extends Fragment {
@@ -47,9 +48,7 @@ public class SettingsFragment extends Fragment {
                     .setNegativeButton("No", ((dialog, which) -> dialog.dismiss()))
                     .setPositiveButton("Yes", ((dialog, which) -> {
                         dialog.dismiss();
-                        Stash.clear(Constants.USERNAME);
-                        Stash.clear(Constants.USER_IMAGE);
-                        Stash.clear(Constants.EMAIL);
+                        Stash.clear(Constants.STASH_USER);
                         Constants.auth().signOut();
                         startActivity(new Intent(context, SplashScreenActivity.class));
                         getActivity().finish();
@@ -71,8 +70,9 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        binding.name.setText(Stash.getString(Constants.USERNAME, ""));
-        binding.email.setText(Stash.getString(Constants.EMAIL, ""));
-        Glide.with(context).load(Stash.getString(Constants.USER_IMAGE, "")).placeholder(R.drawable.profile_icon).into(binding.profileImage);
+        UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
+        binding.name.setText(user.getName());
+        binding.email.setText(user.getEmail());
+        Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
     }
 }
