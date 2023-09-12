@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calender App</string>
+    <string name="terms_and_condition">By continuing you agree <u>Terms of Services</u> &amp; <u>Privacy Policy</u></string>
+    <string name="already_have_account_login">Already have account? <font color="#F3A323"><b>Login</b></font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
