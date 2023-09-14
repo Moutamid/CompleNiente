@@ -83,7 +83,7 @@ public class ListFragment extends Fragment {
     }
 
     TaskClickListener listener = model -> {
-        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model);
+        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, false);
         bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
     };
 

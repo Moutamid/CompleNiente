@@ -6,12 +6,12 @@
     <color name="white">#FCFCFC</color>
     <color name="grey">#F2F2F2</color>
     <color name="greyDark">#E3DFE2</color>
-    <color name="orange">#D5FB4E</color>
-<!--    <color name="orange">#F3A323</color>-->
-<!--    <color name="orange">#2AB28C</color>-->
+<!--    <color name="orange">#D5FB4E</color>-->
+    <color name="orange2">#F3A323</color>
+    <color name="orange">#2AB28C</color>
     <color name="red">#FF4500</color>
     <color name="yellow">#D5FB4E</color>
-    <color name="orange_ripple">#31D5FB4E</color>
+    <color name="orange_ripple">#312AB28C</color>
 
 <!--  icons colors  -->
     <color name="green">#2AB28C</color>

@@ -2089,6 +2089,7 @@ int color mtrl_textinput_hovered_box_stroke_color 0x7f0502e4
 int color notification_action_color_filter 0x7f0502e5
 int color notification_icon_bg_color 0x7f0502e6
 int color orange 0x7f0502e7
+int color orange2 0x7f05031c
 int color orange_ripple 0x7f0502e8
 int color primary_dark_material_dark 0x7f0502e9
 int color primary_dark_material_light 0x7f0502ea
@@ -3308,6 +3309,7 @@ int id browser_actions_menu_items 0x7f090070
 int id browser_actions_menu_view 0x7f090071
 int id btnAddCarPhoto 0x7f090072
 int id btnCancel 0x7f090073
+int id btnLayout 0x7f090251
 int id btnRemoveImage 0x7f090074
 int id buttonPanel 0x7f090075
 int id cache_measures 0x7f090076
@@ -3470,6 +3472,7 @@ int id item_touch_helper_previous_elevation 0x7f090112
 int id jumpToEnd 0x7f090113
 int id jumpToStart 0x7f090114
 int id labeled 0x7f090115
+int id lastMessage 0x7f090254
 int id layout 0x7f090116
 int id layout_aspect_ratio 0x7f090117
 int id layout_rotate_wheel 0x7f090118
@@ -3690,6 +3693,8 @@ int id state_rotate 0x7f0901ee
 int id state_scale 0x7f0901ef
 int id staticLayout 0x7f0901f0
 int id staticPostLayout 0x7f0901f1
+int id status 0x7f090252
+int id statusText 0x7f090253
 int id stop 0x7f0901f2
 int id stretch 0x7f0901f3
 int id submenuarrow 0x7f0901f4
@@ -3913,6 +3918,7 @@ int layout browser_actions_context_menu_page 0x7f0c0025
 int layout browser_actions_context_menu_row 0x7f0c0026
 int layout bs_image_menu 0x7f0c0027
 int layout calendar_item 0x7f0c0028
+int layout chat_item_card 0x7f0c0088
 int layout custom_dialog 0x7f0c0029
 int layout design_bottom_navigation_item 0x7f0c002a
 int layout design_bottom_sheet_dialog 0x7f0c002b
@@ -3930,6 +3936,7 @@ int layout design_navigation_menu_item 0x7f0c0036
 int layout design_text_input_end_icon 0x7f0c0037
 int layout design_text_input_start_icon 0x7f0c0038
 int layout dialog_choose_app 0x7f0c0039
+int layout fragment_chat 0x7f0c0089
 int layout fragment_home 0x7f0c003a
 int layout fragment_list 0x7f0c003b
 int layout fragment_settings 0x7f0c003c

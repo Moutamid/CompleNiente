@@ -2090,6 +2090,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color orange
+color orange2
 color orange_ripple
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -3309,6 +3310,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnAddCarPhoto
 id btnCancel
+id btnLayout
 id btnRemoveImage
 id buttonPanel
 id cache_measures
@@ -3471,6 +3473,7 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
+id lastMessage
 id layout
 id layout_aspect_ratio
 id layout_rotate_wheel
@@ -3691,6 +3694,8 @@ id state_rotate
 id state_scale
 id staticLayout
 id staticPostLayout
+id status
+id statusText
 id stop
 id stretch
 id submenuarrow
@@ -3914,6 +3919,7 @@ layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout bs_image_menu
 layout calendar_item
+layout chat_item_card
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3931,6 +3937,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
+layout fragment_chat
 layout fragment_home
 layout fragment_list
 layout fragment_settings

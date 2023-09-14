@@ -4,12 +4,15 @@ public class TaskModel {
     String ID, name, description;
     String userID, username, userHandle, userImage;
     CalendarDate date;
-    boolean isEnded, isAccepted;
+    boolean isEnded;
+
+    // YES (YES) , REJ (REJECTED), PEN (PENDING)
+    String isAccepted;
 
     public TaskModel() {
     }
 
-    public TaskModel(String ID, String name, String description, String userID, String username, String userHandle, String userImage, CalendarDate date, boolean isEnded, boolean isAccepted) {
+    public TaskModel(String ID, String name, String description, String userID, String username, String userHandle, String userImage, CalendarDate date, boolean isEnded, String isAccepted) {
         this.ID = ID;
         this.name = name;
         this.description = description;
@@ -32,11 +35,11 @@ public class TaskModel {
 
 
 
-    public boolean isAccepted() {
+    public String isAccepted() {
         return isAccepted;
     }
 
-    public void setAccepted(boolean accepted) {
+    public void setAccepted(String accepted) {
         isAccepted = accepted;
     }
 

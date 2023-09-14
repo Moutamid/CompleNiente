@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
     public FragmentHomeBinding binding;
     Context context;
 
-    ArrayList<TaskModel> taskList;
+    ArrayList<TaskModel> taskList, calendarTaskList;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -62,6 +62,7 @@ public class HomeFragment extends Fragment {
         binding.month.setText(d);
 
         taskList = new ArrayList<>();
+        calendarTaskList = new ArrayList<>();
 
         UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
 
@@ -70,7 +71,9 @@ public class HomeFragment extends Fragment {
         } else {
             binding.name.setText(user.getName());
             Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
+            Constants.showDialog();
             getThisMonthTasks();
+            getSendRequests();
         }
 
         GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
@@ -83,7 +86,33 @@ public class HomeFragment extends Fragment {
     }
 
     private void getThisMonthTasks() {
-        Constants.showDialog();
+        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            calendarTaskList.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                if (!taskModel.isEnded()){
+                                    calendarTaskList.add(taskModel);
+                                }
+                            }
+                        }
+                        CalendarAdapter calendarAdapter = new CalendarAdapter(context, generateCalendarData(), onDateClickListener);
+                        binding.calendarRecyclerView.setAdapter(calendarAdapter);
+                        Constants.dismissDialog();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Constants.dismissDialog();
+                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void getSendRequests() {
         Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
@@ -109,8 +138,6 @@ public class HomeFragment extends Fragment {
 
                             }
                         }
-                        CalendarAdapter calendarAdapter = new CalendarAdapter(context, generateCalendarData(), onDateClickListener);
-                        binding.calendarRecyclerView.setAdapter(calendarAdapter);
                         Constants.dismissDialog();
                     }
 
@@ -123,7 +150,7 @@ public class HomeFragment extends Fragment {
     }
 
     TaskClickListener listener = model -> {
-        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model);
+        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, true);
         bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
     };
 
@@ -149,7 +176,7 @@ public class HomeFragment extends Fragment {
             MonthType monthType = getMonthType(calendar, currentMonth, currentYear);
 
             boolean isSelected = false;
-            for (TaskModel model : taskList) {
+            for (TaskModel model : calendarTaskList) {
                 String dayMonth = "ddMM";
                 String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
                 String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date);

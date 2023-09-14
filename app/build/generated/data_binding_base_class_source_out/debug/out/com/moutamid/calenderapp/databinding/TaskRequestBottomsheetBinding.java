@@ -4,6 +4,7 @@ package com.moutamid.calenderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,6 +26,9 @@ public final class TaskRequestBottomsheetBinding implements ViewBinding {
   public final MaterialButton accept;
 
   @NonNull
+  public final LinearLayout btnLayout;
+
+  @NonNull
   public final TextView date;
 
   @NonNull
@@ -35,6 +39,12 @@ public final class TaskRequestBottomsheetBinding implements ViewBinding {
 
   @NonNull
   public final CircleImageView profileImage;
+
+  @NonNull
+  public final View status;
+
+  @NonNull
+  public final TextView statusText;
 
   @NonNull
   public final TextView taskDesc;
@@ -49,15 +59,20 @@ public final class TaskRequestBottomsheetBinding implements ViewBinding {
   public final TextView username;
 
   private TaskRequestBottomsheetBinding(@NonNull RelativeLayout rootView,
-      @NonNull MaterialButton accept, @NonNull TextView date, @NonNull MaterialButton endReject,
-      @NonNull View handle, @NonNull CircleImageView profileImage, @NonNull TextView taskDesc,
-      @NonNull TextView taskName, @NonNull TextView userID, @NonNull TextView username) {
+      @NonNull MaterialButton accept, @NonNull LinearLayout btnLayout, @NonNull TextView date,
+      @NonNull MaterialButton endReject, @NonNull View handle,
+      @NonNull CircleImageView profileImage, @NonNull View status, @NonNull TextView statusText,
+      @NonNull TextView taskDesc, @NonNull TextView taskName, @NonNull TextView userID,
+      @NonNull TextView username) {
     this.rootView = rootView;
     this.accept = accept;
+    this.btnLayout = btnLayout;
     this.date = date;
     this.endReject = endReject;
     this.handle = handle;
     this.profileImage = profileImage;
+    this.status = status;
+    this.statusText = statusText;
     this.taskDesc = taskDesc;
     this.taskName = taskName;
     this.userID = userID;
@@ -97,6 +112,12 @@ public final class TaskRequestBottomsheetBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnLayout;
+      LinearLayout btnLayout = ViewBindings.findChildViewById(rootView, id);
+      if (btnLayout == null) {
+        break missingId;
+      }
+
       id = R.id.date;
       TextView date = ViewBindings.findChildViewById(rootView, id);
       if (date == null) {
@@ -118,6 +139,18 @@ public final class TaskRequestBottomsheetBinding implements ViewBinding {
       id = R.id.profileImage;
       CircleImageView profileImage = ViewBindings.findChildViewById(rootView, id);
       if (profileImage == null) {
+        break missingId;
+      }
+
+      id = R.id.status;
+      View status = ViewBindings.findChildViewById(rootView, id);
+      if (status == null) {
+        break missingId;
+      }
+
+      id = R.id.statusText;
+      TextView statusText = ViewBindings.findChildViewById(rootView, id);
+      if (statusText == null) {
         break missingId;
       }
 
@@ -145,8 +178,9 @@ public final class TaskRequestBottomsheetBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TaskRequestBottomsheetBinding((RelativeLayout) rootView, accept, date, endReject,
-          handle, profileImage, taskDesc, taskName, userID, username);
+      return new TaskRequestBottomsheetBinding((RelativeLayout) rootView, accept, btnLayout, date,
+          endReject, handle, profileImage, status, statusText, taskDesc, taskName, userID,
+          username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

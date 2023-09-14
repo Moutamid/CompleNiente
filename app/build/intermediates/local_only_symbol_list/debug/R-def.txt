@@ -9,6 +9,7 @@ color grey
 color greyDark
 color ic_launcher_background
 color orange
+color orange2
 color orange_ripple
 color red
 color stroke
@@ -56,6 +57,7 @@ id bio
 id bottomNav
 id btnAddCarPhoto
 id btnCancel
+id btnLayout
 id btnRemoveImage
 id calendarRecyclerView
 id calenderView
@@ -77,6 +79,7 @@ id frameLayout
 id greeting
 id handle
 id image
+id lastMessage
 id login
 id logout
 id message
@@ -94,6 +97,8 @@ id reset
 id root
 id search
 id start
+id status
+id statusText
 id taskDesc
 id taskName
 id terms
@@ -115,6 +120,8 @@ layout activity_splash_screen
 layout activity_welcome
 layout bs_image_menu
 layout calendar_item
+layout chat_item_card
+layout fragment_chat
 layout fragment_home
 layout fragment_list
 layout fragment_settings

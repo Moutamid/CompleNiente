@@ -17,6 +17,7 @@ import com.fxn.stash.Stash;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.moutamid.calenderapp.databinding.ActivityMainBinding;
+import com.moutamid.calenderapp.fragment.ChatFragment;
 import com.moutamid.calenderapp.fragment.HomeFragment;
 import com.moutamid.calenderapp.fragment.ListFragment;
 import com.moutamid.calenderapp.fragment.SettingsFragment;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomeFragment()).commit();
             return true;
         } else if (item.getItemId() == R.id.nav_chat) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ChatFragment()).commit();
             return true;
         } else if (item.getItemId() == R.id.nav_setting) {
             getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsFragment()).commit();

@@ -43,9 +43,15 @@ public class Constants {
     public static final String MONTH_YEAR= "MM-yyyy";
     public static final String REQUESTS = "REQUESTS";
     public static final String SEND_REQUESTS = "SEND_REQUESTS";
+    public static final String ACTIVE_TASKS = "ACTIVE_TASKS";
     public static final String USER = "USER";
     public static final String STASH_USER = "STASH_USER";
     public static final String DATE = "DATE";
+    public static final String YES = "YES";
+    public static final String PEN = "PEN";
+    public static final String REJ = "REJ";
+    public static final String CHAT_LIST = "CHAT_LIST";
+    public static final String CHATS = "CHATS";
 
     public static String getFormattedDate(long date){
         return new SimpleDateFormat(DATE_FORMAT, Locale.getDefault()).format(date);
@@ -78,7 +84,7 @@ public class Constants {
     }
     public static void createSnackbar(Context context, View view, String message, String buttonText){
         Snackbar.make(context, view, message, Snackbar.LENGTH_LONG).setAction(buttonText, v -> {
-            Toast.makeText(context, "Hello", Toast.LENGTH_SHORT).show();
+
         }).setActionTextColor(context.getResources().getColor(R.color.orange)).show();
     }
 
