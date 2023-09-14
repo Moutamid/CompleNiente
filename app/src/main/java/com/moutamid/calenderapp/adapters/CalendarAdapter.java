@@ -1,10 +1,10 @@
 package com.moutamid.calenderapp.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,35 +42,32 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
         // Customize the view for each calendar cell
         holder.dateTextView.setText(Constants.getDays(date.getDate()));
 
-        // Set background color based on selection state
-        if (date.isSelected()) {
-            holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.orange));
-        } else {
-            switch (date.getMonthType()) {
-                case CURRENT:
-                    holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
-                    holder.card.setStrokeColor(context.getResources().getColor(R.color.stroke));
-                    holder.itemView.setOnClickListener(view -> onDateClickListener.onDateClick(date));
-                    break;
-                case PREVIOUS:
-                    holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-                    holder.card.setStrokeColor(context.getResources().getColor(R.color.white));
-                    break;
-                case NEXT:
-                    holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-                    holder.card.setStrokeColor(context.getResources().getColor(R.color.white));
-                    break;
-                default:
-                    break;
-            }
+        switch (date.getMonthType()) {
+            case CURRENT:
+                holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+                holder.card.setStrokeColor(context.getResources().getColor(R.color.stroke));
 
+                if (date.isSelected()) {
+                    holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.yellow));
+                    holder.card.setStrokeColor(context.getResources().getColor(R.color.yellow));
+                    holder.dashes.setVisibility(View.VISIBLE);
+                } else {
+                    holder.itemView.setOnClickListener(view -> onDateClickListener.onDateClick(date));
+                }
+
+                break;
+            case NEXT:
+            case PREVIOUS:
+                holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+                holder.card.setStrokeColor(context.getResources().getColor(R.color.white));
+                break;
         }
 
         // Indicate today's date with a border
         if (date.isToday()) {
-            holder.card.setStrokeColor(context.getResources().getColor(R.color.orange));
-            holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.orange));
-            holder.dateTextView.setTextColor(context.getResources().getColor(R.color.white));
+            holder.card.setStrokeColor(context.getResources().getColor(R.color.greenLight));
+            holder.card.setCardBackgroundColor(context.getResources().getColor(R.color.greenLight));
+//            holder.dateTextView.setTextColor(context.getResources().getColor(R.color.white));
         }
 
     }
@@ -83,11 +80,13 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
     public static class CalendarViewHolder extends RecyclerView.ViewHolder {
         TextView dateTextView;
         MaterialCardView card;
+        ImageView dashes;
 
         public CalendarViewHolder(View itemView) {
             super(itemView);
             dateTextView = itemView.findViewById(R.id.dateTextView);
             card = itemView.findViewById(R.id.card);
+            dashes = itemView.findViewById(R.id.dashes);
         }
     }
 

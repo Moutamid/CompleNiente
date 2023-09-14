@@ -20,6 +20,7 @@
             android:layout_marginHorizontal="12dp"
             app:cardCornerRadius="12dp"
             app:cardBackgroundColor="@color/grey"
+            android:clickable="true"
             app:strokeColor="@color/stroke"
             app:strokeWidth="1dp">
 

@@ -2,22 +2,22 @@ package com.moutamid.calenderapp.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.adapters.TaskAdapter;
+import com.moutamid.calenderapp.bottomsheets.TaskRequestBottomSheet;
 import com.moutamid.calenderapp.databinding.FragmentListBinding;
+import com.moutamid.calenderapp.interfaces.TaskClickListener;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.utilis.Constants;
 
@@ -39,6 +39,8 @@ public class ListFragment extends Fragment {
         taskList = new ArrayList<>();
         binding.RC.setLayoutManager(new LinearLayoutManager(context));
         binding.RC.setHasFixedSize(false);
+
+        Constants.initDialog(context);
 
         getThisMonthTasks();
 
@@ -65,7 +67,7 @@ public class ListFragment extends Fragment {
                                     binding.RC.setVisibility(View.GONE);
                                     binding.noItemLayout.setVisibility(View.VISIBLE);
                                 }
-                                TaskAdapter adapter = new TaskAdapter(context, taskList);
+                                TaskAdapter adapter = new TaskAdapter(context, taskList, listener);
                                 binding.RC.setAdapter(adapter);
                             }
                         }
@@ -79,5 +81,10 @@ public class ListFragment extends Fragment {
                     }
                 });
     }
+
+    TaskClickListener listener = model -> {
+        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model);
+        bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
+    };
 
 }

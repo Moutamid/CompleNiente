@@ -1,10 +1,5 @@
 package com.moutamid.calenderapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
@@ -13,7 +8,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.fxn.stash.BuildConfig;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.fxn.stash.Stash;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-                shouldShowRequestPermissionRationale(android.Manifest.permission.POST_NOTIFICATIONS);
+                shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS);
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
             }
         }

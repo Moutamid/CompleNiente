@@ -1,14 +1,6 @@
 package com.moutamid.calenderapp.utilis;
 
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.moutamid.calenderapp.R;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -18,6 +10,14 @@ import android.view.Window;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.moutamid.calenderapp.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

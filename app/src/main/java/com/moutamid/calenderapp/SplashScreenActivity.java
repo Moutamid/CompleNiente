@@ -1,10 +1,10 @@
 package com.moutamid.calenderapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.moutamid.calenderapp.activities.WelcomeActivity;
 import com.moutamid.calenderapp.utilis.Constants;

@@ -1,20 +1,19 @@
 package com.moutamid.calenderapp.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Patterns;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.fxn.stash.Stash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.MainActivity;
-import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.databinding.ActivitySignUpBinding;
 import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;

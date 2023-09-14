@@ -1,9 +1,5 @@
 package com.moutamid.calenderapp.activities;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,6 +12,10 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.adapters.AddImageAdapter;

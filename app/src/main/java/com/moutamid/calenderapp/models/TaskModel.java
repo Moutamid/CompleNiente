@@ -1,26 +1,43 @@
 package com.moutamid.calenderapp.models;
 
-import java.util.ArrayList;
-
 public class TaskModel {
     String ID, name, description;
-    String userID, username, userImage;
+    String userID, username, userHandle, userImage;
     CalendarDate date;
-    boolean isEnded;
+    boolean isEnded, isAccepted;
 
     public TaskModel() {
     }
 
-
-    public TaskModel(String ID, String name, String description, String userID, String username, String userImage, CalendarDate date, boolean isEnded) {
+    public TaskModel(String ID, String name, String description, String userID, String username, String userHandle, String userImage, CalendarDate date, boolean isEnded, boolean isAccepted) {
         this.ID = ID;
         this.name = name;
         this.description = description;
         this.userID = userID;
         this.username = username;
+        this.userHandle = userHandle;
         this.userImage = userImage;
         this.date = date;
         this.isEnded = isEnded;
+        this.isAccepted = isAccepted;
+    }
+
+    public String getUserHandle() {
+        return userHandle;
+    }
+
+    public void setUserHandle(String userHandle) {
+        this.userHandle = userHandle;
+    }
+
+
+
+    public boolean isAccepted() {
+        return isAccepted;
+    }
+
+    public void setAccepted(boolean accepted) {
+        isAccepted = accepted;
     }
 
     public String getUserID() {

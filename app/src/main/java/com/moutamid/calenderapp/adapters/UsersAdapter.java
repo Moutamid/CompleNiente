@@ -100,6 +100,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
             dialog.dismiss();
             String MONTH = Constants.CurrentMonth();
             CalendarDate date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
+            date.setSelected(true);
             if (name.getEditText().getText().toString().isEmpty() || description.getEditText().getText().toString().isEmpty()){
                 Toast.makeText(context, "Please fill all data", Toast.LENGTH_SHORT).show();
             } else {
@@ -107,13 +108,13 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
                 String ID = UUID.randomUUID().toString();
                 TaskModel sendTaskModel = new TaskModel(ID,
                         name.getEditText().getText().toString(), description.getEditText().getText().toString(),
-                        model.getID(), model.getName(), model.getImage(),
-                        date, false);
+                        model.getID(), model.getName(), model.getUsername(), model.getImage(),
+                        date, false, false);
                 UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
                 TaskModel recieveTaskModel = new TaskModel(ID,
                         name.getEditText().getText().toString(), description.getEditText().getText().toString(),
-                        stashUser.getID(), stashUser.getName(), stashUser.getImage(),
-                        date, false);
+                        stashUser.getID(), stashUser.getName(), stashUser.getUsername(), stashUser.getImage(),
+                        date, false, false);
                 Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(model.getID()).child(ID).setValue(recieveTaskModel)
                         .addOnSuccessListener(unused -> {
                             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)

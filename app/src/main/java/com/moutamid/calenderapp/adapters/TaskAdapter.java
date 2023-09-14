@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.interfaces.TaskClickListener;
 import com.moutamid.calenderapp.models.TaskModel;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -23,10 +23,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskVH> {
     Context context;
     ArrayList<TaskModel> list;
+    TaskClickListener listener;
 
-    public TaskAdapter(Context context, ArrayList<TaskModel> list) {
+
+    public TaskAdapter(Context context, ArrayList<TaskModel> list, TaskClickListener listener) {
         this.context = context;
         this.list = list;
+        this.listener = listener;
     }
 
     @NonNull
@@ -44,6 +47,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskVH> {
         Glide.with(context).load(taskModel.getUserImage()).placeholder(R.drawable.profile_icon).into(holder.profileImage);
         String date = new SimpleDateFormat("MMM dd", Locale.getDefault()).format(taskModel.getDate().getDate());
         holder.date.setText(date);
+
+        holder.itemView.setOnClickListener(v -> {
+            listener.onClick(taskModel);
+        });
+
     }
 
     @Override

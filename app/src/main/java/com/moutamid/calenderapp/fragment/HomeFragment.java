@@ -3,30 +3,28 @@ package com.moutamid.calenderapp.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
-import com.github.sundeepk.compactcalendarview.CompactCalendarView;
-import com.github.sundeepk.compactcalendarview.domain.Event;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
-import com.moutamid.calenderapp.activities.AddTaskActivity;
 import com.moutamid.calenderapp.activities.SelectUserActivity;
 import com.moutamid.calenderapp.adapters.CalendarAdapter;
 import com.moutamid.calenderapp.adapters.TaskAdapter;
+import com.moutamid.calenderapp.bottomsheets.TaskRequestBottomSheet;
 import com.moutamid.calenderapp.databinding.FragmentHomeBinding;
+import com.moutamid.calenderapp.interfaces.TaskClickListener;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.MonthType;
 import com.moutamid.calenderapp.models.TaskModel;
@@ -81,10 +79,6 @@ public class HomeFragment extends Fragment {
         binding.RC.setLayoutManager(new LinearLayoutManager(context));
         binding.RC.setHasFixedSize(false);
 
-        CalendarAdapter adapter = new CalendarAdapter(context, generateCalendarData(), onDateClickListener);
-        binding.calendarRecyclerView.setAdapter(adapter);
-
-
         return binding.getRoot();
     }
 
@@ -109,11 +103,14 @@ public class HomeFragment extends Fragment {
                                     binding.noItemLayout.setVisibility(View.VISIBLE);
                                 }
 
-                                TaskAdapter adapter = new TaskAdapter(context, taskList);
+
+                                TaskAdapter adapter = new TaskAdapter(context, taskList, listener);
                                 binding.RC.setAdapter(adapter);
 
                             }
                         }
+                        CalendarAdapter calendarAdapter = new CalendarAdapter(context, generateCalendarData(), onDateClickListener);
+                        binding.calendarRecyclerView.setAdapter(calendarAdapter);
                         Constants.dismissDialog();
                     }
 
@@ -124,6 +121,11 @@ public class HomeFragment extends Fragment {
                     }
                 });
     }
+
+    TaskClickListener listener = model -> {
+        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model);
+        bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
+    };
 
     private List<CalendarDate> generateCalendarData() {
         List<CalendarDate> calendarData = new ArrayList<>();
@@ -146,8 +148,19 @@ public class HomeFragment extends Fragment {
             boolean isToday = isToday(date, todayCalendar);
             MonthType monthType = getMonthType(calendar, currentMonth, currentYear);
 
-            calendarData.add(new CalendarDate(date, false, isToday, monthType));
+            boolean isSelected = false;
+            for (TaskModel model : taskList) {
+                String dayMonth = "ddMM";
+                String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
+                String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date);
+                if (listDate.equals(calenderDate)){
+                    isSelected = true;
+                    break;
+                }
+            }
+            calendarData.add(new CalendarDate(date, isSelected, isToday, monthType));
             calendar.add(Calendar.DAY_OF_MONTH, 1);
+
         }
 
         return calendarData;

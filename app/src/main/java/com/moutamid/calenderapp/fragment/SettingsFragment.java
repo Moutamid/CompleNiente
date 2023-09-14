@@ -5,19 +5,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.SplashScreenActivity;
 import com.moutamid.calenderapp.activities.ProfileEditActivity;
-import com.moutamid.calenderapp.databinding.FragmentHomeBinding;
 import com.moutamid.calenderapp.databinding.FragmentSettingsBinding;
 import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;

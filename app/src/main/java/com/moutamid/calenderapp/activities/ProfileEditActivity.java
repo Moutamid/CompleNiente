@@ -1,22 +1,20 @@
 package com.moutamid.calenderapp.activities;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.github.dhaval2404.imagepicker.ImagePicker;
-import com.moutamid.calenderapp.MainActivity;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.databinding.ActivityProfileEditBinding;
 import com.moutamid.calenderapp.models.UserModel;
@@ -44,7 +42,7 @@ public class ProfileEditActivity extends AppCompatActivity {
         Constants.initDialog(this);
 
         binding.toolbar.title.setText("Edit Profile");
-        binding.toolbar.back.setOnClickListener(v -> onBackPressed());
+        binding.toolbar.back.setOnClickListener(v -> Toast.makeText(this, "Thisssss", Toast.LENGTH_SHORT).show());
 
         getUserDetails();
 
