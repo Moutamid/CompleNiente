@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:id="@+id/root"
+    android:padding="12dp"
+    tools:context=".activities.WelcomeActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:fontFamily="@font/baloo"
+        android:layout_alignParentTop="true"
+        android:textSize="20sp"
+        android:text="Connect With Others"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:startIconDrawable="@drawable/email_alt"
+        android:layout_marginTop="10dp"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:layout_above="@id/explore"
+        android:text="@string/terms_and_condition"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/explore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="12dp"
+        android:text="Explore this App"
+        app:backgroundTint="@color/black"
+        android:layout_above="@id/login"
+        app:icon="@drawable/forward"
+        app:iconTint="@color/orange"
+        app:iconGravity="end"
+        app:iconSize="28dp"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="12dp"
+        android:text="@string/already_have_account_login"
+        app:backgroundTint="@color/grey"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+        app:rippleColor="@color/orange_ripple"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>
