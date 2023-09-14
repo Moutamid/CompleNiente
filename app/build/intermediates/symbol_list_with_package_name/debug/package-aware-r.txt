@@ -3025,6 +3025,7 @@ drawable arrow_back
 drawable arrow_forward
 drawable avd_hide_password
 drawable avd_show_password
+drawable bottom_radius
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3763,6 +3764,8 @@ id uniform
 id unlabeled
 id up
 id update
+id uploadImage
+id uploadVideo
 id useLogo
 id userID
 id username
@@ -3907,6 +3910,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_task
+layout activity_chat
 layout activity_forgot
 layout activity_login
 layout activity_main
@@ -3920,6 +3924,8 @@ layout browser_actions_context_menu_row
 layout bs_image_menu
 layout calendar_item
 layout chat_item_card
+layout chat_row_left
+layout chat_row_right
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

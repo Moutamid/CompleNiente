@@ -3024,6 +3024,7 @@ int drawable arrow_back 0x7f070078
 int drawable arrow_forward 0x7f070079
 int drawable avd_hide_password 0x7f07007a
 int drawable avd_show_password 0x7f07007b
+int drawable bottom_radius 0x7f070123
 int drawable btn_checkbox_checked_mtrl 0x7f07007c
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07007d
 int drawable btn_checkbox_unchecked_mtrl 0x7f07007e
@@ -3762,6 +3763,8 @@ int id uniform 0x7f090231
 int id unlabeled 0x7f090232
 int id up 0x7f090233
 int id update 0x7f090234
+int id uploadImage 0x7f090255
+int id uploadVideo 0x7f090256
 int id useLogo 0x7f090235
 int id userID 0x7f090236
 int id username 0x7f090237
@@ -3906,6 +3909,7 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_add_task 0x7f0c001c
+int layout activity_chat 0x7f0c008a
 int layout activity_forgot 0x7f0c001d
 int layout activity_login 0x7f0c001e
 int layout activity_main 0x7f0c001f
@@ -3919,6 +3923,8 @@ int layout browser_actions_context_menu_row 0x7f0c0026
 int layout bs_image_menu 0x7f0c0027
 int layout calendar_item 0x7f0c0028
 int layout chat_item_card 0x7f0c0088
+int layout chat_row_left 0x7f0c008b
+int layout chat_row_right 0x7f0c008c
 int layout custom_dialog 0x7f0c0029
 int layout design_bottom_navigation_item 0x7f0c002a
 int layout design_bottom_sheet_dialog 0x7f0c002b

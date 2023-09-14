@@ -87,41 +87,46 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             model.setAccepted(Constants.YES);
             model.getDate().setSelected(true);
             UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
-            Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
-                    .setValue(model).addOnSuccessListener(unused -> {
-                        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getUserID())
-                                .setValue(model).addOnSuccessListener(unused1 -> {
-                                    Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
-                                            .setValue(model).addOnSuccessListener(unused2 -> {
-                                                String ID = UUID.randomUUID().toString();
-                                                ChatListModel sender = new ChatListModel(ID, stashUser.getImage(), stashUser.getName(), "Start sharing content", model.getID(), model.getDate().getDate());
-                                                ChatListModel receiver = new ChatListModel(ID, model.getUserImage(), model.getUsername(), "Start sharing content", model.getID(), model.getDate().getDate());
+            Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
+                Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused1 -> {
+                    Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused2 -> {
+                        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused8 -> {
+                            Constants.databaseReference().child(Constants.REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused6 -> {
+                                String ID = UUID.randomUUID().toString();
+                                ChatListModel sender = new ChatListModel(ID, stashUser.getImage(), stashUser.getName(), "Start sharing content", model.getID(), model.getDate().getDate());
+                                ChatListModel receiver = new ChatListModel(ID, model.getUserImage(), model.getUsername(), "Start sharing content", model.getID(), model.getDate().getDate());
 
-                                                Constants.databaseReference().child(Constants.CHAT_LIST).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(receiver)
-                                                        .addOnSuccessListener(unused3 -> {
-                                                            Constants.databaseReference().child(Constants.CHAT_LIST).child(model.getUserID()).child(ID).setValue(sender)
-                                                                    .addOnSuccessListener(unused4 -> {
-                                                                        Toast.makeText(context, "Task Accepted", Toast.LENGTH_SHORT).show();
-                                                                    }).addOnFailureListener(e -> {
-                                                                        Constants.dismissDialog();
-                                                                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                                                    });
-                                                        }).addOnFailureListener(e -> {
-                                                            Constants.dismissDialog();
-                                                            Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                                        });
-                                            }).addOnFailureListener(e -> {
-                                                Constants.dismissDialog();
-                                                Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                            });
+                                Constants.databaseReference().child(Constants.CHAT_LIST).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(receiver).addOnSuccessListener(unused3 -> {
+                                    Constants.databaseReference().child(Constants.CHAT_LIST).child(model.getUserID()).child(ID).setValue(sender).addOnSuccessListener(unused4 -> {
+                                        Toast.makeText(context, "Task Accepted", Toast.LENGTH_SHORT).show();
+                                    }).addOnFailureListener(e -> {
+                                        Constants.dismissDialog();
+                                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                    });
                                 }).addOnFailureListener(e -> {
                                     Constants.dismissDialog();
                                     Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                                 });
+                            }).addOnFailureListener(e -> {
+                                Constants.dismissDialog();
+                                Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            });
+                        }).addOnFailureListener(e -> {
+                            Constants.dismissDialog();
+                            Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        });
                     }).addOnFailureListener(e -> {
                         Constants.dismissDialog();
                         Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     });
+                }).addOnFailureListener(e -> {
+                    Constants.dismissDialog();
+                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                });
+            }).addOnFailureListener(e -> {
+                Constants.dismissDialog();
+                Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            });
 
             dismiss();
         });
@@ -144,36 +149,30 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
 
     private void endTask() {
         String MONTH = Constants.CurrentMonth();
-        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue()
-                .addOnSuccessListener(unused1 -> {
-                    Constants.dismissDialog();
-                    Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
-                })
-                .addOnFailureListener(e -> {
-                    Constants.dismissDialog();
-                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                });
+        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
+            Constants.dismissDialog();
+            Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+        }).addOnFailureListener(e -> {
+            Constants.dismissDialog();
+            Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void rejectRequest() {
         String MONTH = Constants.CurrentMonth();
         if (b) {
-            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue()
-                    .addOnSuccessListener(unused -> {
-                        Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).removeValue()
-                                .addOnSuccessListener(unused1 -> {
-                                    Constants.dismissDialog();
-                                    Toast.makeText(context, "Task Ended", Toast.LENGTH_SHORT).show();
-                                })
-                                .addOnFailureListener(e -> {
-                                    Constants.dismissDialog();
-                                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                });
-                    })
-                    .addOnFailureListener(e -> {
-                        Constants.dismissDialog();
-                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                    });
+            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused -> {
+                Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
+                    Constants.dismissDialog();
+                    Toast.makeText(context, "Task Ended", Toast.LENGTH_SHORT).show();
+                }).addOnFailureListener(e -> {
+                    Constants.dismissDialog();
+                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                });
+            }).addOnFailureListener(e -> {
+                Constants.dismissDialog();
+                Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            });
         } else {
             model.setAccepted(Constants.REJ);
             model.getDate().setSelected(false);
@@ -182,21 +181,18 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             model.setUserImage(stashUser.getImage());
             model.setUserHandle(stashUser.getUsername());
             model.setUsername(stashUser.getName());
-            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).setValue(model)
-                    .addOnSuccessListener(unused -> {
-                        Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue()
-                                .addOnSuccessListener(unused1 -> {
-                                    Constants.dismissDialog();
-                                    Toast.makeText(context, "Rejected", Toast.LENGTH_SHORT).show();
-                                })
-                                .addOnFailureListener(e -> {
-                                    Constants.dismissDialog();
-                                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                });
-                    }).addOnFailureListener(e -> {
-                        Constants.dismissDialog();
-                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                    });
+            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
+                Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
+                    Constants.dismissDialog();
+                    Toast.makeText(context, "Rejected", Toast.LENGTH_SHORT).show();
+                }).addOnFailureListener(e -> {
+                    Constants.dismissDialog();
+                    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                });
+            }).addOnFailureListener(e -> {
+                Constants.dismissDialog();
+                Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            });
         }
     }
 

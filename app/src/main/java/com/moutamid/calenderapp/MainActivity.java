@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         initializeNotification();
 
-        binding.bottomNav.setItemActiveIndicatorColor(ColorStateList.valueOf(getResources().getColor(R.color.orange_ripple)));
+        binding.bottomNav.setItemActiveIndicatorColor(ColorStateList.valueOf(getResources().getColor(R.color.greenLight)));
         binding.bottomNav.setOnNavigationItemSelectedListener(this);
         binding.bottomNav.setSelectedItemId(R.id.nav_home);
 

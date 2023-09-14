@@ -17,6 +17,7 @@ color white
 color yellow
 drawable arrow_back
 drawable arrow_forward
+drawable bottom_radius
 drawable calendar_day
 drawable chat
 drawable curious_rafiki
@@ -54,6 +55,7 @@ id add
 id age
 id back
 id bio
+id bottom
 id bottomNav
 id btnAddCarPhoto
 id btnCancel
@@ -106,10 +108,13 @@ id text
 id title
 id toolbar
 id update
+id uploadImage
+id uploadVideo
 id userID
 id username
 id year
 layout activity_add_task
+layout activity_chat
 layout activity_forgot
 layout activity_login
 layout activity_main
@@ -121,6 +126,8 @@ layout activity_welcome
 layout bs_image_menu
 layout calendar_item
 layout chat_item_card
+layout chat_row_left
+layout chat_row_right
 layout fragment_chat
 layout fragment_home
 layout fragment_list

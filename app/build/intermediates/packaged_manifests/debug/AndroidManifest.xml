@@ -51,6 +51,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.CalenderApp" >
         <activity
+            android:name="com.moutamid.calenderapp.activities.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name="com.moutamid.calenderapp.activities.SelectUserActivity"
             android:exported="false" />
         <activity
