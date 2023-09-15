@@ -104,7 +104,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
                                     for (TaskModel model : calendarTaskList) {
                                         String dayMonth = "ddMM";
                                         String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
-                                        String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date);
+                                        String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date.getDate());
                                         if (listDate.equals(calenderDate)){
                                             isSelected = true;
                                             break;
