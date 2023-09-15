@@ -21,7 +21,11 @@ import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.activities.SelectUserActivity;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
@@ -43,6 +47,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
     Context context;
     ArrayList<UserModel> list;
     ArrayList<UserModel> listAll;
+    ArrayList<TaskModel> calendarTaskList;
 
     public UsersAdapter(Context context, ArrayList<UserModel> list) {
         this.context = context;
@@ -77,7 +82,56 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
 
         holder.start.setOnClickListener(v -> {
             Constants.initDialog(context);
-            showTaskRequestDialog(model);
+            Constants.showDialog();
+            calendarTaskList = new ArrayList<>();
+
+            Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getID())
+                    .addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            Constants.dismissDialog();
+                            if (snapshot.exists()) {
+                                calendarTaskList.clear();
+                                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                    TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                    if (!taskModel.isEnded()){
+                                        calendarTaskList.add(taskModel);
+                                    }
+                                }
+                                CalendarDate date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
+                                if (calendarTaskList.size()>0) {
+                                    boolean isSelected = false;
+                                    for (TaskModel model : calendarTaskList) {
+                                        String dayMonth = "ddMM";
+                                        String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
+                                        String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date);
+                                        if (listDate.equals(calenderDate)){
+                                            isSelected = true;
+                                            break;
+                                        }
+                                    }
+
+                                    if (isSelected){
+                                        Toast.makeText(context, "User is not available for today", Toast.LENGTH_SHORT).show();
+                                    }else {
+                                        showTaskRequestDialog(model);
+                                    }
+
+                                } else {
+                                    showTaskRequestDialog(model);
+                                }
+
+                            } else {
+                                showTaskRequestDialog(model);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Constants.dismissDialog();
+                            Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
         });
 
     }

@@ -3,6 +3,7 @@ package com.moutamid.calenderapp.activities;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,13 +13,17 @@ import com.fxn.stash.Stash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+import com.moutamid.calenderapp.adapters.CalendarAdapter;
 import com.moutamid.calenderapp.adapters.UsersAdapter;
 import com.moutamid.calenderapp.databinding.ActivitySelectUserBinding;
 import com.moutamid.calenderapp.models.CalendarDate;
+import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class SelectUserActivity extends AppCompatActivity {
     ActivitySelectUserBinding binding;
@@ -61,6 +66,10 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
 
+        getUsers();
+    }
+
+    private void getUsers() {
         Constants.databaseReference().child(Constants.USER).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -85,6 +94,5 @@ public class SelectUserActivity extends AppCompatActivity {
                 Constants.createSnackbar(SelectUserActivity.this, binding.getRoot(), error.getMessage());
             }
         });
-
     }
 }
