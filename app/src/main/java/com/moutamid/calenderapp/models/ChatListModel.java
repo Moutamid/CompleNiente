@@ -1,8 +1,11 @@
 package com.moutamid.calenderapp.models;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class ChatListModel {
+public class ChatListModel implements Serializable {
     String ID, image, name, message, taskID;
     Date date;
 

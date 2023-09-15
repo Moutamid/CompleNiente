@@ -4,25 +4,42 @@ package com.moutamid.calenderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.card.MaterialCardView;
 import com.moutamid.calenderapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ChatRowRightBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final MaterialCardView rootView;
 
-  private ChatRowRightBinding(@NonNull RelativeLayout rootView) {
+  @NonNull
+  public final ImageView image;
+
+  @NonNull
+  public final TextView time;
+
+  @NonNull
+  public final ImageView video;
+
+  private ChatRowRightBinding(@NonNull MaterialCardView rootView, @NonNull ImageView image,
+      @NonNull TextView time, @NonNull ImageView video) {
     this.rootView = rootView;
+    this.image = image;
+    this.time = time;
+    this.video = video;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public MaterialCardView getRoot() {
     return rootView;
   }
 
@@ -43,10 +60,31 @@ public final class ChatRowRightBinding implements ViewBinding {
 
   @NonNull
   public static ChatRowRightBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.image;
+      ImageView image = ViewBindings.findChildViewById(rootView, id);
+      if (image == null) {
+        break missingId;
+      }
 
-    return new ChatRowRightBinding((RelativeLayout) rootView);
+      id = R.id.time;
+      TextView time = ViewBindings.findChildViewById(rootView, id);
+      if (time == null) {
+        break missingId;
+      }
+
+      id = R.id.video;
+      ImageView video = ViewBindings.findChildViewById(rootView, id);
+      if (video == null) {
+        break missingId;
+      }
+
+      return new ChatRowRightBinding((MaterialCardView) rootView, image, time, video);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

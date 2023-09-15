@@ -16,6 +16,7 @@
 <!--  icons colors  -->
     <color name="green">#2AB28C</color>
     <color name="greenLight">#A9EDD8</color>
+    <color name="green_trans">#B3A8EDD7</color>
     <color name="greenDark">#148863</color>
 
 

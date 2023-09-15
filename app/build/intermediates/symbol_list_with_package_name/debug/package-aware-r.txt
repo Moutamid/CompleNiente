@@ -1459,6 +1459,7 @@ color foreground_material_light
 color green
 color greenDark
 color greenLight
+color green_trans
 color grey
 color greyDark
 color highlighted_text_material_dark
@@ -3145,6 +3146,7 @@ drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable no_entry
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -3161,6 +3163,7 @@ drawable outline_calendar_month_24
 drawable oval
 drawable password
 drawable person
+drawable play_circle
 drawable profile_icon
 drawable round_add_24
 drawable round_delete_24
@@ -3168,11 +3171,13 @@ drawable round_edit_24
 drawable round_privacy
 drawable round_search_24
 drawable round_settings_24
+drawable send
 drawable task_list
 drawable test_level_drawable
 drawable today_date_border
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable top_radius
 drawable ucrop_crop
 drawable ucrop_ic_angle
 drawable ucrop_ic_crop
@@ -3329,6 +3334,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatRC
 id checkbox
 id checked
 id chronometer
@@ -3458,6 +3464,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imagePreviewRC
+id imageView
 id image_view_crop
 id image_view_logo
 id image_view_state_aspect_ratio
@@ -3570,6 +3578,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id noChatLayout
 id noItemLayout
 id noScroll
 id noState
@@ -3604,6 +3613,9 @@ id postLayout
 id pressed
 id privacy
 id profileImage
+id progressBar
+id progressLayout
+id progressText
 id progress_circular
 id progress_horizontal
 id radio
@@ -3658,6 +3670,8 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id send
+id sendLayout
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3770,6 +3784,8 @@ id useLogo
 id userID
 id username
 id vertical_only
+id video
+id videoView
 id view_offset_helper
 id view_overlay
 id view_transition
@@ -3947,6 +3963,7 @@ layout fragment_chat
 layout fragment_home
 layout fragment_list
 layout fragment_settings
+layout full_preview
 layout image_layout
 layout loading_dialog
 layout m3_alert_dialog

@@ -1,6 +1,7 @@
 package com.moutamid.calenderapp.adapters;
 
 import android.content.Context;
+import android.media.MediaMetadataRetriever;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.interfaces.AddImageClick;
+import com.moutamid.calenderapp.models.ShareContentModel;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AddImageAdapter extends RecyclerView.Adapter<AddImageAdapter.ImageViewHolder> {
     Context context;
-    ArrayList<Uri> imagesList;
+    ArrayList<ShareContentModel> imagesList;
     AddImageClick click;
     private final int limit = 5;
 
-    public AddImageAdapter(Context context, ArrayList<Uri> imagesList, AddImageClick click) {
+    public AddImageAdapter(Context context, ArrayList<ShareContentModel> imagesList, AddImageClick click) {
         this.context = context;
         this.imagesList = imagesList;
         this.click = click;
@@ -35,8 +38,31 @@ public class AddImageAdapter extends RecyclerView.Adapter<AddImageAdapter.ImageV
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
-        holder.image.setImageURI(imagesList.get(holder.getAdapterPosition()));
+        ShareContentModel model = imagesList.get(holder.getAdapterPosition());
         holder.itemView.setOnClickListener(v -> click.onClick(imagesList.get(holder.getAdapterPosition()), holder.getAdapterPosition()));
+
+        if (model.getType().equals("img")){
+            holder.image.setImageURI(model.getUri());
+            holder.video.setVisibility(View.GONE);
+        } else {
+            MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+            try {
+                retriever.setDataSource(context, model.getUri());
+                // Get the first frame as a bitmap
+                android.graphics.Bitmap frame = retriever.getFrameAtTime(1000000); // 1 second in microseconds
+                holder.image.setImageBitmap(frame);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    retriever.release();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                  //  throw new RuntimeException(e);
+                }
+            }
+        }
+
     }
 
     @Override
@@ -48,10 +74,11 @@ public class AddImageAdapter extends RecyclerView.Adapter<AddImageAdapter.ImageV
     }
 
     public class ImageViewHolder extends RecyclerView.ViewHolder{
-        ImageView image;
+        ImageView image, video;
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image);
+            video = itemView.findViewById(R.id.video);
         }
 
     }

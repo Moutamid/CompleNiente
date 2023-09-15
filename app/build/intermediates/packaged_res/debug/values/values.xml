@@ -5,6 +5,7 @@
     <color name="green">#2AB28C</color>
     <color name="greenDark">#148863</color>
     <color name="greenLight">#A9EDD8</color>
+    <color name="green_trans">#B3A8EDD7</color>
     <color name="grey">#F2F2F2</color>
     <color name="greyDark">#E3DFE2</color>
     <color name="ic_launcher_background">#FDFDFD</color>

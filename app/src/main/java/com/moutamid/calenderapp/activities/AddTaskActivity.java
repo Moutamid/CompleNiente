@@ -21,6 +21,7 @@ import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.adapters.AddImageAdapter;
 import com.moutamid.calenderapp.databinding.ActivityAddTaskBinding;
 import com.moutamid.calenderapp.interfaces.AddImageClick;
+import com.moutamid.calenderapp.models.ShareContentModel;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.ArrayList;
@@ -66,51 +67,9 @@ public class AddTaskActivity extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, ""), PICK_FROM_GALLERY);
     }
 
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        try {
-            if (requestCode == PICK_FROM_GALLERY) {
-                try{
-                    if (resultCode == RESULT_OK && data != null && data.getClipData() != null) {
-                        binding.AddPhotoLayout.setVisibility(View.GONE);
-                        binding.AddPhotoLayoutRecycler.setVisibility(View.VISIBLE);
-                        int currentImage = 0;
-
-                        while (currentImage < data.getClipData().getItemCount()) {
-                            if (currentImage < limit){
-                                imagesList.add(data.getClipData().getItemAt(currentImage).getUri());
-                            }
-                            currentImage++;
-                        }
-
-                        adapter = new AddImageAdapter(AddTaskActivity.this, imagesList, click);
-                        binding.RecyclerViewImageList.setAdapter(adapter);
-                    } else {
-                        Toast.makeText(this, "Please Select Multiple Images", Toast.LENGTH_SHORT).show();
-                    }
-                }  catch (Exception e){
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                if (resultCode == RESULT_OK && data != null && data.getData() != null) {
-                    binding.AddPhotoLayout.setVisibility(View.GONE);
-                    binding.AddPhotoLayoutRecycler.setVisibility(View.VISIBLE);
-                    imagesList.add(data.getData());
-
-                    adapter = new AddImageAdapter(AddTaskActivity.this, imagesList, click);
-                    binding.RecyclerViewImageList.setAdapter(adapter);
-                }
-            }
-        } catch (Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
-
     AddImageClick click = new AddImageClick() {
         @Override
-        public void onClick(Uri uri, int position) {
+        public void onClick(ShareContentModel uri, int position) {
             final Dialog dialog = new Dialog(AddTaskActivity.this);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.bs_image_menu);

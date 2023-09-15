@@ -8,10 +8,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.textview.MaterialTextView;
 import com.moutamid.calenderapp.R;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -30,7 +32,31 @@ public final class ActivityChatBinding implements ViewBinding {
   public final LinearLayout bottom;
 
   @NonNull
+  public final RecyclerView chatRC;
+
+  @NonNull
+  public final RecyclerView imagePreviewRC;
+
+  @NonNull
+  public final RelativeLayout noChatLayout;
+
+  @NonNull
   public final CircleImageView profileImage;
+
+  @NonNull
+  public final LinearProgressIndicator progressBar;
+
+  @NonNull
+  public final LinearLayout progressLayout;
+
+  @NonNull
+  public final MaterialTextView progressText;
+
+  @NonNull
+  public final MaterialCardView send;
+
+  @NonNull
+  public final LinearLayout sendLayout;
 
   @NonNull
   public final MaterialTextView title;
@@ -45,13 +71,25 @@ public final class ActivityChatBinding implements ViewBinding {
   public final MaterialButton uploadVideo;
 
   private ActivityChatBinding(@NonNull RelativeLayout rootView, @NonNull MaterialCardView back,
-      @NonNull LinearLayout bottom, @NonNull CircleImageView profileImage,
+      @NonNull LinearLayout bottom, @NonNull RecyclerView chatRC,
+      @NonNull RecyclerView imagePreviewRC, @NonNull RelativeLayout noChatLayout,
+      @NonNull CircleImageView profileImage, @NonNull LinearProgressIndicator progressBar,
+      @NonNull LinearLayout progressLayout, @NonNull MaterialTextView progressText,
+      @NonNull MaterialCardView send, @NonNull LinearLayout sendLayout,
       @NonNull MaterialTextView title, @NonNull LinearLayout toolbar,
       @NonNull MaterialButton uploadImage, @NonNull MaterialButton uploadVideo) {
     this.rootView = rootView;
     this.back = back;
     this.bottom = bottom;
+    this.chatRC = chatRC;
+    this.imagePreviewRC = imagePreviewRC;
+    this.noChatLayout = noChatLayout;
     this.profileImage = profileImage;
+    this.progressBar = progressBar;
+    this.progressLayout = progressLayout;
+    this.progressText = progressText;
+    this.send = send;
+    this.sendLayout = sendLayout;
     this.title = title;
     this.toolbar = toolbar;
     this.uploadImage = uploadImage;
@@ -97,9 +135,57 @@ public final class ActivityChatBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.chatRC;
+      RecyclerView chatRC = ViewBindings.findChildViewById(rootView, id);
+      if (chatRC == null) {
+        break missingId;
+      }
+
+      id = R.id.imagePreviewRC;
+      RecyclerView imagePreviewRC = ViewBindings.findChildViewById(rootView, id);
+      if (imagePreviewRC == null) {
+        break missingId;
+      }
+
+      id = R.id.noChatLayout;
+      RelativeLayout noChatLayout = ViewBindings.findChildViewById(rootView, id);
+      if (noChatLayout == null) {
+        break missingId;
+      }
+
       id = R.id.profileImage;
       CircleImageView profileImage = ViewBindings.findChildViewById(rootView, id);
       if (profileImage == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      LinearProgressIndicator progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.progressLayout;
+      LinearLayout progressLayout = ViewBindings.findChildViewById(rootView, id);
+      if (progressLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.progressText;
+      MaterialTextView progressText = ViewBindings.findChildViewById(rootView, id);
+      if (progressText == null) {
+        break missingId;
+      }
+
+      id = R.id.send;
+      MaterialCardView send = ViewBindings.findChildViewById(rootView, id);
+      if (send == null) {
+        break missingId;
+      }
+
+      id = R.id.sendLayout;
+      LinearLayout sendLayout = ViewBindings.findChildViewById(rootView, id);
+      if (sendLayout == null) {
         break missingId;
       }
 
@@ -127,8 +213,9 @@ public final class ActivityChatBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityChatBinding((RelativeLayout) rootView, back, bottom, profileImage, title,
-          toolbar, uploadImage, uploadVideo);
+      return new ActivityChatBinding((RelativeLayout) rootView, back, bottom, chatRC,
+          imagePreviewRC, noChatLayout, profileImage, progressBar, progressLayout, progressText,
+          send, sendLayout, title, toolbar, uploadImage, uploadVideo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

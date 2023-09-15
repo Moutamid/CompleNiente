@@ -39,12 +39,13 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatLi
     public void onBindViewHolder(@NonNull ChatListVH holder, int position) {
         ChatListModel model = list.get(holder.getAdapterPosition());
         holder.username.setText(model.getName());
+
         holder.lastMessage.setText(model.getMessage());
 
         Glide.with(context).load(model.getImage()).placeholder(R.drawable.profile_icon).into(holder.profileImage);
 
         holder.itemView.setOnClickListener(v -> {
-            context.startActivity(new Intent(context, ChatActivity.class));
+            context.startActivity(new Intent(context, ChatActivity.class).putExtra("ChatPerson", model));
         });
 
     }

@@ -8,11 +8,27 @@
     android:elevation="0dp"
     android:layout_margin="4dp">
 
-    <ImageView
-        android:id="@+id/image"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:scaleType="centerCrop"
-        />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_circle"
+            app:tint="@color/green"
+            />
+
+    </RelativeLayout>
+
 </androidx.cardview.widget.CardView>

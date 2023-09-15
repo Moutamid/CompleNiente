@@ -22,9 +22,14 @@ public final class ImageLayoutBinding implements ViewBinding {
   @NonNull
   public final ImageView image;
 
-  private ImageLayoutBinding(@NonNull CardView rootView, @NonNull ImageView image) {
+  @NonNull
+  public final ImageView video;
+
+  private ImageLayoutBinding(@NonNull CardView rootView, @NonNull ImageView image,
+      @NonNull ImageView video) {
     this.rootView = rootView;
     this.image = image;
+    this.video = video;
   }
 
   @Override
@@ -60,7 +65,13 @@ public final class ImageLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ImageLayoutBinding((CardView) rootView, image);
+      id = R.id.video;
+      ImageView video = ViewBindings.findChildViewById(rootView, id);
+      if (video == null) {
+        break missingId;
+      }
+
+      return new ImageLayoutBinding((CardView) rootView, image, video);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
