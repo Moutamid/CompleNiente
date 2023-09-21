@@ -42,7 +42,7 @@ public class ProfileEditActivity extends AppCompatActivity {
         Constants.initDialog(this);
 
         binding.toolbar.title.setText("Edit Profile");
-        binding.toolbar.back.setOnClickListener(v -> Toast.makeText(this, "Thisssss", Toast.LENGTH_SHORT).show());
+        binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         getUserDetails();
 

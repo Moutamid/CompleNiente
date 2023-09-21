@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private void initializeNotification() {
         FirebaseMessaging.getInstance().subscribeToTopic(Constants.auth().getCurrentUser().getUid())
                 .addOnSuccessListener(unused -> {
-                  //   Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
+                    //   Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(e -> {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     e.printStackTrace();

@@ -33,6 +33,7 @@ import com.moutamid.calenderapp.interfaces.AddImageClick;
 import com.moutamid.calenderapp.models.ChatListModel;
 import com.moutamid.calenderapp.models.ChatsModel;
 import com.moutamid.calenderapp.models.ShareContentModel;
+import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.text.SimpleDateFormat;
@@ -173,6 +174,7 @@ public class ChatActivity extends AppCompatActivity {
                                     .push().setValue(sender).addOnSuccessListener(unused -> {
                                         binding.progressLayout.setVisibility(View.GONE);
                                         imagesList.clear();
+                                        new FcmNotificationsSender(chatListModel.getUserID(), "New Message", "You got a new Message", ChatActivity.this, ChatActivity.this).SendNotifications();
                                     })
                                     .addOnFailureListener(e -> {
                                         e.printStackTrace();

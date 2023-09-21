@@ -1,5 +1,6 @@
 package com.moutamid.calenderapp.bottomsheets;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.icu.text.SimpleDateFormat;
@@ -20,6 +21,7 @@ import com.moutamid.calenderapp.databinding.TaskRequestBottomsheetBinding;
 import com.moutamid.calenderapp.models.ChatListModel;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
+import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.Date;
@@ -93,11 +95,11 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
                         Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused8 -> {
                             Constants.databaseReference().child(Constants.REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused6 -> {
                                 String ID = UUID.randomUUID().toString();
-                                ChatListModel sender = new ChatListModel(ID, stashUser.getImage(), stashUser.getName(), "Start sharing content", model.getID(), model.getDate().getDate());
-                                ChatListModel receiver = new ChatListModel(ID, model.getUserImage(), model.getUsername(), "Start sharing content", model.getID(), model.getDate().getDate());
-
+                                ChatListModel sender = new ChatListModel(ID, stashUser.getImage(), stashUser.getName(), "Start sharing content", model.getID(), stashUser.getID(), model.getDate().getDate());
+                                ChatListModel receiver = new ChatListModel(ID, model.getUserImage(), model.getUsername(), "Start sharing content", model.getID(), model.getUserID(), model.getDate().getDate());
                                 Constants.databaseReference().child(Constants.CHAT_LIST).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(receiver).addOnSuccessListener(unused3 -> {
                                     Constants.databaseReference().child(Constants.CHAT_LIST).child(model.getUserID()).child(ID).setValue(sender).addOnSuccessListener(unused4 -> {
+                                        new FcmNotificationsSender(model.getUserID(), "Request Accepted", "Your Request for \'" + model.getName() + "\' is accepted", context, (Activity) context).SendNotifications();
                                         Toast.makeText(context, "Task Accepted", Toast.LENGTH_SHORT).show();
                                     }).addOnFailureListener(e -> {
                                         Constants.dismissDialog();
@@ -133,7 +135,6 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
 
         binding.endReject.setOnClickListener(v -> {
             Constants.showDialog();
-
             if (model.isAccepted().equals(Constants.PEN) || model.isAccepted().equals(Constants.REJ)) {
                 rejectRequest();
             } else {
@@ -164,6 +165,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused -> {
                 Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
                     Constants.dismissDialog();
+                    new FcmNotificationsSender(model.getUserID(), "Task Ended", "Your Request for \'" + model.getName() + "\' is rejected", context, (Activity) context).SendNotifications();
                     Toast.makeText(context, "Task Ended", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
@@ -184,6 +186,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
                 Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
                     Constants.dismissDialog();
+                    new FcmNotificationsSender(model.getUserID(), "Task Rejected", "\'" + model.getName() +"\' is ended", context, (Activity) context).SendNotifications();
                     Toast.makeText(context, "Rejected", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();

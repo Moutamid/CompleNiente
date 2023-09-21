@@ -6,17 +6,18 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class ChatListModel implements Serializable {
-    String ID, image, name, message, taskID;
+    String ID, image, name, message, taskID, userID;
     Date date;
 
     public ChatListModel() {}
 
-    public ChatListModel(String ID, String image, String name, String message, String taskID, Date date) {
+    public ChatListModel(String ID, String image, String name, String message, String taskID, String userID, Date date) {
         this.ID = ID;
         this.image = image;
         this.name = name;
         this.message = message;
         this.taskID = taskID;
+        this.userID = userID;
         this.date = date;
     }
 
@@ -66,5 +67,13 @@ public class ChatListModel implements Serializable {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }
