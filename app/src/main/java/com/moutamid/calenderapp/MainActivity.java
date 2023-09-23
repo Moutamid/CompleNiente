@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     e.printStackTrace();
                 });
         Constants.databaseReference().child("serverKey").get().addOnSuccessListener(dataSnapshot -> {
-            String key = dataSnapshot.getValue().toString(); 3
+            String key = dataSnapshot.getValue().toString();
           //  Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
             Stash.put(Constants.KEY, key);
         });
