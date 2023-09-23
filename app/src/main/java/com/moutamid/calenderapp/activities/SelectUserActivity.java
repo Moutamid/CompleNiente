@@ -82,7 +82,7 @@ public class SelectUserActivity extends AppCompatActivity {
                         }
                     }
 
-                    adapter = new UsersAdapter(SelectUserActivity.this, list);
+                    adapter = new UsersAdapter(SelectUserActivity.this, SelectUserActivity.this, list);
                     binding.RC.setAdapter(adapter);
                 }
                 Constants.dismissDialog();

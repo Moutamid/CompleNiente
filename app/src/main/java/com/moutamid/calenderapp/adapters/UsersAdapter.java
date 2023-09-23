@@ -48,9 +48,11 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
     ArrayList<UserModel> list;
     ArrayList<UserModel> listAll;
     ArrayList<TaskModel> calendarTaskList;
+    Activity activity;
 
-    public UsersAdapter(Context context, ArrayList<UserModel> list) {
+    public UsersAdapter(Context context, Activity activity, ArrayList<UserModel> list) {
         this.context = context;
+        this.activity = activity;
         this.list = list;
         this.listAll = new ArrayList<>(list);
     }
@@ -173,7 +175,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
                         .addOnSuccessListener(unused -> {
                             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
                                     .addOnSuccessListener(unused1 -> {
-                                        new FcmNotificationsSender(model.getID(), "Incoming Request", "Someone want to work with you", context, (Activity) context).SendNotifications();
+                                        new FcmNotificationsSender(model.getID(), "Incoming Request", "Someone want to work with you", context, activity).SendNotifications();
                                         Constants.dismissDialog();
                                         Toast.makeText(context, "A request is send to the user", Toast.LENGTH_SHORT).show();
                                     }).addOnFailureListener(e -> {

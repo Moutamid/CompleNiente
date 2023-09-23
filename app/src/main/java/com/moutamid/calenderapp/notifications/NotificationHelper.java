@@ -30,7 +30,6 @@ public class NotificationHelper extends ContextWrapper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createChannels();
         }
-
     }
 
     private String CHANNEL_NAME = "High priority channel";

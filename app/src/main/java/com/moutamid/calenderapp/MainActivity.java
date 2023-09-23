@@ -51,13 +51,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private void initializeNotification() {
         FirebaseMessaging.getInstance().subscribeToTopic(Constants.auth().getCurrentUser().getUid())
                 .addOnSuccessListener(unused -> {
-                    //   Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
+//                       Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(e -> {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 });
         Constants.databaseReference().child("serverKey").get().addOnSuccessListener(dataSnapshot -> {
-            String key = dataSnapshot.getValue().toString();
+            String key = dataSnapshot.getValue().toString(); 3
           //  Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
             Stash.put(Constants.KEY, key);
         });

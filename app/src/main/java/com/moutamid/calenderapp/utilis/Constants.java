@@ -47,9 +47,9 @@ public class Constants {
     public static final String USER = "USER";
     public static final String STASH_USER = "STASH_USER";
     public static final String DATE = "DATE";
-    public static final String YES = "YES";
-    public static final String PEN = "PEN";
-    public static final String REJ = "REJ";
+    public static final String YES = "YES";  // Accepted
+    public static final String PEN = "PEN";  // Pending
+    public static final String REJ = "REJ";  // Rejected
     public static final String CHAT_LIST = "CHAT_LIST";
     public static final String CHATS = "CHATS";
 
@@ -61,7 +61,7 @@ public class Constants {
         return new SimpleDateFormat("d", Locale.getDefault()).format(date);
     }
     public static String CurrentMonth() {
-        return new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.getDefault()).format(new Date());
+        return new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.US).format(new Date());
     }
     public static void initDialog(Context context){
         dialog = new Dialog(context);

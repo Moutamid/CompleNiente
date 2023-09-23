@@ -132,7 +132,6 @@ public class HomeFragment extends Fragment {
                                     binding.noItemLayout.setVisibility(View.VISIBLE);
                                 }
 
-
                                 TaskAdapter adapter = new TaskAdapter(context, taskList, listener);
                                 binding.RC.setAdapter(adapter);
 
@@ -181,7 +180,7 @@ public class HomeFragment extends Fragment {
                 String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
                 String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date);
                 if (listDate.equals(calenderDate)){
-                    isSelected = true;
+                    isSelected = model.getDate().isSelected();
                     break;
                 }
             }
