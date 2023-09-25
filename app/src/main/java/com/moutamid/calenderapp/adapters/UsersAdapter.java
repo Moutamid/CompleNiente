@@ -108,12 +108,12 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
                                         String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
                                         String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date.getDate());
                                         if (listDate.equals(calenderDate)){
-                                            isSelected = true;
+                                            isSelected = model.getDate().isSelected();
                                             break;
                                         }
                                     }
 
-                                    if (isSelected){
+                                    if (isSelected) {
                                         Toast.makeText(context, "User is not available for today", Toast.LENGTH_SHORT).show();
                                     }else {
                                         showTaskRequestDialog(model);
@@ -175,7 +175,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
                         .addOnSuccessListener(unused -> {
                             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
                                     .addOnSuccessListener(unused1 -> {
-                                        new FcmNotificationsSender(model.getID(), "Incoming Request", "Someone want to work with you", context, activity).SendNotifications();
+                                        new FcmNotificationsSender("/topics/" + model.getID(), "Incoming Request", "Someone want to work with you", context, activity).SendNotifications();
                                         Constants.dismissDialog();
                                         Toast.makeText(context, "A request is send to the user", Toast.LENGTH_SHORT).show();
                                     }).addOnFailureListener(e -> {

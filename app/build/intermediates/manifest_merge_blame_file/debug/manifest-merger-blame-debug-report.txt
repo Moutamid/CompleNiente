@@ -17,35 +17,35 @@
 13    <uses-permission android:name="android.permission.VIBRATE" />
 13-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:5-66
 13-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:22-63
-14
-15    <queries>
-15-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
-16
-17        <!-- Query Camera Packages -->
-18        <intent>
-18-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:12:9-14:18
-19            <action android:name="android.media.action.IMAGE_CAPTURE" />
-19-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:13-73
-19-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:21-70
-20        </intent>
-21        <!-- Query Open Document -->
-22        <intent>
-22-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:16:9-18:18
-23            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
-23-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:13-79
-23-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:21-76
-24        </intent>
-25    </queries>
-26
-27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-27-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:26:5-79
-27-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:26:22-76
-28    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-28-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:5-68
-28-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:22-65
-29    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-29-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:5-82
-29-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:22-79
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:5-79
+14-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:22-76
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-68
+15-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:22-65
+16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+16-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:5-82
+16-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:22-79
+17
+18    <queries>
+18-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
+19
+20        <!-- Query Camera Packages -->
+21        <intent>
+21-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:12:9-14:18
+22            <action android:name="android.media.action.IMAGE_CAPTURE" />
+22-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:13-73
+22-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:21-70
+23        </intent>
+24        <!-- Query Open Document -->
+25        <intent>
+25-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:16:9-18:18
+26            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:13-79
+26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:21-76
+27        </intent>
+28    </queries>
+29
 30    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 30-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:5-79
 30-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:22-76
@@ -65,178 +65,178 @@
 37-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\7b00b2363202c424da8ffc01806c57cf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 38
 39    <application
-39-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-129:19
+39-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-132:19
 40        android:name="com.moutamid.calenderapp.MyApplication"
-40-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:9-38
+40-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:9-38
 41        android:allowBackup="true"
-41-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:9-35
+41-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:9-35
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 42-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\7b00b2363202c424da8ffc01806c57cf\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 43        android:dataExtractionRules="@xml/data_extraction_rules"
-43-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:9-65
+43-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:15:9-65
 44        android:debuggable="true"
 45        android:extractNativeLibs="false"
 46        android:fullBackupContent="@xml/backup_rules"
-46-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:9-54
+46-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:9-54
 47        android:icon="@mipmap/ic_launcher"
-47-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:9-43
+47-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:9-43
 48        android:label="@string/app_name"
-48-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:15:9-41
+48-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:18:9-41
 49        android:roundIcon="@mipmap/ic_launcher_round"
-49-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:9-54
+49-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:9-54
 50        android:supportsRtl="true"
-50-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:9-35
+50-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-35
 51        android:testOnly="true"
 52        android:theme="@style/Theme.CalenderApp" >
-52-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:18:9-49
+52-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:9-49
 53        <activity
-53-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-22:40
+53-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-25:40
 54            android:name="com.moutamid.calenderapp.activities.ChatActivity"
-54-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:13-52
+54-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:13-52
 55            android:exported="false" />
-55-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:13-37
+55-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:13-37
 56        <activity
-56-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-25:40
+56-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-28:40
 57            android:name="com.moutamid.calenderapp.activities.SelectUserActivity"
-57-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:13-58
+57-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:13-58
 58            android:exported="false" />
-58-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:13-37
+58-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:28:13-37
 59        <activity
-59-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-28:40
+59-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:29:9-31:40
 60            android:name="com.moutamid.calenderapp.activities.AddTaskActivity"
-60-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:13-55
+60-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:30:13-55
 61            android:exported="false" />
-61-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:28:13-37
+61-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:13-37
 62        <activity
-62-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:29:9-31:40
+62-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:9-34:40
 63            android:name="com.moutamid.calenderapp.activities.ProfileEditActivity"
-63-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:30:13-59
+63-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:13-59
 64            android:exported="false" />
-64-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:13-37
+64-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:13-37
 65        <activity
-65-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:9-34:40
+65-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:9-37:40
 66            android:name="com.moutamid.calenderapp.activities.ForgotActivity"
-66-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:13-54
+66-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:13-54
 67            android:exported="false" />
-67-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:13-37
+67-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:13-37
 68        <activity
-68-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:9-37:40
+68-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:9-40:40
 69            android:name="com.moutamid.calenderapp.activities.WelcomeActivity"
-69-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:13-55
+69-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:13-55
 70            android:exported="false" />
-70-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:13-37
+70-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:13-37
 71        <activity
-71-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:9-40:40
+71-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:9-43:40
 72            android:name="com.moutamid.calenderapp.activities.SignUpActivity"
-72-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:13-54
+72-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-54
 73            android:exported="false" />
-73-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:13-37
+73-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:13-37
 74        <activity
-74-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:9-43:40
+74-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:9-46:40
 75            android:name="com.moutamid.calenderapp.activities.LoginActivity"
-75-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-53
+75-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-53
 76            android:exported="false" />
-76-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:13-37
+76-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:13-37
 77        <activity
-77-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:9-53:20
+77-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:9-56:20
 78            android:name="com.moutamid.calenderapp.SplashScreenActivity"
-78-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-49
+78-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-49
 79            android:exported="true"
-79-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:13-36
+79-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:13-36
 80            android:theme="@style/SplashTheme" >
-80-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:13-47
+80-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:50:13-47
 81            <intent-filter>
-81-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-52:29
+81-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:13-55:29
 82                <action android:name="android.intent.action.MAIN" />
-82-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:17-69
-82-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:25-66
+82-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:17-69
+82-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:25-66
 83
 84                <category android:name="android.intent.category.LAUNCHER" />
-84-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:17-77
-84-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:27-74
+84-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:17-77
+84-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:27-74
 85            </intent-filter>
 86        </activity>
 87        <activity
-87-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:9-56:40
+87-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:57:9-59:40
 88            android:name="com.moutamid.calenderapp.MainActivity"
-88-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:55:13-41
+88-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:13-41
 89            android:exported="false" />
-89-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:56:13-37
+89-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:13-37
 90
 91        <service
-91-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:9-65:19
+91-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:9-68:19
 92            android:name="com.moutamid.calenderapp.notifications.FirebaseMessagingService"
-92-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:60:13-91
+92-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:13-91
 93            android:exported="true"
-93-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:13-36
+93-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:13-36
 94            android:permission="TODO" >
-94-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:13-38
+94-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:64:13-38
 95            <intent-filter>
-95-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:13-64:29
+95-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:13-67:29
 96                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-96-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:17-78
-96-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:25-75
+96-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:17-78
+96-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:25-75
 97            </intent-filter>
 98        </service>
 99
 100        <receiver
-100-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:9-73:20
+100-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:9-76:20
 101            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-101-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:67:13-78
+101-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-78
 102            android:exported="true"
-102-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:68:13-36
+102-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:13-36
 103            android:permission="com.google.android.c2dm.permission.SEND" >
-103-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:13-73
+103-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:72:13-73
 104            <intent-filter>
-104-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-72:29
+104-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:13-75:29
 105                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-105-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:17-81
-105-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:25-78
+105-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:74:17-81
+105-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:74:25-78
 106            </intent-filter>
 107        </receiver>
 108
 109        <service
-109-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:9-82:19
+109-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:9-85:19
 110            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-110-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:76:13-82
+110-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:13-82
 111            android:directBootAware="true"
-111-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:77:13-43
+111-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:13-43
 112            android:exported="false" >
-112-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:13-37
+112-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:81:13-37
 113            <intent-filter android:priority="-500" >
-113-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:13-64:29
-113-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:28-51
+113-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:13-67:29
+113-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:28-51
 114                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-114-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:17-78
-114-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:25-75
+114-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:17-78
+114-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:25-75
 115            </intent-filter>
 116        </service>
 117        <service
-117-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:83:9-96:19
+117-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:9-99:19
 118            android:name="com.google.firebase.components.ComponentDiscoveryService"
-118-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:84:13-84
+118-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:13-84
 119            android:directBootAware="true"
-119-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:85:13-43
+119-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:88:13-43
 120            android:exported="false" >
-120-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-37
+120-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:89:13-37
 121            <meta-data
-121-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:13-89:85
+121-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:90:13-92:85
 122                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-122-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:88:17-119
+122-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:17-119
 123                android:value="com.google.firebase.components.ComponentRegistrar" />
-123-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:89:17-82
+123-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:17-82
 124            <meta-data
-124-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:90:13-92:85
+124-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:85
 125                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-125-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:17-115
+125-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-115
 126                android:value="com.google.firebase.components.ComponentRegistrar" />
-126-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:17-82
+126-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:95:17-82
 127            <meta-data
-127-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:85
+127-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:96:13-98:85
 128                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-128-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-127
+128-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:97:17-127
 129                android:value="com.google.firebase.components.ComponentRegistrar" />
-129-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:95:17-82
+129-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:98:17-82
 130            <meta-data
 130-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:69:13-71:85
 131                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -294,40 +294,40 @@
 163        <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
 164
 165        <meta-data
-165-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:109:9-111:69
+165-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:112:9-114:69
 166            android:name="com.google.android.gms.version"
-166-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:110:13-58
+166-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:113:13-58
 167            android:value="@integer/google_play_services_version" />
-167-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:111:13-66
+167-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:114:13-66
 168
 169        <service
-169-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:113:9-119:19
+169-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:9-122:19
 170            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-170-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:114:13-103
+170-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:13-103
 171            android:exported="false" >
-171-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:115:13-37
+171-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:13-37
 172            <meta-data
-172-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:13-118:39
+172-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:119:13-121:39
 173                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-173-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:17-94
+173-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:17-94
 174                android:value="cct" />
-174-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:17-36
+174-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:121:17-36
 175        </service>
 176        <service
-176-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:9-123:72
+176-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:123:9-126:72
 177            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-177-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:121:13-117
+177-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:124:13-117
 178            android:exported="false"
-178-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:122:13-37
+178-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:125:13-37
 179            android:permission="android.permission.BIND_JOB_SERVICE" />
-179-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:123:13-69
+179-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:126:13-69
 180
 181        <receiver
-181-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:125:9-127:40
+181-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:128:9-130:40
 182            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-182-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:126:13-132
+182-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:129:13-132
 183            android:exported="false" />
-183-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:127:13-37
+183-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:130:13-37
 184
 185        <activity
 185-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:22:9-25:68

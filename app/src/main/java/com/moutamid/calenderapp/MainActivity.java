@@ -21,6 +21,7 @@ import com.moutamid.calenderapp.fragment.ChatFragment;
 import com.moutamid.calenderapp.fragment.HomeFragment;
 import com.moutamid.calenderapp.fragment.ListFragment;
 import com.moutamid.calenderapp.fragment.SettingsFragment;
+import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
 import com.moutamid.calenderapp.utilis.Constants;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Constants.checkApp(this);
+
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private void initializeNotification() {
         FirebaseMessaging.getInstance().subscribeToTopic(Constants.auth().getCurrentUser().getUid())
                 .addOnSuccessListener(unused -> {
+//                    new FcmNotificationsSender("/topics/" + "ALL", "Incoming Request", "Someone want to work with you", MainActivity.this, MainActivity.this).SendNotifications();
 //                       Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(e -> {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

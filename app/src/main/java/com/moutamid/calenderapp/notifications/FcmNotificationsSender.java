@@ -51,7 +51,7 @@ public class FcmNotificationsSender {
             mainObj.put("notification", notiObject);
             this.requestQueue.add(new JsonObjectRequest(1, "https://fcm.googleapis.com/fcm/send", mainObj, new Response.Listener<JSONObject>() {
                 public void onResponse(JSONObject response) {
-                    Log.e(TAG, "onResponse: response: " + response.toString());
+                    Log.d(TAG, "onResponse: response: " + response.toString());
                 }
             }, new Response.ErrorListener() {
                 public void onErrorResponse(VolleyError error) {

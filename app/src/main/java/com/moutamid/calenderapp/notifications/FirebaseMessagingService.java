@@ -43,7 +43,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
         ((Vibrator) getSystemService(Context.VIBRATOR_SERVICE)).vibrate(new long[]{100, 300, 300, 300}, -1);
 
 //        int resourceImage = getResources().getIdentifier(remoteMessage.getNotification().getIcon(), "drawable", getPackageName());
-        NotificationCompat.Builder builder = new NotificationCompat.Builder((Context) this, "CHANNEL_ID");
+        NotificationCompat.Builder builder = new NotificationCompat.Builder((Context) this, "Your_channel_id");
 //        if (Build.VERSION.SDK_INT >= 21) {
 //            builder.setSmallIcon(resourceImage);
 //        } else {
@@ -61,8 +61,8 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
         builder.setPriority(2);
         this.mNotificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);//"notification"
         if (Build.VERSION.SDK_INT >= 26) {
-            this.mNotificationManager.createNotificationChannel(new NotificationChannel("CHANNEL_ID", "Channel human readable title", NotificationManager.IMPORTANCE_HIGH));//4
-            builder.setChannelId("CHANNEL_ID");
+            this.mNotificationManager.createNotificationChannel(new NotificationChannel("Your_channel_id", "Channel human readable title", NotificationManager.IMPORTANCE_HIGH));//4
+            builder.setChannelId("Your_channel_id");
         }
         this.mNotificationManager.notify(100, builder.build());
     }

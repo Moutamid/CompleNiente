@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-131:12
-INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-131:12
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-134:12
+INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-134:12
+INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-134:12
+INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:2:1-134:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] C:\Users\sunny\.gradle\caches\transforms-3\6173889dc5e44cf7f71e3e65f3a2d121\transformed\jetified-viewbinding-8.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.sundeepk:compact-calendar-view:3.0.0] C:\Users\sunny\.gradle\caches\transforms-3\7dd09cebc7c34aba63e994cf920918a1\transformed\jetified-compact-calendar-view-3.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.fxn769:stash:1.3.2] C:\Users\sunny\.gradle\caches\transforms-3\0ad98adbace9417c220a39412e326d94\transformed\jetified-stash-1.3.2\AndroidManifest.xml:2:1-12:12
@@ -142,9 +142,63 @@ uses-permission#android.permission.VIBRATE
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:22-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:5-79
+MERGED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\sunny\.gradle\caches\transforms-3\1d83540cb40f2ddf38575999e6368334\transformed\jetified-firebase-database-20.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\sunny\.gradle\caches\transforms-3\1d83540cb40f2ddf38575999e6368334\transformed\jetified-firebase-database-20.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\dc1ec4bb088d91889aaf06c03f73aeba\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\dc1ec4bb088d91889aaf06c03f73aeba\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\sunny\.gradle\caches\transforms-3\e11209adcdcfbb02a2a4fbca76ab424b\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\sunny\.gradle\caches\transforms-3\e11209adcdcfbb02a2a4fbca76ab424b\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:5-82
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:5-82
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:22-79
 application
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-129:19
-INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-129:19
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-132:19
+INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-132:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\sunny\.gradle\caches\transforms-3\f422fb245bba1dd7751aa7588a946071\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\sunny\.gradle\caches\transforms-3\f422fb245bba1dd7751aa7588a946071\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:21:5-40:19
@@ -224,141 +278,141 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\su
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\7b00b2363202c424da8ffc01806c57cf\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:18:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:9-54
-	android:roundIcon
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:9-54
+	android:roundIcon
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:9-54
 	tools:targetApi
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:9-29
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:9-29
 	android:icon
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:9-43
 	android:allowBackup
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:18:9-49
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:9-49
 	android:dataExtractionRules
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:9-65
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:15:9-65
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:9-38
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:9-38
 activity#com.moutamid.calenderapp.activities.ChatActivity
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-22:40
-	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:13-37
-	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:13-52
-activity#com.moutamid.calenderapp.activities.SelectUserActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:13-58
-activity#com.moutamid.calenderapp.activities.AddTaskActivity
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:13-52
+activity#com.moutamid.calenderapp.activities.SelectUserActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-28:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:13-55
-activity#com.moutamid.calenderapp.activities.ProfileEditActivity
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:13-58
+activity#com.moutamid.calenderapp.activities.AddTaskActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:29:9-31:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:30:13-59
-activity#com.moutamid.calenderapp.activities.ForgotActivity
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:30:13-55
+activity#com.moutamid.calenderapp.activities.ProfileEditActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:13-54
-activity#com.moutamid.calenderapp.activities.WelcomeActivity
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:13-59
+activity#com.moutamid.calenderapp.activities.ForgotActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:13-55
-activity#com.moutamid.calenderapp.activities.SignUpActivity
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:13-54
+activity#com.moutamid.calenderapp.activities.WelcomeActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:9-40:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:13-54
-activity#com.moutamid.calenderapp.activities.LoginActivity
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:13-55
+activity#com.moutamid.calenderapp.activities.SignUpActivity
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:9-43:40
 	android:exported
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-53
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-54
+activity#com.moutamid.calenderapp.activities.LoginActivity
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:9-46:40
+	android:exported
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-53
 activity#com.moutamid.calenderapp.SplashScreenActivity
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:9-53:20
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:9-56:20
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:13-36
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:13-36
 	android:theme
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:13-47
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:50:13-47
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-52:29
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:13-55:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:17-69
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:17-69
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:25-66
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:17-77
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:17-77
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:27-74
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:27-74
 activity#com.moutamid.calenderapp.MainActivity
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:9-56:40
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:57:9-59:40
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:56:13-37
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:55:13-41
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:13-41
 service#com.moutamid.calenderapp.notifications.FirebaseMessagingService
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:9-65:19
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:9-68:19
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:13-36
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:13-36
 	android:permission
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:13-38
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:64:13-38
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:60:13-91
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:13-91
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:13-64:29
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:13-67:29
 	android:priority
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:28-51
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:28-51
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:17-78
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:17-78
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:25-75
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:25-75
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:9-73:20
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:9-76:20
 MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:29:9-36:20
 MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:29:9-36:20
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:68:13-36
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:13-36
 	android:permission
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:13-73
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:72:13-73
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:67:13-78
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-72:29
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:13-75:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:17-81
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:74:17-81
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:25-78
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:74:25-78
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:9-82:19
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:9-85:19
 MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:42:9-49:19
 MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:42:9-49:19
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:13-37
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:81:13-37
 	android:directBootAware
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:77:13-43
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:13-43
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:76:13-82
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:13-82
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:83:9-96:19
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:9-99:19
 MERGED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\sunny\.gradle\caches\transforms-3\1d83540cb40f2ddf38575999e6368334\transformed\jetified-firebase-database-20.2.2\AndroidManifest.xml:28:9-34:19
@@ -382,81 +436,81 @@ MERGED from [com.google.firebase:firebase-datatransport:18.1.8] C:\Users\sunny\.
 MERGED from [com.google.firebase:firebase-common:20.3.3] C:\Users\sunny\.gradle\caches\transforms-3\824ad9e67656d6e1955cd9a0cd658a16\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:32:9-36:35
 MERGED from [com.google.firebase:firebase-common:20.3.3] C:\Users\sunny\.gradle\caches\transforms-3\824ad9e67656d6e1955cd9a0cd658a16\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:32:9-36:35
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-37
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:89:13-37
 	tools:targetApi
 		ADDED from [com.google.firebase:firebase-common:20.3.3] C:\Users\sunny\.gradle\caches\transforms-3\824ad9e67656d6e1955cd9a0cd658a16\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:36:13-32
 	android:directBootAware
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:85:13-43
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:88:13-43
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:84:13-84
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:13-84
 meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:13-89:85
-MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:53:13-55:85
-MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:53:13-55:85
-	android:value
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:89:17-82
-	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:88:17-119
-meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:90:13-92:85
-MERGED from [com.google.firebase:firebase-datatransport:18.1.8] C:\Users\sunny\.gradle\caches\transforms-3\8920248717f7f778bf7ce6e642c8fdbb\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
-MERGED from [com.google.firebase:firebase-datatransport:18.1.8] C:\Users\sunny\.gradle\caches\transforms-3\8920248717f7f778bf7ce6e642c8fdbb\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:53:13-55:85
+MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:53:13-55:85
 	android:value
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:17-82
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:17-115
-meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:17-119
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
 ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:85
-MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
-MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] C:\Users\sunny\.gradle\caches\transforms-3\8920248717f7f778bf7ce6e642c8fdbb\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] C:\Users\sunny\.gradle\caches\transforms-3\8920248717f7f778bf7ce6e642c8fdbb\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
 	android:value
 		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:95:17-82
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-127
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-115
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:96:13-98:85
+MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:98:17-82
+	android:name
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:97:17-127
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:109:9-111:69
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:112:9-114:69
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\875ac164e383d2ff27156d5d4872f017\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\875ac164e383d2ff27156d5d4872f017\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:111:13-66
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:114:13-66
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:110:13-58
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:113:13-58
 service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:113:9-119:19
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:9-122:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:36:9-38:40
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:36:9-38:40
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:115:13-37
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:114:13-103
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:13-103
 meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:13-118:39
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:119:13-121:39
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
 	android:value
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:17-36
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:121:17-36
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:17-94
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:17-94
 service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:9-123:72
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:123:9-126:72
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:122:13-37
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:125:13-37
 	android:permission
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:123:13-69
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:126:13-69
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:121:13-117
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:124:13-117
 receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
-ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:125:9-127:40
+ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:128:9-130:40
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:127:13-37
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:130:13-37
 	android:name
-		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:126:13-132
+		ADDED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:129:13-132
 uses-sdk
 INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml
@@ -693,34 +747,6 @@ ADDED from [com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches
 		ADDED from [com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:38:17-68
 	android:name
 		ADDED from [com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\3960bf08af7ddb1732e96fad409ad337\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:37:17-67
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\sunny\.gradle\caches\transforms-3\1d83540cb40f2ddf38575999e6368334\transformed\jetified-firebase-database-20.2.2\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\sunny\.gradle\caches\transforms-3\1d83540cb40f2ddf38575999e6368334\transformed\jetified-firebase-database-20.2.2\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\dc1ec4bb088d91889aaf06c03f73aeba\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\dc1ec4bb088d91889aaf06c03f73aeba\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\sunny\.gradle\caches\transforms-3\e11209adcdcfbb02a2a4fbca76ab424b\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\sunny\.gradle\caches\transforms-3\e11209adcdcfbb02a2a4fbca76ab424b\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:9:5-79
-MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\sunny\.gradle\caches\transforms-3\41a037c456b53e7ba6617c87b79a9875\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:9:5-79
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\961c5f3e5ff18c707522f9b2a34accdd\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\sunny\.gradle\caches\transforms-3\d04a12e01813e9021fbdaed72d0ebf37\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:22:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:26:22-76
 activity#com.google.firebase.auth.internal.GenericIdpActivity
 ADDED from [com.google.firebase:firebase-auth:22.1.1] C:\Users\sunny\.gradle\caches\transforms-3\41b958380bb2de80c25fe9cf7053b814\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents
@@ -793,26 +819,6 @@ ADDED from [com.google.firebase:firebase-crashlytics:18.4.1] C:\Users\sunny\.gra
 		ADDED from [com.google.firebase:firebase-crashlytics:18.4.1] C:\Users\sunny\.gradle\caches\transforms-3\f7e09a408aa60c7e7c0982df43e14c47\transformed\jetified-firebase-crashlytics-18.4.1\AndroidManifest.xml:17:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-crashlytics:18.4.1] C:\Users\sunny\.gradle\caches\transforms-3\f7e09a408aa60c7e7c0982df43e14c47\transformed\jetified-firebase-crashlytics-18.4.1\AndroidManifest.xml:16:17-115
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\a68114eb5651b7b23bd7c1af5dca50ae\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
-MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\1c653d26d954a5ba9d7092736ef037f7\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\3371ed443a5e884c95eb3b087eb40dbd\transformed\jetified-play-services-measurement-impl-21.3.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\17eca8b3ba55e5571b7242c8bb58c5e1\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:25:5-68
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:22-65
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:5-82
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:11:5-82
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\sunny\.gradle\caches\transforms-3\ee84d2b06c5547f9363447835c247d25\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:11:5-82
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.2.1] C:\Users\sunny\.gradle\caches\transforms-3\e4372968d3d1b42b842b07936ab8d9ac\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:22-79
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\c89c1e97f392ec4a9db3be5c7dd22f3e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 	android:exported

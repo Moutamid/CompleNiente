@@ -36,7 +36,7 @@
             app:boxCornerRadiusTopStart="12dp"
             app:startIconDrawable="@drawable/round_search_24"
             android:layout_marginTop="10dp"
-            android:hint="Search">
+            android:hint="Search by username">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
