@@ -177,7 +177,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused -> {
                 Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
                     Constants.dismissDialog();
-                    new FcmNotificationsSender("/topics/" + model.getUserID(), "Task Rejected", "Your Request for \'" + model.getName() + "\' is rejected", context, requireActivity()).SendNotifications();
+                    new FcmNotificationsSender("/topics/" + model.getUserID(), "Task Ended", "\'" + model.getName() + "\' is ended", context, requireActivity()).SendNotifications();
                     Toast.makeText(context, "Task Ended", Toast.LENGTH_SHORT).show();
                     dismiss();
                 }).addOnFailureListener(e -> {
@@ -191,17 +191,23 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
         } else {
             model.setAccepted(Constants.REJ);
             model.getDate().setSelected(false);
+            String userID = model.getUserID();
             UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
             model.setUserID(stashUser.getID());
             model.setUserImage(stashUser.getImage());
             model.setUserHandle(stashUser.getUsername());
             model.setUsername(stashUser.getName());
             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
-                Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
-                    Constants.dismissDialog();
-                    new FcmNotificationsSender("/topics/" + model.getUserID(), "Task Rejected", "\'" + model.getName() + "\' is ended", context, requireActivity()).SendNotifications();
-                    Toast.makeText(context, "Rejected", Toast.LENGTH_SHORT).show();
-                    dismiss();
+                Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(userID).child(model.getID()).setValue(model).addOnSuccessListener(unused1 -> {
+                    Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused2 -> {
+                        Constants.dismissDialog();
+                        new FcmNotificationsSender("/topics/" + userID, "Task Rejected", "Your Request for \'" + model.getName() + "\' is rejected", context, requireActivity()).SendNotifications();
+                        Toast.makeText(context, "Rejected", Toast.LENGTH_SHORT).show();
+                        dismiss();
+                    }).addOnFailureListener(e -> {
+                        Constants.dismissDialog();
+                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    });
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
                     Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

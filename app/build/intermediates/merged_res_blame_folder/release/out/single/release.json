@@ -116,6 +116,10 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-43:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "com.moutamid.calenderapp-merged_res-42:/layout_activity_select_user.xml.flat",
+        "source": "com.moutamid.calenderapp-main-43:/layout/activity_select_user.xml"
+    },
+    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_forward.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-43:\\drawable\\forward.xml"
     },
@@ -134,14 +138,6 @@
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_no_entry.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-43:\\drawable\\no_entry.xml"
-    },
-    {
-        "merged": "com.moutamid.calenderapp-merged_res-42:/layout_users_card.xml.flat",
-        "source": "com.moutamid.calenderapp-main-43:/layout/users_card.xml"
-    },
-    {
-        "merged": "com.moutamid.calenderapp-merged_res-42:/layout_activity_profile_edit.xml.flat",
-        "source": "com.moutamid.calenderapp-main-43:/layout/activity_profile_edit.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_bs_image_menu.xml.flat",

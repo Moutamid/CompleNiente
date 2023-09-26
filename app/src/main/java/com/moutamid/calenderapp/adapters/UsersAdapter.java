@@ -88,51 +88,46 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
             calendarTaskList = new ArrayList<>();
 
             Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getID())
-                    .addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            Constants.dismissDialog();
-                            if (snapshot.exists()) {
-                                calendarTaskList.clear();
-                                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                    TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                    if (!taskModel.isEnded()){
-                                        calendarTaskList.add(taskModel);
+                    .get().addOnSuccessListener(snapshot -> {
+                        Constants.dismissDialog();
+                        if (snapshot.exists()) {
+                            calendarTaskList.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                if (!taskModel.isEnded()){
+                                    calendarTaskList.add(taskModel);
+                                }
+                            }
+                            CalendarDate date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
+                            if (calendarTaskList.size()>0) {
+                                boolean isSelected = false;
+                                for (TaskModel taskModel : calendarTaskList) {
+                                    String dayMonth = "ddMM";
+                                    String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(taskModel.getDate().getDate());
+                                    String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date.getDate());
+                                    if (listDate.equals(calenderDate)){
+                                        isSelected = taskModel.getDate().isSelected();
+                                        break;
                                     }
                                 }
-                                CalendarDate date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
-                                if (calendarTaskList.size()>0) {
-                                    boolean isSelected = false;
-                                    for (TaskModel model : calendarTaskList) {
-                                        String dayMonth = "ddMM";
-                                        String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(model.getDate().getDate());
-                                        String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date.getDate());
-                                        if (listDate.equals(calenderDate)){
-                                            isSelected = model.getDate().isSelected();
-                                            break;
-                                        }
-                                    }
 
-                                    if (isSelected) {
-                                        Toast.makeText(context, "User is not available for today", Toast.LENGTH_SHORT).show();
-                                    }else {
-                                        showTaskRequestDialog(model);
-                                    }
-
-                                } else {
+                                if (isSelected) {
+                                    Toast.makeText(context, "User is not available for today", Toast.LENGTH_SHORT).show();
+                                }else {
                                     showTaskRequestDialog(model);
                                 }
 
                             } else {
                                 showTaskRequestDialog(model);
                             }
-                        }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-                            Constants.dismissDialog();
-                            Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            showTaskRequestDialog(model);
                         }
+                    })
+                    .addOnFailureListener(e -> {
+                        Constants.dismissDialog();
+                        Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
                     });
         });
 
