@@ -4,6 +4,10 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\bs_image_menu.xml"
     },
     {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\fragment_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\chat_row_left.xml",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\chat_row_left.xml"
     },
@@ -12,12 +16,12 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\activity_select_user.xml",
-        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_select_user.xml"
-    },
-    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\activity_welcome.xml",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\activity_select_user.xml",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_select_user.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\full_preview.xml",
@@ -28,12 +32,24 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\task_request_card.xml"
     },
     {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\event_profile_card.xml",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\event_profile_card.xml"
+    },
+    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\chat_item_card.xml",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\chat_item_card.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\calendar_item.xml",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\calendar_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\activity_email_verify.xml",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_email_verify.xml"
+    },
+    {
+        "merged": "com.moutamid.calenderapp-mergeDebugResources-41:/layout/activity_new_event.xml",
+        "source": "com.moutamid.calenderapp-main-44:/layout/activity_new_event.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\users_card.xml",
@@ -56,10 +72,6 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\fragment_settings.xml"
     },
     {
-        "merged": "com.moutamid.calenderapp-mergeDebugResources-41:/layout/activity_select_user.xml",
-        "source": "com.moutamid.calenderapp-main-44:/layout/activity_select_user.xml"
-    },
-    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\activity_sign_up.xml",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_sign_up.xml"
     },
@@ -76,12 +88,12 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\task_request_layout.xml"
     },
     {
-        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\chat_row_right.xml",
-        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\chat_row_right.xml"
-    },
-    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\activity_splash_screen.xml",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\chat_row_right.xml",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\chat_row_right.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-mergeDebugResources-41:\\layout\\task_request_bottomsheet.xml",

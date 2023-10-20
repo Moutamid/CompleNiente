@@ -20,8 +20,7 @@ import com.moutamid.calenderapp.databinding.ActivityMainBinding;
 import com.moutamid.calenderapp.fragment.ChatFragment;
 import com.moutamid.calenderapp.fragment.HomeFragment;
 import com.moutamid.calenderapp.fragment.ListFragment;
-import com.moutamid.calenderapp.fragment.SettingsFragment;
-import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
+import com.moutamid.calenderapp.fragment.ProfileFragment;
 import com.moutamid.calenderapp.utilis.Constants;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ChatFragment()).commit();
             return true;
         } else if (item.getItemId() == R.id.nav_setting) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ProfileFragment()).commit();
             return true;
         } else if (item.getItemId() == R.id.nav_list) {
             getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ListFragment()).commit();

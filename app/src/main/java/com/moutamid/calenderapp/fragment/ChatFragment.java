@@ -39,6 +39,8 @@ public class ChatFragment extends Fragment {
         context = binding.getRoot().getContext();
         Constants.initDialog(context);
 
+//        setStatusBarColor();
+
         list = new ArrayList<>();
 
         binding.RC.setLayoutManager(new LinearLayoutManager(context));

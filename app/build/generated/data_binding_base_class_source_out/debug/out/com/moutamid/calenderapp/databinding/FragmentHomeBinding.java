@@ -9,11 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.textview.MaterialTextView;
 import com.moutamid.calenderapp.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
@@ -25,51 +22,24 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final RecyclerView RC;
-
-  @NonNull
-  public final RecyclerView calendarRecyclerView;
-
-  @NonNull
-  public final MaterialCardView calenderView;
-
-  @NonNull
   public final TextView greeting;
-
-  @NonNull
-  public final MaterialTextView month;
 
   @NonNull
   public final TextView name;
 
   @NonNull
-  public final LinearLayout noItemLayout;
+  public final LinearLayout newUI;
 
   @NonNull
   public final CircleImageView profileImage;
 
-  @NonNull
-  public final MaterialTextView title;
-
-  @NonNull
-  public final MaterialCardView toolbar;
-
-  private FragmentHomeBinding(@NonNull NestedScrollView rootView, @NonNull RecyclerView RC,
-      @NonNull RecyclerView calendarRecyclerView, @NonNull MaterialCardView calenderView,
-      @NonNull TextView greeting, @NonNull MaterialTextView month, @NonNull TextView name,
-      @NonNull LinearLayout noItemLayout, @NonNull CircleImageView profileImage,
-      @NonNull MaterialTextView title, @NonNull MaterialCardView toolbar) {
+  private FragmentHomeBinding(@NonNull NestedScrollView rootView, @NonNull TextView greeting,
+      @NonNull TextView name, @NonNull LinearLayout newUI, @NonNull CircleImageView profileImage) {
     this.rootView = rootView;
-    this.RC = RC;
-    this.calendarRecyclerView = calendarRecyclerView;
-    this.calenderView = calenderView;
     this.greeting = greeting;
-    this.month = month;
     this.name = name;
-    this.noItemLayout = noItemLayout;
+    this.newUI = newUI;
     this.profileImage = profileImage;
-    this.title = title;
-    this.toolbar = toolbar;
   }
 
   @Override
@@ -99,33 +69,9 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.RC;
-      RecyclerView RC = ViewBindings.findChildViewById(rootView, id);
-      if (RC == null) {
-        break missingId;
-      }
-
-      id = R.id.calendarRecyclerView;
-      RecyclerView calendarRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (calendarRecyclerView == null) {
-        break missingId;
-      }
-
-      id = R.id.calenderView;
-      MaterialCardView calenderView = ViewBindings.findChildViewById(rootView, id);
-      if (calenderView == null) {
-        break missingId;
-      }
-
       id = R.id.greeting;
       TextView greeting = ViewBindings.findChildViewById(rootView, id);
       if (greeting == null) {
-        break missingId;
-      }
-
-      id = R.id.month;
-      MaterialTextView month = ViewBindings.findChildViewById(rootView, id);
-      if (month == null) {
         break missingId;
       }
 
@@ -135,9 +81,9 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.noItemLayout;
-      LinearLayout noItemLayout = ViewBindings.findChildViewById(rootView, id);
-      if (noItemLayout == null) {
+      id = R.id.newUI;
+      LinearLayout newUI = ViewBindings.findChildViewById(rootView, id);
+      if (newUI == null) {
         break missingId;
       }
 
@@ -147,20 +93,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.title;
-      MaterialTextView title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
-        break missingId;
-      }
-
-      id = R.id.toolbar;
-      MaterialCardView toolbar = ViewBindings.findChildViewById(rootView, id);
-      if (toolbar == null) {
-        break missingId;
-      }
-
-      return new FragmentHomeBinding((NestedScrollView) rootView, RC, calendarRecyclerView,
-          calenderView, greeting, month, name, noItemLayout, profileImage, title, toolbar);
+      return new FragmentHomeBinding((NestedScrollView) rootView, greeting, name, newUI,
+          profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

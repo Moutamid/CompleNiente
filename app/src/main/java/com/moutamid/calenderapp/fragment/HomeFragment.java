@@ -54,12 +54,14 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(getLayoutInflater(), container, false);
         context = binding.getRoot().getContext();
 
+//        setStatusBarTranslucent();
+
         Constants.initDialog(context);
 
         binding.greeting.setText(Constants.greetingMessage());
 
         String d = new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.getDefault()).format(new Date());
-        binding.month.setText(d);
+//        binding.month.setText(d);
 
         taskList = new ArrayList<>();
         calendarTaskList = new ArrayList<>();
@@ -71,20 +73,20 @@ public class HomeFragment extends Fragment {
         } else {
             binding.name.setText(user.getName());
             Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
-            Constants.showDialog();
-            getThisMonthTasks();
-            getSendRequests();
+//            Constants.showDialog();
+//            getThisMonthTasks();
+//            getSendRequests();
         }
 
-        GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
-        binding.calendarRecyclerView.setLayoutManager(layoutManager);
-
-        binding.RC.setLayoutManager(new LinearLayoutManager(context));
-        binding.RC.setHasFixedSize(false);
+//        GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
+//        binding.calendarRecyclerView.setLayoutManager(layoutManager);
+//
+//        binding.RC.setLayoutManager(new LinearLayoutManager(context));
+//        binding.RC.setHasFixedSize(false);
 
         return binding.getRoot();
     }
-
+/*
     private void getThisMonthTasks() {
         Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
@@ -224,6 +226,8 @@ public class HomeFragment extends Fragment {
         }
     };
 
+ */
+
     private void getUserDetails() {
         Constants.showDialog();
         Constants.databaseReference().child(Constants.USER).child(Constants.auth().getCurrentUser().getUid())
@@ -238,10 +242,11 @@ public class HomeFragment extends Fragment {
                         Constants.createSnackbar(context, binding.getRoot(), "User data not found");
                     }
                     Constants.dismissDialog();
-                    getThisMonthTasks();
+//                    getThisMonthTasks();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
                     Constants.createSnackbar(context, binding.getRoot(), e.getLocalizedMessage(), "Dismiss");
                 });
     }
+
 }

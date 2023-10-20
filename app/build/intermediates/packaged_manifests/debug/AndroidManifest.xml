@@ -51,6 +51,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.CalenderApp" >
         <activity
+            android:name="com.moutamid.calenderapp.activities.NewEventActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.moutamid.calenderapp.activities.EmailVerifyActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentTheme" />
+        <activity
             android:name="com.moutamid.calenderapp.activities.ChatActivity"
             android:exported="false" />
         <activity
@@ -67,7 +74,8 @@
             android:exported="false" />
         <activity
             android:name="com.moutamid.calenderapp.activities.WelcomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/TranslucentTheme" />
         <activity
             android:name="com.moutamid.calenderapp.activities.SignUpActivity"
             android:exported="false" />
@@ -148,20 +156,15 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service>
-
-        <!-- <provider -->
+        </service> <!-- <provider -->
         <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
         <!-- android:authorities=".firebaseinitprovider" -->
         <!-- android:directBootAware="true" -->
         <!-- android:exported="false" -->
         <!-- android:initOrder="100" /> -->
-
-
         <!-- <provider -->
         <!-- android:authorities="com.moutamid.pushnotifications." -->
         <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

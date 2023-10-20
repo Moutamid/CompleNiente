@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="black">#222222</color>
+    <color name="black_trans">#59212121</color>
     <color name="dark_text">#6B6E71</color>
     <color name="green">#2AB28C</color>
     <color name="greenDark">#148863</color>
@@ -57,4 +58,14 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
     <style name="Theme.CalenderApp" parent="Base.Theme.CalenderApp"/>
+    <style name="TranslucentTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 </resources>

@@ -1380,6 +1380,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color black_trans
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3062,8 +3063,10 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ellipse_1
 drawable email_alt
 drawable et_bg
+drawable event
 drawable forward
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -3165,10 +3168,13 @@ drawable password
 drawable person
 drawable play_circle
 drawable profile_icon
+drawable rectangle_1
 drawable round_add_24
 drawable round_delete_24
 drawable round_edit_24
+drawable round_person_24
 drawable round_privacy
+drawable round_refresh_24
 drawable round_search_24
 drawable round_settings_24
 drawable send
@@ -3198,6 +3204,7 @@ drawable ucrop_vector_loader
 drawable ucrop_vector_loader_animated
 drawable ucrop_wrapper_controls_shape
 drawable user_pen_solid
+drawable year_rafiki
 font baloo
 font poppins
 id ALT
@@ -3276,6 +3283,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addtext
 id adjust_height
 id adjust_width
 id age
@@ -3319,9 +3327,8 @@ id btnCancel
 id btnLayout
 id btnRemoveImage
 id buttonPanel
+id buttons
 id cache_measures
-id calendarRecyclerView
-id calenderView
 id callMeasure
 id cancel_button
 id card
@@ -3367,6 +3374,7 @@ id cut
 id dark
 id dashes
 id date
+id datePicker
 id dateTextView
 id date_picker_actions
 id day
@@ -3401,12 +3409,13 @@ id dragRight
 id dragStart
 id dragUp
 id dropdown_menu
+id eImage
 id easeIn
 id easeInOut
 id easeOut
 id east
 id edge
-id editProfile
+id edit
 id edit_query
 id elastic
 id email
@@ -3416,6 +3425,9 @@ id endReject
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id eventCount
+id eventImage
+id eventsRC
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3438,6 +3450,8 @@ id forever
 id forgot
 id fragment_container_view_tag
 id frameLayout
+id friendCount
+id friendName
 id frost
 id fullscreen_header
 id ghost_view
@@ -3457,6 +3471,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hour
 id icon
 id icon_group
 id icon_only
@@ -3496,6 +3511,7 @@ id line3
 id linear
 id listMode
 id list_item
+id location
 id login
 id logout
 id lytCameraPick
@@ -3531,6 +3547,7 @@ id menu_loader
 id message
 id middle
 id mini
+id minute
 id month
 id month_grid
 id month_navigation_bar
@@ -3578,6 +3595,8 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id newEvent
+id newUI
 id noChatLayout
 id noItemLayout
 id noScroll
@@ -3613,6 +3632,7 @@ id postLayout
 id pressed
 id privacy
 id profileImage
+id profile_icon
 id progressBar
 id progressLayout
 id progressText
@@ -3783,6 +3803,7 @@ id uploadVideo
 id useLogo
 id userID
 id username
+id verify
 id vertical_only
 id video
 id videoView
@@ -3927,9 +3948,11 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_task
 layout activity_chat
+layout activity_email_verify
 layout activity_forgot
 layout activity_login
 layout activity_main
+layout activity_new_event
 layout activity_profile_edit
 layout activity_select_user
 layout activity_sign_up
@@ -3959,10 +3982,11 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
+layout event_profile_card
 layout fragment_chat
 layout fragment_home
 layout fragment_list
-layout fragment_settings
+layout fragment_profile
 layout full_preview
 layout image_layout
 layout loading_dialog
@@ -4992,6 +5016,7 @@ style ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText
 style ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style TranslucentTheme
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar

@@ -35,6 +35,9 @@ public class ListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentListBinding.inflate(getLayoutInflater(), container, false);
+
+//        setStatusBarColor();
+
         context = binding.getRoot().getContext();
         taskList = new ArrayList<>();
         binding.RC.setLayoutManager(new LinearLayoutManager(context));

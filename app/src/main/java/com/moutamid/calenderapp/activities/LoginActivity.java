@@ -7,6 +7,7 @@ import android.util.Patterns;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.moutamid.calenderapp.MainActivity;
+import com.moutamid.calenderapp.SplashScreenActivity;
 import com.moutamid.calenderapp.databinding.ActivityLoginBinding;
 import com.moutamid.calenderapp.utilis.Constants;
 
@@ -40,8 +41,13 @@ public class LoginActivity extends AppCompatActivity {
                 )
                 .addOnSuccessListener(authResult -> {
                     Constants.dismissDialog();
-                    startActivity(new Intent(this, MainActivity.class));
-                    finish();
+                    if (Constants.auth().getCurrentUser().isEmailVerified()) {
+                        startActivity(new Intent(this, MainActivity.class));
+                        finish();
+                    } else {
+                        startActivity(new Intent(this, EmailVerifyActivity.class).putExtra("fromSplash", false));
+                        finish();
+                    }
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
                     Constants.createSnackbar(this, binding.getRoot(), e.getLocalizedMessage());

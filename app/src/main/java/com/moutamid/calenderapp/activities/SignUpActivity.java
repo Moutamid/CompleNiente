@@ -112,7 +112,9 @@ public class SignUpActivity extends AppCompatActivity {
                             .setValue(userModel)
                             .addOnSuccessListener(unused -> {
                                 Constants.dismissDialog();
-                                startActivity(new Intent(this, MainActivity.class));
+                                Intent intent = new Intent(this, EmailVerifyActivity.class);
+                                intent.putExtra("fromSplash", false);
+                                startActivity(intent);
                                 finish();
                             }).addOnFailureListener(e -> {
                                 Constants.dismissDialog();

@@ -21,6 +21,16 @@
 
     <style name="Theme.CalenderApp" parent="Base.Theme.CalenderApp" />
 
+    <style name="TranslucentTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 
     <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
 <!--        <item name="android:windowBackground">@drawable/splash_background</item>-->
@@ -29,6 +39,13 @@
         <item name="colorAccent">@color/grey</item>
         <item name="android:statusBarColor">@color/grey</item>
         <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+
+    <style name="Theme.ChipsColor" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="checkedIconTint">@color/chip_text_color</item>
     </style>
 
 </resources>

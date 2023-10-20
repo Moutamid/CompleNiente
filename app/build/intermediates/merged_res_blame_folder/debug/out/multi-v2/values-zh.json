@@ -4,7 +4,7 @@
             "outputFile": "com.moutamid.calenderapp-mergeDebugResources-40:/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sunny\\.gradle\\caches\\transforms-3\\e66caa6b5f2733bd463929110a52bb40\\transformed\\jetified-ucrop-2.2.6\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\sunny\\.gradle\\caches\\transforms-3\\b025aaaf8c4df954ecea1d439cf0e2c5\\transformed\\jetified-ucrop-2.2.6\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

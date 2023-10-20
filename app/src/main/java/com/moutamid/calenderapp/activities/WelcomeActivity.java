@@ -1,8 +1,10 @@
 package com.moutamid.calenderapp.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,28 +20,15 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         Constants.checkApp(this);
 
+        Window window = getWindow();
+        window.setStatusBarColor(Color.TRANSPARENT);
+
         binding.explore.setOnClickListener(v -> {
-          //  startActivity(new Intent(this, MainActivity.class));
-            if (valid()) {
-                startActivity(new Intent(this, SignUpActivity.class).putExtra("email", binding.email.getEditText().getText().toString()));
-            }
+            startActivity(new Intent(this, SignUpActivity.class));
         });
 
         binding.login.setOnClickListener(v -> startActivity(new Intent(this, LoginActivity.class)));
 
     }
 
-    private boolean valid() {
-        if (binding.email.getEditText().getText().toString().isEmpty()){
-            binding.email.setErrorEnabled(true);
-            binding.email.setError("Email is Empty");
-            return false;
-        }
-        if (!Patterns.EMAIL_ADDRESS.matcher(binding.email.getEditText().getText().toString()).matches()){
-            binding.email.setErrorEnabled(true);
-            binding.email.setError("Email is not valid");
-            return false;
-        }
-        return true;
-    }
 }

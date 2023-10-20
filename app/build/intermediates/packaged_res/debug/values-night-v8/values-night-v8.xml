@@ -18,4 +18,14 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
+    <style name="TranslucentTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 </resources>

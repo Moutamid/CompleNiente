@@ -4,14 +4,13 @@ package com.moutamid.calenderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputLayout;
 import com.moutamid.calenderapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -22,7 +21,7 @@ public final class ActivityWelcomeBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextInputLayout email;
+  public final LinearLayout buttons;
 
   @NonNull
   public final MaterialButton explore;
@@ -33,18 +32,14 @@ public final class ActivityWelcomeBinding implements ViewBinding {
   @NonNull
   public final RelativeLayout root;
 
-  @NonNull
-  public final TextView text;
-
-  private ActivityWelcomeBinding(@NonNull RelativeLayout rootView, @NonNull TextInputLayout email,
-      @NonNull MaterialButton explore, @NonNull MaterialButton login, @NonNull RelativeLayout root,
-      @NonNull TextView text) {
+  private ActivityWelcomeBinding(@NonNull RelativeLayout rootView, @NonNull LinearLayout buttons,
+      @NonNull MaterialButton explore, @NonNull MaterialButton login,
+      @NonNull RelativeLayout root) {
     this.rootView = rootView;
-    this.email = email;
+    this.buttons = buttons;
     this.explore = explore;
     this.login = login;
     this.root = root;
-    this.text = text;
   }
 
   @Override
@@ -74,9 +69,9 @@ public final class ActivityWelcomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.email;
-      TextInputLayout email = ViewBindings.findChildViewById(rootView, id);
-      if (email == null) {
+      id = R.id.buttons;
+      LinearLayout buttons = ViewBindings.findChildViewById(rootView, id);
+      if (buttons == null) {
         break missingId;
       }
 
@@ -94,14 +89,7 @@ public final class ActivityWelcomeBinding implements ViewBinding {
 
       RelativeLayout root = (RelativeLayout) rootView;
 
-      id = R.id.text;
-      TextView text = ViewBindings.findChildViewById(rootView, id);
-      if (text == null) {
-        break missingId;
-      }
-
-      return new ActivityWelcomeBinding((RelativeLayout) rootView, email, explore, login, root,
-          text);
+      return new ActivityWelcomeBinding((RelativeLayout) rootView, buttons, explore, login, root);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
