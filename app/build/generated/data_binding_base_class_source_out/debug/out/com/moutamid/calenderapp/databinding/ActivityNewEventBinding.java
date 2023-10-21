@@ -14,11 +14,13 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputLayout;
 import com.moutamid.calenderapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
+import noman.weekcalendar.WeekCalendar;
 
 public final class ActivityNewEventBinding implements ViewBinding {
   @NonNull
@@ -49,7 +51,19 @@ public final class ActivityNewEventBinding implements ViewBinding {
   public final TextView minute;
 
   @NonNull
+  public final TextView month;
+
+  @NonNull
   public final TextInputLayout name;
+
+  @NonNull
+  public final MaterialCardView next;
+
+  @NonNull
+  public final MaterialCardView prev;
+
+  @NonNull
+  public final ChipGroup queenSourceChipGroup;
 
   @NonNull
   public final MaterialButton start;
@@ -57,11 +71,19 @@ public final class ActivityNewEventBinding implements ViewBinding {
   @NonNull
   public final ToolbarBinding toolbar;
 
+  @NonNull
+  public final WeekCalendar weekCalendar;
+
+  @NonNull
+  public final TextView zone;
+
   private ActivityNewEventBinding(@NonNull RelativeLayout rootView, @NonNull LinearLayout addtext,
       @NonNull MaterialCardView datePicker, @NonNull ImageView eImage,
       @NonNull MaterialCardView eventImage, @NonNull TextView friendName, @NonNull TextView hour,
-      @NonNull TextInputLayout location, @NonNull TextView minute, @NonNull TextInputLayout name,
-      @NonNull MaterialButton start, @NonNull ToolbarBinding toolbar) {
+      @NonNull TextInputLayout location, @NonNull TextView minute, @NonNull TextView month,
+      @NonNull TextInputLayout name, @NonNull MaterialCardView next, @NonNull MaterialCardView prev,
+      @NonNull ChipGroup queenSourceChipGroup, @NonNull MaterialButton start,
+      @NonNull ToolbarBinding toolbar, @NonNull WeekCalendar weekCalendar, @NonNull TextView zone) {
     this.rootView = rootView;
     this.addtext = addtext;
     this.datePicker = datePicker;
@@ -71,9 +93,15 @@ public final class ActivityNewEventBinding implements ViewBinding {
     this.hour = hour;
     this.location = location;
     this.minute = minute;
+    this.month = month;
     this.name = name;
+    this.next = next;
+    this.prev = prev;
+    this.queenSourceChipGroup = queenSourceChipGroup;
     this.start = start;
     this.toolbar = toolbar;
+    this.weekCalendar = weekCalendar;
+    this.zone = zone;
   }
 
   @Override
@@ -151,9 +179,33 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.month;
+      TextView month = ViewBindings.findChildViewById(rootView, id);
+      if (month == null) {
+        break missingId;
+      }
+
       id = R.id.name;
       TextInputLayout name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
+        break missingId;
+      }
+
+      id = R.id.next;
+      MaterialCardView next = ViewBindings.findChildViewById(rootView, id);
+      if (next == null) {
+        break missingId;
+      }
+
+      id = R.id.prev;
+      MaterialCardView prev = ViewBindings.findChildViewById(rootView, id);
+      if (prev == null) {
+        break missingId;
+      }
+
+      id = R.id.queenSourceChipGroup;
+      ChipGroup queenSourceChipGroup = ViewBindings.findChildViewById(rootView, id);
+      if (queenSourceChipGroup == null) {
         break missingId;
       }
 
@@ -170,8 +222,21 @@ public final class ActivityNewEventBinding implements ViewBinding {
       }
       ToolbarBinding binding_toolbar = ToolbarBinding.bind(toolbar);
 
+      id = R.id.weekCalendar;
+      WeekCalendar weekCalendar = ViewBindings.findChildViewById(rootView, id);
+      if (weekCalendar == null) {
+        break missingId;
+      }
+
+      id = R.id.zone;
+      TextView zone = ViewBindings.findChildViewById(rootView, id);
+      if (zone == null) {
+        break missingId;
+      }
+
       return new ActivityNewEventBinding((RelativeLayout) rootView, addtext, datePicker, eImage,
-          eventImage, friendName, hour, location, minute, name, start, binding_toolbar);
+          eventImage, friendName, hour, location, minute, month, name, next, prev,
+          queenSourceChipGroup, start, binding_toolbar, weekCalendar, zone);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

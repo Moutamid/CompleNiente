@@ -58,6 +58,11 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
     <style name="Theme.CalenderApp" parent="Base.Theme.CalenderApp"/>
+    <style name="Theme.ChipsColor" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="checkedIconTint">@color/chip_text_color</item>
+    </style>
     <style name="TranslucentTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryVariant">@color/orange</item>

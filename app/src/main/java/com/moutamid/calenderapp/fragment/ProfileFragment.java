@@ -16,6 +16,7 @@ import com.fxn.stash.Stash;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.SplashScreenActivity;
 import com.moutamid.calenderapp.activities.ProfileEditActivity;
+import com.moutamid.calenderapp.activities.SelectUserActivity;
 import com.moutamid.calenderapp.databinding.FragmentProfileBinding;
 import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;
@@ -40,6 +41,7 @@ public class ProfileFragment extends Fragment {
         binding.name.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
         binding.profileImage.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
         binding.edit.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
+        binding.newEvent.setOnClickListener(v -> startActivity(new Intent(context, SelectUserActivity.class)));
 
         binding.logout.setOnClickListener(v -> {
             new AlertDialog.Builder(context)

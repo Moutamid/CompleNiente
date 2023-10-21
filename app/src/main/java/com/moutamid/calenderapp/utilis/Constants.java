@@ -39,6 +39,7 @@ public class Constants {
     static Dialog dialog;
     public static final String DATE_FORMAT = "dd/MM/yyyy";
     public static final String KEY = "KEY";
+    public static final String EventsPics = "EventsPics";
     public static final String MONTH_FORMAT = "MMMM";
     public static final String MONTH_YEAR= "MM-yyyy";
     public static final String REQUESTS = "REQUESTS";
@@ -56,9 +57,21 @@ public class Constants {
     public static String getFormattedDate(long date){
         return new SimpleDateFormat(DATE_FORMAT, Locale.getDefault()).format(date);
     }
+    public static String getFormattedTime(long date){
+        return new SimpleDateFormat("hh:mm", Locale.getDefault()).format(date);
+    }
 
     public static String getDays(Date date) {
         return new SimpleDateFormat("d", Locale.getDefault()).format(date);
+    }
+    public static String getHours(long date) {
+        return new SimpleDateFormat("hh", Locale.getDefault()).format(date);
+    }
+    public static String getMinutes(long date) {
+        return new SimpleDateFormat("mm", Locale.getDefault()).format(date);
+    }
+    public static String getZone(long date) {
+        return new SimpleDateFormat("aa", Locale.getDefault()).format(date);
     }
     public static String CurrentMonth() {
         return new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.US).format(new Date());

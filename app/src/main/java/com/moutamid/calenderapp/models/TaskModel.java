@@ -1,11 +1,11 @@
 package com.moutamid.calenderapp.models;
 
 public class TaskModel {
-    String ID, name, description;
-    String userID, username, userHandle, userImage;
+    String ID, name, description, location;
+    String userID, username, userHandle, userImage, taskImage, recurrence;
     CalendarDate date;
     boolean isEnded;
-
+    long startTime;
     // YES (YES) , REJ (REJECTED), PEN (PENDING)
     String isAccepted;
 
@@ -25,6 +25,14 @@ public class TaskModel {
         this.isAccepted = isAccepted;
     }
 
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(long startTime) {
+        this.startTime = startTime;
+    }
+
     public String getUserHandle() {
         return userHandle;
     }
@@ -33,7 +41,37 @@ public class TaskModel {
         this.userHandle = userHandle;
     }
 
+    public String getLocation() {
+        return location;
+    }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getTaskImage() {
+        return taskImage;
+    }
+
+    public void setTaskImage(String taskImage) {
+        this.taskImage = taskImage;
+    }
+
+    public String getRecurrence() {
+        return recurrence;
+    }
+
+    public void setRecurrence(String recurrence) {
+        this.recurrence = recurrence;
+    }
+
+    public String getIsAccepted() {
+        return isAccepted;
+    }
+
+    public void setIsAccepted(String isAccepted) {
+        this.isAccepted = isAccepted;
+    }
 
     public String isAccepted() {
         return isAccepted;

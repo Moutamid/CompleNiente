@@ -20,6 +20,10 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_activity_new_event.xml.flat",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\activity_new_event.xml"
+    },
+    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_full_preview.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\full_preview.xml"
     },
@@ -52,6 +56,10 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\task_request_card.xml"
     },
     {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\color_chip_text_color.xml.flat",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\color\\chip_text_color.xml"
+    },
+    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_email_alt.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\email_alt.xml"
     },
@@ -68,12 +76,12 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\round_edit_24.xml"
     },
     {
-        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_arrow_back.xml.flat",
-        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\arrow_back.xml"
-    },
-    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_event.png.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\event.png"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_arrow_back.xml.flat",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\arrow_back.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -112,12 +120,12 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\fragment_chat.xml"
     },
     {
-        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
-    },
-    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_ellipse_1.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\ellipse_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -144,16 +152,16 @@
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\image_layout.xml"
     },
     {
-        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_fragment_settings.xml.flat",
-        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\fragment_settings.xml"
-    },
-    {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_oval.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\oval.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\drawable_no_entry.xml.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\drawable\\no_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_calander_week.xml.flat",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\layout\\calander_week.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_bs_image_menu.xml.flat",
@@ -190,6 +198,10 @@
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\color_chip_background_color.xml.flat",
+        "source": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-main-44:\\color\\chip_background_color.xml"
     },
     {
         "merged": "C:\\Users\\sunny\\.gradle\\daemon\\8.0\\com.moutamid.calenderapp-merged_res-42:\\layout_calendar_item.xml.flat",

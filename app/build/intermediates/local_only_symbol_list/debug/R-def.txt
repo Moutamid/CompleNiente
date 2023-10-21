@@ -2,6 +2,8 @@ R_DEF: Internal format may change without notice
 local
 color black
 color black_trans
+color chip_background_color
+color chip_text_color
 color dark_text
 color green
 color greenDark
@@ -93,6 +95,9 @@ id endReject
 id eventCount
 id eventImage
 id eventsRC
+id exSevenDateText
+id exSevenDayText
+id exSevenSelectedView
 id explore
 id forgot
 id frameLayout
@@ -118,15 +123,18 @@ id nav_list
 id nav_setting
 id newEvent
 id newUI
+id next
 id noChatLayout
 id noItemLayout
 id password
+id prev
 id privacy
 id profileImage
 id profile_icon
 id progressBar
 id progressLayout
 id progressText
+id queenSourceChipGroup
 id reset
 id root
 id search
@@ -149,7 +157,9 @@ id username
 id verify
 id video
 id videoView
+id weekCalendar
 id year
+id zone
 layout activity_add_task
 layout activity_chat
 layout activity_email_verify
@@ -163,6 +173,7 @@ layout activity_sign_up
 layout activity_splash_screen
 layout activity_welcome
 layout bs_image_menu
+layout calander_week
 layout calendar_item
 layout chat_item_card
 layout chat_row_left
@@ -201,6 +212,7 @@ string terms_and_condition
 style Base.Theme.CalenderApp
 style SplashTheme
 style Theme.CalenderApp
+style Theme.ChipsColor
 style TranslucentTheme
 xml backup_rules
 xml data_extraction_rules

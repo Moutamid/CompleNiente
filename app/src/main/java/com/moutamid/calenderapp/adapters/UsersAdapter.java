@@ -3,6 +3,7 @@ package com.moutamid.calenderapp.adapters;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.activities.NewEventActivity;
 import com.moutamid.calenderapp.activities.SelectUserActivity;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.TaskModel;
@@ -83,52 +85,12 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
         }
 
         holder.start.setOnClickListener(v -> {
-            Constants.initDialog(context);
-            Constants.showDialog();
-            calendarTaskList = new ArrayList<>();
+//            Constants.initDialog(context);
+//            Constants.showDialog();
+//            calendarTaskList = new ArrayList<>();
 
-            Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getID())
-                    .get().addOnSuccessListener(snapshot -> {
-                        Constants.dismissDialog();
-                        if (snapshot.exists()) {
-                            calendarTaskList.clear();
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                if (!taskModel.isEnded()){
-                                    calendarTaskList.add(taskModel);
-                                }
-                            }
-                            CalendarDate date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
-                            if (calendarTaskList.size()>0) {
-                                boolean isSelected = false;
-                                for (TaskModel taskModel : calendarTaskList) {
-                                    String dayMonth = "ddMM";
-                                    String listDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(taskModel.getDate().getDate());
-                                    String calenderDate = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(date.getDate());
-                                    if (listDate.equals(calenderDate)){
-                                        isSelected = taskModel.getDate().isSelected();
-                                        break;
-                                    }
-                                }
-
-                                if (isSelected) {
-                                    Toast.makeText(context, "User is not available for today", Toast.LENGTH_SHORT).show();
-                                }else {
-                                    showTaskRequestDialog(model);
-                                }
-
-                            } else {
-                                showTaskRequestDialog(model);
-                            }
-
-                        } else {
-                            showTaskRequestDialog(model);
-                        }
-                    })
-                    .addOnFailureListener(e -> {
-                        Constants.dismissDialog();
-                        Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    });
+            Stash.put("PassUser", model);
+            context.startActivity(new Intent(context, NewEventActivity.class));
         });
 
     }

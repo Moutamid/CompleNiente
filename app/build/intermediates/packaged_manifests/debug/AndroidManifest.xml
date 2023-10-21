@@ -139,6 +139,9 @@
                 android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
@@ -151,10 +154,13 @@
                 android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service> <!-- <provider -->
         <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
@@ -240,6 +246,14 @@
                     android:scheme="recaptcha" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.moutamid.calenderapp.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -261,12 +275,6 @@
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.moutamid.calenderapp.firebaseinitprovider"
-            android:directBootAware="true"
-            android:exported="false"
-            android:initOrder="100" />
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.moutamid.calenderapp.androidx-startup"

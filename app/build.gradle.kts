@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.moutamid.calenderapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.moutamid.calenderapp"
@@ -37,7 +37,7 @@ android {
 
 dependencies {
     // Calender Library
-    implementation("com.github.sundeepk:compact-calendar-view:3.0.0")
+    implementation("noman.weekcalendar:weekcalendar:1.0.6")
     // Shared Preference Library
     implementation("com.fxn769:stash:1.3.2")
     // Image Libraries
@@ -47,10 +47,10 @@ dependencies {
     implementation("com.github.dhaval2404:imagepicker:2.1")
 
     // Firebase
-    implementation("com.google.firebase:firebase-auth:22.1.1")
-    implementation("com.google.firebase:firebase-database:20.2.2")
+    implementation("com.google.firebase:firebase-auth:22.1.2")
+    implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.google.firebase:firebase-storage:20.2.1")
-    implementation("com.google.firebase:firebase-crashlytics:18.4.1")
+    implementation("com.google.firebase:firebase-crashlytics:18.4.3")
     implementation("com.google.firebase:firebase-analytics:21.3.0")
     implementation("com.google.firebase:firebase-messaging:23.2.1")
 

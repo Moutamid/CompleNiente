@@ -28,7 +28,7 @@ import java.util.Locale;
 public class SelectUserActivity extends AppCompatActivity {
     ActivitySelectUserBinding binding;
     ArrayList<UserModel> list;
-    CalendarDate date;
+//    CalendarDate date;
     UsersAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class SelectUserActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
 
-        date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
+//        date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
 
         binding.search.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
