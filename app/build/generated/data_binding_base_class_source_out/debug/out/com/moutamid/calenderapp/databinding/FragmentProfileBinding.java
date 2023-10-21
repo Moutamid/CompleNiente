@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -45,6 +46,9 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final MaterialButton newEvent;
 
   @NonNull
+  public final LinearLayout noItemLayout;
+
+  @NonNull
   public final MaterialButton privacy;
 
   @NonNull
@@ -59,8 +63,9 @@ public final class FragmentProfileBinding implements ViewBinding {
   private FragmentProfileBinding(@NonNull RelativeLayout rootView, @NonNull MaterialButton edit,
       @NonNull TextView eventCount, @NonNull RecyclerView eventsRC, @NonNull TextView friendCount,
       @NonNull MaterialButton logout, @NonNull TextView name, @NonNull MaterialButton newEvent,
-      @NonNull MaterialButton privacy, @NonNull ImageView profileIcon,
-      @NonNull MaterialCardView profileImage, @NonNull MaterialButton terms) {
+      @NonNull LinearLayout noItemLayout, @NonNull MaterialButton privacy,
+      @NonNull ImageView profileIcon, @NonNull MaterialCardView profileImage,
+      @NonNull MaterialButton terms) {
     this.rootView = rootView;
     this.edit = edit;
     this.eventCount = eventCount;
@@ -69,6 +74,7 @@ public final class FragmentProfileBinding implements ViewBinding {
     this.logout = logout;
     this.name = name;
     this.newEvent = newEvent;
+    this.noItemLayout = noItemLayout;
     this.privacy = privacy;
     this.profileIcon = profileIcon;
     this.profileImage = profileImage;
@@ -144,6 +150,12 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.noItemLayout;
+      LinearLayout noItemLayout = ViewBindings.findChildViewById(rootView, id);
+      if (noItemLayout == null) {
+        break missingId;
+      }
+
       id = R.id.privacy;
       MaterialButton privacy = ViewBindings.findChildViewById(rootView, id);
       if (privacy == null) {
@@ -169,7 +181,8 @@ public final class FragmentProfileBinding implements ViewBinding {
       }
 
       return new FragmentProfileBinding((RelativeLayout) rootView, edit, eventCount, eventsRC,
-          friendCount, logout, name, newEvent, privacy, profileIcon, profileImage, terms);
+          friendCount, logout, name, newEvent, noItemLayout, privacy, profileIcon, profileImage,
+          terms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

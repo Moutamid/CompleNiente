@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -42,6 +43,9 @@ public final class ActivityUserProfileBinding implements ViewBinding {
   public final TextView name;
 
   @NonNull
+  public final LinearLayout noItemLayout;
+
+  @NonNull
   public final ImageView profileIcon;
 
   @NonNull
@@ -52,8 +56,9 @@ public final class ActivityUserProfileBinding implements ViewBinding {
 
   private ActivityUserProfileBinding(@NonNull RelativeLayout rootView, @NonNull TextView eventCount,
       @NonNull RecyclerView eventsRC, @NonNull TextView friendCount, @NonNull MaterialButton invite,
-      @NonNull MaterialButton message, @NonNull TextView name, @NonNull ImageView profileIcon,
-      @NonNull MaterialCardView profileImage, @NonNull ToolbarBinding toolbar) {
+      @NonNull MaterialButton message, @NonNull TextView name, @NonNull LinearLayout noItemLayout,
+      @NonNull ImageView profileIcon, @NonNull MaterialCardView profileImage,
+      @NonNull ToolbarBinding toolbar) {
     this.rootView = rootView;
     this.eventCount = eventCount;
     this.eventsRC = eventsRC;
@@ -61,6 +66,7 @@ public final class ActivityUserProfileBinding implements ViewBinding {
     this.invite = invite;
     this.message = message;
     this.name = name;
+    this.noItemLayout = noItemLayout;
     this.profileIcon = profileIcon;
     this.profileImage = profileImage;
     this.toolbar = toolbar;
@@ -129,6 +135,12 @@ public final class ActivityUserProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.noItemLayout;
+      LinearLayout noItemLayout = ViewBindings.findChildViewById(rootView, id);
+      if (noItemLayout == null) {
+        break missingId;
+      }
+
       id = R.id.profile_icon;
       ImageView profileIcon = ViewBindings.findChildViewById(rootView, id);
       if (profileIcon == null) {
@@ -149,7 +161,8 @@ public final class ActivityUserProfileBinding implements ViewBinding {
       ToolbarBinding binding_toolbar = ToolbarBinding.bind(toolbar);
 
       return new ActivityUserProfileBinding((RelativeLayout) rootView, eventCount, eventsRC,
-          friendCount, invite, message, name, profileIcon, profileImage, binding_toolbar);
+          friendCount, invite, message, name, noItemLayout, profileIcon, profileImage,
+          binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -10,12 +10,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 import com.google.firebase.database.DataSnapshot;
+import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.databinding.ActivityNewEventBinding;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.MonthType;
@@ -53,6 +55,7 @@ public class NewEventActivity extends AppCompatActivity {
         userModel = (UserModel) Stash.getObject("PassUser", UserModel.class);
 
         binding.friendName.setText(userModel.getName());
+        Glide.with(this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
 
         binding.toolbar.title.setText("Create Event");
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());

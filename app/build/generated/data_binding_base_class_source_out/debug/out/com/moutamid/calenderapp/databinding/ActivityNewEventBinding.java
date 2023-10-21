@@ -17,6 +17,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputLayout;
 import com.moutamid.calenderapp.R;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -63,6 +64,9 @@ public final class ActivityNewEventBinding implements ViewBinding {
   public final MaterialCardView prev;
 
   @NonNull
+  public final CircleImageView profileImage;
+
+  @NonNull
   public final ChipGroup queenSourceChipGroup;
 
   @NonNull
@@ -82,8 +86,9 @@ public final class ActivityNewEventBinding implements ViewBinding {
       @NonNull MaterialCardView eventImage, @NonNull TextView friendName, @NonNull TextView hour,
       @NonNull TextInputLayout location, @NonNull TextView minute, @NonNull TextView month,
       @NonNull TextInputLayout name, @NonNull MaterialCardView next, @NonNull MaterialCardView prev,
-      @NonNull ChipGroup queenSourceChipGroup, @NonNull MaterialButton start,
-      @NonNull ToolbarBinding toolbar, @NonNull WeekCalendar weekCalendar, @NonNull TextView zone) {
+      @NonNull CircleImageView profileImage, @NonNull ChipGroup queenSourceChipGroup,
+      @NonNull MaterialButton start, @NonNull ToolbarBinding toolbar,
+      @NonNull WeekCalendar weekCalendar, @NonNull TextView zone) {
     this.rootView = rootView;
     this.addtext = addtext;
     this.datePicker = datePicker;
@@ -97,6 +102,7 @@ public final class ActivityNewEventBinding implements ViewBinding {
     this.name = name;
     this.next = next;
     this.prev = prev;
+    this.profileImage = profileImage;
     this.queenSourceChipGroup = queenSourceChipGroup;
     this.start = start;
     this.toolbar = toolbar;
@@ -203,6 +209,12 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profileImage;
+      CircleImageView profileImage = ViewBindings.findChildViewById(rootView, id);
+      if (profileImage == null) {
+        break missingId;
+      }
+
       id = R.id.queenSourceChipGroup;
       ChipGroup queenSourceChipGroup = ViewBindings.findChildViewById(rootView, id);
       if (queenSourceChipGroup == null) {
@@ -235,7 +247,7 @@ public final class ActivityNewEventBinding implements ViewBinding {
       }
 
       return new ActivityNewEventBinding((RelativeLayout) rootView, addtext, datePicker, eImage,
-          eventImage, friendName, hour, location, minute, month, name, next, prev,
+          eventImage, friendName, hour, location, minute, month, name, next, prev, profileImage,
           queenSourceChipGroup, start, binding_toolbar, weekCalendar, zone);
     }
     String missingId = rootView.getResources().getResourceName(id);
