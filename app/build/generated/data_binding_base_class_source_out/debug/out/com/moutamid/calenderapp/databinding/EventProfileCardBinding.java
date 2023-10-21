@@ -21,19 +21,24 @@ public final class EventProfileCardBinding implements ViewBinding {
   private final MaterialCardView rootView;
 
   @NonNull
-  public final TextView name;
+  public final TextView date;
 
   @NonNull
-  public final ImageView profileIcon;
+  public final ImageView eventImage;
+
+  @NonNull
+  public final TextView name;
 
   @NonNull
   public final MaterialCardView profileImage;
 
-  private EventProfileCardBinding(@NonNull MaterialCardView rootView, @NonNull TextView name,
-      @NonNull ImageView profileIcon, @NonNull MaterialCardView profileImage) {
+  private EventProfileCardBinding(@NonNull MaterialCardView rootView, @NonNull TextView date,
+      @NonNull ImageView eventImage, @NonNull TextView name,
+      @NonNull MaterialCardView profileImage) {
     this.rootView = rootView;
+    this.date = date;
+    this.eventImage = eventImage;
     this.name = name;
-    this.profileIcon = profileIcon;
     this.profileImage = profileImage;
   }
 
@@ -64,21 +69,27 @@ public final class EventProfileCardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.date;
+      TextView date = ViewBindings.findChildViewById(rootView, id);
+      if (date == null) {
+        break missingId;
+      }
+
+      id = R.id.eventImage;
+      ImageView eventImage = ViewBindings.findChildViewById(rootView, id);
+      if (eventImage == null) {
+        break missingId;
+      }
+
       id = R.id.name;
       TextView name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
         break missingId;
       }
 
-      id = R.id.profile_icon;
-      ImageView profileIcon = ViewBindings.findChildViewById(rootView, id);
-      if (profileIcon == null) {
-        break missingId;
-      }
-
       MaterialCardView profileImage = (MaterialCardView) rootView;
 
-      return new EventProfileCardBinding((MaterialCardView) rootView, name, profileIcon,
+      return new EventProfileCardBinding((MaterialCardView) rootView, date, eventImage, name,
           profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);

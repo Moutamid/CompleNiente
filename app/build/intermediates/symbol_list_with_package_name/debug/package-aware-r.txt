@@ -3499,6 +3499,7 @@ id included
 id indeterminate
 id info
 id invisible
+id invite
 id inward
 id italic
 id item_touch_helper_previous_elevation
@@ -3970,6 +3971,7 @@ layout activity_profile_edit
 layout activity_select_user
 layout activity_sign_up
 layout activity_splash_screen
+layout activity_user_profile
 layout activity_welcome
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

@@ -65,7 +65,7 @@ public class NewEventActivity extends AppCompatActivity {
         binding.zone.setText(Constants.getZone(reminder));
 
         Date d = new Date(milies);
-        date = new CalendarDate(d, true, true, getMonthType());
+        date = new CalendarDate(d, false, true, getMonthType());
 
         String month = new SimpleDateFormat("MMMM dd", Locale.getDefault()).format(milies);
         binding.month.setText(month);
@@ -129,18 +129,14 @@ public class NewEventActivity extends AppCompatActivity {
             binding.weekCalendar.moveToPrevious();
         });
 
-        binding.weekCalendar.setOnDateClickListener(new OnDateClickListener() {
-            @Override
-            public void onDateClick(DateTime dateTime) {
-                milies = dateTime.getMillis();
-                String month = new SimpleDateFormat("MMMM dd", Locale.getDefault()).format(milies);
-                String cc = new SimpleDateFormat("MMMM dd", Locale.getDefault()).format(new Date());
-                binding.month.setText(month);
-                Date d = new Date(milies);
-                boolean isToday = month.equals(cc);
-                date = new CalendarDate(d, true, isToday, getMonthType());
-            }
-
+        binding.weekCalendar.setOnDateClickListener(dateTime -> {
+            milies = dateTime.getMillis();
+            String month1 = new SimpleDateFormat("MMMM dd", Locale.getDefault()).format(milies);
+            String cc = new SimpleDateFormat("MMMM dd", Locale.getDefault()).format(new Date());
+            binding.month.setText(month1);
+            Date d1 = new Date(milies);
+            boolean isToday = month1.equals(cc);
+            date = new CalendarDate(d1, false, isToday, getMonthType());
         });
 
     }
@@ -256,7 +252,7 @@ public class NewEventActivity extends AppCompatActivity {
     }
 
     private boolean valid() {
-        if (imageUri != null){
+        if (imageUri == null){
             Toast.makeText(this, "Add Event Image", Toast.LENGTH_SHORT).show();
             return false;
         }

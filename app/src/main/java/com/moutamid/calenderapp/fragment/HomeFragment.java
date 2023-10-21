@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.activities.SelectUserActivity;
 import com.moutamid.calenderapp.adapters.CalendarAdapter;
+import com.moutamid.calenderapp.adapters.EventAdapter;
 import com.moutamid.calenderapp.adapters.TaskAdapter;
 import com.moutamid.calenderapp.bottomsheets.TaskRequestBottomSheet;
 import com.moutamid.calenderapp.databinding.FragmentHomeBinding;
@@ -73,19 +74,61 @@ public class HomeFragment extends Fragment {
         } else {
             binding.name.setText(user.getName());
             Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
-//            Constants.showDialog();
+            Constants.showDialog();
 //            getThisMonthTasks();
-//            getSendRequests();
+            getSendRequests();
         }
 
 //        GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
 //        binding.calendarRecyclerView.setLayoutManager(layoutManager);
-//
-//        binding.RC.setLayoutManager(new LinearLayoutManager(context));
-//        binding.RC.setHasFixedSize(false);
+
+        binding.RC.setLayoutManager(new LinearLayoutManager(context));
+        binding.RC.setHasFixedSize(false);
 
         return binding.getRoot();
     }
+
+    private void getSendRequests() {
+        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            taskList.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                if (!taskModel.isEnded()){
+                                    taskList.add(taskModel);
+                                }
+                                if (taskList.size() > 0){
+                                    binding.RC.setVisibility(View.VISIBLE);
+                                    binding.noItemLayout.setVisibility(View.GONE);
+                                } else {
+                                    binding.RC.setVisibility(View.GONE);
+                                    binding.noItemLayout.setVisibility(View.VISIBLE);
+                                }
+
+                                EventAdapter adapter = new EventAdapter(context, taskList);
+                                binding.RC.setAdapter(adapter);
+
+                            }
+                        }
+                        Constants.dismissDialog();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Constants.dismissDialog();
+                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    TaskClickListener listener = model -> {
+        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, true);
+        bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
+    };
+
 /*
     private void getThisMonthTasks() {
         Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
@@ -113,47 +156,6 @@ public class HomeFragment extends Fragment {
                     }
                 });
     }
-
-    private void getSendRequests() {
-        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.exists()){
-                            taskList.clear();
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                if (!taskModel.isEnded()){
-                                    taskList.add(taskModel);
-                                }
-                                if (taskList.size() > 0){
-                                    binding.RC.setVisibility(View.VISIBLE);
-                                    binding.noItemLayout.setVisibility(View.GONE);
-                                } else {
-                                    binding.RC.setVisibility(View.GONE);
-                                    binding.noItemLayout.setVisibility(View.VISIBLE);
-                                }
-
-                                TaskAdapter adapter = new TaskAdapter(context, taskList, listener);
-                                binding.RC.setAdapter(adapter);
-
-                            }
-                        }
-                        Constants.dismissDialog();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Constants.dismissDialog();
-                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-    TaskClickListener listener = model -> {
-        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, true);
-        bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
-    };
 
     private List<CalendarDate> generateCalendarData() {
         List<CalendarDate> calendarData = new ArrayList<>();

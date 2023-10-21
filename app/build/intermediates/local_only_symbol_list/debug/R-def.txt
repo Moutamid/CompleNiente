@@ -109,6 +109,7 @@ id hour
 id image
 id imagePreviewRC
 id imageView
+id invite
 id lastMessage
 id location
 id login
@@ -171,6 +172,7 @@ layout activity_profile_edit
 layout activity_select_user
 layout activity_sign_up
 layout activity_splash_screen
+layout activity_user_profile
 layout activity_welcome
 layout bs_image_menu
 layout calander_week

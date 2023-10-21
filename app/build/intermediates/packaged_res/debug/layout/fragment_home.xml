@@ -91,7 +91,36 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/task_request_card"
+            android:visibility="gone"
+            android:layout_below="@id/title" />
 
+        <LinearLayout
+            android:id="@+id/noItemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/curious_rafiki" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_below="@id/title"
+                android:text="Nothing Found"/>
+
+        </LinearLayout>
 
 
     </LinearLayout>

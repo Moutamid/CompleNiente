@@ -28,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.activities.NewEventActivity;
 import com.moutamid.calenderapp.activities.SelectUserActivity;
+import com.moutamid.calenderapp.activities.UserProfileActivity;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
@@ -85,66 +86,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
         }
 
         holder.start.setOnClickListener(v -> {
-//            Constants.initDialog(context);
-//            Constants.showDialog();
-//            calendarTaskList = new ArrayList<>();
-
             Stash.put("PassUser", model);
-            context.startActivity(new Intent(context, NewEventActivity.class));
-        });
-
-    }
-
-    private void showTaskRequestDialog(UserModel model) {
-        Dialog dialog = new Dialog(context);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.task_request_layout);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        dialog.setCancelable(true);
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().setGravity(Gravity.CENTER);
-        dialog.show();
-
-        MaterialButton request = dialog.findViewById(R.id.add);
-        TextInputLayout name = dialog.findViewById(R.id.name);
-        TextInputLayout description = dialog.findViewById(R.id.description);
-
-        request.setOnClickListener(v -> {
-            dialog.dismiss();
-            String MONTH = Constants.CurrentMonth();
-            CalendarDate date = (CalendarDate) Stash.getObject(Constants.DATE, CalendarDate.class);
-            date.setSelected(false);
-            if (name.getEditText().getText().toString().isEmpty() || description.getEditText().getText().toString().isEmpty()){
-                Toast.makeText(context, "Please fill all data", Toast.LENGTH_SHORT).show();
-            } else {
-                Constants.showDialog();
-                String ID = UUID.randomUUID().toString();
-                TaskModel sendTaskModel = new TaskModel(ID,
-                        name.getEditText().getText().toString(), description.getEditText().getText().toString(),
-                        model.getID(), model.getName(), model.getUsername(), model.getImage(),
-                        date, false, Constants.PEN);
-                UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
-                TaskModel recieveTaskModel = new TaskModel(ID,
-                        name.getEditText().getText().toString(), description.getEditText().getText().toString(),
-                        stashUser.getID(), stashUser.getName(), stashUser.getUsername(), stashUser.getImage(),
-                        date, false, Constants.PEN);
-                Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(model.getID()).child(ID).setValue(recieveTaskModel)
-                        .addOnSuccessListener(unused -> {
-                            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
-                                    .addOnSuccessListener(unused1 -> {
-                                        new FcmNotificationsSender("/topics/" + model.getID(), "Incoming Request", "Someone want to work with you", context, activity).SendNotifications();
-                                        Constants.dismissDialog();
-                                        Toast.makeText(context, "A request is send to the user", Toast.LENGTH_SHORT).show();
-                                    }).addOnFailureListener(e -> {
-                                        Constants.dismissDialog();
-                                        Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                    });
-                        }).addOnFailureListener(e -> {
-                            Constants.dismissDialog();
-                            Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                        });
-
-            }
+            context.startActivity(new Intent(context, UserProfileActivity.class));
         });
 
     }
