@@ -104,7 +104,7 @@ public class ProfileFragment extends Fragment {
                                     binding.eventsRC.setVisibility(View.GONE);
                                     binding.noItemLayout.setVisibility(View.VISIBLE);
                                 }
-
+                                binding.eventCount.setText("" + taskList.size());
                                 EventProfileAdapter adapter = new EventProfileAdapter(context, taskList);
                                 binding.eventsRC.setAdapter(adapter);
 

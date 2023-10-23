@@ -56,7 +56,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
     private void getSendRequests() {
         Constants.showDialog();
-        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -64,7 +64,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             taskList.clear();
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                if (!taskModel.isEnded() && Constants.auth().getCurrentUser().getUid().equals(userModel.getID())) {
+                                if (!taskModel.isEnded() && userModel.getID().equals(taskModel.getUserID())) {
                                     taskList.add(taskModel);
                                 }
                                 if (taskList.size() > 0){
@@ -74,7 +74,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                     binding.eventsRC.setVisibility(View.GONE);
                                     binding.noItemLayout.setVisibility(View.VISIBLE);
                                 }
-
+                                binding.eventCount.setText("" + taskList.size());
                                 EventProfileAdapter adapter = new EventProfileAdapter(UserProfileActivity.this, taskList);
                                 binding.eventsRC.setAdapter(adapter);
 
