@@ -66,6 +66,7 @@ id RC
 id RecyclerViewImageList
 id accept
 id add
+id address
 id addtext
 id age
 id back
@@ -94,6 +95,7 @@ id email
 id endReject
 id eventCount
 id eventImage
+id eventName
 id eventsRC
 id exSevenDateText
 id exSevenDayText
@@ -153,6 +155,8 @@ id toolbar
 id update
 id uploadImage
 id uploadVideo
+id user1
+id user2
 id userID
 id username
 id verify
@@ -164,6 +168,7 @@ id zone
 layout activity_add_task
 layout activity_chat
 layout activity_email_verify
+layout activity_event_detail
 layout activity_forgot
 layout activity_login
 layout activity_main
@@ -175,17 +180,20 @@ layout activity_splash_screen
 layout activity_user_profile
 layout activity_welcome
 layout bs_image_menu
+layout buttons
 layout calander_week
 layout calendar_item
 layout chat_item_card
 layout chat_row_left
 layout chat_row_right
 layout event_profile_card
+layout event_profile_card2
 layout fragment_chat
 layout fragment_home
 layout fragment_list
 layout fragment_profile
 layout full_preview
+layout gallery_card
 layout image_layout
 layout loading_dialog
 layout task_request_bottomsheet

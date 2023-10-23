@@ -3287,6 +3287,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id address
 id addtext
 id adjust_height
 id adjust_width
@@ -3432,6 +3433,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id eventCount
 id eventImage
+id eventName
 id eventsRC
 id exSevenDateText
 id exSevenDayText
@@ -3813,6 +3815,8 @@ id update
 id uploadImage
 id uploadVideo
 id useLogo
+id user1
+id user2
 id userID
 id username
 id verify
@@ -3963,6 +3967,7 @@ layout abc_tooltip
 layout activity_add_task
 layout activity_chat
 layout activity_email_verify
+layout activity_event_detail
 layout activity_forgot
 layout activity_login
 layout activity_main
@@ -3976,6 +3981,7 @@ layout activity_welcome
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout bs_image_menu
+layout buttons
 layout calander_week
 layout calendar_item
 layout chat_item_card
@@ -3999,12 +4005,14 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
 layout event_profile_card
+layout event_profile_card2
 layout fragment_chat
 layout fragment_home
 layout fragment_list
 layout fragment_profile
 layout fragment_week
 layout full_preview
+layout gallery_card
 layout grid_item
 layout image_layout
 layout loading_dialog

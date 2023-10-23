@@ -38,6 +38,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventVH> {
         TaskModel taskModel = list.get(holder.getAdapterPosition());
 
         holder.name.setText(taskModel.getName());
+        holder.location.setText(taskModel.getLocation());
         Glide.with(context).load(taskModel.getTaskImage()).placeholder(R.drawable.event).into(holder.eventImage);
         String date = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(taskModel.getDate().getDate());
         holder.date.setText(date);
@@ -55,12 +56,13 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventVH> {
 
     public class EventVH extends RecyclerView.ViewHolder{
         ImageView eventImage;
-        TextView name, date;
+        TextView name, date, location;
         public EventVH(@NonNull View itemView) {
             super(itemView);
             eventImage = itemView.findViewById(R.id.eventImage);
             name = itemView.findViewById(R.id.name);
             date = itemView.findViewById(R.id.date);
+            location = itemView.findViewById(R.id.location);
         }
     }
 
