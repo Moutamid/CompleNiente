@@ -69,7 +69,7 @@ public class NewEventActivity extends AppCompatActivity {
 
         Date d = new Date(milies);
         date = new CalendarDate(d, false, true, getMonthType());
-
+        Stash.put(Constants.DATE, date);
         String month = new SimpleDateFormat("MMMM dd", Locale.getDefault()).format(milies);
         binding.month.setText(month);
 

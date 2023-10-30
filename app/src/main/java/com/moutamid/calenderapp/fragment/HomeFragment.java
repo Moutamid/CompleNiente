@@ -57,8 +57,6 @@ public class HomeFragment extends Fragment {
 
 //        setStatusBarTranslucent();
 
-        Constants.initDialog(context);
-
         binding.greeting.setText(Constants.greetingMessage());
 
         String d = new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.getDefault()).format(new Date());
@@ -67,8 +65,20 @@ public class HomeFragment extends Fragment {
         taskList = new ArrayList<>();
         calendarTaskList = new ArrayList<>();
 
-        UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
+//        GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
+//        binding.calendarRecyclerView.setLayoutManager(layoutManager);
 
+        binding.RC.setLayoutManager(new LinearLayoutManager(context));
+        binding.RC.setHasFixedSize(false);
+
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Constants.initDialog(context);
+        UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
         if (user == null) {
             getUserDetails();
         } else {
@@ -79,13 +89,6 @@ public class HomeFragment extends Fragment {
             getSendRequests();
         }
 
-//        GridLayoutManager layoutManager = new GridLayoutManager(context, 7);
-//        binding.calendarRecyclerView.setLayoutManager(layoutManager);
-
-        binding.RC.setLayoutManager(new LinearLayoutManager(context));
-        binding.RC.setHasFixedSize(false);
-
-        return binding.getRoot();
     }
 
     private void getSendRequests() {
