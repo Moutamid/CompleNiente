@@ -78,9 +78,6 @@ public final class ActivityNewEventBinding implements ViewBinding {
   @NonNull
   public final WeekCalendar weekCalendar;
 
-  @NonNull
-  public final TextView zone;
-
   private ActivityNewEventBinding(@NonNull RelativeLayout rootView, @NonNull LinearLayout addtext,
       @NonNull MaterialCardView datePicker, @NonNull ImageView eImage,
       @NonNull MaterialCardView eventImage, @NonNull TextView friendName, @NonNull TextView hour,
@@ -88,7 +85,7 @@ public final class ActivityNewEventBinding implements ViewBinding {
       @NonNull TextInputLayout name, @NonNull MaterialCardView next, @NonNull MaterialCardView prev,
       @NonNull CircleImageView profileImage, @NonNull ChipGroup queenSourceChipGroup,
       @NonNull MaterialButton start, @NonNull ToolbarBinding toolbar,
-      @NonNull WeekCalendar weekCalendar, @NonNull TextView zone) {
+      @NonNull WeekCalendar weekCalendar) {
     this.rootView = rootView;
     this.addtext = addtext;
     this.datePicker = datePicker;
@@ -107,7 +104,6 @@ public final class ActivityNewEventBinding implements ViewBinding {
     this.start = start;
     this.toolbar = toolbar;
     this.weekCalendar = weekCalendar;
-    this.zone = zone;
   }
 
   @Override
@@ -240,15 +236,9 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.zone;
-      TextView zone = ViewBindings.findChildViewById(rootView, id);
-      if (zone == null) {
-        break missingId;
-      }
-
       return new ActivityNewEventBinding((RelativeLayout) rootView, addtext, datePicker, eImage,
           eventImage, friendName, hour, location, minute, month, name, next, prev, profileImage,
-          queenSourceChipGroup, start, binding_toolbar, weekCalendar, zone);
+          queenSourceChipGroup, start, binding_toolbar, weekCalendar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

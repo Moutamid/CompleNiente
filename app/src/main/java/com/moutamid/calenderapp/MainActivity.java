@@ -15,13 +15,18 @@ import androidx.core.content.ContextCompat;
 
 import com.fxn.stash.Stash;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.moutamid.calenderapp.databinding.ActivityMainBinding;
 import com.moutamid.calenderapp.fragment.ChatFragment;
 import com.moutamid.calenderapp.fragment.HomeFragment;
 import com.moutamid.calenderapp.fragment.ListFragment;
 import com.moutamid.calenderapp.fragment.ProfileFragment;
+import com.moutamid.calenderapp.models.TaskModel;
+import com.moutamid.calenderapp.notifications.Notification;
 import com.moutamid.calenderapp.utilis.Constants;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     ActivityMainBinding binding;
@@ -34,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         Constants.checkApp(this);
 
 
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
                 shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS);
@@ -43,6 +47,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
 
         initializeNotification();
+
+        ArrayList<TaskModel> taskList = new ArrayList<>();
+        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+                .get().addOnSuccessListener(dataSnapshot -> {
+                    if (dataSnapshot.exists()) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            TaskModel taskModel = snapshot.getValue(TaskModel.class);
+                            taskList.add(taskModel);
+                        }
+                        Notification.scheduleEventNotifications(this, taskList);
+                    }
+                });
 
         binding.bottomNav.setItemActiveIndicatorColor(ColorStateList.valueOf(getResources().getColor(R.color.greenLight)));
         binding.bottomNav.setOnNavigationItemSelectedListener(this);
@@ -61,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 });
         Constants.databaseReference().child("serverKey").get().addOnSuccessListener(dataSnapshot -> {
             String key = dataSnapshot.getValue().toString();
-          //  Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
+            //  Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
             Stash.put(Constants.KEY, key);
         });
     }

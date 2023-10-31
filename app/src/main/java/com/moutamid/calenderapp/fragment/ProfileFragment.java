@@ -92,6 +92,7 @@ public class ProfileFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.exists()){
                             taskList.clear();
+                            Stash.clear(Constants.NOTI_SCHEDULE);
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
                                 if (!taskModel.isEnded()){
@@ -105,6 +106,7 @@ public class ProfileFragment extends Fragment {
                                     binding.noItemLayout.setVisibility(View.VISIBLE);
                                 }
                                 binding.eventCount.setText("" + taskList.size());
+                                Stash.put(Constants.NOTI_SCHEDULE, taskList);
                                 EventProfileAdapter adapter = new EventProfileAdapter(context, taskList);
                                 binding.eventsRC.setAdapter(adapter);
 

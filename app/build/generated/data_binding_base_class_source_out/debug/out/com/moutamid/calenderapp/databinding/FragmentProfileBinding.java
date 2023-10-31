@@ -37,9 +37,6 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final TextView friendCount;
 
   @NonNull
-  public final MaterialButton logout;
-
-  @NonNull
   public final TextView name;
 
   @NonNull
@@ -49,36 +46,25 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final LinearLayout noItemLayout;
 
   @NonNull
-  public final MaterialButton privacy;
-
-  @NonNull
   public final ImageView profileIcon;
 
   @NonNull
   public final MaterialCardView profileImage;
 
-  @NonNull
-  public final MaterialButton terms;
-
   private FragmentProfileBinding(@NonNull RelativeLayout rootView, @NonNull MaterialButton edit,
       @NonNull TextView eventCount, @NonNull RecyclerView eventsRC, @NonNull TextView friendCount,
-      @NonNull MaterialButton logout, @NonNull TextView name, @NonNull MaterialButton newEvent,
-      @NonNull LinearLayout noItemLayout, @NonNull MaterialButton privacy,
-      @NonNull ImageView profileIcon, @NonNull MaterialCardView profileImage,
-      @NonNull MaterialButton terms) {
+      @NonNull TextView name, @NonNull MaterialButton newEvent, @NonNull LinearLayout noItemLayout,
+      @NonNull ImageView profileIcon, @NonNull MaterialCardView profileImage) {
     this.rootView = rootView;
     this.edit = edit;
     this.eventCount = eventCount;
     this.eventsRC = eventsRC;
     this.friendCount = friendCount;
-    this.logout = logout;
     this.name = name;
     this.newEvent = newEvent;
     this.noItemLayout = noItemLayout;
-    this.privacy = privacy;
     this.profileIcon = profileIcon;
     this.profileImage = profileImage;
-    this.terms = terms;
   }
 
   @Override
@@ -132,12 +118,6 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.logout;
-      MaterialButton logout = ViewBindings.findChildViewById(rootView, id);
-      if (logout == null) {
-        break missingId;
-      }
-
       id = R.id.name;
       TextView name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
@@ -156,12 +136,6 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.privacy;
-      MaterialButton privacy = ViewBindings.findChildViewById(rootView, id);
-      if (privacy == null) {
-        break missingId;
-      }
-
       id = R.id.profile_icon;
       ImageView profileIcon = ViewBindings.findChildViewById(rootView, id);
       if (profileIcon == null) {
@@ -174,15 +148,8 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.terms;
-      MaterialButton terms = ViewBindings.findChildViewById(rootView, id);
-      if (terms == null) {
-        break missingId;
-      }
-
       return new FragmentProfileBinding((RelativeLayout) rootView, edit, eventCount, eventsRC,
-          friendCount, logout, name, newEvent, noItemLayout, privacy, profileIcon, profileImage,
-          terms);
+          friendCount, name, newEvent, noItemLayout, profileIcon, profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

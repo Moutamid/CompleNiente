@@ -40,6 +40,7 @@ public class Constants {
     public static final String DATE_FORMAT = "dd/MM/yyyy";
     public static final String KEY = "KEY";
     public static final String EventsPics = "EventsPics";
+    public static final String NOTI_SCHEDULE = "NOTI_SCHEDULE";
     public static final String MONTH_FORMAT = "MMMM";
     public static final String MONTH_YEAR= "MM-yyyy";
     public static final String REQUESTS = "REQUESTS";

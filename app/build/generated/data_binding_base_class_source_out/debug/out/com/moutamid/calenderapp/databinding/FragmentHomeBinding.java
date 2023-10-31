@@ -12,6 +12,8 @@ import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputLayout;
 import com.moutamid.calenderapp.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
@@ -24,6 +26,9 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public final RecyclerView RC;
+
+  @NonNull
+  public final MaterialButton create;
 
   @NonNull
   public final TextView greeting;
@@ -40,16 +45,22 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final CircleImageView profileImage;
 
+  @NonNull
+  public final TextInputLayout username;
+
   private FragmentHomeBinding(@NonNull NestedScrollView rootView, @NonNull RecyclerView RC,
-      @NonNull TextView greeting, @NonNull TextView name, @NonNull LinearLayout newUI,
-      @NonNull LinearLayout noItemLayout, @NonNull CircleImageView profileImage) {
+      @NonNull MaterialButton create, @NonNull TextView greeting, @NonNull TextView name,
+      @NonNull LinearLayout newUI, @NonNull LinearLayout noItemLayout,
+      @NonNull CircleImageView profileImage, @NonNull TextInputLayout username) {
     this.rootView = rootView;
     this.RC = RC;
+    this.create = create;
     this.greeting = greeting;
     this.name = name;
     this.newUI = newUI;
     this.noItemLayout = noItemLayout;
     this.profileImage = profileImage;
+    this.username = username;
   }
 
   @Override
@@ -85,6 +96,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.create;
+      MaterialButton create = ViewBindings.findChildViewById(rootView, id);
+      if (create == null) {
+        break missingId;
+      }
+
       id = R.id.greeting;
       TextView greeting = ViewBindings.findChildViewById(rootView, id);
       if (greeting == null) {
@@ -115,8 +132,14 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((NestedScrollView) rootView, RC, greeting, name, newUI,
-          noItemLayout, profileImage);
+      id = R.id.username;
+      TextInputLayout username = ViewBindings.findChildViewById(rootView, id);
+      if (username == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((NestedScrollView) rootView, RC, create, greeting, name, newUI,
+          noItemLayout, profileImage, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

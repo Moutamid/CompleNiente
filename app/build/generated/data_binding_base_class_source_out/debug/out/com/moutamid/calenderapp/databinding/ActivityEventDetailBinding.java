@@ -52,6 +52,9 @@ public final class ActivityEventDetailBinding implements ViewBinding {
   public final RecyclerView imagePreviewRC;
 
   @NonNull
+  public final TextView occurrence;
+
+  @NonNull
   public final LinearProgressIndicator progressBar;
 
   @NonNull
@@ -78,11 +81,11 @@ public final class ActivityEventDetailBinding implements ViewBinding {
   private ActivityEventDetailBinding(@NonNull RelativeLayout rootView, @NonNull Button add,
       @NonNull TextView address, @NonNull RecyclerView chatRC, @NonNull TextView date,
       @NonNull ImageView eImage, @NonNull MaterialCardView eventImage, @NonNull TextView eventName,
-      @NonNull RecyclerView imagePreviewRC, @NonNull LinearProgressIndicator progressBar,
-      @NonNull LinearLayout progressLayout, @NonNull MaterialTextView progressText,
-      @NonNull MaterialCardView send, @NonNull LinearLayout sendLayout,
-      @NonNull ToolbarBinding toolbar, @NonNull CircleImageView user1,
-      @NonNull CircleImageView user2) {
+      @NonNull RecyclerView imagePreviewRC, @NonNull TextView occurrence,
+      @NonNull LinearProgressIndicator progressBar, @NonNull LinearLayout progressLayout,
+      @NonNull MaterialTextView progressText, @NonNull MaterialCardView send,
+      @NonNull LinearLayout sendLayout, @NonNull ToolbarBinding toolbar,
+      @NonNull CircleImageView user1, @NonNull CircleImageView user2) {
     this.rootView = rootView;
     this.add = add;
     this.address = address;
@@ -92,6 +95,7 @@ public final class ActivityEventDetailBinding implements ViewBinding {
     this.eventImage = eventImage;
     this.eventName = eventName;
     this.imagePreviewRC = imagePreviewRC;
+    this.occurrence = occurrence;
     this.progressBar = progressBar;
     this.progressLayout = progressLayout;
     this.progressText = progressText;
@@ -177,6 +181,12 @@ public final class ActivityEventDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.occurrence;
+      TextView occurrence = ViewBindings.findChildViewById(rootView, id);
+      if (occurrence == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       LinearProgressIndicator progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -227,8 +237,8 @@ public final class ActivityEventDetailBinding implements ViewBinding {
       }
 
       return new ActivityEventDetailBinding((RelativeLayout) rootView, add, address, chatRC, date,
-          eImage, eventImage, eventName, imagePreviewRC, progressBar, progressLayout, progressText,
-          send, sendLayout, binding_toolbar, user1, user2);
+          eImage, eventImage, eventName, imagePreviewRC, occurrence, progressBar, progressLayout,
+          progressText, send, sendLayout, binding_toolbar, user1, user2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
