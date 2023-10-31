@@ -57,27 +57,27 @@ public class ProfileFragment extends Fragment {
         binding.edit.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
         binding.newEvent.setOnClickListener(v -> startActivity(new Intent(context, SelectUserActivity.class)));
 
-        binding.logout.setOnClickListener(v -> {
-            new AlertDialog.Builder(context)
-                    .setTitle("Logout")
-                    .setMessage("Are you sure you want to logout?")
-                    .setNegativeButton("No", ((dialog, which) -> dialog.dismiss()))
-                    .setPositiveButton("Yes", ((dialog, which) -> {
-                        dialog.dismiss();
-                        Stash.clear(Constants.STASH_USER);
-                        Constants.auth().signOut();
-                        startActivity(new Intent(context, SplashScreenActivity.class));
-                        getActivity().finish();
-                    }))
-                    .show();
-        });
+//        binding.logout.setOnClickListener(v -> {
+//            new AlertDialog.Builder(context)
+//                    .setTitle("Logout")
+//                    .setMessage("Are you sure you want to logout?")
+//                    .setNegativeButton("No", ((dialog, which) -> dialog.dismiss()))
+//                    .setPositiveButton("Yes", ((dialog, which) -> {
+//                        dialog.dismiss();
+//                        Stash.clear(Constants.STASH_USER);
+//                        Constants.auth().signOut();
+//                        startActivity(new Intent(context, SplashScreenActivity.class));
+//                        getActivity().finish();
+//                    }))
+//                    .show();
+//        });
 
 
         binding.eventsRC.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         binding.eventsRC.setHasFixedSize(false);
 
-        binding.terms.setOnClickListener(v -> openBrowser(Constants.TERMS));
-        binding.privacy.setOnClickListener(v -> openBrowser(Constants.POLICY));
+//        binding.terms.setOnClickListener(v -> openBrowser(Constants.TERMS));
+//        binding.privacy.setOnClickListener(v -> openBrowser(Constants.POLICY));
 
         getSendRequests();
 

@@ -1,6 +1,7 @@
 package com.moutamid.calenderapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.fxn.stash.Stash;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.activities.EventDetailActivity;
 import com.moutamid.calenderapp.models.TaskModel;
 
 import java.util.ArrayList;
@@ -44,7 +47,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventVH> {
         holder.date.setText(date);
 
         holder.itemView.setOnClickListener(v -> {
-
+            Stash.put("EVENT", taskModel);
+            context.startActivity(new Intent(context, EventDetailActivity.class).putExtra("eventID", taskModel.getID()));
         });
 
     }

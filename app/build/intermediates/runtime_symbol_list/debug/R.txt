@@ -3172,8 +3172,10 @@ int drawable play_circle 0x7f07010a
 int drawable profile_icon 0x7f07010b
 int drawable rectangle_1 0x7f07010c
 int drawable round_add_24 0x7f07010d
+int drawable round_camera_alt_24 0x7f070132
 int drawable round_delete_24 0x7f07010e
 int drawable round_edit_24 0x7f07010f
+int drawable round_image_24 0x7f070133
 int drawable round_person_24 0x7f070110
 int drawable round_privacy 0x7f070111
 int drawable round_refresh_24 0x7f070112
@@ -3334,6 +3336,7 @@ int id buttonPanel 0x7f090078
 int id buttons 0x7f090079
 int id cache_measures 0x7f09007a
 int id callMeasure 0x7f09007b
+int id camera 0x7f09027e
 int id cancel_button 0x7f09007c
 int id card 0x7f09007d
 int id carryVelocity 0x7f09007e
@@ -3523,7 +3526,6 @@ int id listMode 0x7f090135
 int id list_item 0x7f090136
 int id location 0x7f090137
 int id login 0x7f090138
-int id logout 0x7f090139
 int id lytCameraPick 0x7f09013a
 int id lytGalleryPick 0x7f09013b
 int id m3_side_sheet 0x7f09013c
@@ -3618,6 +3620,7 @@ int id north 0x7f090194
 int id notification_background 0x7f090195
 int id notification_main_column 0x7f090196
 int id notification_main_column_container 0x7f090197
+int id occurrence 0x7f09027f
 int id off 0x7f090198
 int id on 0x7f090199
 int id onInterceptTouchReturnSwipe 0x7f09019a
@@ -3641,7 +3644,6 @@ int id position 0x7f0901ab
 int id postLayout 0x7f0901ac
 int id pressed 0x7f0901ad
 int id prev 0x7f0901ae
-int id privacy 0x7f0901af
 int id profileImage 0x7f0901b0
 int id profile_icon 0x7f0901b1
 int id progressBar 0x7f0901b2
@@ -3764,7 +3766,6 @@ int id tag_unhandled_key_listeners 0x7f090226
 int id tag_window_insets_animation_callback 0x7f090227
 int id taskDesc 0x7f090228
 int id taskName 0x7f090229
-int id terms 0x7f09022a
 int id text 0x7f09022b
 int id text2 0x7f09022c
 int id textEnd 0x7f09022d
@@ -3847,7 +3848,6 @@ int id wrapper_states 0x7f090279
 int id x_left 0x7f09027a
 int id x_right 0x7f09027b
 int id year 0x7f09027c
-int id zone 0x7f09027d
 int integer abc_config_activityDefaultDur 0x7f0a0000
 int integer abc_config_activityShortDur 0x7f0a0001
 int integer app_bar_elevation_anim_duration 0x7f0a0002
@@ -4072,6 +4072,7 @@ int layout notification_template_custom_big 0x7f0c0084
 int layout notification_template_icon_group 0x7f0c0085
 int layout notification_template_part_chronometer 0x7f0c0086
 int layout notification_template_part_time 0x7f0c0087
+int layout picker_selector 0x7f0c009a
 int layout select_dialog_item_material 0x7f0c0088
 int layout select_dialog_multichoice_material 0x7f0c0089
 int layout select_dialog_singlechoice_material 0x7f0c008a

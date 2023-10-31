@@ -65,7 +65,7 @@ public class Constants {
         return new SimpleDateFormat("d", Locale.getDefault()).format(date);
     }
     public static String getHours(long date) {
-        return new SimpleDateFormat("hh", Locale.getDefault()).format(date);
+        return new SimpleDateFormat("HH", Locale.getDefault()).format(date);
     }
     public static String getMinutes(long date) {
         return new SimpleDateFormat("mm", Locale.getDefault()).format(date);

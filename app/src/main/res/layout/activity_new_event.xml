@@ -220,16 +220,6 @@
                         android:text="00"
                         android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/zone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="12dp"
-                        android:text="AM"
-                        android:textAllCaps="true"
-                        android:textSize="18sp" />
-
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>

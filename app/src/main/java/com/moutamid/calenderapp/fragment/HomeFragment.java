@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.activities.SelectUserActivity;
+import com.moutamid.calenderapp.activities.UserProfileActivity;
 import com.moutamid.calenderapp.adapters.CalendarAdapter;
 import com.moutamid.calenderapp.adapters.EventAdapter;
 import com.moutamid.calenderapp.adapters.TaskAdapter;
@@ -71,6 +72,41 @@ public class HomeFragment extends Fragment {
         binding.RC.setLayoutManager(new LinearLayoutManager(context));
         binding.RC.setHasFixedSize(false);
 
+        binding.create.setOnClickListener(v -> {
+            if (binding.username.getEditText().getText().toString().isEmpty()) {
+                Toast.makeText(context, "User name is empty", Toast.LENGTH_SHORT).show();
+            } else {
+                Constants.showDialog();
+                Constants.databaseReference().child(Constants.USER).get()
+                        .addOnSuccessListener(dataSnapshot -> {
+                            Constants.dismissDialog();
+                            if (dataSnapshot.exists()) {
+                                UserModel temp = null;
+                                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                    UserModel model = snapshot.getValue(UserModel.class);
+                                    if (model.getUsername().equals(binding.username.getEditText().getText().toString().trim()) ||
+                                            model.getEmail().equals(binding.username.getEditText().getText().toString().trim())) {
+                                        temp = model;
+                                        break;
+                                    }
+                                }
+
+                                if (temp != null) {
+                                    Stash.put("PassUser", temp);
+                                    context.startActivity(new Intent(context, UserProfileActivity.class));
+                                } else {
+                                    Toast.makeText(context, "User not found", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        })
+                        .addOnFailureListener(e -> {
+                            Constants.dismissDialog();
+                            Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+            }
+        });
+
         return binding.getRoot();
     }
 
@@ -96,14 +132,14 @@ public class HomeFragment extends Fragment {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.exists()){
+                        if (snapshot.exists()) {
                             taskList.clear();
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                if (!taskModel.isEnded()){
+                                if (!taskModel.isEnded()) {
                                     taskList.add(taskModel);
                                 }
-                                if (taskList.size() > 0){
+                                if (taskList.size() > 0) {
                                     binding.RC.setVisibility(View.VISIBLE);
                                     binding.noItemLayout.setVisibility(View.GONE);
                                 } else {
@@ -238,7 +274,7 @@ public class HomeFragment extends Fragment {
         Constants.databaseReference().child(Constants.USER).child(Constants.auth().getCurrentUser().getUid())
                 .get()
                 .addOnSuccessListener(dataSnapshot -> {
-                    if (dataSnapshot.exists()){
+                    if (dataSnapshot.exists()) {
                         UserModel userModel = dataSnapshot.getValue(UserModel.class);
                         Stash.put(Constants.STASH_USER, userModel);
                         binding.name.setText(userModel.getName());

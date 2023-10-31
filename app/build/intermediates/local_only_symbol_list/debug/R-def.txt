@@ -45,8 +45,10 @@ drawable play_circle
 drawable profile_icon
 drawable rectangle_1
 drawable round_add_24
+drawable round_camera_alt_24
 drawable round_delete_24
 drawable round_edit_24
+drawable round_image_24
 drawable round_person_24
 drawable round_privacy
 drawable round_refresh_24
@@ -78,6 +80,7 @@ id btnCancel
 id btnLayout
 id btnRemoveImage
 id buttons
+id camera
 id card
 id chatRC
 id create
@@ -115,7 +118,6 @@ id invite
 id lastMessage
 id location
 id login
-id logout
 id message
 id minute
 id month
@@ -129,9 +131,9 @@ id newUI
 id next
 id noChatLayout
 id noItemLayout
+id occurrence
 id password
 id prev
-id privacy
 id profileImage
 id profile_icon
 id progressBar
@@ -148,7 +150,6 @@ id status
 id statusText
 id taskDesc
 id taskName
-id terms
 id time
 id title
 id toolbar
@@ -164,7 +165,6 @@ id video
 id videoView
 id weekCalendar
 id year
-id zone
 layout activity_add_task
 layout activity_chat
 layout activity_email_verify
@@ -196,6 +196,7 @@ layout full_preview
 layout gallery_card
 layout image_layout
 layout loading_dialog
+layout picker_selector
 layout task_request_bottomsheet
 layout task_request_card
 layout task_request_layout

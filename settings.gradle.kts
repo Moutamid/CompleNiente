@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CalendarTaskApp"
+rootProject.name = "CompleNiente"
 include(":app")

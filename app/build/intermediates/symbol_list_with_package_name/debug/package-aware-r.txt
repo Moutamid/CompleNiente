@@ -3173,8 +3173,10 @@ drawable play_circle
 drawable profile_icon
 drawable rectangle_1
 drawable round_add_24
+drawable round_camera_alt_24
 drawable round_delete_24
 drawable round_edit_24
+drawable round_image_24
 drawable round_person_24
 drawable round_privacy
 drawable round_refresh_24
@@ -3335,6 +3337,7 @@ id buttonPanel
 id buttons
 id cache_measures
 id callMeasure
+id camera
 id cancel_button
 id card
 id carryVelocity
@@ -3524,7 +3527,6 @@ id listMode
 id list_item
 id location
 id login
-id logout
 id lytCameraPick
 id lytGalleryPick
 id m3_side_sheet
@@ -3619,6 +3621,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id occurrence
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3642,7 +3645,6 @@ id position
 id postLayout
 id pressed
 id prev
-id privacy
 id profileImage
 id profile_icon
 id progressBar
@@ -3765,7 +3767,6 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id taskDesc
 id taskName
-id terms
 id text
 id text2
 id textEnd
@@ -3848,7 +3849,6 @@ id wrapper_states
 id x_left
 id x_right
 id year
-id zone
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -4073,6 +4073,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout picker_selector
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

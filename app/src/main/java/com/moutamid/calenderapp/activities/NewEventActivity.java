@@ -65,7 +65,7 @@ public class NewEventActivity extends AppCompatActivity {
         reminder = milies;
         binding.hour.setText(Constants.getHours(reminder));
         binding.minute.setText(Constants.getMinutes(reminder));
-        binding.zone.setText(Constants.getZone(reminder));
+//        binding.zone.setText(Constants.getZone(reminder));
 
         Date d = new Date(milies);
         date = new CalendarDate(d, false, true, getMonthType());
@@ -277,7 +277,7 @@ public class NewEventActivity extends AppCompatActivity {
 
     private void openTimePicker() {
         MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
-                .setTimeFormat(TimeFormat.CLOCK_12H)
+                .setTimeFormat(TimeFormat.CLOCK_24H)
                 .setHour(12)
                 .setInputMode(MaterialTimePicker.INPUT_MODE_CLOCK)
                 .setMinute(0)
@@ -298,7 +298,7 @@ public class NewEventActivity extends AppCompatActivity {
 
             binding.hour.setText(Constants.getHours(reminder));
             binding.minute.setText(Constants.getMinutes(reminder));
-            binding.zone.setText(Constants.getZone(reminder));
+//            binding.zone.setText(Constants.getZone(reminder));
         });
 
         timePicker.show(getSupportFragmentManager(), "timePicker");

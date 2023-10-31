@@ -153,6 +153,7 @@
                         android:padding="12dp"
                         android:text="New Event"
                         android:textColor="@color/black"
+                        android:visibility="gone"
                         android:textSize="16sp"
                         android:layout_marginTop="5dp"
                         app:backgroundTint="@color/grey"
@@ -166,7 +167,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="12dp"
-                        android:text="Edit Profile"
+                        android:text="Settings"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:layout_marginTop="5dp"
@@ -219,7 +220,7 @@
                     android:text="Nothing Found"/>
 
             </LinearLayout>
-
+<!--
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -275,7 +276,7 @@
                 android:textSize="16sp"
                 app:backgroundTint="@color/red"
                 app:cornerRadius="12dp"
-                app:rippleColor="@color/grey" />
+                app:rippleColor="@color/grey" />-->
 
         </LinearLayout>
 
