@@ -45,6 +45,20 @@ public class ChatFragment extends Fragment {
 
         binding.RC.setLayoutManager(new LinearLayoutManager(context));
         binding.RC.setHasFixedSize(false);
+
+
+
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Constants.initDialog(requireContext());
+        getChats();
+    }
+
+    private void getChats() {
         Constants.showDialog();
         Constants.databaseReference().child(Constants.CHAT_LIST).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
@@ -78,7 +92,5 @@ public class ChatFragment extends Fragment {
                         Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
-        return binding.getRoot();
     }
 }

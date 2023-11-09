@@ -43,7 +43,8 @@ public class EventProfileAdapter extends RecyclerView.Adapter<EventProfileAdapte
         holder.name.setText(taskModel.getName());
         Glide.with(context).load(taskModel.getTaskImage()).placeholder(R.drawable.event).into(holder.eventImage);
         String date = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(taskModel.getDate().getDate());
-        holder.date.setText(date);
+        String time = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(taskModel.getStartTime());
+        holder.date.setText(date +", "+time);
 
         holder.itemView.setOnClickListener(v -> {
             Stash.put("EVENT", taskModel);

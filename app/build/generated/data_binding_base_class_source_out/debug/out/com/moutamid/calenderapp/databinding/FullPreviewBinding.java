@@ -4,14 +4,13 @@ package com.moutamid.calenderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 import com.moutamid.calenderapp.R;
@@ -27,26 +26,22 @@ public final class FullPreviewBinding implements ViewBinding {
   public final MaterialCardView back;
 
   @NonNull
-  public final ImageView imageView;
-
-  @NonNull
   public final MaterialTextView title;
 
   @NonNull
   public final LinearLayout toolbar;
 
   @NonNull
-  public final VideoView videoView;
+  public final ViewPager2 viewPager;
 
   private FullPreviewBinding(@NonNull RelativeLayout rootView, @NonNull MaterialCardView back,
-      @NonNull ImageView imageView, @NonNull MaterialTextView title, @NonNull LinearLayout toolbar,
-      @NonNull VideoView videoView) {
+      @NonNull MaterialTextView title, @NonNull LinearLayout toolbar,
+      @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
     this.back = back;
-    this.imageView = imageView;
     this.title = title;
     this.toolbar = toolbar;
-    this.videoView = videoView;
+    this.viewPager = viewPager;
   }
 
   @Override
@@ -82,12 +77,6 @@ public final class FullPreviewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
-        break missingId;
-      }
-
       id = R.id.title;
       MaterialTextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
@@ -100,14 +89,13 @@ public final class FullPreviewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.videoView;
-      VideoView videoView = ViewBindings.findChildViewById(rootView, id);
-      if (videoView == null) {
+      id = R.id.viewPager;
+      ViewPager2 viewPager = ViewBindings.findChildViewById(rootView, id);
+      if (viewPager == null) {
         break missingId;
       }
 
-      return new FullPreviewBinding((RelativeLayout) rootView, back, imageView, title, toolbar,
-          videoView);
+      return new FullPreviewBinding((RelativeLayout) rootView, back, title, toolbar, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

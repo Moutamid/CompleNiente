@@ -39,18 +39,29 @@ public class UserProfileActivity extends AppCompatActivity {
 
         binding.toolbar.title.setText("Friend Profile");
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
-
-        userModel = (UserModel) Stash.getObject("PassUser", UserModel.class);
+        String userID = "";
+        if (getIntent() != null){
+            userID = getIntent().getStringExtra("userID");
+        }
+        if (userID != null){
+            Constants.showDialog();
+            Constants.databaseReference().child(Constants.USER).child(userID)
+                    .get().addOnSuccessListener(dataSnapshot -> {
+                        Constants.dismissDialog();
+                        userModel = dataSnapshot.getValue(UserModel.class);
+                        getSendRequests();
+                        binding.name.setText(userModel.getName());
+                        Glide.with(this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileIcon);
+                    }).addOnFailureListener(e -> {
+                        Constants.dismissDialog();
+                        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    });
+        }
 
         binding.invite.setOnClickListener(v -> startActivity(new Intent(this, NewEventActivity.class)));
 
         binding.eventsRC.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         binding.eventsRC.setHasFixedSize(false);
-
-        getSendRequests();
-
-        binding.name.setText(userModel.getName());
-        Glide.with(this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileIcon);
 
     }
 

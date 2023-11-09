@@ -18,6 +18,8 @@ import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -38,34 +40,20 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ChatVH> 
         this.list = list;
     }
 
-    private void showFullPreview(ChatsModel model) {
+    private void showFullPreview(int position) {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.full_preview);
 
-        ImageView imageView = dialog.findViewById(R.id.imageView);
-        VideoView videoView = dialog.findViewById(R.id.videoView);
+        ViewPager2 pager = dialog.findViewById(R.id.viewPager);
         MaterialCardView back = dialog.findViewById(R.id.back);
-
-        MediaController mediaController = new MediaController(context);
-        mediaController.setAnchorView(videoView);
-        videoView.setMediaController(mediaController);
 
         back.setOnClickListener(v -> dialog.dismiss());
 
-        boolean isImage = model.getType().equals("img");
-        if (isImage){
-            videoView.setVisibility(View.GONE);
-        } else {
-            imageView.setVisibility(View.GONE);
-        }
+        MediaPagerAdapter adapter = new MediaPagerAdapter(context, list);
+        pager.setAdapter(adapter);
 
-        if (isImage){
-            Glide.with(context).load(model.getMessage()).placeholder(R.color.black).into(imageView);
-        } else {
-            videoView.setVideoPath(model.getMessage());
-            videoView.start();
-        }
+        pager.setCurrentItem(position);
 
         dialog.show();
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -101,7 +89,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ChatVH> 
         }
 
         holder.itemView.setOnClickListener(v -> {
-            showFullPreview(model);
+            showFullPreview(holder.getAdapterPosition());
         });
 
     }

@@ -3527,6 +3527,7 @@ id listMode
 id list_item
 id location
 id login
+id logout
 id lytCameraPick
 id lytGalleryPick
 id m3_side_sheet
@@ -3824,6 +3825,7 @@ id verify
 id vertical_only
 id video
 id videoView
+id viewPager
 id view_offset_helper
 id view_overlay
 id view_transition
@@ -4073,6 +4075,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout pager
 layout picker_selector
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

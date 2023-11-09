@@ -140,6 +140,7 @@ public class NewEventActivity extends AppCompatActivity {
             Date d1 = new Date(milies);
             boolean isToday = month1.equals(cc);
             date = new CalendarDate(d1, false, isToday, getMonthType());
+            Stash.put(Constants.DATE, date);
         });
 
     }
@@ -182,6 +183,7 @@ public class NewEventActivity extends AppCompatActivity {
                                                             new FcmNotificationsSender("/topics/" + userModel.getID(), "Incoming Request", "Someone want to work with you", this, this).SendNotifications();
                                                             Constants.dismissDialog();
                                                             Toast.makeText(this, "A request is send to the user", Toast.LENGTH_SHORT).show();
+                                                            onBackPressed();
                                                         }).addOnFailureListener(e -> {
                                                             Constants.dismissDialog();
                                                             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

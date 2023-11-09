@@ -84,6 +84,7 @@ public class HomeFragment extends Fragment {
                                 UserModel temp = null;
                                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                     UserModel model = snapshot.getValue(UserModel.class);
+
                                     if (model.getUsername().equals(binding.username.getEditText().getText().toString().trim()) ||
                                             model.getEmail().equals(binding.username.getEditText().getText().toString().trim())) {
                                         temp = model;
@@ -92,8 +93,12 @@ public class HomeFragment extends Fragment {
                                 }
 
                                 if (temp != null) {
-                                    Stash.put("PassUser", temp);
-                                    context.startActivity(new Intent(context, UserProfileActivity.class));
+
+                                    if (temp.getID().equals(Constants.auth().getCurrentUser().getUid())){
+                                        Toast.makeText(context, "You can't create event with your self", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        context.startActivity(new Intent(context, UserProfileActivity.class).putExtra("userID", temp.getID()));
+                                    }
                                 } else {
                                     Toast.makeText(context, "User not found", Toast.LENGTH_SHORT).show();
                                 }
@@ -113,14 +118,13 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        Constants.initDialog(context);
+        Constants.initDialog(requireContext());
         UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
         if (user == null) {
             getUserDetails();
         } else {
             binding.name.setText(user.getName());
             Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
-            Constants.showDialog();
 //            getThisMonthTasks();
             getSendRequests();
         }
@@ -128,6 +132,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getSendRequests() {
+        Constants.showDialog();
         Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override

@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.textview.MaterialTextView;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.activities.ChatActivity;
+import com.moutamid.calenderapp.activities.UserProfileActivity;
 import com.moutamid.calenderapp.models.ChatListModel;
 
 import java.util.ArrayList;
@@ -44,6 +45,9 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatLi
 
         Glide.with(context).load(model.getImage()).placeholder(R.drawable.profile_icon).into(holder.profileImage);
 
+        holder.profileImage.setOnClickListener(v -> {
+            context.startActivity(new Intent(context, UserProfileActivity.class).putExtra("userID", model.getUserID()));
+        });
         holder.itemView.setOnClickListener(v -> {
             context.startActivity(new Intent(context, ChatActivity.class).putExtra("ChatPerson", model));
         });

@@ -53,7 +53,7 @@ public class EventDetailActivity extends AppCompatActivity {
     private static final int REQUEST_VIDEO_CAPTURE = 4;
     ActivityEventDetailBinding binding;
     String eventID;
-    UserModel parti1, part2;
+    UserModel part1, part2;
     TaskModel taskModel;
     AddImageAdapter adapter;
     GalleryAdapter chatAdapter;
@@ -71,7 +71,7 @@ public class EventDetailActivity extends AppCompatActivity {
 
         Constants.initDialog(this);
 
-        taskModel = (TaskModel) Stash.getObject("EVENT", TaskModel.class);
+        taskModel = (TaskModel) Stash.getObject(Constants.EVENT, TaskModel.class);
 
         chatsList = new ArrayList<>();
         imagesList = new ArrayList<>();
@@ -85,12 +85,12 @@ public class EventDetailActivity extends AppCompatActivity {
         getUsers();
 
         binding.user1.setOnClickListener(v -> {
-            Stash.put("PassUser", parti1);
-            startActivity(new Intent(this, UserProfileActivity.class));
+            if (!part1.getID().equals(Constants.auth().getCurrentUser().getUid()))
+                startActivity(new Intent(this, UserProfileActivity.class).putExtra("userID", part1.getID()));
         });
         binding.user2.setOnClickListener(v -> {
-            Stash.put("PassUser", part2);
-            startActivity(new Intent(this, UserProfileActivity.class));
+            if (!part2.getID().equals(Constants.auth().getCurrentUser().getUid()))
+                startActivity(new Intent(this, UserProfileActivity.class).putExtra("userID", part2.getID()));
         });
 
         binding.send.setOnClickListener(v -> {
@@ -232,11 +232,10 @@ public class EventDetailActivity extends AppCompatActivity {
                     UserModel userModel = dataSnapshot.getValue(UserModel.class);
                     part2 = userModel;
                     UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
-                    parti1 = stashUser;
-                    Glide.with(this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.user2);
-                    Glide.with(this).load(stashUser.getImage()).placeholder(R.drawable.profile_icon).into(binding.user1);
+                    part1 = stashUser;
+                    Glide.with(this).load(part2.getImage()).placeholder(R.drawable.profile_icon).into(binding.user2);
+                    Glide.with(this).load(part1.getImage()).placeholder(R.drawable.profile_icon).into(binding.user1);
                     Constants.dismissDialog();
-//                    getThisMonthTasks();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
                     Constants.createSnackbar(this, binding.getRoot(), e.getLocalizedMessage(), "Dismiss");
@@ -318,8 +317,7 @@ public class EventDetailActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-            }
-            else if (requestCode == PICK_FROM_GALLERY_VIDEO) {
+            } else if (requestCode == PICK_FROM_GALLERY_VIDEO) {
                 try {
                     if (resultCode == RESULT_OK && data != null && data.getClipData() != null) {
                         binding.sendLayout.setVisibility(View.VISIBLE);
@@ -341,8 +339,7 @@ public class EventDetailActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-            }
-            else if (requestCode == REQUEST_IMAGE_CAPTURE) {
+            } else if (requestCode == REQUEST_IMAGE_CAPTURE) {
                 Log.d("EVENTDETAIL123", "onActivityResult: REQUEST_IMAGE_CAPTURE");
                 Log.d("EVENTDETAIL123", "onActivityResult: resultCode   " + resultCode);
                 Log.d("EVENTDETAIL123", "onActivityResult: data   " + (data != null));
@@ -354,8 +351,7 @@ public class EventDetailActivity extends AppCompatActivity {
                     adapter = new AddImageAdapter(EventDetailActivity.this, imagesList, click);
                     binding.imagePreviewRC.setAdapter(adapter);
                 }
-            }
-            else if (requestCode == REQUEST_VIDEO_CAPTURE) {
+            } else if (requestCode == REQUEST_VIDEO_CAPTURE) {
                 if (resultCode == RESULT_OK && data != null) {
                     binding.sendLayout.setVisibility(View.VISIBLE);
                     Uri imageUri = data.getData();

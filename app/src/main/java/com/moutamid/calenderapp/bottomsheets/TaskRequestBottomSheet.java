@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
     Context context;
     TaskModel model;
     boolean b;
+    private static final String TAG = "TaskRequestBottomSheet";
 
     public TaskRequestBottomSheet(TaskModel model, boolean b) {
         this.model = model;
@@ -57,6 +59,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
 
         Glide.with(context).load(model.getUserImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
 
+        Log.d(TAG, "model: " + model.getUserID());
         if (b) {
             binding.accept.setVisibility(View.GONE);
             binding.endReject.setText("Reject/Delete");
@@ -88,11 +91,18 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             Constants.showDialog();
             model.setAccepted(Constants.YES);
             model.getDate().setSelected(true);
+            Log.d(TAG, "model: " + model.getUserID());
+            Log.d(TAG, "login: " + Constants.auth().getCurrentUser().getUid());
+            TaskModel taskModel = model;
+            taskModel.setUserID(Constants.auth().getCurrentUser().getUid());
+            Log.d(TAG, "taskModel: " + taskModel.getUserID());
+
             UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
             Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
-                Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused1 -> {
+                Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(taskModel).addOnSuccessListener(unused1 -> {
+
                     Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused2 -> {
-                        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused8 -> {
+                        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(taskModel).addOnSuccessListener(unused8 -> {
                             Constants.databaseReference().child(Constants.REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused6 -> {
                                 String ID = UUID.randomUUID().toString();
                                 ChatListModel sender = new ChatListModel(ID, stashUser.getImage(), stashUser.getName(), "Task : " + model.getName(), model.getID(), stashUser.getID(), model.getDate().getDate());

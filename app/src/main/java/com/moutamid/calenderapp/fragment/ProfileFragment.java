@@ -23,6 +23,7 @@ import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.SplashScreenActivity;
 import com.moutamid.calenderapp.activities.ProfileEditActivity;
 import com.moutamid.calenderapp.activities.SelectUserActivity;
+import com.moutamid.calenderapp.activities.SettingActivity;
 import com.moutamid.calenderapp.adapters.EventAdapter;
 import com.moutamid.calenderapp.adapters.EventProfileAdapter;
 import com.moutamid.calenderapp.databinding.FragmentProfileBinding;
@@ -48,38 +49,20 @@ public class ProfileFragment extends Fragment {
 
 //        setStatusBarColor();
 
-        Constants.initDialog(context);
+
 
         taskList = new ArrayList<>();
 
         binding.name.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
         binding.profileImage.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
-        binding.edit.setOnClickListener(v -> startActivity(new Intent(context, ProfileEditActivity.class)));
+        binding.edit.setOnClickListener(v -> startActivity(new Intent(context, SettingActivity.class)));
         binding.newEvent.setOnClickListener(v -> startActivity(new Intent(context, SelectUserActivity.class)));
-
-//        binding.logout.setOnClickListener(v -> {
-//            new AlertDialog.Builder(context)
-//                    .setTitle("Logout")
-//                    .setMessage("Are you sure you want to logout?")
-//                    .setNegativeButton("No", ((dialog, which) -> dialog.dismiss()))
-//                    .setPositiveButton("Yes", ((dialog, which) -> {
-//                        dialog.dismiss();
-//                        Stash.clear(Constants.STASH_USER);
-//                        Constants.auth().signOut();
-//                        startActivity(new Intent(context, SplashScreenActivity.class));
-//                        getActivity().finish();
-//                    }))
-//                    .show();
-//        });
 
 
         binding.eventsRC.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         binding.eventsRC.setHasFixedSize(false);
 
-//        binding.terms.setOnClickListener(v -> openBrowser(Constants.TERMS));
-//        binding.privacy.setOnClickListener(v -> openBrowser(Constants.POLICY));
 
-        getSendRequests();
 
         return binding.getRoot();
     }
@@ -123,14 +106,11 @@ public class ProfileFragment extends Fragment {
                 });
     }
 
-    private void openBrowser(String link) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-        startActivity(intent);
-    }
-
     @Override
     public void onResume() {
         super.onResume();
+        Constants.initDialog(requireContext());
+        getSendRequests();
         UserModel user = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
         binding.name.setText(user.getName());
         Glide.with(context).load(user.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileIcon);

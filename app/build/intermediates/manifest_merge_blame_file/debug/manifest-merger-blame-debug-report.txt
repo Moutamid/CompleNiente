@@ -9,552 +9,566 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-12-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:5-77
-12-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:22-74
-13    <uses-permission android:name="android.permission.VIBRATE" />
-13-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:5-66
-13-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:22-63
-14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:5-79
-14-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:22-76
-15    <uses-permission android:name="android.permission.WAKE_LOCK" />
-15-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-68
-15-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:22-65
-16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-16-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:5-82
-16-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:22-79
-17    <uses-permission android:name="android.permission.CAMERA" />
-17-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:5-65
-17-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:22-62
-18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-18-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-71
-18-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:22-68
-19
-20    <uses-feature android:name="android.hardware.camera" />
-20-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:5-60
-20-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:19-57
-21    <uses-feature android:name="android.hardware.camera.autofocus" />
-21-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:5-70
-21-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:19-67
-22
-23    <queries>
-23-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
+12-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:5-77
+12-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:22-74
+13    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+13-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+14-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:5-74
+14-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:22-71
+15    <uses-permission android:name="android.permission.VIBRATE" />
+15-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-66
+15-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:22-63
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:5-79
+16-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:22-76
+17    <uses-permission android:name="android.permission.WAKE_LOCK" />
+17-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:5-68
+17-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:22-65
+18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+18-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-82
+18-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:22-79
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:5-65
+19-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:22-62
+20    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+20-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:5-71
+20-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:22-68
+21
+22    <uses-feature android:name="android.hardware.camera" />
+22-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:15:5-60
+22-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:15:19-57
+23    <uses-feature android:name="android.hardware.camera.autofocus" />
+23-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:5-70
+23-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:19-67
 24
-25        <!-- Query Camera Packages -->
-26        <intent>
-26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:12:9-14:18
-27            <action android:name="android.media.action.IMAGE_CAPTURE" />
-27-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:13-73
-27-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:21-70
-28        </intent>
-29        <!-- Query Open Document -->
-30        <intent>
-30-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:16:9-18:18
-31            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
-31-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:13-79
-31-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:21-76
-32        </intent>
-33    </queries>
-34
-35    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-35-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:5-79
-35-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:22-76
-36    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-36-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:26:5-110
-36-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:26:22-107
-37
-38    <permission
-38-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-39        android:name="com.moutamid.calenderapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-39-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-40        android:protectionLevel="signature" />
-40-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-41
-42    <uses-permission android:name="com.moutamid.calenderapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-42-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-42-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+25    <queries>
+25-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
+26
+27        <!-- Query Camera Packages -->
+28        <intent>
+28-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:12:9-14:18
+29            <action android:name="android.media.action.IMAGE_CAPTURE" />
+29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:13-73
+29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:13:21-70
+30        </intent>
+31        <!-- Query Open Document -->
+32        <intent>
+32-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:16:9-18:18
+33            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+33-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:13-79
+33-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:17:21-76
+34        </intent>
+35    </queries>
+36
+37    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+37-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:5-79
+37-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:22-76
+38    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+38-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:26:5-110
+38-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:26:22-107
+39
+40    <permission
+40-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+41        android:name="com.moutamid.calenderapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+41-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+42        android:protectionLevel="signature" />
+42-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 43
-44    <application
-44-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:18:5-149:19
-45        android:name="com.moutamid.calenderapp.MyApplication"
-45-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:9-38
-46        android:allowBackup="true"
-46-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-35
-47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-47-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-48        android:dataExtractionRules="@xml/data_extraction_rules"
-48-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:9-65
-49        android:debuggable="true"
-50        android:extractNativeLibs="false"
-51        android:fullBackupContent="@xml/backup_rules"
-51-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:9-54
-52        android:icon="@mipmap/ic_launcher"
-52-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-43
-53        android:label="@string/app_name"
-53-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:9-41
-54        android:roundIcon="@mipmap/ic_launcher_round"
-54-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:9-54
-55        android:supportsRtl="true"
-55-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-35
-56        android:testOnly="true"
-57        android:theme="@style/Theme.CalenderApp" >
-57-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:9-49
-58        <activity
-58-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:30:9-32:40
-59            android:name="com.moutamid.calenderapp.activities.EventDetailActivity"
-59-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:13-59
-60            android:exported="false" />
-60-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:13-37
-61        <activity
-61-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:9-35:40
-62            android:name="com.moutamid.calenderapp.activities.UserProfileActivity"
-62-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:13-59
-63            android:exported="false" />
-63-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:13-37
-64        <activity
-64-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:9-38:40
-65            android:name="com.moutamid.calenderapp.activities.NewEventActivity"
-65-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:13-56
-66            android:exported="false" />
-66-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:13-37
-67        <activity
-67-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:9-42:55
-68            android:name="com.moutamid.calenderapp.activities.EmailVerifyActivity"
-68-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:13-59
-69            android:exported="false"
-69-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:13-37
-70            android:theme="@style/TranslucentTheme" />
-70-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-52
-71        <activity
-71-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:9-45:40
-72            android:name="com.moutamid.calenderapp.activities.ChatActivity"
-72-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:13-52
-73            android:exported="false" />
-73-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-37
-74        <activity
-74-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:9-48:40
-75            android:name="com.moutamid.calenderapp.activities.SelectUserActivity"
-75-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:13-58
-76            android:exported="false" />
-76-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-37
-77        <activity
-77-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:9-51:40
-78            android:name="com.moutamid.calenderapp.activities.AddTaskActivity"
-78-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:50:13-55
-79            android:exported="false" />
-79-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:13-37
-80        <activity
-80-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:9-54:40
-81            android:name="com.moutamid.calenderapp.activities.ProfileEditActivity"
-81-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:53:13-59
-82            android:exported="false" />
-82-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:13-37
-83        <activity
-83-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:55:9-57:40
-84            android:name="com.moutamid.calenderapp.activities.ForgotActivity"
-84-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:56:13-54
-85            android:exported="false" />
-85-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:57:13-37
-86        <activity
-86-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:9-61:55
-87            android:name="com.moutamid.calenderapp.activities.WelcomeActivity"
-87-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:13-55
-88            android:exported="false"
-88-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:60:13-37
-89            android:theme="@style/TranslucentTheme" />
-89-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:13-52
-90        <activity
-90-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:9-64:40
-91            android:name="com.moutamid.calenderapp.activities.SignUpActivity"
-91-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:13-54
-92            android:exported="false" />
-92-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:64:13-37
-93        <activity
-93-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:9-67:40
-94            android:name="com.moutamid.calenderapp.activities.LoginActivity"
-94-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:13-53
-95            android:exported="false" />
-95-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:67:13-37
-96        <activity
-96-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:68:9-77:20
-97            android:name="com.moutamid.calenderapp.SplashScreenActivity"
-97-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:13-49
-98            android:exported="true"
-98-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-36
-99            android:theme="@style/SplashTheme" >
-99-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:13-47
-100            <intent-filter>
-100-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:72:13-76:29
-101                <action android:name="android.intent.action.MAIN" />
-101-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:17-69
-101-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:25-66
-102
-103                <category android:name="android.intent.category.LAUNCHER" />
-103-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:17-77
-103-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:27-74
-104            </intent-filter>
-105        </activity>
-106        <activity
-106-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:9-80:40
-107            android:name="com.moutamid.calenderapp.MainActivity"
-107-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:13-41
-108            android:exported="false" />
-108-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:13-37
-109
-110        <service
-110-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:9-89:19
-111            android:name="com.moutamid.calenderapp.notifications.FirebaseMessagingService"
-111-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:83:13-67
-112            android:exported="true"
-112-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:84:13-36
-113            android:permission="TODO" >
-113-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:85:13-38
-114            <intent-filter>
-114-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-88:29
-115                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-115-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:17-78
-115-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:25-75
-116            </intent-filter>
-117        </service>
-118
-119        <receiver
-119-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:9-98:20
-120            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-120-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:13-78
-121            android:exported="true"
-121-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-36
-122            android:permission="com.google.android.c2dm.permission.SEND" >
-122-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:13-73
-123            <intent-filter>
-123-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:95:13-97:29
-124                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-124-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:96:17-81
-124-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:96:25-78
-125            </intent-filter>
-126        </receiver>
-127
-128        <service
-128-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:100:9-107:19
-129            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-129-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:101:13-82
-130            android:directBootAware="true"
-130-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:102:13-43
-131            android:exported="false" >
-131-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:103:13-37
-132            <intent-filter android:priority="-500" >
-132-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-88:29
-132-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:104:28-51
-133                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-133-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:17-78
-133-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:25-75
-134            </intent-filter>
-135        </service>
-136        <service
-136-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:108:9-121:19
-137            android:name="com.google.firebase.components.ComponentDiscoveryService"
-137-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:109:13-84
-138            android:directBootAware="true"
-138-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:110:13-43
-139            android:exported="false" >
-139-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:111:13-37
-140            <meta-data
-140-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:112:13-114:85
-141                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-141-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:113:17-119
-142                android:value="com.google.firebase.components.ComponentRegistrar" />
-142-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:114:17-82
-143            <meta-data
-143-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:115:13-117:85
-144                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-144-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:17-115
-145                android:value="com.google.firebase.components.ComponentRegistrar" />
-145-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:17-82
-146            <meta-data
-146-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:13-120:85
-147                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-147-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:119:17-127
-148                android:value="com.google.firebase.components.ComponentRegistrar" />
-148-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:17-82
-149            <meta-data
-149-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:69:13-71:85
-150                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-150-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:70:17-109
-151                android:value="com.google.firebase.components.ComponentRegistrar" />
-151-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:71:17-82
-152            <meta-data
-152-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:29:13-31:85
-153                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-153-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:30:17-120
-154                android:value="com.google.firebase.components.ComponentRegistrar" />
-154-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:31:17-82
-155            <meta-data
-155-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:32:13-34:85
-156                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-156-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:33:17-109
-157                android:value="com.google.firebase.components.ComponentRegistrar" />
-157-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:34:17-82
-158            <meta-data
-158-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\16286cebd61e975d9b6ec1d62f93f43d\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:32:13-34:85
-159                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-159-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\16286cebd61e975d9b6ec1d62f93f43d\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:33:17-107
-160                android:value="com.google.firebase.components.ComponentRegistrar" />
-160-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\16286cebd61e975d9b6ec1d62f93f43d\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:34:17-82
-161            <meta-data
-161-->[com.google.firebase:firebase-crashlytics:18.4.3] C:\Users\sunny\.gradle\caches\transforms-3\0b740714e414874fa0a999119e5ffc4a\transformed\jetified-firebase-crashlytics-18.4.3\AndroidManifest.xml:15:13-17:85
-162                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-162-->[com.google.firebase:firebase-crashlytics:18.4.3] C:\Users\sunny\.gradle\caches\transforms-3\0b740714e414874fa0a999119e5ffc4a\transformed\jetified-firebase-crashlytics-18.4.3\AndroidManifest.xml:16:17-115
-163                android:value="com.google.firebase.components.ComponentRegistrar" />
-163-->[com.google.firebase:firebase-crashlytics:18.4.3] C:\Users\sunny\.gradle\caches\transforms-3\0b740714e414874fa0a999119e5ffc4a\transformed\jetified-firebase-crashlytics-18.4.3\AndroidManifest.xml:17:17-82
-164            <meta-data
-164-->[com.google.firebase:firebase-sessions:1.0.2] C:\Users\sunny\.gradle\caches\transforms-3\a18a9e1d58cbaa6800a54290de8c67ef\transformed\jetified-firebase-sessions-1.0.2\AndroidManifest.xml:25:13-27:85
-165                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
-165-->[com.google.firebase:firebase-sessions:1.0.2] C:\Users\sunny\.gradle\caches\transforms-3\a18a9e1d58cbaa6800a54290de8c67ef\transformed\jetified-firebase-sessions-1.0.2\AndroidManifest.xml:26:17-117
-166                android:value="com.google.firebase.components.ComponentRegistrar" />
-166-->[com.google.firebase:firebase-sessions:1.0.2] C:\Users\sunny\.gradle\caches\transforms-3\a18a9e1d58cbaa6800a54290de8c67ef\transformed\jetified-firebase-sessions-1.0.2\AndroidManifest.xml:27:17-82
-167            <meta-data
-167-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\1fdae27227af5c6eae96e0420b38c040\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
-168                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-168-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\1fdae27227af5c6eae96e0420b38c040\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
-169                android:value="com.google.firebase.components.ComponentRegistrar" />
-169-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\1fdae27227af5c6eae96e0420b38c040\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
-170            <meta-data
-170-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:31:13-33:85
-171                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-171-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:32:17-139
-172                android:value="com.google.firebase.components.ComponentRegistrar" />
-172-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:33:17-82
-173            <meta-data
-173-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
-174                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-174-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
-175                android:value="com.google.firebase.components.ComponentRegistrar" />
-175-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
-176        </service> <!-- <provider -->
-177        <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
-178        <!-- android:authorities=".firebaseinitprovider" -->
-179        <!-- android:directBootAware="true" -->
-180        <!-- android:exported="false" -->
-181        <!-- android:initOrder="100" /> -->
-182        <!-- <provider -->
-183        <!-- android:authorities="com.moutamid.pushnotifications." -->
-184        <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
-185        <meta-data
-185-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:130:9-132:69
-186            android:name="com.google.android.gms.version"
-186-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:131:13-58
-187            android:value="@integer/google_play_services_version" />
-187-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:132:13-66
-188
-189        <service
-189-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:134:9-140:19
-190            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-190-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:135:13-103
-191            android:exported="false" >
-191-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:136:13-37
-192            <meta-data
-192-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:137:13-139:39
-193                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-193-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:138:17-94
-194                android:value="cct" />
-194-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:139:17-36
-195        </service>
-196        <service
-196-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:141:9-144:72
-197            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-197-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:142:13-117
-198            android:exported="false"
-198-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:143:13-37
-199            android:permission="android.permission.BIND_JOB_SERVICE" />
-199-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:144:13-69
-200
-201        <receiver
-201-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:146:9-148:40
-202            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-202-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:147:13-132
-203            android:exported="false" />
-203-->C:\Users\sunny\Documents\BridgeLinxProjects\CalendarTaskApp\app\src\main\AndroidManifest.xml:148:13-37
-204
-205        <activity
-205-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:22:9-25:68
-206            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
-206-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:23:13-81
-207            android:screenOrientation="unspecified"
-207-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:24:13-52
-208            android:theme="@style/Theme.Transparent.ImagePicker" />
-208-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:25:13-65
-209        <activity
-209-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:26:9-29:72
-210            android:name="com.yalantis.ucrop.UCropActivity"
-210-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:27:13-60
-211            android:screenOrientation="portrait"
-211-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:28:13-49
-212            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-212-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:29:13-69
-213
-214        <provider
-214-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:31:9-39:20
-215            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
-215-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:32:13-85
-216            android:authorities="com.moutamid.calenderapp.imagepicker.provider"
-216-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:33:13-72
-217            android:exported="false"
-217-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:34:13-37
-218            android:grantUriPermissions="true" >
-218-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:35:13-47
-219            <meta-data
-219-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:36:13-38:71
-220                android:name="android.support.FILE_PROVIDER_PATHS"
-220-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:37:17-67
-221                android:resource="@xml/image_picker_provider_paths" />
-221-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:38:17-68
-222        </provider>
-223
-224        <activity
-224-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:29:9-46:20
-225            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-225-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:30:13-80
-226            android:excludeFromRecents="true"
-226-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:31:13-46
-227            android:exported="true"
-227-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:32:13-36
-228            android:launchMode="singleTask"
-228-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:33:13-44
-229            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-229-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:34:13-72
-230            <intent-filter>
-230-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:35:13-45:29
-231                <action android:name="android.intent.action.VIEW" />
-231-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:17-69
-231-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:25-66
-232
-233                <category android:name="android.intent.category.DEFAULT" />
-233-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:17-76
-233-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:27-73
-234                <category android:name="android.intent.category.BROWSABLE" />
-234-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:17-78
-234-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:27-75
-235
-236                <data
-236-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:41:17-44:51
-237                    android:host="firebase.auth"
-237-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:42:21-49
-238                    android:path="/"
-238-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:43:21-37
-239                    android:scheme="genericidp" />
-239-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:44:21-48
-240            </intent-filter>
-241        </activity>
-242        <activity
-242-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:47:9-64:20
-243            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-243-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:48:13-79
-244            android:excludeFromRecents="true"
-244-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:49:13-46
-245            android:exported="true"
-245-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:50:13-36
-246            android:launchMode="singleTask"
-246-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:51:13-44
-247            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-247-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:52:13-72
-248            <intent-filter>
-248-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:53:13-63:29
-249                <action android:name="android.intent.action.VIEW" />
-249-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:17-69
-249-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:25-66
-250
-251                <category android:name="android.intent.category.DEFAULT" />
-251-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:17-76
-251-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:27-73
-252                <category android:name="android.intent.category.BROWSABLE" />
-252-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:17-78
-252-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:27-75
-253
-254                <data
-254-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:41:17-44:51
-255                    android:host="firebase.auth"
-255-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:42:21-49
-256                    android:path="/"
-256-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:43:21-37
-257                    android:scheme="recaptcha" />
-257-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:44:21-48
-258            </intent-filter>
-259        </activity>
-260
-261        <provider
-261-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
-262            android:name="com.google.firebase.provider.FirebaseInitProvider"
-262-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
-263            android:authorities="com.moutamid.calenderapp.firebaseinitprovider"
-263-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
-264            android:directBootAware="true"
-264-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
-265            android:exported="false"
-265-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
-266            android:initOrder="100" />
-266-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
-267
-268        <activity
-268-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-269            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-269-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-270            android:exported="false"
-270-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-271            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-271-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-272
-273        <receiver
-273-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:29:9-33:20
-274            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-274-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:30:13-85
-275            android:enabled="true"
-275-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:31:13-35
-276            android:exported="false" >
-276-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:32:13-37
-277        </receiver>
+44    <uses-permission android:name="com.moutamid.calenderapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+44-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+44-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+45
+46    <application
+46-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:18:5-155:19
+47        android:name="com.moutamid.calenderapp.MyApplication"
+47-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:9-38
+48        android:allowBackup="true"
+48-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-35
+49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+49-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+50        android:dataExtractionRules="@xml/data_extraction_rules"
+50-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:9-65
+51        android:debuggable="true"
+52        android:extractNativeLibs="false"
+53        android:fullBackupContent="@xml/backup_rules"
+53-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:9-54
+54        android:icon="@mipmap/ic_launcher"
+54-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-43
+55        android:label="@string/app_name"
+55-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:9-41
+56        android:roundIcon="@mipmap/ic_launcher_round"
+56-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:9-54
+57        android:supportsRtl="true"
+57-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-35
+58        android:testOnly="true"
+59        android:theme="@style/Theme.CalenderApp" >
+59-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:9-49
+60        <activity
+60-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:30:9-32:40
+61            android:name="com.moutamid.calenderapp.activities.EventDetailActivity"
+61-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:13-59
+62            android:exported="false" />
+62-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:13-37
+63        <activity
+63-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:9-35:40
+64            android:name="com.moutamid.calenderapp.activities.UserProfileActivity"
+64-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:13-59
+65            android:exported="false" />
+65-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:13-37
+66        <activity
+66-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:9-38:40
+67            android:name="com.moutamid.calenderapp.activities.NewEventActivity"
+67-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:13-56
+68            android:exported="false" />
+68-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:13-37
+69        <activity
+69-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:9-42:55
+70            android:name="com.moutamid.calenderapp.activities.EmailVerifyActivity"
+70-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:13-59
+71            android:exported="false"
+71-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:13-37
+72            android:theme="@style/TranslucentTheme" />
+72-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-52
+73        <activity
+73-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:9-45:40
+74            android:name="com.moutamid.calenderapp.activities.ChatActivity"
+74-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:13-52
+75            android:exported="false" />
+75-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-37
+76        <activity
+76-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:9-48:40
+77            android:name="com.moutamid.calenderapp.activities.SelectUserActivity"
+77-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:13-58
+78            android:exported="false" />
+78-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-37
+79        <activity
+79-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:9-51:40
+80            android:name="com.moutamid.calenderapp.activities.AddTaskActivity"
+80-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:50:13-55
+81            android:exported="false" />
+81-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:13-37
+82        <activity
+82-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:9-54:40
+83            android:name="com.moutamid.calenderapp.activities.ProfileEditActivity"
+83-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:53:13-59
+84            android:exported="false" />
+84-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:13-37
+85        <activity
+85-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:55:9-57:40
+86            android:name="com.moutamid.calenderapp.activities.ForgotActivity"
+86-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:56:13-54
+87            android:exported="false" />
+87-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:57:13-37
+88        <activity
+88-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:9-61:55
+89            android:name="com.moutamid.calenderapp.activities.WelcomeActivity"
+89-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:13-55
+90            android:exported="false"
+90-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:60:13-37
+91            android:theme="@style/TranslucentTheme" />
+91-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:13-52
+92        <activity
+92-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:9-64:40
+93            android:name="com.moutamid.calenderapp.activities.SignUpActivity"
+93-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:13-54
+94            android:exported="false" />
+94-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:64:13-37
+95        <activity
+95-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:9-67:40
+96            android:name="com.moutamid.calenderapp.activities.LoginActivity"
+96-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:13-53
+97            android:exported="false" />
+97-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:67:13-37
+98        <activity
+98-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:68:9-77:20
+99            android:name="com.moutamid.calenderapp.SplashScreenActivity"
+99-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:13-49
+100            android:exported="true"
+100-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-36
+101            android:theme="@style/SplashTheme" >
+101-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:13-47
+102            <intent-filter>
+102-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:72:13-76:29
+103                <action android:name="android.intent.action.MAIN" />
+103-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:17-69
+103-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:25-66
+104
+105                <category android:name="android.intent.category.LAUNCHER" />
+105-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:17-77
+105-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:27-74
+106            </intent-filter>
+107        </activity>
+108        <activity
+108-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:9-80:40
+109            android:name="com.moutamid.calenderapp.MainActivity"
+109-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:13-41
+110            android:exported="false" />
+110-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:13-37
+111
+112        <service
+112-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:9-89:19
+113            android:name="com.moutamid.calenderapp.notifications.FirebaseMessagingService"
+113-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:83:13-67
+114            android:exported="true"
+114-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:84:13-36
+115            android:permission="TODO" >
+115-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:85:13-38
+116            <intent-filter>
+116-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-88:29
+117                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+117-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:17-78
+117-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:25-75
+118            </intent-filter>
+119        </service>
+120
+121        <receiver
+121-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:9-98:20
+122            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+122-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:13-78
+123            android:exported="true"
+123-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-36
+124            android:permission="com.google.android.c2dm.permission.SEND" >
+124-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:13-73
+125            <intent-filter>
+125-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:95:13-97:29
+126                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+126-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:96:17-81
+126-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:96:25-78
+127            </intent-filter>
+128        </receiver>
+129
+130        <service
+130-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:100:9-107:19
+131            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+131-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:101:13-82
+132            android:directBootAware="true"
+132-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:102:13-43
+133            android:exported="false" >
+133-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:103:13-37
+134            <intent-filter android:priority="-500" >
+134-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-88:29
+134-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:104:28-51
+135                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+135-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:17-78
+135-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:25-75
+136            </intent-filter>
+137        </service>
+138        <service
+138-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:108:9-121:19
+139            android:name="com.google.firebase.components.ComponentDiscoveryService"
+139-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:109:13-84
+140            android:directBootAware="true"
+140-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:110:13-43
+141            android:exported="false" >
+141-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:111:13-37
+142            <meta-data
+142-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:112:13-114:85
+143                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+143-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:113:17-119
+144                android:value="com.google.firebase.components.ComponentRegistrar" />
+144-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:114:17-82
+145            <meta-data
+145-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:115:13-117:85
+146                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+146-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:17-115
+147                android:value="com.google.firebase.components.ComponentRegistrar" />
+147-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:17-82
+148            <meta-data
+148-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:13-120:85
+149                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+149-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:119:17-127
+150                android:value="com.google.firebase.components.ComponentRegistrar" />
+150-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:17-82
+151            <meta-data
+151-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:69:13-71:85
+152                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+152-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:70:17-109
+153                android:value="com.google.firebase.components.ComponentRegistrar" />
+153-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:71:17-82
+154            <meta-data
+154-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:29:13-31:85
+155                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+155-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:30:17-120
+156                android:value="com.google.firebase.components.ComponentRegistrar" />
+156-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:31:17-82
+157            <meta-data
+157-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:32:13-34:85
+158                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+158-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:33:17-109
+159                android:value="com.google.firebase.components.ComponentRegistrar" />
+159-->[com.google.firebase:firebase-database:20.3.0] C:\Users\sunny\.gradle\caches\transforms-3\0771e7586cbc278d47d6a36b28cd68c6\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:34:17-82
+160            <meta-data
+160-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\16286cebd61e975d9b6ec1d62f93f43d\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:32:13-34:85
+161                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+161-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\16286cebd61e975d9b6ec1d62f93f43d\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:33:17-107
+162                android:value="com.google.firebase.components.ComponentRegistrar" />
+162-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\sunny\.gradle\caches\transforms-3\16286cebd61e975d9b6ec1d62f93f43d\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:34:17-82
+163            <meta-data
+163-->[com.google.firebase:firebase-crashlytics:18.4.3] C:\Users\sunny\.gradle\caches\transforms-3\0b740714e414874fa0a999119e5ffc4a\transformed\jetified-firebase-crashlytics-18.4.3\AndroidManifest.xml:15:13-17:85
+164                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+164-->[com.google.firebase:firebase-crashlytics:18.4.3] C:\Users\sunny\.gradle\caches\transforms-3\0b740714e414874fa0a999119e5ffc4a\transformed\jetified-firebase-crashlytics-18.4.3\AndroidManifest.xml:16:17-115
+165                android:value="com.google.firebase.components.ComponentRegistrar" />
+165-->[com.google.firebase:firebase-crashlytics:18.4.3] C:\Users\sunny\.gradle\caches\transforms-3\0b740714e414874fa0a999119e5ffc4a\transformed\jetified-firebase-crashlytics-18.4.3\AndroidManifest.xml:17:17-82
+166            <meta-data
+166-->[com.google.firebase:firebase-sessions:1.0.2] C:\Users\sunny\.gradle\caches\transforms-3\a18a9e1d58cbaa6800a54290de8c67ef\transformed\jetified-firebase-sessions-1.0.2\AndroidManifest.xml:25:13-27:85
+167                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+167-->[com.google.firebase:firebase-sessions:1.0.2] C:\Users\sunny\.gradle\caches\transforms-3\a18a9e1d58cbaa6800a54290de8c67ef\transformed\jetified-firebase-sessions-1.0.2\AndroidManifest.xml:26:17-117
+168                android:value="com.google.firebase.components.ComponentRegistrar" />
+168-->[com.google.firebase:firebase-sessions:1.0.2] C:\Users\sunny\.gradle\caches\transforms-3\a18a9e1d58cbaa6800a54290de8c67ef\transformed\jetified-firebase-sessions-1.0.2\AndroidManifest.xml:27:17-82
+169            <meta-data
+169-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\1fdae27227af5c6eae96e0420b38c040\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+170                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+170-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\1fdae27227af5c6eae96e0420b38c040\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+171                android:value="com.google.firebase.components.ComponentRegistrar" />
+171-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\1fdae27227af5c6eae96e0420b38c040\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+172            <meta-data
+172-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:31:13-33:85
+173                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+173-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:32:17-139
+174                android:value="com.google.firebase.components.ComponentRegistrar" />
+174-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\60cb038bb82ca6fd779ddfa7fcb46759\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:33:17-82
+175            <meta-data
+175-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+176                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+176-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+177                android:value="com.google.firebase.components.ComponentRegistrar" />
+177-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+178        </service> <!-- <provider -->
+179        <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
+180        <!-- android:authorities=".firebaseinitprovider" -->
+181        <!-- android:directBootAware="true" -->
+182        <!-- android:exported="false" -->
+183        <!-- android:initOrder="100" /> -->
+184        <!-- <provider -->
+185        <!-- android:authorities="com.moutamid.pushnotifications." -->
+186        <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
+187        <meta-data
+187-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:130:9-132:69
+188            android:name="com.google.android.gms.version"
+188-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:131:13-58
+189            android:value="@integer/google_play_services_version" />
+189-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:132:13-66
+190
+191        <service
+191-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:134:9-140:19
+192            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+192-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:135:13-103
+193            android:exported="false" >
+193-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:136:13-37
+194            <meta-data
+194-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:137:13-139:39
+195                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+195-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:138:17-94
+196                android:value="cct" />
+196-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:139:17-36
+197        </service>
+198        <service
+198-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:141:9-144:72
+199            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+199-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:142:13-117
+200            android:exported="false"
+200-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:143:13-37
+201            android:permission="android.permission.BIND_JOB_SERVICE" />
+201-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:144:13-69
+202
+203        <receiver
+203-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:146:9-148:40
+204            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+204-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:147:13-132
+205            android:exported="false" />
+205-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:148:13-37
+206        <receiver
+206-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:150:9-153:40
+207            android:name="com.moutamid.calenderapp.notifications.NotificationSchdule"
+207-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:151:13-62
+208            android:enabled="true"
+208-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:152:13-35
+209            android:exported="false" />
+209-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:153:13-37
+210
+211        <activity
+211-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:22:9-25:68
+212            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+212-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:23:13-81
+213            android:screenOrientation="unspecified"
+213-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:24:13-52
+214            android:theme="@style/Theme.Transparent.ImagePicker" />
+214-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:25:13-65
+215        <activity
+215-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:26:9-29:72
+216            android:name="com.yalantis.ucrop.UCropActivity"
+216-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:27:13-60
+217            android:screenOrientation="portrait"
+217-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:28:13-49
+218            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+218-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:29:13-69
+219
+220        <provider
+220-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:31:9-39:20
+221            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+221-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:32:13-85
+222            android:authorities="com.moutamid.calenderapp.imagepicker.provider"
+222-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:33:13-72
+223            android:exported="false"
+223-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:34:13-37
+224            android:grantUriPermissions="true" >
+224-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:35:13-47
+225            <meta-data
+225-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:36:13-38:71
+226                android:name="android.support.FILE_PROVIDER_PATHS"
+226-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:37:17-67
+227                android:resource="@xml/image_picker_provider_paths" />
+227-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:38:17-68
+228        </provider>
+229
+230        <activity
+230-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:29:9-46:20
+231            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+231-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:30:13-80
+232            android:excludeFromRecents="true"
+232-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:31:13-46
+233            android:exported="true"
+233-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:32:13-36
+234            android:launchMode="singleTask"
+234-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:33:13-44
+235            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+235-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:34:13-72
+236            <intent-filter>
+236-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:35:13-45:29
+237                <action android:name="android.intent.action.VIEW" />
+237-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:17-69
+237-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:25-66
+238
+239                <category android:name="android.intent.category.DEFAULT" />
+239-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:17-76
+239-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:27-73
+240                <category android:name="android.intent.category.BROWSABLE" />
+240-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:17-78
+240-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:27-75
+241
+242                <data
+242-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:41:17-44:51
+243                    android:host="firebase.auth"
+243-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:42:21-49
+244                    android:path="/"
+244-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:43:21-37
+245                    android:scheme="genericidp" />
+245-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:44:21-48
+246            </intent-filter>
+247        </activity>
+248        <activity
+248-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:47:9-64:20
+249            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+249-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:48:13-79
+250            android:excludeFromRecents="true"
+250-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:49:13-46
+251            android:exported="true"
+251-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:50:13-36
+252            android:launchMode="singleTask"
+252-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:51:13-44
+253            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+253-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:52:13-72
+254            <intent-filter>
+254-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:53:13-63:29
+255                <action android:name="android.intent.action.VIEW" />
+255-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:17-69
+255-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:36:25-66
+256
+257                <category android:name="android.intent.category.DEFAULT" />
+257-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:17-76
+257-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:27-73
+258                <category android:name="android.intent.category.BROWSABLE" />
+258-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:17-78
+258-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:27-75
+259
+260                <data
+260-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:41:17-44:51
+261                    android:host="firebase.auth"
+261-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:42:21-49
+262                    android:path="/"
+262-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:43:21-37
+263                    android:scheme="recaptcha" />
+263-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\sunny\.gradle\caches\transforms-3\11182aa0c1fb762c83cc4f7159198c5d\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:44:21-48
+264            </intent-filter>
+265        </activity>
+266
+267        <provider
+267-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+268            android:name="com.google.firebase.provider.FirebaseInitProvider"
+268-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+269            android:authorities="com.moutamid.calenderapp.firebaseinitprovider"
+269-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+270            android:directBootAware="true"
+270-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+271            android:exported="false"
+271-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+272            android:initOrder="100" />
+272-->[com.google.firebase:firebase-common:20.4.2] C:\Users\sunny\.gradle\caches\transforms-3\e04448f6480183dc71acdb0aa12818fa\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+273
+274        <activity
+274-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+275            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+275-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+276            android:exported="false"
+276-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+277            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+277-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\sunny\.gradle\caches\transforms-3\a2f06e1a76e666553f8b8e92936cbf76\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 278
-279        <service
-279-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:35:9-38:40
-280            android:name="com.google.android.gms.measurement.AppMeasurementService"
-280-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:36:13-84
+279        <receiver
+279-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:29:9-33:20
+280            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+280-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:30:13-85
 281            android:enabled="true"
-281-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:37:13-35
-282            android:exported="false" />
-282-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:38:13-37
-283        <service
-283-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:39:9-43:72
-284            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-284-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:40:13-87
-285            android:enabled="true"
-285-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:41:13-35
-286            android:exported="false"
-286-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:42:13-37
-287            android:permission="android.permission.BIND_JOB_SERVICE" />
-287-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:43:13-69
-288
-289        <provider
-289-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-290            android:name="androidx.startup.InitializationProvider"
-290-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-291            android:authorities="com.moutamid.calenderapp.androidx-startup"
-291-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-292            android:exported="false" >
-292-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-293            <meta-data
-293-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-294                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-294-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-295                android:value="androidx.startup" />
-295-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-296            <meta-data
-296-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\sunny\.gradle\caches\transforms-3\0b5e3be99dd8c8145b0726c12d8e2831\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-297                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-297-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\sunny\.gradle\caches\transforms-3\0b5e3be99dd8c8145b0726c12d8e2831\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-298                android:value="androidx.startup" />
-298-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\sunny\.gradle\caches\transforms-3\0b5e3be99dd8c8145b0726c12d8e2831\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-299        </provider>
-300    </application>
-301
-302</manifest>
+281-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:31:13-35
+282            android:exported="false" >
+282-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:32:13-37
+283        </receiver>
+284
+285        <service
+285-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:35:9-38:40
+286            android:name="com.google.android.gms.measurement.AppMeasurementService"
+286-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:36:13-84
+287            android:enabled="true"
+287-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:37:13-35
+288            android:exported="false" />
+288-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:38:13-37
+289        <service
+289-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:39:9-43:72
+290            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+290-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:40:13-87
+291            android:enabled="true"
+291-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:41:13-35
+292            android:exported="false"
+292-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:42:13-37
+293            android:permission="android.permission.BIND_JOB_SERVICE" />
+293-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8c8d29ac03b657ef631913dcb2bf039a\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:43:13-69
+294
+295        <provider
+295-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+296            android:name="androidx.startup.InitializationProvider"
+296-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+297            android:authorities="com.moutamid.calenderapp.androidx-startup"
+297-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+298            android:exported="false" >
+298-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+299            <meta-data
+299-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+300                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+300-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+301                android:value="androidx.startup" />
+301-->[androidx.emoji2:emoji2:1.2.0] C:\Users\sunny\.gradle\caches\transforms-3\0a595a49102f421a5f5359a7a8a76f23\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+302            <meta-data
+302-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\sunny\.gradle\caches\transforms-3\0b5e3be99dd8c8145b0726c12d8e2831\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+303                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+303-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\sunny\.gradle\caches\transforms-3\0b5e3be99dd8c8145b0726c12d8e2831\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+304                android:value="androidx.startup" />
+304-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\sunny\.gradle\caches\transforms-3\0b5e3be99dd8c8145b0726c12d8e2831\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+305        </provider>
+306    </application>
+307
+308</manifest>

@@ -43,10 +43,6 @@ public class ListFragment extends Fragment {
         binding.RC.setLayoutManager(new LinearLayoutManager(context));
         binding.RC.setHasFixedSize(false);
 
-        Constants.initDialog(context);
-
-        getThisMonthTasks();
-
         return binding.getRoot();
     }
 
@@ -83,6 +79,13 @@ public class ListFragment extends Fragment {
                         Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Constants.initDialog(requireContext());
+        getThisMonthTasks();
     }
 
     TaskClickListener listener = model -> {

@@ -118,6 +118,7 @@ id invite
 id lastMessage
 id location
 id login
+id logout
 id message
 id minute
 id month
@@ -163,6 +164,7 @@ id username
 id verify
 id video
 id videoView
+id viewPager
 id weekCalendar
 id year
 layout activity_add_task
@@ -196,6 +198,7 @@ layout full_preview
 layout gallery_card
 layout image_layout
 layout loading_dialog
+layout pager
 layout picker_selector
 layout task_request_bottomsheet
 layout task_request_card
