@@ -34,9 +34,6 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final RecyclerView eventsRC;
 
   @NonNull
-  public final MaterialButton logout;
-
-  @NonNull
   public final TextView name;
 
   @NonNull
@@ -52,14 +49,13 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final MaterialCardView profileImage;
 
   private FragmentProfileBinding(@NonNull RelativeLayout rootView, @NonNull MaterialButton edit,
-      @NonNull TextView eventCount, @NonNull RecyclerView eventsRC, @NonNull MaterialButton logout,
-      @NonNull TextView name, @NonNull MaterialButton newEvent, @NonNull LinearLayout noItemLayout,
+      @NonNull TextView eventCount, @NonNull RecyclerView eventsRC, @NonNull TextView name,
+      @NonNull MaterialButton newEvent, @NonNull LinearLayout noItemLayout,
       @NonNull ImageView profileIcon, @NonNull MaterialCardView profileImage) {
     this.rootView = rootView;
     this.edit = edit;
     this.eventCount = eventCount;
     this.eventsRC = eventsRC;
-    this.logout = logout;
     this.name = name;
     this.newEvent = newEvent;
     this.noItemLayout = noItemLayout;
@@ -112,12 +108,6 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.logout;
-      MaterialButton logout = ViewBindings.findChildViewById(rootView, id);
-      if (logout == null) {
-        break missingId;
-      }
-
       id = R.id.name;
       TextView name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
@@ -148,8 +138,8 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((RelativeLayout) rootView, edit, eventCount, eventsRC,
-          logout, name, newEvent, noItemLayout, profileIcon, profileImage);
+      return new FragmentProfileBinding((RelativeLayout) rootView, edit, eventCount, eventsRC, name,
+          newEvent, noItemLayout, profileIcon, profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

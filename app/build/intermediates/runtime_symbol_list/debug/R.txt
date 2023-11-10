@@ -3424,6 +3424,7 @@ int id easeOut 0x7f0900d0
 int id east 0x7f0900d1
 int id edge 0x7f0900d2
 int id edit 0x7f0900d3
+int id editProfile 0x7f09027e
 int id edit_query 0x7f0900d4
 int id elastic 0x7f0900d5
 int id email 0x7f0900d6
@@ -3645,6 +3646,7 @@ int id position 0x7f0901ad
 int id postLayout 0x7f0901ae
 int id pressed 0x7f0901af
 int id prev 0x7f0901b0
+int id privacy 0x7f09027f
 int id profileImage 0x7f0901b1
 int id profile_icon 0x7f0901b2
 int id progressBar 0x7f0901b3
@@ -3767,6 +3769,7 @@ int id tag_unhandled_key_listeners 0x7f090227
 int id tag_window_insets_animation_callback 0x7f090228
 int id taskDesc 0x7f090229
 int id taskName 0x7f09022a
+int id terms 0x7f090280
 int id text 0x7f09022b
 int id text2 0x7f09022c
 int id textEnd 0x7f09022d
@@ -3975,6 +3978,7 @@ int layout activity_main 0x7f0c0022
 int layout activity_new_event 0x7f0c0023
 int layout activity_profile_edit 0x7f0c0024
 int layout activity_select_user 0x7f0c0025
+int layout activity_setting 0x7f0c009c
 int layout activity_sign_up 0x7f0c0026
 int layout activity_splash_screen 0x7f0c0027
 int layout activity_user_profile 0x7f0c0028

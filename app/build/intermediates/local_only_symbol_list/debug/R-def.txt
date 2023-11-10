@@ -94,6 +94,7 @@ id description
 id dobLayout
 id eImage
 id edit
+id editProfile
 id email
 id endReject
 id eventCount
@@ -135,6 +136,7 @@ id noItemLayout
 id occurrence
 id password
 id prev
+id privacy
 id profileImage
 id profile_icon
 id progressBar
@@ -151,6 +153,7 @@ id status
 id statusText
 id taskDesc
 id taskName
+id terms
 id time
 id title
 id toolbar
@@ -177,6 +180,7 @@ layout activity_main
 layout activity_new_event
 layout activity_profile_edit
 layout activity_select_user
+layout activity_setting
 layout activity_sign_up
 layout activity_splash_screen
 layout activity_user_profile

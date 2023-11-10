@@ -58,6 +58,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.CalenderApp" >
         <activity
+            android:name="com.moutamid.calenderapp.activities.SettingActivity"
+            android:exported="false" />
+        <activity
             android:name="com.moutamid.calenderapp.activities.EventDetailActivity"
             android:exported="false" />
         <activity

@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
+import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.database.ChildEventListener;
@@ -197,10 +198,10 @@ public class EventDetailActivity extends AppCompatActivity {
         camera.setOnClickListener(v -> {
             dialog.dismiss();
             if (isImage) {
-                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(Intent.createChooser(takePictureIntent, ""), REQUEST_IMAGE_CAPTURE);
-                }
+                ImagePicker.with(EventDetailActivity.this)
+                        .cameraOnly()
+                        .compress(1024)
+                        .start(REQUEST_IMAGE_CAPTURE);
             } else {
                 Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
                 if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {

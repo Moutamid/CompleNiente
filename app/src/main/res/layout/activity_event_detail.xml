@@ -201,7 +201,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/top_radius"
-        android:backgroundTint="@color/grey"
+        android:backgroundTint="@color/white"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:visibility="gone"
