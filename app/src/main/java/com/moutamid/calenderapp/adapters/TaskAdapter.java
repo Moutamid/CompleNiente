@@ -42,9 +42,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskVH> {
     public void onBindViewHolder(@NonNull TaskVH holder, int position) {
         TaskModel taskModel = list.get(holder.getAdapterPosition());
 
-        holder.username.setText(taskModel.getUsername());
+        holder.username.setText(taskModel.getUser().get(1).getUsername());
         holder.taskName.setText(taskModel.getName());
-        Glide.with(context).load(taskModel.getUserImage()).placeholder(R.drawable.profile_icon).into(holder.profileImage);
+        Glide.with(context).load(taskModel.getUser().get(1).getImage()).placeholder(R.drawable.profile_icon).into(holder.profileImage);
         String date = new SimpleDateFormat("MMM dd", Locale.getDefault()).format(taskModel.getDate().getDate());
         holder.date.setText(date);
 

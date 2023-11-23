@@ -49,17 +49,16 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
 
         Constants.initDialog(context);
 
-        binding.username.setText(model.getUsername());
-        binding.userID.setText("@" + model.getUserHandle());
+        binding.username.setText(model.getUser().get(1).getName());
+        binding.userID.setText("@" + model.getUser().get(1).getUsername());
         binding.taskName.setText(model.getName());
         binding.taskDesc.setText(model.getDescription());
 
         String date = new SimpleDateFormat("MMM dd", Locale.getDefault()).format(model.getDate().getDate());
         binding.date.setText(date);
 
-        Glide.with(context).load(model.getUserImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
+        Glide.with(context).load(model.getUser().get(1).getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
 
-        Log.d(TAG, "model: " + model.getUserID());
         if (b) {
             binding.accept.setVisibility(View.GONE);
             binding.endReject.setText("Reject/Delete");
@@ -91,26 +90,22 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             Constants.showDialog();
             model.setAccepted(Constants.YES);
             model.getDate().setSelected(true);
-            Log.d(TAG, "model: " + model.getUserID());
             Log.d(TAG, "login: " + Constants.auth().getCurrentUser().getUid());
-            TaskModel taskModel = model;
-            taskModel.setUserID(Constants.auth().getCurrentUser().getUid());
-            Log.d(TAG, "taskModel: " + taskModel.getUserID());
 
             UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
             Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
-                Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(model.getUserID()).child(model.getID()).setValue(taskModel).addOnSuccessListener(unused1 -> {
+                Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(model.getUser().get(1).getID()).child(model.getID()).setValue(model).addOnSuccessListener(unused1 -> {
 
                     Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused2 -> {
-                        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(model.getUserID()).child(model.getID()).setValue(taskModel).addOnSuccessListener(unused8 -> {
+                        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(model.getUser().get(1).getID()).child(model.getID()).setValue(model).addOnSuccessListener(unused8 -> {
                             Constants.databaseReference().child(Constants.REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused6 -> {
                                 String ID = UUID.randomUUID().toString();
                                 ChatListModel sender = new ChatListModel(ID, stashUser.getImage(), stashUser.getName(), "Task : " + model.getName(), model.getID(), stashUser.getID(), model.getDate().getDate());
-                                ChatListModel receiver = new ChatListModel(ID, model.getUserImage(), model.getUsername(), "Task : " + model.getName(), model.getID(), model.getUserID(), model.getDate().getDate());
+                                ChatListModel receiver = new ChatListModel(ID, model.getUser().get(1).getImage(), model.getUser().get(1).getName(), "Task : " + model.getName(), model.getID(), model.getUser().get(1).getID(), model.getDate().getDate());
                                 Constants.databaseReference().child(Constants.CHAT_LIST).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(receiver).addOnSuccessListener(unused3 -> {
-                                    Constants.databaseReference().child(Constants.CHAT_LIST).child(model.getUserID()).child(ID).setValue(sender).addOnSuccessListener(unused4 -> {
+                                    Constants.databaseReference().child(Constants.CHAT_LIST).child(model.getUser().get(1).getID()).child(ID).setValue(sender).addOnSuccessListener(unused4 -> {
                                         Constants.dismissDialog();
-                                        new FcmNotificationsSender("/topics/" + model.getUserID(), "Request Accepted", "Your Request for \'" + model.getName() + "\' is accepted", context, requireActivity()).SendNotifications();
+                                        new FcmNotificationsSender("/topics/" + model.getUser().get(1).getID(), "Request Accepted", "Your Request for \'" + model.getName() + "\' is accepted", context, requireActivity()).SendNotifications();
                                         dismiss();
                                     }).addOnFailureListener(e -> {
                                         Constants.dismissDialog();
@@ -161,10 +156,10 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
         Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
             Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model)
                     .addOnSuccessListener(unused -> {
-                        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(model.getUserID()).child(model.getID()).setValue(model)
+                        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(model.getUser().get(1).getID()).child(model.getID()).setValue(model)
                                 .addOnSuccessListener(unused2 -> {
                                     Constants.dismissDialog();
-                                    new FcmNotificationsSender("/topics/" + model.getUserID(), "Task Ended", "Your Task \'" + model.getName() + "\' is Ended", context, requireActivity()).SendNotifications();
+                                    new FcmNotificationsSender("/topics/" + model.getUser().get(1).getID(), "Task Ended", "Your Task \'" + model.getName() + "\' is Ended", context, requireActivity()).SendNotifications();
                                     Toast.makeText(context, "Deleted/Ended", Toast.LENGTH_SHORT).show();
                                     dismiss();
                                 }).addOnFailureListener(e -> {
@@ -186,9 +181,9 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
         String MONTH = Constants.CurrentMonth();
         if (b) {
             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused -> {
-                Constants.databaseReference().child(Constants.REQUESTS).child(model.getUserID()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
+                Constants.databaseReference().child(Constants.REQUESTS).child(model.getUser().get(1).getID()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
                     Constants.dismissDialog();
-                    new FcmNotificationsSender("/topics/" + model.getUserID(), "Task Ended", "\'" + model.getName() + "\' is ended", context, requireActivity()).SendNotifications();
+                    new FcmNotificationsSender("/topics/" + model.getUser().get(1).getID(), "Task Ended", "\'" + model.getName() + "\' is ended", context, requireActivity()).SendNotifications();
                     Toast.makeText(context, "Task Ended", Toast.LENGTH_SHORT).show();
                     dismiss();
                 }).addOnFailureListener(e -> {
@@ -202,13 +197,9 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
         } else {
             model.setAccepted(Constants.REJ);
             model.getDate().setSelected(false);
-            String userID = model.getUserID();
+            String userID = model.getUser().get(1).getID();
             UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
-            model.setUserID(stashUser.getID());
-            model.setUserImage(stashUser.getImage());
-            model.setUserHandle(stashUser.getUsername());
-            model.setUsername(stashUser.getName());
-            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(model.getUserID()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
+            Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).setValue(model).addOnSuccessListener(unused -> {
                 Constants.databaseReference().child(Constants.SEND_REQUESTS).child(userID).child(model.getID()).setValue(model).addOnSuccessListener(unused1 -> {
                     Constants.databaseReference().child(Constants.REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused2 -> {
                         Constants.dismissDialog();

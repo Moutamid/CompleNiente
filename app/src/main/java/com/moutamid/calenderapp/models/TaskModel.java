@@ -1,8 +1,11 @@
 package com.moutamid.calenderapp.models;
 
+import java.util.ArrayList;
+
 public class TaskModel {
     String ID, name, description, location;
-    String userID, username, userHandle, userImage, taskImage, recurrence;
+    ArrayList<UserModel> user;
+    String taskImage, recurrence;
     CalendarDate date;
     boolean isEnded;
     long startTime;
@@ -12,17 +15,26 @@ public class TaskModel {
     public TaskModel() {
     }
 
-    public TaskModel(String ID, String name, String description, String userID, String username, String userHandle, String userImage, CalendarDate date, boolean isEnded, String isAccepted) {
+    public TaskModel(String ID, String name, String description, String location, ArrayList<UserModel> user, String taskImage, String recurrence, CalendarDate date, boolean isEnded, long startTime, String isAccepted) {
         this.ID = ID;
         this.name = name;
         this.description = description;
-        this.userID = userID;
-        this.username = username;
-        this.userHandle = userHandle;
-        this.userImage = userImage;
+        this.location = location;
+        this.user = user;
+        this.taskImage = taskImage;
+        this.recurrence = recurrence;
         this.date = date;
         this.isEnded = isEnded;
+        this.startTime = startTime;
         this.isAccepted = isAccepted;
+    }
+
+    public ArrayList<UserModel> getUser() {
+        return user;
+    }
+
+    public void setUser(ArrayList<UserModel> user) {
+        this.user = user;
     }
 
     public long getStartTime() {
@@ -31,14 +43,6 @@ public class TaskModel {
 
     public void setStartTime(long startTime) {
         this.startTime = startTime;
-    }
-
-    public String getUserHandle() {
-        return userHandle;
-    }
-
-    public void setUserHandle(String userHandle) {
-        this.userHandle = userHandle;
     }
 
     public String getLocation() {
@@ -79,30 +83,6 @@ public class TaskModel {
 
     public void setAccepted(String accepted) {
         isAccepted = accepted;
-    }
-
-    public String getUserID() {
-        return userID;
-    }
-
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getUserImage() {
-        return userImage;
-    }
-
-    public void setUserImage(String userImage) {
-        this.userImage = userImage;
     }
 
     public String getID() {

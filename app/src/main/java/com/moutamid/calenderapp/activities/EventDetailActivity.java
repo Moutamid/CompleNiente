@@ -83,7 +83,12 @@ public class EventDetailActivity extends AppCompatActivity {
         binding.date.setText(Constants.getFormattedDate(taskModel.getDate().getDate().getTime()));
         Glide.with(this).load(taskModel.getTaskImage()).placeholder(R.color.white).into(binding.eImage);
 
-        getUsers();
+        UserModel userModel = taskModel.getUser().get(0);
+        part2 = userModel;
+        UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
+        part1 = stashUser;
+        Glide.with(this).load(part2.getImage()).placeholder(R.drawable.profile_icon).into(binding.user2);
+        Glide.with(this).load(part1.getImage()).placeholder(R.drawable.profile_icon).into(binding.user1);
 
         binding.user1.setOnClickListener(v -> {
             if (!part1.getID().equals(Constants.auth().getCurrentUser().getUid()))
@@ -225,24 +230,6 @@ public class EventDetailActivity extends AppCompatActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
-    private void getUsers() {
-        Constants.showDialog();
-        Constants.databaseReference().child(Constants.USER).child(taskModel.getUserID())
-                .get()
-                .addOnSuccessListener(dataSnapshot -> {
-                    UserModel userModel = dataSnapshot.getValue(UserModel.class);
-                    part2 = userModel;
-                    UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
-                    part1 = stashUser;
-                    Glide.with(this).load(part2.getImage()).placeholder(R.drawable.profile_icon).into(binding.user2);
-                    Glide.with(this).load(part1.getImage()).placeholder(R.drawable.profile_icon).into(binding.user1);
-                    Constants.dismissDialog();
-                }).addOnFailureListener(e -> {
-                    Constants.dismissDialog();
-                    Constants.createSnackbar(this, binding.getRoot(), e.getLocalizedMessage(), "Dismiss");
-                });
-    }
-
     private void uploadChat() {
         binding.sendLayout.setVisibility(View.GONE);
         binding.progressLayout.setVisibility(View.VISIBLE);
@@ -257,7 +244,10 @@ public class EventDetailActivity extends AppCompatActivity {
                                     .push().setValue(sender).addOnSuccessListener(unused -> {
                                         binding.progressLayout.setVisibility(View.GONE);
                                         imagesList.clear();
-                                        new FcmNotificationsSender("/topics/" + taskModel.getUserID(), "New Message", "You got a new Message", EventDetailActivity.this, EventDetailActivity.this).SendNotifications();
+                                        for (UserModel user : taskModel.getUser()) {
+                                            if (user.getID().equals(Constants.auth().getCurrentUser().getUid()))
+                                                new FcmNotificationsSender("/topics/" + user.getID(), "New Message", "You got a new Message", EventDetailActivity.this, EventDetailActivity.this).SendNotifications();
+                                        }
                                     })
                                     .addOnFailureListener(e -> {
                                         e.printStackTrace();

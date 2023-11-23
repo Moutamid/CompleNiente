@@ -77,7 +77,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             taskList.clear();
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                if (!taskModel.isEnded() && userModel.getID().equals(taskModel.getUserID())) {
+                                if (!taskModel.isEnded() && userModel.getID().equals(taskModel.getUser().get(1).getID())) {
                                     taskList.add(taskModel);
                                 }
                                 if (taskList.size() > 0) {

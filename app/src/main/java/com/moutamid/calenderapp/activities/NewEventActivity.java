@@ -8,6 +8,7 @@ import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -34,6 +35,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import noman.weekcalendar.listener.OnDateClickListener;
 
 public class NewEventActivity extends AppCompatActivity {
@@ -54,8 +56,33 @@ public class NewEventActivity extends AppCompatActivity {
 
         userModel = (UserModel) Stash.getObject("PassUser", UserModel.class);
 
-        binding.friendName.setText(userModel.getName());
-        Glide.with(this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
+        UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
+
+        particepents.add(userModel);
+        particepents.add(stashUser);
+
+        for (int i =0; i< particepents.size(); i++) {
+            CircleImageView circleImageView = new CircleImageView(this);
+            float scale = getResources().getDisplayMetrics().density;
+            int pixels = (int) (60 * scale + 0.5f);
+            int leftMarginInPixels = (int) (10 * scale + 0.5f);
+
+            circleImageView.setLayoutParams(new ViewGroup.LayoutParams(pixels, pixels));
+            ViewGroup.LayoutParams layoutParams = circleImageView.getLayoutParams();
+            if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+                // If yes, cast it to MarginLayoutParams
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+                marginLayoutParams.leftMargin = leftMarginInPixels;
+                circleImageView.setLayoutParams(marginLayoutParams);
+            }
+
+            Glide.with(this).load(particepents.get(i).getImage()).placeholder(R.drawable.profile_icon).into(circleImageView);
+            binding.imagesLayout.addView(circleImageView);
+        }
+
+        binding.addMore.setOnClickListener(v -> {
+            startActivity(new Intent(this, SelectUserActivity.class));
+        });
 
         binding.toolbar.title.setText("Create Event");
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
@@ -142,7 +169,6 @@ public class NewEventActivity extends AppCompatActivity {
             date = new CalendarDate(d1, false, isToday, getMonthType());
             Stash.put(Constants.DATE, date);
         });
-
     }
 
     private MonthType getMonthType() {
@@ -175,7 +201,6 @@ public class NewEventActivity extends AppCompatActivity {
                                 taskSnapshot.getStorage().getDownloadUrl().addOnSuccessListener(uri -> {
                                     TaskModel sendTaskModel = getSenderModel(ID, uri.toString());
                                     TaskModel recieverTaskModel = getReceiverModel(ID, uri.toString());
-
                                     Constants.databaseReference().child(Constants.REQUESTS).child(userModel.getID()).child(ID).setValue(recieverTaskModel)
                                             .addOnSuccessListener(unused -> {
                                                 Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
@@ -203,17 +228,13 @@ public class NewEventActivity extends AppCompatActivity {
                     });
         }
     }
-
+    ArrayList<UserModel> particepents = new ArrayList<>();
     private TaskModel getSenderModel(String ID, String image) {
         TaskModel taskModel = new TaskModel();
-
         taskModel.setID(ID);
         taskModel.setName(binding.name.getEditText().getText().toString());
         taskModel.setLocation(binding.location.getEditText().getText().toString());
-        taskModel.setUserID(userModel.getID());
-        taskModel.setUsername(userModel.getName());
-        taskModel.setUserImage(userModel.getImage());
-        taskModel.setUserHandle(userModel.getUsername());
+        taskModel.setUser(particepents);
         taskModel.setEnded(false);
         taskModel.setDescription("");
         taskModel.setDate(date);
@@ -227,14 +248,10 @@ public class NewEventActivity extends AppCompatActivity {
 
     private TaskModel getReceiverModel(String ID, String image) {
         TaskModel taskModel = new TaskModel();
-        UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
         taskModel.setID(ID);
         taskModel.setName(binding.name.getEditText().getText().toString());
         taskModel.setLocation(binding.location.getEditText().getText().toString());
-        taskModel.setUserID(stashUser.getID());
-        taskModel.setUsername(stashUser.getName());
-        taskModel.setUserImage(stashUser.getImage());
-        taskModel.setUserHandle(stashUser.getUsername());
+        taskModel.setUser(particepents);
         taskModel.setEnded(false);
         taskModel.setDescription("");
         taskModel.setDate(date);
