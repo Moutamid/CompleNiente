@@ -79,8 +79,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\sunny\Desktop\logos\photo_2023-09-13_16-09-04.jpg" />
-                                                <entry key="scalingPercent" value="85" />
+                                                <entry key="imagePath" value="C:\Users\sunny\Downloads\Telegram Desktop\photo_2023-11-10_10-53-08.png" />
+                                                <entry key="scalingPercent" value="70" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -114,7 +114,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="fdfdfd" />
+                                      <entry key="backgroundColor" value="21242b" />
                                     </map>
                                   </option>
                                 </PersistentState>

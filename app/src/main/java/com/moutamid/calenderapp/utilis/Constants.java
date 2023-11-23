@@ -79,6 +79,30 @@ public class Constants {
     public static String CurrentMonth() {
         return new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.US).format(new Date());
     }
+
+    public static long adjustDate(long timestamp, String recurrence) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timestamp);
+
+        switch (recurrence) {
+            case "Weekly":
+                calendar.add(Calendar.WEEK_OF_YEAR, 1);
+                break;
+            case "Monthly":
+                calendar.add(Calendar.MONTH, 1);
+                break;
+            case "Semi-Annual":
+                calendar.add(Calendar.MONTH, 6);
+                break;
+            case "Annual":
+                calendar.add(Calendar.YEAR, 1);
+                break;
+            // If the recurrence is "Single" or unknown, do nothing
+        }
+
+        return calendar.getTimeInMillis();
+    }
+
     public static void initDialog(Context context){
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

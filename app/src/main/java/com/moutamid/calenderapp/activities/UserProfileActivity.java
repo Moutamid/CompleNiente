@@ -27,6 +27,7 @@ public class UserProfileActivity extends AppCompatActivity {
     ActivityUserProfileBinding binding;
     UserModel userModel;
     ArrayList<TaskModel> taskList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,15 +41,16 @@ public class UserProfileActivity extends AppCompatActivity {
         binding.toolbar.title.setText("Friend Profile");
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
         String userID = "";
-        if (getIntent() != null){
+        if (getIntent() != null) {
             userID = getIntent().getStringExtra("userID");
         }
-        if (userID != null){
+        if (userID != null) {
             Constants.showDialog();
             Constants.databaseReference().child(Constants.USER).child(userID)
                     .get().addOnSuccessListener(dataSnapshot -> {
                         Constants.dismissDialog();
                         userModel = dataSnapshot.getValue(UserModel.class);
+                        Stash.put("PassUser", userModel);
                         getSendRequests();
                         binding.name.setText(userModel.getName());
                         Glide.with(this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileIcon);
@@ -67,18 +69,18 @@ public class UserProfileActivity extends AppCompatActivity {
 
     private void getSendRequests() {
         Constants.showDialog();
-        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.exists()){
+                        if (snapshot.exists()) {
                             taskList.clear();
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
                                 if (!taskModel.isEnded() && userModel.getID().equals(taskModel.getUserID())) {
                                     taskList.add(taskModel);
                                 }
-                                if (taskList.size() > 0){
+                                if (taskList.size() > 0) {
                                     binding.eventsRC.setVisibility(View.VISIBLE);
                                     binding.noItemLayout.setVisibility(View.GONE);
                                 } else {

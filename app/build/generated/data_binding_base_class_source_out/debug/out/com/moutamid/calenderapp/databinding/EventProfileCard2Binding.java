@@ -27,17 +27,21 @@ public final class EventProfileCard2Binding implements ViewBinding {
   public final ImageView eventImage;
 
   @NonNull
+  public final TextView location;
+
+  @NonNull
   public final TextView name;
 
   @NonNull
   public final MaterialCardView profileImage;
 
   private EventProfileCard2Binding(@NonNull MaterialCardView rootView, @NonNull TextView date,
-      @NonNull ImageView eventImage, @NonNull TextView name,
+      @NonNull ImageView eventImage, @NonNull TextView location, @NonNull TextView name,
       @NonNull MaterialCardView profileImage) {
     this.rootView = rootView;
     this.date = date;
     this.eventImage = eventImage;
+    this.location = location;
     this.name = name;
     this.profileImage = profileImage;
   }
@@ -81,6 +85,12 @@ public final class EventProfileCard2Binding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.location;
+      TextView location = ViewBindings.findChildViewById(rootView, id);
+      if (location == null) {
+        break missingId;
+      }
+
       id = R.id.name;
       TextView name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
@@ -89,8 +99,8 @@ public final class EventProfileCard2Binding implements ViewBinding {
 
       MaterialCardView profileImage = (MaterialCardView) rootView;
 
-      return new EventProfileCard2Binding((MaterialCardView) rootView, date, eventImage, name,
-          profileImage);
+      return new EventProfileCard2Binding((MaterialCardView) rootView, date, eventImage, location,
+          name, profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

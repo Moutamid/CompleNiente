@@ -69,7 +69,7 @@ public class ProfileFragment extends Fragment {
 
     private void getSendRequests() {
         Constants.showDialog();
-        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+        Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

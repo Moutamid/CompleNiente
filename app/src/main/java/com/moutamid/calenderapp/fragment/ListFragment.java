@@ -2,6 +2,7 @@ package com.moutamid.calenderapp.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,11 +49,12 @@ public class ListFragment extends Fragment {
 
     private void getThisMonthTasks() {
         Constants.showDialog();
-        Constants.databaseReference().child(Constants.REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+        Constants.databaseReference().child(Constants.REQUESTS).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.exists()){
+                            Log.d("getThisMonthTasks", "onDataChange: ");
                             taskList.clear();
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);

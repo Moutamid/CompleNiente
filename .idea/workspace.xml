@@ -16,18 +16,86 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/com/moutamid/calenderapp/databinding/EventProfileCard2Binding.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/com/moutamid/calenderapp/databinding/EventProfileCard2Binding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/apk/debug/CalenderApp-1.0-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/apk/debug/CalenderApp-1.0-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_base_class_log_artifact/debug/out/com.moutamid.calenderapp-binding_classes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_base_class_log_artifact/debug/out/com.moutamid.calenderapp-binding_classes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/event_profile_card2-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/event_profile_card2-layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_package/debug/out/event_profile_card2-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_package/debug/out/event_profile_card2-layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/activities/NewEventActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/activities/NewEventActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/activities/UserProfileActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/activities/UserProfileActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/activities/UserProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/activities/UserProfileActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventAdapter$EventVH.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventAdapter$EventVH.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventProfileAdapter$EventVH.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventProfileAdapter$EventVH.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventProfileAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/adapters/EventProfileAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/bottomsheets/TaskRequestBottomSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/bottomsheets/TaskRequestBottomSheet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/databinding/EventProfileCard2Binding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/databinding/EventProfileCard2Binding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/HomeFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/HomeFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/ListFragment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/ListFragment$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/ListFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/ListFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/ProfileFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/fragment/ProfileFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/utilis/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/moutamid/calenderapp/utilis/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/layout_event_profile_card2.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/layout_event_profile_card2.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/event_profile_card2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/layout/event_profile_card2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/activities/NewEventActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/activities/NewEventActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/activities/UserProfileActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/activities/UserProfileActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/activities/UserProfileActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/activities/UserProfileActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventAdapter$EventVH.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventAdapter$EventVH.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventProfileAdapter$EventVH.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventProfileAdapter$EventVH.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventProfileAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/adapters/EventProfileAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/bottomsheets/TaskRequestBottomSheet.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/bottomsheets/TaskRequestBottomSheet.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/databinding/EventProfileCard2Binding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/databinding/EventProfileCard2Binding.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/HomeFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/HomeFragment.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/ListFragment$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/ListFragment$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/ListFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/ListFragment.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/ProfileFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/fragment/ProfileFragment.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/utilis/Constants.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/moutamid/calenderapp/utilis/Constants.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/release/CalenderApp-1.0-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/CalenderApp-1.0-release.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/activities/NewEventActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/activities/NewEventActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/activities/UserProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/activities/UserProfileActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/adapters/EventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/adapters/EventAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/adapters/EventProfileAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/adapters/EventProfileAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/bottomsheets/TaskRequestBottomSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/bottomsheets/TaskRequestBottomSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/fragment/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/fragment/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/fragment/ListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/fragment/ListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/fragment/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/fragment/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/utilis/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/utilis/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/event_profile_card2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/event_profile_card2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58M4230KKR]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\sunny\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -72,7 +140,7 @@
     &quot;ApkExportedModule&quot;: &quot;CompleNiente.app&quot;,
     &quot;ExportApk.ApkPathForCalendarTaskApp.app&quot;: &quot;C:\\Users\\sunny\\Documents\\BridgeLinxProjects\\CalendarTaskApp\\app&quot;,
     &quot;ExportApk.ApkPathForCompleNiente.app&quot;: &quot;C:\\Users\\sunny\\Documents\\Projects\\CalendarTaskApp\\app&quot;,
-    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,
+    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;MIPMAP&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -346,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699536324457</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="commit">
+      <created>1699597900848</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699597900848</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commit">
+      <created>1699597950542</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699597950542</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

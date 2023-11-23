@@ -176,9 +176,9 @@ public class NewEventActivity extends AppCompatActivity {
                                     TaskModel sendTaskModel = getSenderModel(ID, uri.toString());
                                     TaskModel recieverTaskModel = getReceiverModel(ID, uri.toString());
 
-                                    Constants.databaseReference().child(Constants.REQUESTS).child(MONTH).child(userModel.getID()).child(ID).setValue(recieverTaskModel)
+                                    Constants.databaseReference().child(Constants.REQUESTS).child(userModel.getID()).child(ID).setValue(recieverTaskModel)
                                             .addOnSuccessListener(unused -> {
-                                                Constants.databaseReference().child(Constants.SEND_REQUESTS).child(MONTH).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
+                                                Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
                                                         .addOnSuccessListener(unused1 -> {
                                                             new FcmNotificationsSender("/topics/" + userModel.getID(), "Incoming Request", "Someone want to work with you", this, this).SendNotifications();
                                                             Constants.dismissDialog();

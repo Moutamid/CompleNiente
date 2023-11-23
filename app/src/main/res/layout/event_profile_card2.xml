@@ -57,6 +57,15 @@
                 android:textStyle="bold"
                 tools:text="Suleman Ijaz" />
 
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                tools:text="Suleman Ijaz" />
+
         </LinearLayout>
 
     </RelativeLayout>

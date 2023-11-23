@@ -133,7 +133,7 @@ public class HomeFragment extends Fragment {
 
     private void getSendRequests() {
         Constants.showDialog();
-        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
+        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

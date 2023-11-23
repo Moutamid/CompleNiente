@@ -16,10 +16,15 @@ import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.activities.EventDetailActivity;
+import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.TaskModel;
+import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class EventProfileAdapter extends RecyclerView.Adapter<EventProfileAdapter.EventVH> {
     Context context;
@@ -41,10 +46,33 @@ public class EventProfileAdapter extends RecyclerView.Adapter<EventProfileAdapte
         TaskModel taskModel = list.get(holder.getAdapterPosition());
 
         holder.name.setText(taskModel.getName());
+        holder.location.setText(taskModel.getLocation());
         Glide.with(context).load(taskModel.getTaskImage()).placeholder(R.drawable.event).into(holder.eventImage);
-        String date = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(taskModel.getDate().getDate());
-        String time = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(taskModel.getStartTime());
-        holder.date.setText(date +", "+time);
+
+        long currentDate = new Date().getTime();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
+        long timestamp = taskModel.getDate().getDate().getTime();
+
+        if (timestamp > currentDate) {
+            String formattedDate = dateFormat.format(new Date(timestamp));
+            String time = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(taskModel.getStartTime());
+            holder.date.setText(formattedDate +", "+time);
+        } else {
+            // Date has passed, adjust based on recurrence
+            long adjustedDate = Constants.adjustDate(timestamp, taskModel.getRecurrence());
+
+            TaskModel update = taskModel;
+            CalendarDate calendarDate = update.getDate();
+            calendarDate.setDate(new Date(adjustedDate));
+            Map<String, Object> map = new HashMap<>();
+            map.put("date", calendarDate);
+            Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.auth().getCurrentUser().getUid())
+                    .child(taskModel.getID()).updateChildren(map);
+
+            String formattedDate = dateFormat.format(new Date(adjustedDate));
+            String time = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(taskModel.getStartTime());
+            holder.date.setText(formattedDate +", "+time);
+        }
 
         holder.itemView.setOnClickListener(v -> {
             Stash.put("EVENT", taskModel);
@@ -60,12 +88,13 @@ public class EventProfileAdapter extends RecyclerView.Adapter<EventProfileAdapte
 
     public class EventVH extends RecyclerView.ViewHolder{
         ImageView eventImage;
-        TextView name, date;
+        TextView name, date, location;
         public EventVH(@NonNull View itemView) {
             super(itemView);
             eventImage = itemView.findViewById(R.id.eventImage);
             name = itemView.findViewById(R.id.name);
             date = itemView.findViewById(R.id.date);
+            location = itemView.findViewById(R.id.location);
         }
     }
 
