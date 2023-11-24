@@ -295,35 +295,32 @@
             </com.google.android.material.chip.ChipGroup>
 
             <TextView
+                android:id="@+id/addMore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="With :"
+                android:drawableEnd="@drawable/round_add_24"
+                android:drawableTint="@color/orange"
                 android:textSize="18sp" />
 
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:scrollbarSize="2dp"
+                android:scrollbarTrackHorizontal="@color/orange"
+                android:fillViewport="true">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:civ_border_width="1dp"
-                    app:civ_border_color="@color/stroke"
-                    android:src="@drawable/profile_icon" />
-
-                <TextView
-                    android:id="@+id/friendName"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/imagesLayout"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginStart="10dp"
-                    android:text="Friend Name"
-                    android:textSize="18sp" />
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/start"

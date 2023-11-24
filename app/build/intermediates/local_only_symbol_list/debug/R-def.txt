@@ -68,6 +68,7 @@ id RC
 id RecyclerViewImageList
 id accept
 id add
+id addMore
 id address
 id addtext
 id age
@@ -108,13 +109,13 @@ id explore
 id forgot
 id frameLayout
 id friendCount
-id friendName
 id greeting
 id handle
 id hour
 id image
 id imagePreviewRC
 id imageView
+id imagesLayout
 id invite
 id lastMessage
 id location
@@ -160,8 +161,6 @@ id toolbar
 id update
 id uploadImage
 id uploadVideo
-id user1
-id user2
 id userID
 id username
 id verify

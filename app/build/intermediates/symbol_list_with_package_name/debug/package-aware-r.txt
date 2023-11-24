@@ -3289,6 +3289,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addMore
 id address
 id addtext
 id adjust_height
@@ -3464,7 +3465,6 @@ id forgot
 id fragment_container_view_tag
 id frameLayout
 id friendCount
-id friendName
 id frost
 id fullscreen_header
 id ghost_view
@@ -3500,6 +3500,7 @@ id image_view_logo
 id image_view_state_aspect_ratio
 id image_view_state_rotate
 id image_view_state_scale
+id imagesLayout
 id immediateStop
 id included
 id indeterminate
@@ -3820,8 +3821,6 @@ id update
 id uploadImage
 id uploadVideo
 id useLogo
-id user1
-id user2
 id userID
 id username
 id verify

@@ -94,30 +94,24 @@
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="horizontal">
+                android:fillViewport="true"
+                android:scrollbarSize="2dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/user1"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/profile_icon"
-                    app:civ_border_color="@color/stroke"
-                    app:civ_border_width="1dp" />
+                <LinearLayout
+                    android:id="@+id/imagesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/user2"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/profile_icon"
-                    app:civ_border_color="@color/stroke"
-                    app:civ_border_width="1dp" />
 
-            </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
             <RelativeLayout
                 android:layout_width="match_parent"

@@ -16,6 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.adapters.CalendarAdapter;
 import com.moutamid.calenderapp.adapters.UsersAdapter;
 import com.moutamid.calenderapp.databinding.ActivitySelectUserBinding;
+import com.moutamid.calenderapp.interfaces.UserSelect;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
@@ -82,7 +83,7 @@ public class SelectUserActivity extends AppCompatActivity {
                         }
                     }
 
-                    adapter = new UsersAdapter(SelectUserActivity.this, SelectUserActivity.this, list);
+                    adapter = new UsersAdapter(SelectUserActivity.this, list, userSelect);
                     binding.RC.setAdapter(adapter);
                 }
                 Constants.dismissDialog();
@@ -95,6 +96,14 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
     }
+
+    UserSelect userSelect = new UserSelect() {
+        @Override
+        public void onClick(UserModel model) {
+            Stash.put("SELECTED_USER", model);
+            onBackPressed();
+        }
+    };
 
     @Override
     public void onBackPressed() {

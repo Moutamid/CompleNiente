@@ -47,6 +47,8 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.UUID;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class EventDetailActivity extends AppCompatActivity {
     private static final int PICK_FROM_GALLERY_IMAGE = 1;
     private static final int PICK_FROM_GALLERY_VIDEO = 2;
@@ -54,13 +56,37 @@ public class EventDetailActivity extends AppCompatActivity {
     private static final int REQUEST_VIDEO_CAPTURE = 4;
     ActivityEventDetailBinding binding;
     String eventID;
-    UserModel part1, part2;
     TaskModel taskModel;
     AddImageAdapter adapter;
     GalleryAdapter chatAdapter;
     private final int limit = 5;
     ArrayList<ShareContentModel> imagesList;
     ArrayList<ChatsModel> chatsList;
+    ArrayList<UserModel> particepents;
+
+    private void setProfileImages() {
+        binding.imagesLayout.removeAllViews();
+        for (int i =0; i< particepents.size(); i++) {
+            CircleImageView circleImageView = new CircleImageView(this);
+            circleImageView.setBorderWidth(1);
+            circleImageView.setBorderColor(getResources().getColor(R.color.stroke));
+            float scale = getResources().getDisplayMetrics().density;
+            int pixels = (int) (60 * scale + 0.5f);
+            int leftMarginInPixels = (int) (10 * scale + 0.5f);
+
+            circleImageView.setLayoutParams(new ViewGroup.LayoutParams(pixels, pixels));
+            ViewGroup.LayoutParams layoutParams = circleImageView.getLayoutParams();
+            if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+                // If yes, cast it to MarginLayoutParams
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+                marginLayoutParams.leftMargin = leftMarginInPixels;
+                circleImageView.setLayoutParams(marginLayoutParams);
+            }
+
+            Glide.with(this).load(particepents.get(i).getImage()).placeholder(R.drawable.profile_icon).into(circleImageView);
+            binding.imagesLayout.addView(circleImageView);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,22 +108,11 @@ public class EventDetailActivity extends AppCompatActivity {
         binding.occurrence.setText(taskModel.getRecurrence() + " Event");
         binding.date.setText(Constants.getFormattedDate(taskModel.getDate().getDate().getTime()));
         Glide.with(this).load(taskModel.getTaskImage()).placeholder(R.color.white).into(binding.eImage);
+        particepents = new ArrayList<>();
 
-        UserModel userModel = taskModel.getUser().get(0);
-        part2 = userModel;
-        UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
-        part1 = stashUser;
-        Glide.with(this).load(part2.getImage()).placeholder(R.drawable.profile_icon).into(binding.user2);
-        Glide.with(this).load(part1.getImage()).placeholder(R.drawable.profile_icon).into(binding.user1);
+        particepents = taskModel.getUser();
 
-        binding.user1.setOnClickListener(v -> {
-            if (!part1.getID().equals(Constants.auth().getCurrentUser().getUid()))
-                startActivity(new Intent(this, UserProfileActivity.class).putExtra("userID", part1.getID()));
-        });
-        binding.user2.setOnClickListener(v -> {
-            if (!part2.getID().equals(Constants.auth().getCurrentUser().getUid()))
-                startActivity(new Intent(this, UserProfileActivity.class).putExtra("userID", part2.getID()));
-        });
+        setProfileImages();
 
         binding.send.setOnClickListener(v -> {
             uploadChat();

@@ -17,7 +17,6 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputLayout;
 import com.moutamid.calenderapp.R;
-import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -26,6 +25,9 @@ import noman.weekcalendar.WeekCalendar;
 public final class ActivityNewEventBinding implements ViewBinding {
   @NonNull
   private final RelativeLayout rootView;
+
+  @NonNull
+  public final TextView addMore;
 
   @NonNull
   public final LinearLayout addtext;
@@ -40,10 +42,10 @@ public final class ActivityNewEventBinding implements ViewBinding {
   public final MaterialCardView eventImage;
 
   @NonNull
-  public final TextView friendName;
+  public final TextView hour;
 
   @NonNull
-  public final TextView hour;
+  public final LinearLayout imagesLayout;
 
   @NonNull
   public final TextInputLayout location;
@@ -64,9 +66,6 @@ public final class ActivityNewEventBinding implements ViewBinding {
   public final MaterialCardView prev;
 
   @NonNull
-  public final CircleImageView profileImage;
-
-  @NonNull
   public final ChipGroup queenSourceChipGroup;
 
   @NonNull
@@ -78,28 +77,28 @@ public final class ActivityNewEventBinding implements ViewBinding {
   @NonNull
   public final WeekCalendar weekCalendar;
 
-  private ActivityNewEventBinding(@NonNull RelativeLayout rootView, @NonNull LinearLayout addtext,
-      @NonNull MaterialCardView datePicker, @NonNull ImageView eImage,
-      @NonNull MaterialCardView eventImage, @NonNull TextView friendName, @NonNull TextView hour,
-      @NonNull TextInputLayout location, @NonNull TextView minute, @NonNull TextView month,
-      @NonNull TextInputLayout name, @NonNull MaterialCardView next, @NonNull MaterialCardView prev,
-      @NonNull CircleImageView profileImage, @NonNull ChipGroup queenSourceChipGroup,
-      @NonNull MaterialButton start, @NonNull ToolbarBinding toolbar,
-      @NonNull WeekCalendar weekCalendar) {
+  private ActivityNewEventBinding(@NonNull RelativeLayout rootView, @NonNull TextView addMore,
+      @NonNull LinearLayout addtext, @NonNull MaterialCardView datePicker,
+      @NonNull ImageView eImage, @NonNull MaterialCardView eventImage, @NonNull TextView hour,
+      @NonNull LinearLayout imagesLayout, @NonNull TextInputLayout location,
+      @NonNull TextView minute, @NonNull TextView month, @NonNull TextInputLayout name,
+      @NonNull MaterialCardView next, @NonNull MaterialCardView prev,
+      @NonNull ChipGroup queenSourceChipGroup, @NonNull MaterialButton start,
+      @NonNull ToolbarBinding toolbar, @NonNull WeekCalendar weekCalendar) {
     this.rootView = rootView;
+    this.addMore = addMore;
     this.addtext = addtext;
     this.datePicker = datePicker;
     this.eImage = eImage;
     this.eventImage = eventImage;
-    this.friendName = friendName;
     this.hour = hour;
+    this.imagesLayout = imagesLayout;
     this.location = location;
     this.minute = minute;
     this.month = month;
     this.name = name;
     this.next = next;
     this.prev = prev;
-    this.profileImage = profileImage;
     this.queenSourceChipGroup = queenSourceChipGroup;
     this.start = start;
     this.toolbar = toolbar;
@@ -133,6 +132,12 @@ public final class ActivityNewEventBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.addMore;
+      TextView addMore = ViewBindings.findChildViewById(rootView, id);
+      if (addMore == null) {
+        break missingId;
+      }
+
       id = R.id.addtext;
       LinearLayout addtext = ViewBindings.findChildViewById(rootView, id);
       if (addtext == null) {
@@ -157,15 +162,15 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.friendName;
-      TextView friendName = ViewBindings.findChildViewById(rootView, id);
-      if (friendName == null) {
-        break missingId;
-      }
-
       id = R.id.hour;
       TextView hour = ViewBindings.findChildViewById(rootView, id);
       if (hour == null) {
+        break missingId;
+      }
+
+      id = R.id.imagesLayout;
+      LinearLayout imagesLayout = ViewBindings.findChildViewById(rootView, id);
+      if (imagesLayout == null) {
         break missingId;
       }
 
@@ -205,12 +210,6 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.profileImage;
-      CircleImageView profileImage = ViewBindings.findChildViewById(rootView, id);
-      if (profileImage == null) {
-        break missingId;
-      }
-
       id = R.id.queenSourceChipGroup;
       ChipGroup queenSourceChipGroup = ViewBindings.findChildViewById(rootView, id);
       if (queenSourceChipGroup == null) {
@@ -236,8 +235,8 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewEventBinding((RelativeLayout) rootView, addtext, datePicker, eImage,
-          eventImage, friendName, hour, location, minute, month, name, next, prev, profileImage,
+      return new ActivityNewEventBinding((RelativeLayout) rootView, addMore, addtext, datePicker,
+          eImage, eventImage, hour, imagesLayout, location, minute, month, name, next, prev,
           queenSourceChipGroup, start, binding_toolbar, weekCalendar);
     }
     String missingId = rootView.getResources().getResourceName(id);

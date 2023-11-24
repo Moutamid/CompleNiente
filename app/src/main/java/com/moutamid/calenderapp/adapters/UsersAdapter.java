@@ -1,39 +1,23 @@
 package com.moutamid.calenderapp.adapters;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.fxn.stash.Stash;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.R;
-import com.moutamid.calenderapp.activities.NewEventActivity;
-import com.moutamid.calenderapp.activities.SelectUserActivity;
-import com.moutamid.calenderapp.activities.UserProfileActivity;
-import com.moutamid.calenderapp.models.CalendarDate;
+import com.moutamid.calenderapp.interfaces.UserSelect;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
-import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
-import com.moutamid.calenderapp.utilis.Constants;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -42,7 +26,6 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
-import java.util.UUID;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -51,11 +34,11 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
     ArrayList<UserModel> list;
     ArrayList<UserModel> listAll;
     ArrayList<TaskModel> calendarTaskList;
-    Activity activity;
+    UserSelect userSelect;
 
-    public UsersAdapter(Context context, Activity activity, ArrayList<UserModel> list) {
+    public UsersAdapter(Context context, ArrayList<UserModel> list, UserSelect userSelect) {
         this.context = context;
-        this.activity = activity;
+        this.userSelect = userSelect;
         this.list = list;
         this.listAll = new ArrayList<>(list);
     }
@@ -86,8 +69,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserVH> impl
         }
 
         holder.start.setOnClickListener(v -> {
-            Stash.put("PassUser", model);
-            context.startActivity(new Intent(context, UserProfileActivity.class));
+            userSelect.onClick(list.get(holder.getAdapterPosition()));
         });
 
     }

@@ -52,33 +52,16 @@ public class NewEventActivity extends AppCompatActivity {
         binding = ActivityNewEventBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Constants.initDialog(this);
-
         userModel = (UserModel) Stash.getObject("PassUser", UserModel.class);
-
         UserModel stashUser = (UserModel) Stash.getObject(Constants.STASH_USER, UserModel.class);
+
+        userModel.setPassword("");
+        stashUser.setPassword("");
 
         particepents.add(userModel);
         particepents.add(stashUser);
 
-        for (int i =0; i< particepents.size(); i++) {
-            CircleImageView circleImageView = new CircleImageView(this);
-            float scale = getResources().getDisplayMetrics().density;
-            int pixels = (int) (60 * scale + 0.5f);
-            int leftMarginInPixels = (int) (10 * scale + 0.5f);
-
-            circleImageView.setLayoutParams(new ViewGroup.LayoutParams(pixels, pixels));
-            ViewGroup.LayoutParams layoutParams = circleImageView.getLayoutParams();
-            if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
-                // If yes, cast it to MarginLayoutParams
-                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
-                marginLayoutParams.leftMargin = leftMarginInPixels;
-                circleImageView.setLayoutParams(marginLayoutParams);
-            }
-
-            Glide.with(this).load(particepents.get(i).getImage()).placeholder(R.drawable.profile_icon).into(circleImageView);
-            binding.imagesLayout.addView(circleImageView);
-        }
+        setProfileImages();
 
         binding.addMore.setOnClickListener(v -> {
             startActivity(new Intent(this, SelectUserActivity.class));
@@ -171,6 +154,30 @@ public class NewEventActivity extends AppCompatActivity {
         });
     }
 
+    private void setProfileImages() {
+        binding.imagesLayout.removeAllViews();
+        for (int i = 0; i < particepents.size(); i++) {
+            CircleImageView circleImageView = new CircleImageView(this);
+            circleImageView.setBorderWidth(1);
+            circleImageView.setBorderColor(getResources().getColor(R.color.stroke));
+            float scale = getResources().getDisplayMetrics().density;
+            int pixels = (int) (60 * scale + 0.5f);
+            int leftMarginInPixels = (int) (10 * scale + 0.5f);
+
+            circleImageView.setLayoutParams(new ViewGroup.LayoutParams(pixels, pixels));
+            ViewGroup.LayoutParams layoutParams = circleImageView.getLayoutParams();
+            if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
+                // If yes, cast it to MarginLayoutParams
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+                marginLayoutParams.leftMargin = leftMarginInPixels;
+                circleImageView.setLayoutParams(marginLayoutParams);
+            }
+
+            Glide.with(this).load(particepents.get(i).getImage()).placeholder(R.drawable.profile_icon).into(circleImageView);
+            binding.imagesLayout.addView(circleImageView);
+        }
+    }
+
     private MonthType getMonthType() {
         Calendar selectedCalendar = Calendar.getInstance();
         selectedCalendar.setTimeInMillis(milies);
@@ -190,6 +197,30 @@ public class NewEventActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Constants.initDialog(this);
+        UserModel selectedUser = (UserModel) Stash.getObject("SELECTED_USER", UserModel.class);
+        if (selectedUser != null) {
+            selectedUser.setPassword("");
+            boolean check = false;
+            for (UserModel user : particepents) {
+                if (user.getID().equals(selectedUser.getID())) {
+                    check = true;
+                    break;
+                }
+            }
+            if (!check) {
+                particepents.add(selectedUser);
+                setProfileImages();
+                Stash.clear("SELECTED_USER");
+            } else {
+                Toast.makeText(this, "This user already selected!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
     private void startEvent() {
         String MONTH = Constants.CurrentMonth();
         date.setSelected(false);
@@ -197,18 +228,18 @@ public class NewEventActivity extends AppCompatActivity {
             Constants.showDialog();
             String ID = UUID.randomUUID().toString();
             Constants.storageReference(Constants.auth().getCurrentUser().getUid()).child(Constants.EventsPics).putFile(imageUri)
-                            .addOnSuccessListener(taskSnapshot -> {
-                                taskSnapshot.getStorage().getDownloadUrl().addOnSuccessListener(uri -> {
-                                    TaskModel sendTaskModel = getSenderModel(ID, uri.toString());
-                                    TaskModel recieverTaskModel = getReceiverModel(ID, uri.toString());
-                                    Constants.databaseReference().child(Constants.REQUESTS).child(userModel.getID()).child(ID).setValue(recieverTaskModel)
+                    .addOnSuccessListener(taskSnapshot -> {
+                        taskSnapshot.getStorage().getDownloadUrl().addOnSuccessListener(uri -> {
+                            TaskModel sendTaskModel = getSenderModel(ID, uri.toString());
+                            TaskModel recieverTaskModel = getReceiverModel(ID, uri.toString());
+                            for (int i = 0; i < particepents.size(); i++) {
+                                UserModel userModel1 = particepents.get(i);
+                                if (!Constants.auth().getCurrentUser().getUid().equals(userModel1.getID())) {
+                                    Constants.databaseReference().child(Constants.REQUESTS).child(userModel1.getID()).child(ID).setValue(recieverTaskModel)
                                             .addOnSuccessListener(unused -> {
                                                 Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
                                                         .addOnSuccessListener(unused1 -> {
-                                                            new FcmNotificationsSender("/topics/" + userModel.getID(), "Incoming Request", "Someone want to work with you", this, this).SendNotifications();
-                                                            Constants.dismissDialog();
-                                                            Toast.makeText(this, "A request is send to the user", Toast.LENGTH_SHORT).show();
-                                                            onBackPressed();
+                                                            new FcmNotificationsSender("/topics/" + userModel1.getID(), "Incoming Request", "Someone want to work with you", this, this).SendNotifications();
                                                         }).addOnFailureListener(e -> {
                                                             Constants.dismissDialog();
                                                             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
@@ -217,18 +248,28 @@ public class NewEventActivity extends AppCompatActivity {
                                                 Constants.dismissDialog();
                                                 Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                                             });
+                                }
 
-                                }).addOnFailureListener(e -> {
+                                if (i == particepents.size() - 1) {
                                     Constants.dismissDialog();
-                                    Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                });
-                            }).addOnFailureListener(e -> {
+                                    Toast.makeText(this, "A request is send to all users", Toast.LENGTH_SHORT).show();
+                                    onBackPressed();
+                                }
+
+                            }
+                        }).addOnFailureListener(e -> {
+                            Constants.dismissDialog();
+                            Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        });
+                    }).addOnFailureListener(e -> {
                         Constants.dismissDialog();
                         Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     });
         }
     }
+
     ArrayList<UserModel> particepents = new ArrayList<>();
+
     private TaskModel getSenderModel(String ID, String image) {
         TaskModel taskModel = new TaskModel();
         taskModel.setID(ID);
@@ -274,19 +315,19 @@ public class NewEventActivity extends AppCompatActivity {
     }
 
     private boolean valid() {
-        if (imageUri == null){
+        if (imageUri == null) {
             Toast.makeText(this, "Add Event Image", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (binding.name.getEditText().getText().toString().isEmpty()){
+        if (binding.name.getEditText().getText().toString().isEmpty()) {
             Toast.makeText(this, "Name is Empty", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (binding.location.getEditText().getText().toString().isEmpty()){
+        if (binding.location.getEditText().getText().toString().isEmpty()) {
             Toast.makeText(this, "Location is Empty", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (getRecurrence().isEmpty()){
+        if (getRecurrence().isEmpty()) {
             Toast.makeText(this, "Select Recurrence", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -322,7 +363,9 @@ public class NewEventActivity extends AppCompatActivity {
 
         timePicker.show(getSupportFragmentManager(), "timePicker");
     }
+
     long reminder;
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
