@@ -18,7 +18,6 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.textview.MaterialTextView;
 import com.moutamid.calenderapp.R;
-import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -55,6 +54,9 @@ public final class ActivityEventDetailBinding implements ViewBinding {
   public final TextView occurrence;
 
   @NonNull
+  public final RecyclerView participentsRC;
+
+  @NonNull
   public final LinearProgressIndicator progressBar;
 
   @NonNull
@@ -72,20 +74,14 @@ public final class ActivityEventDetailBinding implements ViewBinding {
   @NonNull
   public final ToolbarBinding toolbar;
 
-  @NonNull
-  public final CircleImageView user1;
-
-  @NonNull
-  public final CircleImageView user2;
-
   private ActivityEventDetailBinding(@NonNull RelativeLayout rootView, @NonNull Button add,
       @NonNull TextView address, @NonNull RecyclerView chatRC, @NonNull TextView date,
       @NonNull ImageView eImage, @NonNull MaterialCardView eventImage, @NonNull TextView eventName,
       @NonNull RecyclerView imagePreviewRC, @NonNull TextView occurrence,
-      @NonNull LinearProgressIndicator progressBar, @NonNull LinearLayout progressLayout,
-      @NonNull MaterialTextView progressText, @NonNull MaterialCardView send,
-      @NonNull LinearLayout sendLayout, @NonNull ToolbarBinding toolbar,
-      @NonNull CircleImageView user1, @NonNull CircleImageView user2) {
+      @NonNull RecyclerView participentsRC, @NonNull LinearProgressIndicator progressBar,
+      @NonNull LinearLayout progressLayout, @NonNull MaterialTextView progressText,
+      @NonNull MaterialCardView send, @NonNull LinearLayout sendLayout,
+      @NonNull ToolbarBinding toolbar) {
     this.rootView = rootView;
     this.add = add;
     this.address = address;
@@ -96,14 +92,13 @@ public final class ActivityEventDetailBinding implements ViewBinding {
     this.eventName = eventName;
     this.imagePreviewRC = imagePreviewRC;
     this.occurrence = occurrence;
+    this.participentsRC = participentsRC;
     this.progressBar = progressBar;
     this.progressLayout = progressLayout;
     this.progressText = progressText;
     this.send = send;
     this.sendLayout = sendLayout;
     this.toolbar = toolbar;
-    this.user1 = user1;
-    this.user2 = user2;
   }
 
   @Override
@@ -187,6 +182,12 @@ public final class ActivityEventDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.participentsRC;
+      RecyclerView participentsRC = ViewBindings.findChildViewById(rootView, id);
+      if (participentsRC == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       LinearProgressIndicator progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -224,21 +225,9 @@ public final class ActivityEventDetailBinding implements ViewBinding {
       }
       ToolbarBinding binding_toolbar = ToolbarBinding.bind(toolbar);
 
-      id = R.id.user1;
-      CircleImageView user1 = ViewBindings.findChildViewById(rootView, id);
-      if (user1 == null) {
-        break missingId;
-      }
-
-      id = R.id.user2;
-      CircleImageView user2 = ViewBindings.findChildViewById(rootView, id);
-      if (user2 == null) {
-        break missingId;
-      }
-
       return new ActivityEventDetailBinding((RelativeLayout) rootView, add, address, chatRC, date,
-          eImage, eventImage, eventName, imagePreviewRC, occurrence, progressBar, progressLayout,
-          progressText, send, sendLayout, binding_toolbar, user1, user2);
+          eImage, eventImage, eventName, imagePreviewRC, occurrence, participentsRC, progressBar,
+          progressLayout, progressText, send, sendLayout, binding_toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

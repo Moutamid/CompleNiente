@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
@@ -45,9 +46,6 @@ public final class ActivityNewEventBinding implements ViewBinding {
   public final TextView hour;
 
   @NonNull
-  public final LinearLayout imagesLayout;
-
-  @NonNull
   public final TextInputLayout location;
 
   @NonNull
@@ -61,6 +59,9 @@ public final class ActivityNewEventBinding implements ViewBinding {
 
   @NonNull
   public final MaterialCardView next;
+
+  @NonNull
+  public final RecyclerView participentsRC;
 
   @NonNull
   public final MaterialCardView prev;
@@ -80,9 +81,9 @@ public final class ActivityNewEventBinding implements ViewBinding {
   private ActivityNewEventBinding(@NonNull RelativeLayout rootView, @NonNull TextView addMore,
       @NonNull LinearLayout addtext, @NonNull MaterialCardView datePicker,
       @NonNull ImageView eImage, @NonNull MaterialCardView eventImage, @NonNull TextView hour,
-      @NonNull LinearLayout imagesLayout, @NonNull TextInputLayout location,
-      @NonNull TextView minute, @NonNull TextView month, @NonNull TextInputLayout name,
-      @NonNull MaterialCardView next, @NonNull MaterialCardView prev,
+      @NonNull TextInputLayout location, @NonNull TextView minute, @NonNull TextView month,
+      @NonNull TextInputLayout name, @NonNull MaterialCardView next,
+      @NonNull RecyclerView participentsRC, @NonNull MaterialCardView prev,
       @NonNull ChipGroup queenSourceChipGroup, @NonNull MaterialButton start,
       @NonNull ToolbarBinding toolbar, @NonNull WeekCalendar weekCalendar) {
     this.rootView = rootView;
@@ -92,12 +93,12 @@ public final class ActivityNewEventBinding implements ViewBinding {
     this.eImage = eImage;
     this.eventImage = eventImage;
     this.hour = hour;
-    this.imagesLayout = imagesLayout;
     this.location = location;
     this.minute = minute;
     this.month = month;
     this.name = name;
     this.next = next;
+    this.participentsRC = participentsRC;
     this.prev = prev;
     this.queenSourceChipGroup = queenSourceChipGroup;
     this.start = start;
@@ -168,12 +169,6 @@ public final class ActivityNewEventBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imagesLayout;
-      LinearLayout imagesLayout = ViewBindings.findChildViewById(rootView, id);
-      if (imagesLayout == null) {
-        break missingId;
-      }
-
       id = R.id.location;
       TextInputLayout location = ViewBindings.findChildViewById(rootView, id);
       if (location == null) {
@@ -201,6 +196,12 @@ public final class ActivityNewEventBinding implements ViewBinding {
       id = R.id.next;
       MaterialCardView next = ViewBindings.findChildViewById(rootView, id);
       if (next == null) {
+        break missingId;
+      }
+
+      id = R.id.participentsRC;
+      RecyclerView participentsRC = ViewBindings.findChildViewById(rootView, id);
+      if (participentsRC == null) {
         break missingId;
       }
 
@@ -236,7 +237,7 @@ public final class ActivityNewEventBinding implements ViewBinding {
       }
 
       return new ActivityNewEventBinding((RelativeLayout) rootView, addMore, addtext, datePicker,
-          eImage, eventImage, hour, imagesLayout, location, minute, month, name, next, prev,
+          eImage, eventImage, hour, location, minute, month, name, next, participentsRC, prev,
           queenSourceChipGroup, start, binding_toolbar, weekCalendar);
     }
     String missingId = rootView.getResources().getResourceName(id);

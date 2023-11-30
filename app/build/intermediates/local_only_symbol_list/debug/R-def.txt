@@ -115,7 +115,6 @@ id hour
 id image
 id imagePreviewRC
 id imageView
-id imagesLayout
 id invite
 id lastMessage
 id location
@@ -135,6 +134,7 @@ id next
 id noChatLayout
 id noItemLayout
 id occurrence
+id participentsRC
 id password
 id prev
 id privacy
@@ -202,7 +202,9 @@ layout gallery_card
 layout image_layout
 layout loading_dialog
 layout pager
+layout participents
 layout picker_selector
+layout search_user
 layout task_request_bottomsheet
 layout task_request_card
 layout task_request_layout

@@ -94,24 +94,13 @@
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/participentsRC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fillViewport="true"
-                android:scrollbarSize="2dp">
-
-                <LinearLayout
-                    android:id="@+id/imagesLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:orientation="horizontal">
-
-
-
-                </LinearLayout>
-
-            </HorizontalScrollView>
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/participents" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -157,8 +146,8 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/top_radius"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:padding="12dp">
+        android:padding="12dp"
+        android:visibility="gone">
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -194,12 +183,12 @@
         android:id="@+id/sendLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/top_radius"
         android:backgroundTint="@color/white"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:visibility="gone"
-        android:padding="12dp">
+        android:padding="12dp"
+        android:visibility="gone">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/imagePreviewRC"
@@ -222,11 +211,11 @@
             app:strokeColor="@color/stroke"
             app:strokeWidth="0dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:src="@drawable/send" />
+                android:text="Confirm" />
 
         </com.google.android.material.card.MaterialCardView>
 

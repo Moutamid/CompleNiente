@@ -2,6 +2,7 @@ package com.moutamid.calenderapp.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
@@ -19,6 +20,7 @@ import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 import com.google.firebase.database.DataSnapshot;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.adapters.ParticipentsAdapter;
 import com.moutamid.calenderapp.databinding.ActivityNewEventBinding;
 import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.MonthType;
@@ -155,27 +157,11 @@ public class NewEventActivity extends AppCompatActivity {
     }
 
     private void setProfileImages() {
-        binding.imagesLayout.removeAllViews();
-        for (int i = 0; i < particepents.size(); i++) {
-            CircleImageView circleImageView = new CircleImageView(this);
-            circleImageView.setBorderWidth(1);
-            circleImageView.setBorderColor(getResources().getColor(R.color.stroke));
-            float scale = getResources().getDisplayMetrics().density;
-            int pixels = (int) (60 * scale + 0.5f);
-            int leftMarginInPixels = (int) (10 * scale + 0.5f);
+        binding.participentsRC.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        binding.participentsRC.setHasFixedSize(false);
 
-            circleImageView.setLayoutParams(new ViewGroup.LayoutParams(pixels, pixels));
-            ViewGroup.LayoutParams layoutParams = circleImageView.getLayoutParams();
-            if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
-                // If yes, cast it to MarginLayoutParams
-                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
-                marginLayoutParams.leftMargin = leftMarginInPixels;
-                circleImageView.setLayoutParams(marginLayoutParams);
-            }
-
-            Glide.with(this).load(particepents.get(i).getImage()).placeholder(R.drawable.profile_icon).into(circleImageView);
-            binding.imagesLayout.addView(circleImageView);
-        }
+        ParticipentsAdapter participentsAdapter = new ParticipentsAdapter(this, particepents);
+        binding.participentsRC.setAdapter(participentsAdapter);
     }
 
     private MonthType getMonthType() {

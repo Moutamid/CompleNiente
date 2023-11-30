@@ -94,7 +94,7 @@ public class HomeFragment extends Fragment {
 
                                 if (temp != null) {
 
-                                    if (temp.getID().equals(Constants.auth().getCurrentUser().getUid())){
+                                    if (temp.getID().equals(Constants.auth().getCurrentUser().getUid())) {
                                         Toast.makeText(context, "You can't create event with your self", Toast.LENGTH_SHORT).show();
                                     } else {
                                         context.startActivity(new Intent(context, UserProfileActivity.class).putExtra("userID", temp.getID()));
@@ -141,7 +141,9 @@ public class HomeFragment extends Fragment {
                             taskList.clear();
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
-                                if (!taskModel.isEnded()) {
+                                Date taskDate = new Date(taskModel.getStartTime());
+                                Date currentDate = new Date();
+                                if (!taskModel.isEnded() && taskDate.after(currentDate) && taskModel.getIsAccepted().equals(Constants.YES)) {
                                     taskList.add(taskModel);
                                 }
                                 if (taskList.size() > 0) {

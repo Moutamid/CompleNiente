@@ -112,7 +112,6 @@
                         android:padding="12dp"
                         android:text="New Event"
                         android:textColor="@color/black"
-                        android:visibility="gone"
                         android:textSize="16sp"
                         android:layout_marginTop="5dp"
                         app:backgroundTint="@color/grey"

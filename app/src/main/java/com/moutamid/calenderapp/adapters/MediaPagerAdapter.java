@@ -1,5 +1,6 @@
 package com.moutamid.calenderapp.adapters;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -48,13 +49,22 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
         if (isImage){
             Glide.with(context).load(model.getMessage()).placeholder(R.color.black).into(holder.imageView);
         } else {
-//            Uri videoUri = Uri.parse();
+            ProgressDialog progressDialog = new ProgressDialog(context);
+            progressDialog.setMessage("Media is Loading...");
+            progressDialog.show();
+            progressDialog.setCancelable(false);
             MediaController mediaController = new MediaController(context);
             mediaController.setAnchorView(holder.videoView);
             mediaController.setMediaPlayer(holder.videoView);
             holder.videoView.setVideoPath(model.getMessage());
             holder.videoView.setMediaController(mediaController);
             holder.videoView.start();
+            holder.videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    progressDialog.dismiss();
+                }
+            });
             holder.videoView.setOnCompletionListener(mp -> {
                 holder.videoView.start();
             });

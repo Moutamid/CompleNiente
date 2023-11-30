@@ -130,7 +130,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All Events"
+            android:text="Upcoming Events"
             android:padding="12dp"
             android:textColor="@color/black"
             android:textSize="16sp" />

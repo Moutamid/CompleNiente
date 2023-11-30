@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -33,6 +34,7 @@ import com.google.firebase.database.DatabaseError;
 import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.adapters.AddImageAdapter;
 import com.moutamid.calenderapp.adapters.GalleryAdapter;
+import com.moutamid.calenderapp.adapters.ParticipentsAdapter;
 import com.moutamid.calenderapp.databinding.ActivityEventDetailBinding;
 import com.moutamid.calenderapp.interfaces.AddImageClick;
 import com.moutamid.calenderapp.models.ChatsModel;
@@ -65,27 +67,11 @@ public class EventDetailActivity extends AppCompatActivity {
     ArrayList<UserModel> particepents;
 
     private void setProfileImages() {
-        binding.imagesLayout.removeAllViews();
-        for (int i =0; i< particepents.size(); i++) {
-            CircleImageView circleImageView = new CircleImageView(this);
-            circleImageView.setBorderWidth(1);
-            circleImageView.setBorderColor(getResources().getColor(R.color.stroke));
-            float scale = getResources().getDisplayMetrics().density;
-            int pixels = (int) (60 * scale + 0.5f);
-            int leftMarginInPixels = (int) (10 * scale + 0.5f);
+        binding.participentsRC.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        binding.participentsRC.setHasFixedSize(false);
 
-            circleImageView.setLayoutParams(new ViewGroup.LayoutParams(pixels, pixels));
-            ViewGroup.LayoutParams layoutParams = circleImageView.getLayoutParams();
-            if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
-                // If yes, cast it to MarginLayoutParams
-                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
-                marginLayoutParams.leftMargin = leftMarginInPixels;
-                circleImageView.setLayoutParams(marginLayoutParams);
-            }
-
-            Glide.with(this).load(particepents.get(i).getImage()).placeholder(R.drawable.profile_icon).into(circleImageView);
-            binding.imagesLayout.addView(circleImageView);
-        }
+        ParticipentsAdapter participentsAdapter = new ParticipentsAdapter(this, particepents);
+        binding.participentsRC.setAdapter(participentsAdapter);
     }
 
     @Override

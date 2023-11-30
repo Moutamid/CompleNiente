@@ -13,6 +13,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -53,6 +56,8 @@ public class ChatActivity extends AppCompatActivity {
     private final int limit = 5;
     ArrayList<ShareContentModel> imagesList;
     ArrayList<ChatsModel> chatsList;
+    private static final int REQUEST_IMAGE_CAPTURE = 3;
+    private static final int REQUEST_VIDEO_CAPTURE = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +91,7 @@ public class ChatActivity extends AppCompatActivity {
         String dayMonth = "ddMM";
         String cd = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(currentDate);
         String t = new SimpleDateFormat(dayMonth, Locale.getDefault()).format(taskDate);
-        if (cd.equals(t)){
+        if (cd.equals(t)) {
             binding.noChatLayout.setVisibility(View.GONE);
             binding.uploadImage.setEnabled(true);
             binding.uploadVideo.setEnabled(true);
@@ -97,52 +102,52 @@ public class ChatActivity extends AppCompatActivity {
         }
 
         Constants.databaseReference().child(Constants.CHATS).child(chatListModel.getTaskID())
-                        .addChildEventListener(new ChildEventListener() {
-                            @Override
-                            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                                if (snapshot.exists()){
-                                    ChatsModel chatsModel = snapshot.getValue(ChatsModel.class);
-                                    chatsList.add(chatsModel);
-                                    chatsList.sort(Comparator.comparing(ChatsModel::getTimestamps));
-                                    chatAdapter = new ChatAdapter(ChatActivity.this, chatsList);
-                                    binding.chatRC.setAdapter(chatAdapter);
-                                    binding.chatRC.scrollToPosition(chatsList.size()-1);
-                                    chatAdapter.notifyItemInserted(chatsList.size()-1);
-                                }
-                            }
+                .addChildEventListener(new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                        if (snapshot.exists()) {
+                            ChatsModel chatsModel = snapshot.getValue(ChatsModel.class);
+                            chatsList.add(chatsModel);
+                            chatsList.sort(Comparator.comparing(ChatsModel::getTimestamps));
+                            chatAdapter = new ChatAdapter(ChatActivity.this, chatsList);
+                            binding.chatRC.setAdapter(chatAdapter);
+                            binding.chatRC.scrollToPosition(chatsList.size() - 1);
+                            chatAdapter.notifyItemInserted(chatsList.size() - 1);
+                        }
+                    }
 
-                            @Override
-                            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                                if (snapshot.exists()){
+                    @Override
+                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                        if (snapshot.exists()) {
 
-                                }
-                            }
+                        }
+                    }
 
-                            @Override
-                            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-                                if (snapshot.exists()){
+                    @Override
+                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
 
-                                }
-                            }
+                        }
+                    }
 
-                            @Override
-                            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                                if (snapshot.exists()){
+                    @Override
+                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                        if (snapshot.exists()) {
 
-                                }
-                            }
+                        }
+                    }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                            }
-                        });
+                    }
+                });
 
         binding.uploadImage.setOnClickListener(v -> {
             if (imagesList.size() >= limit) {
                 Toast.makeText(this, "Required Number of Images are selected", Toast.LENGTH_SHORT).show();
             } else {
-                getImage();
+                showPicker(true);
             }
         });
 
@@ -150,7 +155,7 @@ public class ChatActivity extends AppCompatActivity {
             if (imagesList.size() >= limit) {
                 Toast.makeText(this, "Required Number of Images are selected", Toast.LENGTH_SHORT).show();
             } else {
-                getVideos();
+                showPicker(false);
             }
         });
 
@@ -158,6 +163,44 @@ public class ChatActivity extends AppCompatActivity {
             uploadChat();
         });
 
+    }
+
+    public void showPicker(boolean isImage) {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.picker_selector);
+
+        MaterialCardView camera = dialog.findViewById(R.id.camera);
+        MaterialCardView image = dialog.findViewById(R.id.image);
+
+        camera.setOnClickListener(v -> {
+            dialog.dismiss();
+            if (isImage) {
+                ImagePicker.with(ChatActivity.this)
+                        .cameraOnly()
+                        .compress(1024)
+                        .start(REQUEST_IMAGE_CAPTURE);
+            } else {
+                Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(Intent.createChooser(takeVideoIntent, ""), REQUEST_VIDEO_CAPTURE);
+                }
+            }
+        });
+
+        image.setOnClickListener(v -> {
+            dialog.dismiss();
+            if (isImage) {
+                getImage();
+            } else {
+                getVideos();
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
     private void uploadChat() {
@@ -256,6 +299,26 @@ public class ChatActivity extends AppCompatActivity {
                     }
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            } else if (requestCode == REQUEST_IMAGE_CAPTURE) {
+                Log.d("EVENTDETAIL123", "onActivityResult: REQUEST_IMAGE_CAPTURE");
+                Log.d("EVENTDETAIL123", "onActivityResult: resultCode   " + resultCode);
+                Log.d("EVENTDETAIL123", "onActivityResult: data   " + (data != null));
+                Log.d("EVENTDETAIL123", "onActivityResult: data   " + (data.getData() != null));
+                if (resultCode == RESULT_OK) {
+                    binding.sendLayout.setVisibility(View.VISIBLE);
+                    Uri imageUri = data.getData();
+                    imagesList.add(new ShareContentModel(imageUri, "img"));
+                    adapter = new AddImageAdapter(ChatActivity.this, imagesList, click);
+                    binding.imagePreviewRC.setAdapter(adapter);
+                }
+            } else if (requestCode == REQUEST_VIDEO_CAPTURE) {
+                if (resultCode == RESULT_OK && data != null) {
+                    binding.sendLayout.setVisibility(View.VISIBLE);
+                    Uri imageUri = data.getData();
+                    imagesList.add(new ShareContentModel(imageUri, "vid"));
+                    adapter = new AddImageAdapter(ChatActivity.this, imagesList, click);
+                    binding.imagePreviewRC.setAdapter(adapter);
                 }
             }
         } catch (Exception e) {
