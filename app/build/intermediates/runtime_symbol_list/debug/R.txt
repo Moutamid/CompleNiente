@@ -3658,6 +3658,7 @@ int id progress_horizontal 0x7f0901b9
 int id queenSourceChipGroup 0x7f0901ba
 int id radio 0x7f0901bb
 int id ratio 0x7f0901bc
+int id rc 0x7f090284
 int id rectangles 0x7f0901bd
 int id reset 0x7f0901be
 int id reverseSawtooth 0x7f0901bf
@@ -3826,7 +3827,6 @@ int id verify 0x7f090263
 int id vertical_only 0x7f090264
 int id video 0x7f090265
 int id videoView 0x7f090266
-int id viewPager 0x7f090267
 int id view_offset_helper 0x7f090268
 int id view_overlay 0x7f090269
 int id view_transition 0x7f09026a
@@ -3972,6 +3972,7 @@ int layout activity_chat 0x7f0c001d
 int layout activity_email_verify 0x7f0c001e
 int layout activity_event_detail 0x7f0c001f
 int layout activity_forgot 0x7f0c0020
+int layout activity_full_preview 0x7f0c009f
 int layout activity_login 0x7f0c0021
 int layout activity_main 0x7f0c0022
 int layout activity_new_event 0x7f0c0023

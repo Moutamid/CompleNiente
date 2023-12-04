@@ -23,10 +23,13 @@ import java.util.ArrayList;
 public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.MediaVH> {
     private Context context;
     private ArrayList<ChatsModel> list;
-
+    ProgressDialog progressDialog;
     public MediaPagerAdapter(Context context, ArrayList<ChatsModel> list) {
         this.context = context;
         this.list = list;
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setMessage("Media is Loading...");
+        progressDialog.setCancelable(false);
     }
 
     @NonNull
@@ -40,30 +43,25 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
         ChatsModel model = list.get(holder.getAdapterPosition());
 
         boolean isImage = model.getType().equals("img");
-        if (isImage){
+        if (isImage) {
             holder.videoView.setVisibility(View.GONE);
         } else {
             holder.imageView.setVisibility(View.GONE);
         }
 
-        if (isImage){
+        if (isImage) {
             Glide.with(context).load(model.getMessage()).placeholder(R.color.black).into(holder.imageView);
         } else {
-            ProgressDialog progressDialog = new ProgressDialog(context);
-            progressDialog.setMessage("Media is Loading...");
             progressDialog.show();
-            progressDialog.setCancelable(false);
             MediaController mediaController = new MediaController(context);
             mediaController.setAnchorView(holder.videoView);
             mediaController.setMediaPlayer(holder.videoView);
             holder.videoView.setVideoPath(model.getMessage());
             holder.videoView.setMediaController(mediaController);
             holder.videoView.start();
-            holder.videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    progressDialog.dismiss();
-                }
+            holder.videoView.setOnPreparedListener(mp -> {
+                progressDialog.dismiss();
+                mediaController.show();
             });
             holder.videoView.setOnCompletionListener(mp -> {
                 holder.videoView.start();
@@ -77,9 +75,10 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
         return list.size();
     }
 
-    public class MediaVH extends RecyclerView.ViewHolder{
+    public class MediaVH extends RecyclerView.ViewHolder {
         ImageView imageView;
         VideoView videoView;
+
         public MediaVH(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);

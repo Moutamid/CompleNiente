@@ -2,6 +2,7 @@ package com.moutamid.calenderapp.adapters;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.icu.text.SimpleDateFormat;
@@ -17,14 +18,17 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.fxn.stash.Stash;
 import com.google.android.material.card.MaterialCardView;
 import com.moutamid.calenderapp.R;
+import com.moutamid.calenderapp.activities.FullPreviewActivity;
 import com.moutamid.calenderapp.models.ChatsModel;
 
 import java.util.ArrayList;
@@ -38,28 +42,6 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ChatVH> 
     public GalleryAdapter(Context context, ArrayList<ChatsModel> list) {
         this.context = context;
         this.list = list;
-    }
-
-    private void showFullPreview(int position) {
-        final Dialog dialog = new Dialog(context);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.full_preview);
-
-        ViewPager2 pager = dialog.findViewById(R.id.viewPager);
-        MaterialCardView back = dialog.findViewById(R.id.back);
-
-        back.setOnClickListener(v -> dialog.dismiss());
-
-        MediaPagerAdapter adapter = new MediaPagerAdapter(context, list);
-        pager.setAdapter(adapter);
-
-        pager.setCurrentItem(position);
-
-        dialog.show();
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.getWindow().setGravity(Gravity.CENTER);
-
     }
 
     @NonNull
@@ -89,7 +71,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ChatVH> 
         }
 
         holder.itemView.setOnClickListener(v -> {
-            showFullPreview(holder.getAdapterPosition());
+            Stash.put("GALERYLIST", list);
+            context.startActivity(new Intent(context, FullPreviewActivity.class).putExtra("position", holder.getAdapterPosition()));
         });
 
     }

@@ -3659,6 +3659,7 @@ id progress_horizontal
 id queenSourceChipGroup
 id radio
 id ratio
+id rc
 id rectangles
 id reset
 id reverseSawtooth
@@ -3827,7 +3828,6 @@ id verify
 id vertical_only
 id video
 id videoView
-id viewPager
 id view_offset_helper
 id view_overlay
 id view_transition
@@ -3973,6 +3973,7 @@ layout activity_chat
 layout activity_email_verify
 layout activity_event_detail
 layout activity_forgot
+layout activity_full_preview
 layout activity_login
 layout activity_main
 layout activity_new_event

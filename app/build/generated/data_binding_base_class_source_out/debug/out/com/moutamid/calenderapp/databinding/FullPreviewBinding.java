@@ -8,9 +8,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 import com.moutamid.calenderapp.R;
@@ -26,22 +26,21 @@ public final class FullPreviewBinding implements ViewBinding {
   public final MaterialCardView back;
 
   @NonNull
+  public final RecyclerView rc;
+
+  @NonNull
   public final MaterialTextView title;
 
   @NonNull
   public final LinearLayout toolbar;
 
-  @NonNull
-  public final ViewPager2 viewPager;
-
   private FullPreviewBinding(@NonNull RelativeLayout rootView, @NonNull MaterialCardView back,
-      @NonNull MaterialTextView title, @NonNull LinearLayout toolbar,
-      @NonNull ViewPager2 viewPager) {
+      @NonNull RecyclerView rc, @NonNull MaterialTextView title, @NonNull LinearLayout toolbar) {
     this.rootView = rootView;
     this.back = back;
+    this.rc = rc;
     this.title = title;
     this.toolbar = toolbar;
-    this.viewPager = viewPager;
   }
 
   @Override
@@ -77,6 +76,12 @@ public final class FullPreviewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rc;
+      RecyclerView rc = ViewBindings.findChildViewById(rootView, id);
+      if (rc == null) {
+        break missingId;
+      }
+
       id = R.id.title;
       MaterialTextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
@@ -89,13 +94,7 @@ public final class FullPreviewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.viewPager;
-      ViewPager2 viewPager = ViewBindings.findChildViewById(rootView, id);
-      if (viewPager == null) {
-        break missingId;
-      }
-
-      return new FullPreviewBinding((RelativeLayout) rootView, back, title, toolbar, viewPager);
+      return new FullPreviewBinding((RelativeLayout) rootView, back, rc, title, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
