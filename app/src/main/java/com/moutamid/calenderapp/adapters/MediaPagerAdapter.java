@@ -24,12 +24,14 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
     private Context context;
     private ArrayList<ChatsModel> list;
     ProgressDialog progressDialog;
+    public static MediaController mediaController;
     public MediaPagerAdapter(Context context, ArrayList<ChatsModel> list) {
         this.context = context;
         this.list = list;
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Media is Loading...");
         progressDialog.setCancelable(false);
+        mediaController = new MediaController(context);
     }
 
     @NonNull
@@ -44,6 +46,10 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
 
         boolean isImage = model.getType().equals("img");
         if (isImage) {
+            if (holder.videoView.isPlaying()) {
+                holder.videoView.pause();
+                holder.videoView.stopPlayback();
+            }
             holder.videoView.setVisibility(View.GONE);
         } else {
             holder.imageView.setVisibility(View.GONE);
@@ -53,7 +59,6 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
             Glide.with(context).load(model.getMessage()).placeholder(R.color.black).into(holder.imageView);
         } else {
             progressDialog.show();
-            MediaController mediaController = new MediaController(context);
             mediaController.setAnchorView(holder.videoView);
             mediaController.setMediaPlayer(holder.videoView);
             holder.videoView.setVideoPath(model.getMessage());
@@ -67,7 +72,6 @@ public class MediaPagerAdapter extends RecyclerView.Adapter<MediaPagerAdapter.Me
                 holder.videoView.start();
             });
         }
-
     }
 
     @Override
