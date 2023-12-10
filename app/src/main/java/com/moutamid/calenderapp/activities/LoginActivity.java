@@ -2,6 +2,7 @@ package com.moutamid.calenderapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
+                    Log.d("LoginAccount", e.getLocalizedMessage());
                     Constants.createSnackbar(this, binding.getRoot(), e.getLocalizedMessage());
                 });
     }

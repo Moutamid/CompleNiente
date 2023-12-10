@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".activities.SettingActivity">
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/user_pen_solid"
+            android:drawableTint="@color/orange"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="12dp"
+            android:text="Account"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:cornerRadius="12dp"
+            android:gravity="start|center"
+            android:textColor="@color/black"
+            app:rippleColor="@color/grey"
+            app:icon="@drawable/arrow_forward"
+            android:textSize="16sp"
+            app:iconTint="@color/black"
+            android:layout_marginTop="6dp"
+            app:iconGravity="end"
+            app:backgroundTint="@color/white"
+            android:text="Edit Profile" />
+
+        <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableEnd="@drawable/round_privacy"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/orange"
+                android:gravity="center"
+                android:text="Legal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="start|center"
+                android:padding="12dp"
+                android:text="Terms &amp; Services"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/arrow_forward"
+                app:iconGravity="end"
+                app:iconTint="@color/black"
+                app:rippleColor="@color/grey" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:padding="12dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/arrow_forward"
+                app:iconGravity="end"
+                app:iconTint="@color/black"
+                app:rippleColor="@color/grey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Log Out"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="@color/red"
+            app:cornerRadius="12dp"
+            app:rippleColor="@color/grey" />
+
+    </LinearLayout>
+
+</RelativeLayout>

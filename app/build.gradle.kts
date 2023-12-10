@@ -47,12 +47,12 @@ dependencies {
     implementation("com.github.dhaval2404:imagepicker:2.1")
 
     // Firebase
-    implementation("com.google.firebase:firebase-auth:22.1.2")
+    implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation("com.google.firebase:firebase-database:20.3.0")
-    implementation("com.google.firebase:firebase-storage:20.2.1")
-    implementation("com.google.firebase:firebase-crashlytics:18.4.3")
-    implementation("com.google.firebase:firebase-analytics:21.3.0")
-    implementation("com.google.firebase:firebase-messaging:23.2.1")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("com.google.firebase:firebase-crashlytics:18.6.0")
+    implementation("com.google.firebase:firebase-analytics:21.5.0")
+    implementation("com.google.firebase:firebase-messaging:23.4.0")
 
     implementation("com.android.volley:volley:1.2.1")
 
