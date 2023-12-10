@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.moutamid.calenderapp-mergeDebugResources-40:/values-it/values-it.xml",
+            "outputFile": "com.moutamid.calenderapp-mergeDebugResources-43:/values-it/values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\sunny\\.gradle\\caches\\transforms-3\\b025aaaf8c4df954ecea1d439cf0e2c5\\transformed\\jetified-ucrop-2.2.6\\res\\values-it\\values-it.xml",

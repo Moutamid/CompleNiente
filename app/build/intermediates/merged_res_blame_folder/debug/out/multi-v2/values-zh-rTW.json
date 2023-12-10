@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.moutamid.calenderapp-mergeDebugResources-40:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.moutamid.calenderapp-mergeDebugResources-43:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\sunny\\.gradle\\caches\\transforms-3\\a2f06e1a76e666553f8b8e92936cbf76\\transformed\\jetified-play-services-base-18.1.0\\res\\values-zh-rTW\\values.xml",

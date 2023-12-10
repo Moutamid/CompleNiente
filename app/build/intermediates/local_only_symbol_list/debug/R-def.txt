@@ -218,7 +218,6 @@ mipmap ic_launcher_round
 string already_have_account_login
 string app_name
 string com.google.firebase.crashlytics.mapping_file_id
-string default_web_client_id
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key

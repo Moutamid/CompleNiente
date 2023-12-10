@@ -20,16 +20,15 @@
     <string name="already_have_account_login">Already have account? <font color="#F3A323"><b>Login</b></font></string>
     <string name="app_name">Compleniente</string>
     <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
-    <string name="default_web_client_id" translatable="false">890062472575-05ue90j9694eg6eorj1lhjoknkj3oqja.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://sweet-nutrition-default-rtdb.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">890062472575</string>
-    <string name="google_api_key" translatable="false">AIzaSyAyGSYphpIh40M7fze_LUKzkSi4dDG8OQY</string>
-    <string name="google_app_id" translatable="false">1:890062472575:android:5ce6ad65b49e680004464a</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAyGSYphpIh40M7fze_LUKzkSi4dDG8OQY</string>
-    <string name="google_storage_bucket" translatable="false">sweet-nutrition.appspot.com</string>
+    <string name="firebase_database_url" translatable="false">https://sajjad-70ecc-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">704645610113</string>
+    <string name="google_api_key" translatable="false">AIzaSyB7dXBAgW1uCsU5pG8Uhriq5xgC7niOej4</string>
+    <string name="google_app_id" translatable="false">1:704645610113:android:95d72277332aab6dbf2b80</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB7dXBAgW1uCsU5pG8Uhriq5xgC7niOej4</string>
+    <string name="google_storage_bucket" translatable="false">sajjad-70ecc.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lorem15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolores harum iste maxime placeat, quibusdam.</string>
-    <string name="project_id" translatable="false">sweet-nutrition</string>
+    <string name="project_id" translatable="false">sajjad-70ecc</string>
     <string name="terms_and_condition">By continuing you agree <u>Terms of Services</u> &amp; <u>Privacy Policy</u></string>
     <style name="Base.Theme.CalenderApp" parent="Theme.Material3.Light.NoActionBar">
         

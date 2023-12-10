@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.moutamid.calenderapp-mergeDebugResources-40:/values-v31/values-v31.xml",
+            "outputFile": "com.moutamid.calenderapp-mergeDebugResources-43:/values-v31/values-v31.xml",
             "map": [
                 {
                     "source": "C:\\Users\\sunny\\.gradle\\caches\\transforms-3\\479e4f8f83d4615392bb1ebbd3b3d05d\\transformed\\material-1.9.0\\res\\values-v31\\values-v31.xml",
