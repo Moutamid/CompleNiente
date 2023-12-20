@@ -15,7 +15,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
-        android:text="Chat List"/>
+        android:text="@string/chat_list"/>
 
     <View
         android:layout_width="55dp"
@@ -50,7 +50,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:layout_below="@id/title"
-            android:text="No Chat Yet"/>
+            android:text="@string/no_chat_yet"/>
 
     </LinearLayout>
 

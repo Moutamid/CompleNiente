@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/greenLight"
             android:padding="12dp"
-            android:text="Upload Image"
+            android:text="@string/upload_image"
             android:textColor="@color/black"
             app:icon="@drawable/images_solid"
             app:iconTint="@color/black" />
@@ -37,7 +37,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/greenLight"
             android:padding="12dp"
-            android:text="Upload Video"
+            android:text="@string/upload_video"
             android:textColor="@color/black"
             app:icon="@drawable/images_solid"
             app:iconTint="@color/black" />

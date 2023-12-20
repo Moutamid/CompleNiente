@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="Capture, Share, Relive!"
+                android:text="@string/capture_share_relive"
                 android:textColor="@color/white"
                 android:padding="12dp"
                 android:layout_alignParentEnd="true"
@@ -86,7 +86,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New Event"
+            android:text="@string/new_event"
             android:padding="12dp"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="E-Mail / Username"
+            android:hint="@string/e_mail_username"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="12dp"
-            android:text="Create Event"
+            android:text="@string/create_event"
             app:elevation="6dp"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -130,7 +130,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Upcoming Events"
+            android:text="@string/upcoming_events"
             android:padding="12dp"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -162,7 +162,7 @@
                 android:gravity="center"
                 android:textSize="16sp"
                 android:layout_below="@id/title"
-                android:text="Nothing Found"/>
+                android:text="@string/nothing_found"/>
 
         </LinearLayout>
 

@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:layout_weight="1"
-                android:text="Edit Photo" />
+                android:text="@string/edit_photo" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -34,7 +34,8 @@
                 android:backgroundTint="@color/white"
                 android:id="@+id/btnCancel"
                 android:textAllCaps="false"
-                android:text="Cancel" />
+                android:textColor="@color/black"
+                android:text="@string/cancel" />
         </LinearLayout>
 
         <View
@@ -48,8 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/round_delete_24"
-            android:text="Remove"
-            android:backgroundTint="@color/white"
+            android:text="@string/remove"
+            android:backgroundTint="@color/greyDark"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:drawablePadding="8dp"

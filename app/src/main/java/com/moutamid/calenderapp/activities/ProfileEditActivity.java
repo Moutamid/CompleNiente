@@ -41,7 +41,7 @@ public class ProfileEditActivity extends AppCompatActivity {
 
         Constants.initDialog(this);
 
-        binding.toolbar.title.setText("Edit Profile");
+        binding.toolbar.title.setText(getString(R.string.edit_profile));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         getUserDetails();
@@ -102,7 +102,7 @@ public class ProfileEditActivity extends AppCompatActivity {
         Constants.databaseReference().child(Constants.USER).child(Constants.auth().getCurrentUser().getUid())
                 .setValue(userModel).addOnSuccessListener(unused -> {
                     Constants.dismissDialog();
-                    Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.profile_updated), Toast.LENGTH_SHORT).show();
                     onBackPressed();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
@@ -129,7 +129,7 @@ public class ProfileEditActivity extends AppCompatActivity {
 
                         Glide.with(ProfileEditActivity.this).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
                     } else {
-                        Constants.createSnackbar(this, binding.getRoot(), "User data not found");
+                        Constants.createSnackbar(this, binding.getRoot(), getString(R.string.user_data_not_found));
                     }
                     Constants.dismissDialog();
                 }).addOnFailureListener(e -> {
@@ -156,7 +156,7 @@ public class ProfileEditActivity extends AppCompatActivity {
                     } else if (resultCode == ImagePicker.RESULT_ERROR) {
                         Constants.createSnackbar(ProfileEditActivity.this, binding.getRoot(), ImagePicker.getError(data));
                     } else {
-                        Constants.createSnackbar(ProfileEditActivity.this, binding.getRoot(), "No Image is selected");
+                        Constants.createSnackbar(ProfileEditActivity.this, binding.getRoot(), getString(R.string.no_image_is_selected));
                     }
                 }
             }

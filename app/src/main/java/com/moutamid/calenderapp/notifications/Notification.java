@@ -23,7 +23,7 @@ public class Notification {
             long timeDifference = eventDate.getTime() + eventStartTime - currentTime.getTime();
 
             if (timeDifference > 0) {
-                ArrayList<NotiModel> arrayList = Data.getData();
+                ArrayList<NotiModel> arrayList = Data.getData(context);
                 // Schedule notification for the exact event time
                 scheduleNotification(context, event, timeDifference, arrayList.get(0).title, arrayList.get(0).message);
 

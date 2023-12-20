@@ -15,7 +15,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
-        android:text="Task Requests"/>
+        android:text="@string/task_requests"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/des"
@@ -24,7 +24,7 @@
         android:gravity="center"
         android:textSize="16sp"
         android:layout_below="@id/title"
-        android:text="This Month"/>
+        android:text="@string/this_month"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RC"
@@ -54,7 +54,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:layout_below="@id/title"
-            android:text="Nothing Found"/>
+            android:text="@string/nothing_found"/>
 
     </LinearLayout>
 

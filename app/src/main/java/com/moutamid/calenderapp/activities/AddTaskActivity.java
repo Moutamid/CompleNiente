@@ -40,7 +40,7 @@ public class AddTaskActivity extends AppCompatActivity {
 
         Constants.initDialog(this);
 
-        binding.toolbar.title.setText("Add Tasks");
+        binding.toolbar.title.setText(getString(R.string.add_tasks));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         imagesList = new ArrayList<>();
@@ -49,7 +49,7 @@ public class AddTaskActivity extends AppCompatActivity {
 
         binding.btnAddCarPhoto.setOnClickListener(v -> {
             if (imagesList.size() >= limit){
-                Toast.makeText(this, "Required Number of Images are selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.required_number_of_images_are_selected), Toast.LENGTH_SHORT).show();
             } else{
                 getImage();
             }

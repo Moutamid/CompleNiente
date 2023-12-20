@@ -91,7 +91,7 @@ public class EventDetailActivity extends AppCompatActivity {
 
         binding.eventName.setText(taskModel.getName());
         binding.address.setText(taskModel.getLocation());
-        binding.occurrence.setText(taskModel.getRecurrence() + " Event");
+        binding.occurrence.setText(taskModel.getRecurrence() + getString(R.string.event));
         binding.date.setText(Constants.getFormattedDate(taskModel.getDate().getDate().getTime()));
         Glide.with(this).load(taskModel.getTaskImage()).placeholder(R.color.white).into(binding.eImage);
         particepents = new ArrayList<>();
@@ -125,7 +125,7 @@ public class EventDetailActivity extends AppCompatActivity {
                 uploadImage.setOnClickListener(vv -> {
                     dialog.dismiss();
                     if (imagesList.size() >= limit) {
-                        Toast.makeText(this, "Required Number of medias are selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.required_number_of_medias_are_selected), Toast.LENGTH_SHORT).show();
                     } else {
                         showPicker(true);
                     }
@@ -134,7 +134,7 @@ public class EventDetailActivity extends AppCompatActivity {
                 uploadVideo.setOnClickListener(vv -> {
                     dialog.dismiss();
                     if (imagesList.size() >= limit) {
-                        Toast.makeText(this, "Required Number of medias are selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.required_number_of_medias_are_selected), Toast.LENGTH_SHORT).show();
                     } else {
                         showPicker(false);
                     }
@@ -147,7 +147,7 @@ public class EventDetailActivity extends AppCompatActivity {
             }
         });
 
-        binding.toolbar.title.setText("Event");
+        binding.toolbar.title.setText(getString(R.string.event));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         Constants.databaseReference().child(Constants.CHATS).child(eventID)
@@ -304,7 +304,7 @@ public class EventDetailActivity extends AppCompatActivity {
                         adapter = new AddImageAdapter(EventDetailActivity.this, imagesList, click);
                         binding.imagePreviewRC.setAdapter(adapter);
                     } else {
-                        Toast.makeText(this, "Please Select Multiple Images", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.please_select_multiple_images), Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -326,7 +326,7 @@ public class EventDetailActivity extends AppCompatActivity {
                         adapter = new AddImageAdapter(EventDetailActivity.this, imagesList, click);
                         binding.imagePreviewRC.setAdapter(adapter);
                     } else {
-                        Toast.makeText(this, "Please Select Multiple Images", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.please_select_multiple_videos), Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

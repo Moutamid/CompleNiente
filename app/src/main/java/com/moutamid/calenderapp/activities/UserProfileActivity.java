@@ -38,7 +38,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
         taskList = new ArrayList<>();
 
-        binding.toolbar.title.setText("Friend Profile");
+        binding.toolbar.title.setText(getString(R.string.friend_profile));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
         String userID = "";
         if (getIntent() != null) {

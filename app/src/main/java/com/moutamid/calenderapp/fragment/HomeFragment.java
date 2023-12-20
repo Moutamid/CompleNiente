@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
 
 //        setStatusBarTranslucent();
 
-        binding.greeting.setText(Constants.greetingMessage());
+        binding.greeting.setText(Constants.greetingMessage(requireContext()));
 
         String d = new SimpleDateFormat(Constants.MONTH_FORMAT, Locale.getDefault()).format(new Date());
 //        binding.month.setText(d);
@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
 
         binding.create.setOnClickListener(v -> {
             if (binding.username.getEditText().getText().toString().isEmpty()) {
-                Toast.makeText(context, "User name is empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, getString(R.string.user_name_is_empty), Toast.LENGTH_SHORT).show();
             } else {
                 Constants.showDialog();
                 Constants.databaseReference().child(Constants.USER).get()
@@ -95,12 +95,12 @@ public class HomeFragment extends Fragment {
                                 if (temp != null) {
 
                                     if (temp.getID().equals(Constants.auth().getCurrentUser().getUid())) {
-                                        Toast.makeText(context, "You can't create event with your self", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context, getString(R.string.you_can_t_create_event_with_your_self), Toast.LENGTH_SHORT).show();
                                     } else {
                                         context.startActivity(new Intent(context, UserProfileActivity.class).putExtra("userID", temp.getID()));
                                     }
                                 } else {
-                                    Toast.makeText(context, "User not found", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, getString(R.string.user_not_found), Toast.LENGTH_SHORT).show();
                                 }
 
                             }
@@ -287,13 +287,13 @@ public class HomeFragment extends Fragment {
                         binding.name.setText(userModel.getName());
                         Glide.with(context).load(userModel.getImage()).placeholder(R.drawable.profile_icon).into(binding.profileImage);
                     } else {
-                        Constants.createSnackbar(context, binding.getRoot(), "User data not found");
+                        Constants.createSnackbar(context, binding.getRoot(), getString(R.string.user_data_not_found));
                     }
                     Constants.dismissDialog();
 //                    getThisMonthTasks();
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
-                    Constants.createSnackbar(context, binding.getRoot(), e.getLocalizedMessage(), "Dismiss");
+                    Constants.createSnackbar(context, binding.getRoot(), e.getLocalizedMessage(), getString(R.string.dismiss));
                 });
     }
 

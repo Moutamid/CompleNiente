@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Month 00"
+                android:text="@string/month_00"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -118,7 +118,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="Add Image"
+                            android:text="@string/add_image"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -141,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Event Name"
+                android:hint="@string/event_name"
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
@@ -160,7 +160,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Location"
+                android:hint="@string/location"
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
@@ -228,7 +228,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Recurrence :"
+                android:text="@string/recurrence"
                 android:textSize="18sp" />
 
             <com.google.android.material.chip.ChipGroup
@@ -244,7 +244,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Single"
+                    android:text="@string/single"
                     android:textSize="16sp"
                     app:checkedIconEnabled="true" />
 
@@ -255,7 +255,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Weekly"
+                    android:text="@string/weekly"
                     android:textSize="16sp"
                     app:checkedIconEnabled="true" />
 
@@ -266,7 +266,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Monthly"
+                    android:text="@string/monthly"
                     android:textSize="16sp"
                     app:checkedIconEnabled="true" />
 
@@ -277,7 +277,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Semi-Annual"
+                    android:text="@string/semi_annual"
                     android:textSize="16sp"
                     app:checkedIconEnabled="true" />
 
@@ -288,7 +288,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Annual"
+                    android:text="@string/annual"
                     android:textSize="16sp"
                     app:checkedIconEnabled="true" />
 
@@ -299,7 +299,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="With :"
+                android:text="@string/with"
                 android:drawableEnd="@drawable/round_add_24"
                 android:drawableTint="@color/orange"
                 android:textSize="18sp" />
@@ -319,7 +319,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:padding="12dp"
-                android:text="Start"
+                android:text="@string/start"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="16sp"

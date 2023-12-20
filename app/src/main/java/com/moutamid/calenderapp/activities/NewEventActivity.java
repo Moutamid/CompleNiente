@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
@@ -48,6 +49,7 @@ public class NewEventActivity extends AppCompatActivity {
     long milies;
     CalendarDate date;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +71,7 @@ public class NewEventActivity extends AppCompatActivity {
             startActivity(new Intent(this, SelectUserActivity.class));
         });
 
-        binding.toolbar.title.setText("Create Event");
+        binding.toolbar.title.setText(getString(R.string.create_event));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         milies = new Date().getTime();
@@ -118,7 +120,7 @@ public class NewEventActivity extends AppCompatActivity {
                                 }
 
                                 if (isSelected) {
-                                    Toast.makeText(this, "User is not available for today", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(this, getString(R.string.user_is_not_available_for_today), Toast.LENGTH_SHORT).show();
                                 } else {
                                     startEvent();
                                 }
@@ -202,7 +204,7 @@ public class NewEventActivity extends AppCompatActivity {
                 setProfileImages();
                 Stash.clear("SELECTED_USER");
             } else {
-                Toast.makeText(this, "This user already selected!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.this_user_already_selected), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -238,7 +240,7 @@ public class NewEventActivity extends AppCompatActivity {
 
                                 if (i == particepents.size() - 1) {
                                     Constants.dismissDialog();
-                                    Toast.makeText(this, "A request is send to all users", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(this, getString(R.string.a_request_is_send_to_all_users), Toast.LENGTH_SHORT).show();
                                     onBackPressed();
                                 }
 
@@ -302,19 +304,19 @@ public class NewEventActivity extends AppCompatActivity {
 
     private boolean valid() {
         if (imageUri == null) {
-            Toast.makeText(this, "Add Event Image", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.add_event_image), Toast.LENGTH_SHORT).show();
             return false;
         }
         if (binding.name.getEditText().getText().toString().isEmpty()) {
-            Toast.makeText(this, "Name is Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.name_is_empty), Toast.LENGTH_SHORT).show();
             return false;
         }
         if (binding.location.getEditText().getText().toString().isEmpty()) {
-            Toast.makeText(this, "Location is Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.location_is_empty), Toast.LENGTH_SHORT).show();
             return false;
         }
         if (getRecurrence().isEmpty()) {
-            Toast.makeText(this, "Select Recurrence", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.select_recurrence), Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -327,9 +329,9 @@ public class NewEventActivity extends AppCompatActivity {
                 .setHour(12)
                 .setInputMode(MaterialTimePicker.INPUT_MODE_CLOCK)
                 .setMinute(0)
-                .setTitleText("Select Time")
-                .setPositiveButtonText("Add")
-                .setNegativeButtonText("Cancel")
+                .setTitleText(getString(R.string.select_time))
+                .setPositiveButtonText(getString(R.string.add))
+                .setNegativeButtonText(getString(R.string.cancel))
                 .build();
 
         timePicker.addOnPositiveButtonClickListener(v -> {

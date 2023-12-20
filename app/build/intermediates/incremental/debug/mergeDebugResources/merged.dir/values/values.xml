@@ -1995,6 +1995,8 @@
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
+    <string name="a_password_reset_mail_is_sent_to_your_email_address">È stata inviata una mail di reset password al tuo indirizzo email</string>
+    <string name="a_request_is_send_to_all_users">È stata inviata una richiesta a tutti gli utenti</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -2022,20 +2024,37 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="accept">Accetta</string>
+    <string name="accepted">Accettato</string>
+    <string name="account">Account</string>
     <string name="action_cancel">Cancel</string>
-    <string name="already_have_account_login">Already have account? <font color="#F3A323"><b>Login</b></font></string>
+    <string name="add">Aggiungi</string>
+    <string name="add_event_image">Aggiungi immagine dell\'evento</string>
+    <string name="add_image">Aggiungi immagine</string>
+    <string name="add_media">Aggiungi media</string>
+    <string name="add_task">Aggiungi compito</string>
+    <string name="add_tasks">Aggiungi compiti</string>
+    <string name="add_up_to_5_pictures">Aggiungi fino a 5 immagini</string>
+    <string name="already_have_account_login">Hai già un account? <font color="#F3A323"><b>Accedi</b></font></string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
+    <string name="annual">Annuale</string>
     <string name="app_name">Compleniente</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="are_you_sure_you_want_to_logout">Sei sicuro di voler uscire?</string>
+    <string name="bio">Biografia</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an accessibility action to collapse the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
     <string description="A description of an accessibility action to expand the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_expand">Expand the bottom sheet</string>
     <string description="A description of an action that a user of an accessibility service can perform to expand a bottomsheet halfway to its full height. [CHAR LIMIT=25]" name="bottomsheet_action_expand_halfway">Expand halfway</string>
     <string description="An accessibility feedback when the bottom sheet drag handle is clicked [CHAR LIMIT=NONE]" name="bottomsheet_drag_handle_clicked">Drag handle double-tapped</string>
     <string description="The content description of bottom sheet drag handles [CHAR LIMIT=NONE]" name="bottomsheet_drag_handle_content_description">Drag handle</string>
+    <string name="camera">Fotocamera</string>
+    <string name="cancel">Annulla</string>
+    <string name="capture_share_relive">Cattura, Condividi, Rivivi!</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
+    <string name="chat_list">Elenco chat</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -2056,7 +2075,28 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="confirm">Conferma</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
+    <string name="create">Crea</string>
+    <string name="create_account">Crea account</string>
+    <string name="create_event">Crea evento</string>
+    <string name="date">Data</string>
+    <string name="date_is_not_valid">La data non è valida</string>
+    <string name="date_of_birth">Data di nascita</string>
+    <string name="day">Giorno</string>
+    <string name="did_you_miss_the_event_hurry_up_and_participate_the_event_and_don_t_forgot_to_capture_share_relive">Hai perso l\'evento 😕. Sbrigati e partecipa all\'evento e non dimenticare di catturare, condividere e rivivere</string>
+    <string name="didn_t_receive_verification_email">Non hai ricevuto l\'email di verifica??</string>
+    <string name="dismiss">Ignora</string>
+    <string name="don_t_forget_your_compliant">Non dimenticare la tua Conformità</string>
+    <string name="e_mail_username">E-Mail / Nome utente</string>
+    <string name="edit_photo">Modifica foto</string>
+    <string name="edit_profile">Modifica profilo</string>
+    <string name="email">Email</string>
+    <string name="email_is_empty">L\'email è vuota</string>
+    <string name="email_is_not_valid">L\'email non è valida</string>
+    <string name="email_verified">Email verificata</string>
+    <string name="end_reject">Fine/Rifiuta</string>
+    <string name="end_task">Fine compito</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
@@ -2067,6 +2107,9 @@
     <string name="error_failed_to_crop_image">Failed to crop image</string>
     <string name="error_icon_content_description">Error</string>
     <string name="error_task_cancelled">Task Cancelled</string>
+    <string name="event">Evento</string>
+    <string name="event_name">Nome dell\'evento</string>
+    <string name="events">Eventi</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
@@ -2075,16 +2118,36 @@
     <string name="fallback_menu_item_share_link">Share link</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url" translatable="false">https://sajjad-70ecc-default-rtdb.firebaseio.com</string>
+    <string name="forgot_password">Password dimenticata?</string>
+    <string name="forgot_your_password">Hai dimenticato la tua password??</string>
+    <string name="friend_profile">Profilo dell\'amico</string>
+    <string name="full_name">Nome completo</string>
+    <string name="gallery">Galleria</string>
     <string name="gcm_defaultSenderId" translatable="false">704645610113</string>
+    <string name="good_afternoon">Buon pomeriggio</string>
+    <string name="good_evening">Buonasera</string>
+    <string name="good_morning">Buongiorno</string>
+    <string name="good_night">Buonanotte</string>
     <string name="google_api_key" translatable="false">AIzaSyB7dXBAgW1uCsU5pG8Uhriq5xgC7niOej4</string>
     <string name="google_app_id" translatable="false">1:704645610113:android:95d72277332aab6dbf2b80</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB7dXBAgW1uCsU5pG8Uhriq5xgC7niOej4</string>
     <string name="google_storage_bucket" translatable="false">sajjad-70ecc.appspot.com</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Ciao frammento vuoto</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="home">Casa</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="image_picker_provider_authority_suffix" translatable="false">.imagepicker.provider</string>
+    <string name="invite">Invita</string>
+    <string name="is_started">" è iniziato"</string>
     <string name="item_view_role_description">Tab</string>
+    <string name="legal">Legale</string>
+    <string name="list_of_users_you_can_interact_with">Elenco degli utenti con cui puoi interagire</string>
+    <string name="location">Posizione</string>
+    <string name="location_is_empty">La posizione è vuota</string>
+    <string name="log_in">Accedi</string>
+    <string name="log_out">Esci</string>
+    <string name="login">Accedi</string>
+    <string name="logout">Esci</string>
     <string name="lorem15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolores harum iste maxime placeat, quibusdam.</string>
     <string name="m3_ref_typeface_brand_medium" translatable="false">sans-serif-medium</string>
     <string name="m3_ref_typeface_brand_regular" translatable="false">sans-serif</string>
@@ -2123,6 +2186,11 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="media_is_loading">Caricamento media...</string>
+    <string name="messages">Messaggi</string>
+    <string name="month">Mese</string>
+    <string name="month_00">Mese 00</string>
+    <string name="monthly">Mensile</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string name="mtrl_checkbox_button_icon_path_checked" translatable="false">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>
     <string name="mtrl_checkbox_button_icon_path_group_name" translatable="false">icon</string>
@@ -2191,27 +2259,76 @@
     <string name="mtrl_switch_track_path" translatable="false">M0,16 A16,16 0 0,1 16,0 H36 A16,16 0 0,1 36,32 H16 A16,16 0 0,1 0,16</string>
     <string description="Button text to indicate that the widget will ignore the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_cancel">Cancel</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
+    <string name="name">Nome</string>
+    <string name="name_is_empty">Il nome è vuoto</string>
+    <string name="new_event">Nuovo evento</string>
+    <string name="no">No</string>
+    <string name="no_chat_yet">Ancora nessuna chat</string>
+    <string name="no_image_is_selected">Nessuna immagine selezionata</string>
+    <string name="nothing_found">Nessun risultato trovato</string>
+    <string name="participants">Partecipanti</string>
+    <string name="password">Password</string>
+    <string name="password_is_empty">La password è vuota</string>
+    <string name="password_reset">Reset password</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="pending">In sospeso</string>
     <string name="permission_camera_denied">
         <![CDATA[Camera permission is needed to take a picture. Please allow permission from Settings > Permissions.]]></string>
+    <string name="please_click_on_the_verification_link_we_ve_sent_to_your_inbox">Fai clic sul link di verifica che abbiamo inviato alla tua casella di posta</string>
+    <string name="please_select_multiple_images">Seleziona più immagini</string>
+    <string name="please_select_multiple_videos">Seleziona più video</string>
+    <string name="please_wait">Attendere prego</string>
+    <string name="privacy_policy">Informativa sulla privacy</string>
+    <string name="profile">Profilo</string>
+    <string name="profile_updated">Profilo aggiornato</string>
     <string name="project_id" translatable="false">sajjad-70ecc</string>
+    <string name="recurrence">Ricorrenza :</string>
+    <string name="reject_delete">Rifiuta/Elimina</string>
+    <string name="rejected">Rifiutato</string>
+    <string name="remove">Rimuovi</string>
+    <string name="required_number_of_images_are_selected">Il numero richiesto di immagini è stato selezionato</string>
+    <string name="required_number_of_medias_are_selected">Il numero richiesto di media è stato selezionato</string>
+    <string name="reset_password">Reimposta password</string>
+    <string name="search_by_username">Cerca per nome utente</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
   </string>
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
+    <string name="select_recurrence">Seleziona ricorrenza</string>
+    <string name="select_time">Seleziona ora</string>
+    <string name="select_user">Seleziona utente</string>
+    <string name="select_users">Seleziona utenti</string>
+    <string name="semi_annual">Semestrale</string>
+    <string name="send_message">Invia messaggio</string>
+    <string name="settings">Impostazioni</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
+    <string name="sign_up">Iscriviti</string>
+    <string name="single">Singolo</string>
+    <string name="start">Inizio</string>
+    <string name="stating_in_few_minutes">Inizio tra pochi minuti</string>
+    <string name="status">Stato :</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="terms_and_condition">By continuing you agree <u>Terms of Services</u> &amp; <u>Privacy Policy</u></string>
+    <string name="task_description">Descrizione del compito</string>
+    <string name="task_name">Nome del compito</string>
+    <string name="task_request_from">Richiesta di compito da</string>
+    <string name="task_requests">Richieste di compito</string>
+    <string name="tel_us_your_email_we_will_send_you_a_password_resent_link">Dicci la tua email e ti invieremo un link per reimpostare la password</string>
+    <string name="terms_amp_services">Termini &amp; Servizi</string>
+    <string name="terms_and_condition">Continuando, accetti i <u>Termini di servizio</u> e l\'<u>Informativa sulla privacy</u></string>
+    <string name="the_event_is_stating_in_15_minutes_prepare_yourself_for_the_best_experience">L\'evento inizia tra 15 minuti, preparati per la migliore esperienza.</string>
+    <string name="this_month">Questo mese</string>
+    <string name="this_user_already_selected">Questo utente è già stato selezionato!</string>
     <string name="title_camera">Camera</string>
     <string name="title_choose_image_provider">Choose</string>
     <string name="title_gallery">Gallery</string>
+    <string name="to_ensure_the_security_of_your_account_and_access_to_our_awesome_features_we_need_to_verify_your_email_address">Per garantire la sicurezza del tuo account e l\'accesso alle nostre fantastiche funzionalità, dobbiamo verificare il tuo indirizzo email</string>
     <string name="ucrop_crop">Crop</string>
     <string name="ucrop_error_input_data_is_absent" translatable="false">Both input and output Uri must be specified</string>
     <string name="ucrop_label_edit_photo">Edit Photo</string>
@@ -2220,6 +2337,25 @@
     <string name="ucrop_mutate_exception_hint" translatable="false">Therefore, override color resource (ucrop_color_toolbar_widget) in your app to make it work on pre-L devices</string>
     <string name="ucrop_rotate">Rotate</string>
     <string name="ucrop_scale">Scale</string>
+    <string name="upcoming_events">Eventi futuri</string>
+    <string name="update_account">Aggiorna account</string>
+    <string name="upload_image">Carica immagine</string>
+    <string name="upload_video">Carica video</string>
+    <string name="uploading">Caricamento...</string>
+    <string name="user_data_not_found">Dati utente non trovati</string>
+    <string name="user_is_not_available_for_today">L\'utente non è disponibile oggi</string>
+    <string name="user_name_is_empty">Il nome utente è vuoto</string>
+    <string name="user_not_found">Utente non trovato</string>
+    <string name="username">Nome utente</string>
+    <string name="username_is_not_available">Il nome utente non è disponibile</string>
+    <string name="username_only_contain_letters">Il nome utente può contenere solo lettere &amp; (. , _)</string>
+    <string name="verify_your_email">Verifica la tua email</string>
+    <string name="weekly">Settimanale</string>
+    <string name="with">Con :</string>
+    <string name="year">Anno</string>
+    <string name="yes">Sì</string>
+    <string name="you_can_only_chat_on_the_day_the_task_is_assigned">Puoi chattare solo il giorno in cui viene assegnato il compito</string>
+    <string name="you_can_t_create_event_with_your_self">Non puoi creare un evento da solo</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

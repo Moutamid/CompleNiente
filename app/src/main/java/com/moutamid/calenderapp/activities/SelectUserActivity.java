@@ -13,6 +13,7 @@ import com.fxn.stash.Stash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.adapters.CalendarAdapter;
 import com.moutamid.calenderapp.adapters.UsersAdapter;
 import com.moutamid.calenderapp.databinding.ActivitySelectUserBinding;
@@ -37,7 +38,7 @@ public class SelectUserActivity extends AppCompatActivity {
         binding = ActivitySelectUserBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.toolbar.title.setText("Select Users");
+        binding.toolbar.title.setText(getString(R.string.select_users));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         binding.RC.setLayoutManager(new LinearLayoutManager(this));

@@ -4,19 +4,19 @@
     <item
         android:id="@+id/nav_setting"
         android:icon="@drawable/round_person_24"
-        android:title="Profile" />
+        android:title="@string/profile" />
 
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/home"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/nav_chat"
         android:icon="@drawable/chat"
-        android:title="Messages" />
+        android:title="@string/messages" />
     <item
         android:id="@+id/nav_list"
         android:icon="@drawable/outline_calendar_month_24"
-        android:title="Events" />
+        android:title="@string/events" />
 
 </menu>

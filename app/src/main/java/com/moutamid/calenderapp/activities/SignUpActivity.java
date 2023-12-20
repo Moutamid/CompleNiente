@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.calenderapp.MainActivity;
+import com.moutamid.calenderapp.R;
 import com.moutamid.calenderapp.databinding.ActivitySignUpBinding;
 import com.moutamid.calenderapp.models.UserModel;
 import com.moutamid.calenderapp.utilis.Constants;
@@ -34,7 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         Constants.initDialog(this);
 
-        binding.toolbar.title.setText("Create Account");
+        binding.toolbar.title.setText(getString(R.string.create_account));
         binding.toolbar.back.setOnClickListener(v -> onBackPressed());
 
         email = getIntent().getStringExtra("email");
@@ -129,7 +130,7 @@ public class SignUpActivity extends AppCompatActivity {
     private boolean valid() {
         if (binding.username.getEditText().getText().toString().isEmpty()) {
             binding.username.setErrorEnabled(true);
-            binding.username.setError("Username is Empty");
+            binding.username.setError(getString(R.string.user_name_is_empty));
             return false;
         }
 
@@ -138,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity {
             for (UserModel user : list){
                 if (un.equals(user.getUsername())) {
                     binding.username.setErrorEnabled(true);
-                    binding.username.setError("Username is not available");
+                    binding.username.setError(getString(R.string.username_is_not_available));
                     return false;
                 }
             }
@@ -146,29 +147,29 @@ public class SignUpActivity extends AppCompatActivity {
 
         if (binding.name.getEditText().getText().toString().isEmpty()) {
             binding.name.setErrorEnabled(true);
-            binding.name.setError("Name is Empty");
+            binding.name.setError(getString(R.string.name_is_empty));
             return false;
         }
         String day = binding.day.getEditText().getText().toString();
         String month = binding.month.getEditText().getText().toString();
         String year = binding.year.getEditText().getText().toString();
         if (!isValidDate(day, month, year)){
-            Constants.createSnackbar(this, binding.create, "Date is not valid");
+            Constants.createSnackbar(this, binding.create, getString(R.string.date_is_not_valid));
             return false;
         }
         if (binding.email.getEditText().getText().toString().isEmpty()) {
             binding.email.setErrorEnabled(true);
-            binding.email.setError("Email is Empty");
+            binding.email.setError(getString(R.string.email_is_empty));
             return false;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(binding.email.getEditText().getText().toString()).matches()) {
             binding.email.setErrorEnabled(true);
-            binding.email.setError("Email is not valid");
+            binding.email.setError(getString(R.string.email_is_not_valid));
             return false;
         }
         if (binding.password.getEditText().getText().toString().isEmpty()) {
             binding.password.setErrorEnabled(true);
-            binding.password.setError("Password is Empty");
+            binding.password.setError(getString(R.string.password_is_empty));
             return false;
         }
         return true;

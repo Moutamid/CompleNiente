@@ -39,7 +39,7 @@ public class FullPreviewActivity extends AppCompatActivity {
         list = Stash.getArrayList("GALERYLIST", ChatsModel.class);
 
         progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Media is Loading...");
+        progressDialog.setMessage(getString(R.string.media_is_loading));
         progressDialog.setCancelable(false);
         mediaController = new MediaController(this);
 

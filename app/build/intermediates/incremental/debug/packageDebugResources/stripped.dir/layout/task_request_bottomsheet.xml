@@ -37,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="12dp"
-                    android:text="Status : " />
+                    android:text="@string/status" />
 
                 <View
                     android:id="@+id/status"
@@ -51,14 +51,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:text="Pending" />
+                    android:text="@string/pending" />
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Task Name" />
+                android:text="@string/task_name" />
 
             <TextView
                 android:id="@+id/taskName"
@@ -68,13 +68,13 @@
                 android:layout_marginTop="6dp"
                 android:textSize="16sp"
                 android:background="@drawable/et_bg"
-                android:text="Task Name" />
+                android:text="@string/task_name" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Task Description" />
+                android:text="@string/task_description" />
 
             <TextView
                 android:id="@+id/taskDesc"
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Task Request From" />
+                android:text="@string/task_request_from" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Date"
+                        android:text="@string/date"
                         android:textColor="@color/dark_text"/>
 
                     <TextView
@@ -174,7 +174,7 @@
                     android:id="@+id/endReject"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="End/Reject"
+                    android:text="@string/end_reject"
                     android:layout_weight="1"
                     android:padding="12dp"
                     app:cornerRadius="12dp"
@@ -191,7 +191,7 @@
                     android:textColor="@color/white"
                     android:backgroundTint="@color/orange"
                     app:cornerRadius="12dp"
-                    android:text="Accept"/>
+                    android:text="@string/accept"/>
 
             </LinearLayout>
 

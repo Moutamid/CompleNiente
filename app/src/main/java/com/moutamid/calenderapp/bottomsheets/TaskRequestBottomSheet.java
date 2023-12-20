@@ -1,5 +1,6 @@
 package com.moutamid.calenderapp.bottomsheets;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -41,6 +42,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
         this.b = b;
     }
 
+    @SuppressLint("SetTextI18n")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,28 +63,28 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
 
         if (b) {
             binding.accept.setVisibility(View.GONE);
-            binding.endReject.setText("Reject/Delete");
+            binding.endReject.setText(getString(R.string.reject_delete));
         }
 
         if (model.isAccepted().equals(Constants.YES)) {
             binding.accept.setVisibility(View.GONE);
-            binding.endReject.setText("End Task");
+            binding.endReject.setText(getString(R.string.end_task));
         } else {
             if (!b) {
                 binding.accept.setVisibility(View.VISIBLE);
             }
-            binding.endReject.setText("Reject/Delete");
+            binding.endReject.setText(getString(R.string.reject_delete));
         }
 
         if (model.isAccepted().equals(Constants.YES)) {
             binding.status.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
-            binding.statusText.setText("Accepted");
+            binding.statusText.setText(getString(R.string.accepted));
         } else if (model.isAccepted().equals(Constants.REJ)) {
             binding.status.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-            binding.statusText.setText("Rejected");
+            binding.statusText.setText(getString(R.string.rejected));
         } else if (model.isAccepted().equals(Constants.PEN)) {
             binding.status.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.orange2)));
-            binding.statusText.setText("Pending");
+            binding.statusText.setText(getString(R.string.pending));
         }
 
 

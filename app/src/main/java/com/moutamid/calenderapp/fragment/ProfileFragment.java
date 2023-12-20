@@ -91,7 +91,7 @@ public class ProfileFragment extends Fragment {
 
         create.setOnClickListener(v -> {
             if (username.getEditText().getText().toString().isEmpty()) {
-                Toast.makeText(context, "User name is empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, getString(R.string.user_name_is_empty), Toast.LENGTH_SHORT).show();
             } else {
                 dialog.dismiss();
                 Constants.showDialog();
@@ -113,12 +113,12 @@ public class ProfileFragment extends Fragment {
                                 if (temp != null) {
 
                                     if (temp.getID().equals(Constants.auth().getCurrentUser().getUid())) {
-                                        Toast.makeText(context, "You can't create event with your self", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context, getString(R.string.you_can_t_create_event_with_your_self), Toast.LENGTH_SHORT).show();
                                     } else {
                                         context.startActivity(new Intent(context, UserProfileActivity.class).putExtra("userID", temp.getID()));
                                     }
                                 } else {
-                                    Toast.makeText(context, "User not found", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, getString(R.string.user_not_found), Toast.LENGTH_SHORT).show();
                                 }
 
                             }

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:gravity="center"
-            android:text="Verify your Email"
+            android:text="@string/verify_your_email"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -29,7 +29,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="6dp"
             android:gravity="center"
-            android:text="To ensure the security of your account and access to our awesome features, we need to verify your email address"
+            android:text="@string/to_ensure_the_security_of_your_account_and_access_to_our_awesome_features_we_need_to_verify_your_email_address"
             android:textSize="16sp" />
 
         <com.google.android.material.button.MaterialButton
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Didn't receive verification email??" />
+            android:text="@string/didn_t_receive_verification_email" />
 
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="6dp"
             android:gravity="center"
-            android:text="Please click on the verification link we've sent to your inbox"
+            android:text="@string/please_click_on_the_verification_link_we_ve_sent_to_your_inbox"
             android:textSize="16sp"
             android:visibility="gone" />
 

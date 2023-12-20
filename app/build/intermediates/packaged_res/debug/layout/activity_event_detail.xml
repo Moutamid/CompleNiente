@@ -56,7 +56,7 @@
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                tools:text="Event Name" />
+                tools:text="@string/event_name" />
 
             <TextView
                 android:id="@+id/address"
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Participants"
+                android:text="@string/participants"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_centerInParent="true"
-                    android:text="Gallery"
+                    android:text="@string/gallery"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -123,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerInParent="true"
-                    android:text="Add Media" />
+                    android:text="@string/add_media" />
 
             </RelativeLayout>
 
@@ -153,7 +153,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:text="Uploading..."
+            android:text="@string/uploading"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -215,7 +215,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Confirm" />
+                android:text="@string/confirm" />
 
         </com.google.android.material.card.MaterialCardView>
 

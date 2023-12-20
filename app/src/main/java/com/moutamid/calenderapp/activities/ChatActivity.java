@@ -145,7 +145,7 @@ public class ChatActivity extends AppCompatActivity {
 
         binding.uploadImage.setOnClickListener(v -> {
             if (imagesList.size() >= limit) {
-                Toast.makeText(this, "Required Number of Images are selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.required_number_of_medias_are_selected), Toast.LENGTH_SHORT).show();
             } else {
                 showPicker(true);
             }
@@ -153,7 +153,7 @@ public class ChatActivity extends AppCompatActivity {
 
         binding.uploadVideo.setOnClickListener(v -> {
             if (imagesList.size() >= limit) {
-                Toast.makeText(this, "Required Number of Images are selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.required_number_of_medias_are_selected), Toast.LENGTH_SHORT).show();
             } else {
                 showPicker(false);
             }
@@ -273,7 +273,7 @@ public class ChatActivity extends AppCompatActivity {
                         adapter = new AddImageAdapter(ChatActivity.this, imagesList, click);
                         binding.imagePreviewRC.setAdapter(adapter);
                     } else {
-                        Toast.makeText(this, "Please Select Multiple Images", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.please_select_multiple_images), Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -295,7 +295,7 @@ public class ChatActivity extends AppCompatActivity {
                         adapter = new AddImageAdapter(ChatActivity.this, imagesList, click);
                         binding.imagePreviewRC.setAdapter(adapter);
                     } else {
-                        Toast.makeText(this, "Please Select Multiple Images", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, getString(R.string.please_select_multiple_videos), Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

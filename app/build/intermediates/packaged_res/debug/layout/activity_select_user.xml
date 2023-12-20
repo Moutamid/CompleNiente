@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="List of users you can interact with" />
+            android:text="@string/list_of_users_you_can_interact_with" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search"
@@ -36,7 +36,7 @@
             app:boxCornerRadiusTopStart="12dp"
             app:startIconDrawable="@drawable/round_search_24"
             android:layout_marginTop="10dp"
-            android:hint="Search by username">
+            android:hint="@string/search_by_username">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

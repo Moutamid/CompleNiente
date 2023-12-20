@@ -4,6 +4,7 @@ package com.moutamid.calenderapp.utilis;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.view.Window;
@@ -128,18 +129,18 @@ public class Constants {
         }).setActionTextColor(context.getResources().getColor(R.color.orange)).show();
     }
 
-    public static String greetingMessage() {
+    public static String greetingMessage(Context context) {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
         if(timeOfDay < 12){
-            return "Good Morning";
+            return  context.getResources().getString(R.string.good_morning);
         }else if(timeOfDay < 16){
-            return "Good Afternoon";
+            return context.getResources().getString(R.string.good_afternoon);
         }else if(timeOfDay < 21){
-            return "Good Evening";
+            return context.getResources().getString(R.string.good_evening);
         }else {
-            return "Good Night";
+            return context.getResources().getString(R.string.good_night);
         }
     }
 

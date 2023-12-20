@@ -31,7 +31,7 @@ public class EmailVerifyActivity extends AppCompatActivity {
 
         boolean fromSplash = getIntent().getBooleanExtra("fromSplash", false);
 
-        String text = fromSplash ? "Didn't receive verification email??" : "Verify your email";
+        String text = fromSplash ? getString(R.string.didn_t_receive_verification_email) : getString(R.string.verify_your_email);
         binding.verify.setText(text);
 
         binding.verify.setOnClickListener(v -> {
@@ -52,7 +52,7 @@ public class EmailVerifyActivity extends AppCompatActivity {
         ).addOnSuccessListener(authResult -> {
             Constants.dismissDialog();
             if (Constants.auth().getCurrentUser().isEmailVerified()) {
-                Toast.makeText(this, "Email Verified", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.email_verified), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(EmailVerifyActivity.this, MainActivity.class));
                 finish();
             }
