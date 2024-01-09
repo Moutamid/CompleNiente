@@ -47,9 +47,8 @@ public class Notification {
         );
 
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        long notificationTime = System.currentTimeMillis() + timeDifference;
 
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, notificationTime, pendingIntent);
+        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, timeDifference, pendingIntent);
     }
 
 }

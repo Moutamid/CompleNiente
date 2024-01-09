@@ -217,7 +217,7 @@ public class ChatActivity extends AppCompatActivity {
                                     .push().setValue(sender).addOnSuccessListener(unused -> {
                                         binding.progressLayout.setVisibility(View.GONE);
                                         imagesList.clear();
-                                        new FcmNotificationsSender("/topics/" + chatListModel.getUserID(), "New Message", "You got a new Message", ChatActivity.this, ChatActivity.this).SendNotifications();
+                                        new FcmNotificationsSender("/topics/" + chatListModel.getUserID(), "Nuovo messaggio", "Hai ricevuto un nuovo messaggio", ChatActivity.this, ChatActivity.this).SendNotifications();
                                     })
                                     .addOnFailureListener(e -> {
                                         e.printStackTrace();

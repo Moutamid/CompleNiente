@@ -227,7 +227,7 @@ public class NewEventActivity extends AppCompatActivity {
                                             .addOnSuccessListener(unused -> {
                                                 Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
                                                         .addOnSuccessListener(unused1 -> {
-                                                            new FcmNotificationsSender("/topics/" + userModel1.getID(), "Incoming Request", "Someone want to work with you", this, this).SendNotifications();
+                                                            new FcmNotificationsSender("/topics/" + userModel1.getID(), "Richiesta in arrivo", "Qualcuno vuole lavorare con te", this, this).SendNotifications();
                                                         }).addOnFailureListener(e -> {
                                                             Constants.dismissDialog();
                                                             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

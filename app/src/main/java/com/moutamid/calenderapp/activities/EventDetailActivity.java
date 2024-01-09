@@ -247,7 +247,7 @@ public class EventDetailActivity extends AppCompatActivity {
                                         imagesList.clear();
                                         for (UserModel user : taskModel.getUser()) {
                                             if (user.getID().equals(Constants.auth().getCurrentUser().getUid()))
-                                                new FcmNotificationsSender("/topics/" + user.getID(), "New Message", "You got a new Message", EventDetailActivity.this, EventDetailActivity.this).SendNotifications();
+                                                new FcmNotificationsSender("/topics/" + user.getID(), "Nuovo messaggio", "Hai ricevuto un nuovo messaggio", EventDetailActivity.this, EventDetailActivity.this).SendNotifications();
                                         }
                                     })
                                     .addOnFailureListener(e -> {

@@ -46,7 +46,7 @@
     <string name="log_out">Esci</string>
     <string name="username_only_contain_letters">Il nome utente può contenere solo lettere &amp; (. , _)</string>
     <string name="full_name">Nome completo</string>
-    <string name="create_account">Crea account</string>
+    <string name="create_account">Creare un account</string>
     <string name="don_t_forget_your_compliant">Non dimenticare la tua Conformità</string>
     <string name="sign_up">Iscriviti</string>
     <string name="log_in">Accedi</string>
@@ -57,7 +57,7 @@
     <string name="no_chat_yet">Ancora nessuna chat</string>
     <string name="capture_share_relive">Cattura, Condividi, Rivivi!</string>
     <string name="new_event">Nuovo evento</string>
-    <string name="e_mail_username">E-Mail / Nome utente</string>
+    <string name="e_mail_username">Nome utente</string>
     <string name="create_event">Crea evento</string>
     <string name="upcoming_events">Eventi futuri</string>
     <string name="task_requests">Richieste di compito</string>

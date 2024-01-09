@@ -85,8 +85,7 @@ public class HomeFragment extends Fragment {
                                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                     UserModel model = snapshot.getValue(UserModel.class);
 
-                                    if (model.getUsername().equals(binding.username.getEditText().getText().toString().trim()) ||
-                                            model.getEmail().equals(binding.username.getEditText().getText().toString().trim())) {
+                                    if (model.getUsername().equals(binding.username.getEditText().getText().toString().trim())) {
                                         temp = model;
                                         break;
                                     }

@@ -1,6 +1,10 @@
 package com.moutamid.calenderapp;
 
 import android.Manifest;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.os.Build;
@@ -24,9 +28,12 @@ import com.moutamid.calenderapp.fragment.ListFragment;
 import com.moutamid.calenderapp.fragment.ProfileFragment;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.notifications.Notification;
+import com.moutamid.calenderapp.notifications.NotificationSchdule;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     ActivityMainBinding binding;
@@ -37,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Constants.checkApp(this);
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
