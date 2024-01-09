@@ -41,7 +41,7 @@
     <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
     <string name="confirm">Conferma</string>
     <string name="create">Crea</string>
-    <string name="create_account">Crea account</string>
+    <string name="create_account">Creare un account</string>
     <string name="create_event">Crea evento</string>
     <string name="date">Data</string>
     <string name="date_is_not_valid">La data non è valida</string>
@@ -51,7 +51,7 @@
     <string name="didn_t_receive_verification_email">Non hai ricevuto l\'email di verifica??</string>
     <string name="dismiss">Ignora</string>
     <string name="don_t_forget_your_compliant">Non dimenticare la tua Conformità</string>
-    <string name="e_mail_username">E-Mail / Nome utente</string>
+    <string name="e_mail_username">Nome utente</string>
     <string name="edit_photo">Modifica foto</string>
     <string name="edit_profile">Modifica profilo</string>
     <string name="email">Email</string>

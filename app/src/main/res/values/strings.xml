@@ -140,5 +140,6 @@
     <string name="email_verified">Email verificata</string>
     <string name="event">Evento</string>
     <string name="required_number_of_medias_are_selected">Il numero richiesto di media è stato selezionato</string>
+    <string name="waiting_for_acceptance">In attesa di accettazione</string>
 
 </resources>

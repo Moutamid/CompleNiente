@@ -20,6 +20,7 @@ import com.moutamid.calenderapp.bottomsheets.TaskRequestBottomSheet;
 import com.moutamid.calenderapp.databinding.FragmentListBinding;
 import com.moutamid.calenderapp.interfaces.TaskClickListener;
 import com.moutamid.calenderapp.models.TaskModel;
+import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class ListFragment extends Fragment {
     FragmentListBinding binding;
     Context context;
     ArrayList<TaskModel> taskList;
+    ArrayList<TaskModel> sendList;
     public ListFragment() {
         // Required empty public constructor
     }
@@ -40,9 +42,14 @@ public class ListFragment extends Fragment {
 //        setStatusBarColor();
 
         context = binding.getRoot().getContext();
+
+        sendList = new ArrayList<>();
         taskList = new ArrayList<>();
+
         binding.RC.setLayoutManager(new LinearLayoutManager(context));
         binding.RC.setHasFixedSize(false);
+        binding.sendRC.setLayoutManager(new LinearLayoutManager(context));
+        binding.sendRC.setHasFixedSize(false);
 
         return binding.getRoot();
     }
@@ -88,7 +95,46 @@ public class ListFragment extends Fragment {
         super.onResume();
         Constants.initDialog(requireContext());
         getThisMonthTasks();
+        getSendTasks();
     }
+
+    private void getSendTasks() {
+        Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            Log.d("getThisMonthTasks", "onDataChange: ");
+                            sendList.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                                if (!taskModel.isEnded() || !taskModel.getIsAccepted().equals("YES")) {
+                                    sendList.add(taskModel);
+                                }
+                                if (sendList.size() > 0) {
+                                    binding.sendRC.setVisibility(View.VISIBLE);
+                                    binding.noSendLayout.setVisibility(View.GONE);
+                                } else {
+                                    binding.sendRC.setVisibility(View.GONE);
+                                    binding.noSendLayout.setVisibility(View.VISIBLE);
+                                }
+                                TaskAdapter adapter = new TaskAdapter(context, sendList, sendListener);
+                                binding.sendRC.setAdapter(adapter);
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError e) {
+                        Toast.makeText(requireContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    TaskClickListener sendListener = model -> {
+        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, true);
+        bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
+    };
 
     TaskClickListener listener = model -> {
         TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, false);

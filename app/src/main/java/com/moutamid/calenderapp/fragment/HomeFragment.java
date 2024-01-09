@@ -169,11 +169,6 @@ public class HomeFragment extends Fragment {
                 });
     }
 
-    TaskClickListener listener = model -> {
-        TaskRequestBottomSheet bottomSheetFragment = new TaskRequestBottomSheet(model, true);
-        bottomSheetFragment.show(requireActivity().getSupportFragmentManager(), bottomSheetFragment.getTag());
-    };
-
 /*
     private void getThisMonthTasks() {
         Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(Constants.CurrentMonth()).child(Constants.auth().getCurrentUser().getUid())
