@@ -34,10 +34,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574c3a22-a036-413a-bd02-1a52c5f2ae42" name="Changes" comment="schedule notification issue solved">
+    <list default="true" id="574c3a22-a036-413a-bd02-1a52c5f2ae42" name="Changes" comment="new firebase attached and FCM implemented">
       <change afterPath="$PROJECT_DIR$/app/src/main/assets/serviceAccountKey.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/notifications/FCMNotificationHelper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moutamid/calenderapp/notifications/TokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release/CalenderApp-1.0-release.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release/output-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/checksums/sha1-checksums.bin" afterDir="false" />
@@ -297,7 +299,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\sunny\.android\avd\Medium_Tablet_API_33.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\sunny\.android\avd\Pixel_7_android_10.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -367,7 +369,7 @@
   }
 }</component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="d2788947-7194-4e0e-bdc4-612641548150" />
+    <option name="defaultAccountId" value="a94fbb05-893a-4aba-9cbd-808d147b182d" />
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -759,7 +761,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704792828794</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="new firebase attached and FCM implemented">
+      <option name="closed" value="true" />
+      <created>1726227875879</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1726227875879</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -767,6 +777,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="convert the whole app into italian language" />
     <MESSAGE value="schedule notification issue solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="schedule notification issue solved" />
+    <MESSAGE value="new firebase attached and FCM implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="new firebase attached and FCM implemented" />
   </component>
 </project>
