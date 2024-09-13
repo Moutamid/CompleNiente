@@ -47,6 +47,7 @@
     <string name="date_is_not_valid">La data non è valida</string>
     <string name="date_of_birth">Data di nascita</string>
     <string name="day">Giorno</string>
+    <string name="default_web_client_id" translatable="false">795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com</string>
     <string name="did_you_miss_the_event_hurry_up_and_participate_the_event_and_don_t_forgot_to_capture_share_relive">Hai perso l\'evento 😕. Sbrigati e partecipa all\'evento e non dimenticare di catturare, condividere e rivivere</string>
     <string name="didn_t_receive_verification_email">Non hai ricevuto l\'email di verifica??</string>
     <string name="dismiss">Ignora</string>
@@ -63,21 +64,21 @@
     <string name="event">Evento</string>
     <string name="event_name">Nome dell\'evento</string>
     <string name="events">Eventi</string>
-    <string name="firebase_database_url" translatable="false">https://sajjad-70ecc-default-rtdb.firebaseio.com</string>
+    <string name="firebase_database_url" translatable="false">https://sajjad-7d412.firebaseio.com</string>
     <string name="forgot_password">Password dimenticata?</string>
     <string name="forgot_your_password">Hai dimenticato la tua password??</string>
     <string name="friend_profile">Profilo dell\'amico</string>
     <string name="full_name">Nome completo</string>
     <string name="gallery">Galleria</string>
-    <string name="gcm_defaultSenderId" translatable="false">704645610113</string>
+    <string name="gcm_defaultSenderId" translatable="false">795152780860</string>
     <string name="good_afternoon">Buon pomeriggio</string>
     <string name="good_evening">Buonasera</string>
     <string name="good_morning">Buongiorno</string>
     <string name="good_night">Buonanotte</string>
-    <string name="google_api_key" translatable="false">AIzaSyB7dXBAgW1uCsU5pG8Uhriq5xgC7niOej4</string>
-    <string name="google_app_id" translatable="false">1:704645610113:android:95d72277332aab6dbf2b80</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB7dXBAgW1uCsU5pG8Uhriq5xgC7niOej4</string>
-    <string name="google_storage_bucket" translatable="false">sajjad-70ecc.appspot.com</string>
+    <string name="google_api_key" translatable="false">AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ</string>
+    <string name="google_app_id" translatable="false">1:795152780860:android:064f273708f30b880f7d39</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ</string>
+    <string name="google_storage_bucket" translatable="false">sajjad-7d412.appspot.com</string>
     <string name="hello_blank_fragment">Ciao frammento vuoto</string>
     <string name="home">Casa</string>
     <string name="invite">Invita</string>
@@ -115,7 +116,7 @@
     <string name="privacy_policy">Informativa sulla privacy</string>
     <string name="profile">Profilo</string>
     <string name="profile_updated">Profilo aggiornato</string>
-    <string name="project_id" translatable="false">sajjad-70ecc</string>
+    <string name="project_id" translatable="false">sajjad-7d412</string>
     <string name="recurrence">Ricorrenza :</string>
     <string name="reject_delete">Rifiuta/Elimina</string>
     <string name="rejected">Rifiutato</string>
@@ -160,6 +161,7 @@
     <string name="username_is_not_available">Il nome utente non è disponibile</string>
     <string name="username_only_contain_letters">Il nome utente può contenere solo lettere &amp; (. , _)</string>
     <string name="verify_your_email">Verifica la tua email</string>
+    <string name="waiting_for_acceptance">In attesa di accettazione</string>
     <string name="weekly">Settimanale</string>
     <string name="with">Con :</string>
     <string name="year">Anno</string>

@@ -41,15 +41,13 @@ import com.moutamid.calenderapp.models.ChatsModel;
 import com.moutamid.calenderapp.models.ShareContentModel;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
-import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
+import com.moutamid.calenderapp.notifications.FCMNotificationHelper;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.UUID;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class EventDetailActivity extends AppCompatActivity {
     private static final int PICK_FROM_GALLERY_IMAGE = 1;
@@ -247,7 +245,7 @@ public class EventDetailActivity extends AppCompatActivity {
                                         imagesList.clear();
                                         for (UserModel user : taskModel.getUser()) {
                                             if (user.getID().equals(Constants.auth().getCurrentUser().getUid()))
-                                                new FcmNotificationsSender("/topics/" + user.getID(), "Nuovo messaggio", "Hai ricevuto un nuovo messaggio", EventDetailActivity.this, EventDetailActivity.this).SendNotifications();
+                                                new FCMNotificationHelper(EventDetailActivity.this).sendNotification(user.getID(), "Nuovo messaggio", "Hai ricevuto un nuovo messaggio");
                                         }
                                     })
                                     .addOnFailureListener(e -> {

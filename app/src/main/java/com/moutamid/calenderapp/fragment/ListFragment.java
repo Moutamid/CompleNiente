@@ -20,7 +20,6 @@ import com.moutamid.calenderapp.bottomsheets.TaskRequestBottomSheet;
 import com.moutamid.calenderapp.databinding.FragmentListBinding;
 import com.moutamid.calenderapp.interfaces.TaskClickListener;
 import com.moutamid.calenderapp.models.TaskModel;
-import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.ArrayList;
@@ -111,7 +110,7 @@ public class ListFragment extends Fragment {
                                 if (!taskModel.isEnded() || !taskModel.getIsAccepted().equals("YES")) {
                                     sendList.add(taskModel);
                                 }
-                                if (sendList.size() > 0) {
+                                if (!sendList.isEmpty()) {
                                     binding.sendRC.setVisibility(View.VISIBLE);
                                     binding.noSendLayout.setVisibility(View.GONE);
                                 } else {

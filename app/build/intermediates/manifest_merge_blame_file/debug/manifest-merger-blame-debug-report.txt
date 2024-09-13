@@ -9,42 +9,42 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-12-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:5-77
-12-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:22-74
+12-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:5-77
+12-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:6:22-74
 13    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-13-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:22-76
+13-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
-14-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:5-74
-14-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:22-71
+14-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:5-74
+14-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:8:22-71
 15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-66
-15-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:22-63
+15-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:5-66
+15-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:9:22-63
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:5-79
-16-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:22-76
+16-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:5-79
+16-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:10:22-76
 17    <uses-permission android:name="android.permission.WAKE_LOCK" />
-17-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:5-68
-17-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:22-65
+17-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:5-68
+17-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:11:22-65
 18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-18-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-82
-18-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:22-79
+18-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:5-82
+18-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:12:22-79
 19    <uses-permission android:name="android.permission.CAMERA" />
-19-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:5-65
-19-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:22-62
+19-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:5-65
+19-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:13:22-62
 20    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-20-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:5-71
-20-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:22-68
+20-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:5-71
+20-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:14:22-68
 21
 22    <uses-feature android:name="android.hardware.camera" />
-22-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:5-60
-22-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:19-57
+22-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:5-60
+22-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:16:19-57
 23    <uses-feature android:name="android.hardware.camera.autofocus" />
-23-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:5-70
-23-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:19-67
+23-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:5-70
+23-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:17:19-67
 24
 25    <queries>
 25-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:9:5-19:15
@@ -90,173 +90,173 @@
 46-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 47
 48    <application
-48-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:5-160:19
+48-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:19:5-160:19
 49        android:name="com.moutamid.calenderapp.MyApplication"
-49-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-38
+49-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:20:9-38
 50        android:allowBackup="true"
-50-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:9-35
+50-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:21:9-35
 51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 51-->[androidx.core:core:1.9.0] C:\Users\sunny\.gradle\caches\transforms-3\3cbbda11acd1fbfa546a72950b0721ec\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 52        android:dataExtractionRules="@xml/data_extraction_rules"
-52-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:9-65
+52-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:22:9-65
 53        android:debuggable="true"
 54        android:extractNativeLibs="false"
 55        android:fullBackupContent="@xml/backup_rules"
-55-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-54
+55-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:23:9-54
 56        android:icon="@mipmap/ic_launcher"
-56-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:9-43
+56-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:24:9-43
 57        android:label="@string/app_name"
-57-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:9-41
+57-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:25:9-41
 58        android:roundIcon="@mipmap/ic_launcher_round"
-58-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-54
+58-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:26:9-54
 59        android:supportsRtl="true"
-59-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:9-35
+59-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:27:9-35
 60        android:testOnly="true"
 61        android:theme="@style/Theme.CalenderApp" >
-61-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:28:9-49
+61-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:28:9-49
 62        <activity
-62-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:9-33:40
+62-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:31:9-33:40
 63            android:name="com.moutamid.calenderapp.activities.FullPreviewActivity"
-63-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:13-59
+63-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:32:13-59
 64            android:exported="false" />
-64-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:13-37
+64-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:33:13-37
 65        <activity
-65-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:9-36:40
+65-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:34:9-36:40
 66            android:name="com.moutamid.calenderapp.activities.SettingActivity"
-66-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:13-55
+66-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:35:13-55
 67            android:exported="false" />
-67-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:13-37
+67-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:36:13-37
 68        <activity
-68-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:9-39:40
+68-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:37:9-39:40
 69            android:name="com.moutamid.calenderapp.activities.EventDetailActivity"
-69-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:13-59
+69-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:38:13-59
 70            android:exported="false" />
-70-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:13-37
+70-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:39:13-37
 71        <activity
-71-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:9-42:40
+71-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:40:9-42:40
 72            android:name="com.moutamid.calenderapp.activities.UserProfileActivity"
-72-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:13-59
+72-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:41:13-59
 73            android:exported="false" />
-73-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-37
+73-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:42:13-37
 74        <activity
-74-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:9-45:40
+74-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:43:9-45:40
 75            android:name="com.moutamid.calenderapp.activities.NewEventActivity"
-75-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:13-56
+75-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:44:13-56
 76            android:exported="false" />
-76-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-37
+76-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:45:13-37
 77        <activity
-77-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:9-49:55
+77-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:46:9-49:55
 78            android:name="com.moutamid.calenderapp.activities.EmailVerifyActivity"
-78-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:13-59
+78-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:47:13-59
 79            android:exported="false"
-79-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-37
+79-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:48:13-37
 80            android:theme="@style/TranslucentTheme" />
-80-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:13-52
+80-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:49:13-52
 81        <activity
-81-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:50:9-52:40
+81-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:50:9-52:40
 82            android:name="com.moutamid.calenderapp.activities.ChatActivity"
-82-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:13-52
+82-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:51:13-52
 83            android:exported="false" />
-83-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:13-37
+83-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:52:13-37
 84        <activity
-84-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:53:9-55:40
+84-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:53:9-55:40
 85            android:name="com.moutamid.calenderapp.activities.SelectUserActivity"
-85-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:13-58
+85-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:54:13-58
 86            android:exported="false" />
-86-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:55:13-37
+86-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:55:13-37
 87        <activity
-87-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:56:9-58:40
+87-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:56:9-58:40
 88            android:name="com.moutamid.calenderapp.activities.AddTaskActivity"
-88-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:57:13-55
+88-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:57:13-55
 89            android:exported="false" />
-89-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:13-37
+89-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:58:13-37
 90        <activity
-90-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:9-61:40
+90-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:59:9-61:40
 91            android:name="com.moutamid.calenderapp.activities.ProfileEditActivity"
-91-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:60:13-59
+91-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:60:13-59
 92            android:exported="false" />
-92-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:13-37
+92-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:61:13-37
 93        <activity
-93-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:9-64:40
+93-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:62:9-64:40
 94            android:name="com.moutamid.calenderapp.activities.ForgotActivity"
-94-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:13-54
+94-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:63:13-54
 95            android:exported="false" />
-95-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:64:13-37
+95-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:64:13-37
 96        <activity
-96-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:9-68:55
+96-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:65:9-68:55
 97            android:name="com.moutamid.calenderapp.activities.WelcomeActivity"
-97-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:13-55
+97-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:66:13-55
 98            android:exported="false"
-98-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:67:13-37
+98-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:67:13-37
 99            android:theme="@style/TranslucentTheme" />
-99-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:68:13-52
+99-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:68:13-52
 100        <activity
-100-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:9-71:40
+100-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:69:9-71:40
 101            android:name="com.moutamid.calenderapp.activities.SignUpActivity"
-101-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-54
+101-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:70:13-54
 102            android:exported="false" />
-102-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:13-37
+102-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:71:13-37
 103        <activity
-103-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:72:9-74:40
+103-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:72:9-74:40
 104            android:name="com.moutamid.calenderapp.activities.LoginActivity"
-104-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:13-53
+104-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:73:13-53
 105            android:exported="false" />
-105-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:74:13-37
+105-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:74:13-37
 106        <activity
-106-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:9-84:20
+106-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:75:9-84:20
 107            android:name="com.moutamid.calenderapp.SplashScreenActivity"
-107-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:76:13-49
+107-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:76:13-49
 108            android:exported="true"
-108-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:77:13-36
+108-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:77:13-36
 109            android:theme="@style/SplashTheme" >
-109-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:13-47
+109-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:78:13-47
 110            <intent-filter>
-110-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:13-83:29
+110-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:79:13-83:29
 111                <action android:name="android.intent.action.MAIN" />
-111-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:17-69
-111-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:25-66
+111-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:17-69
+111-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:80:25-66
 112
 113                <category android:name="android.intent.category.LAUNCHER" />
-113-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:17-77
-113-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:27-74
+113-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:17-77
+113-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:82:27-74
 114            </intent-filter>
 115        </activity>
 116        <activity
-116-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:85:9-87:40
+116-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:85:9-87:40
 117            android:name="com.moutamid.calenderapp.MainActivity"
-117-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-41
+117-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:86:13-41
 118            android:exported="false" />
-118-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:13-37
+118-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:87:13-37
 119
 120        <service
-120-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:89:9-96:19
+120-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:89:9-96:19
 121            android:name="com.moutamid.calenderapp.notifications.FirebaseMessagingService"
-121-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:90:13-67
+121-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:90:13-67
 122            android:exported="true"
-122-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:13-36
+122-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:91:13-36
 123            android:permission="TODO" >
-123-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:13-38
+123-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:92:13-38
 124            <intent-filter>
-124-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:29
+124-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:29
 125                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-125-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-78
-125-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:25-75
+125-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-78
+125-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:25-75
 126            </intent-filter>
 127        </service>
 128
 129        <receiver
-129-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:98:9-105:20
+129-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:98:9-105:20
 130            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-130-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:99:13-78
+130-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:99:13-78
 131            android:exported="true"
-131-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:100:13-36
+131-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:100:13-36
 132            android:permission="com.google.android.c2dm.permission.SEND" >
-132-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:101:13-73
+132-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:101:13-73
 133            <intent-filter>
-133-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:102:13-104:29
+133-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:102:13-104:29
 134                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-134-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:103:17-81
-134-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:103:25-78
+134-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:103:17-81
+134-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:103:25-78
 135            </intent-filter>
 136
 137            <meta-data
@@ -268,47 +268,47 @@
 140        </receiver>
 141
 142        <service
-142-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:107:9-114:19
+142-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:107:9-114:19
 143            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-143-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:108:13-82
+143-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:108:13-82
 144            android:directBootAware="true"
-144-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:109:13-43
+144-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:109:13-43
 145            android:exported="false" >
-145-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:110:13-37
+145-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:110:13-37
 146            <intent-filter android:priority="-500" >
-146-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:29
-146-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:111:28-51
+146-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:93:13-95:29
+146-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:111:28-51
 147                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-147-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-78
-147-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:25-75
+147-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:17-78
+147-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:94:25-75
 148            </intent-filter>
 149        </service>
 150        <service
-150-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:115:9-128:19
+150-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:115:9-128:19
 151            android:name="com.google.firebase.components.ComponentDiscoveryService"
-151-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:13-84
+151-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:116:13-84
 152            android:directBootAware="true"
-152-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:13-43
+152-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:117:13-43
 153            android:exported="false" >
-153-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:13-37
+153-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:118:13-37
 154            <meta-data
-154-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:119:13-121:85
+154-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:119:13-121:85
 155                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-155-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:17-119
+155-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:120:17-119
 156                android:value="com.google.firebase.components.ComponentRegistrar" />
-156-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:121:17-82
+156-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:121:17-82
 157            <meta-data
-157-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:122:13-124:85
+157-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:122:13-124:85
 158                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-158-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:123:17-115
+158-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:123:17-115
 159                android:value="com.google.firebase.components.ComponentRegistrar" />
-159-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:124:17-82
+159-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:124:17-82
 160            <meta-data
-160-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:125:13-127:85
+160-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:125:13-127:85
 161                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-161-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:126:17-127
+161-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:126:17-127
 162                android:value="com.google.firebase.components.ComponentRegistrar" />
-162-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:127:17-82
+162-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:127:17-82
 163            <meta-data
 163-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\sunny\.gradle\caches\transforms-3\8512f0cfa8cf2ded769d3e63f204fb47\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:69:13-71:85
 164                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -409,48 +409,48 @@
 215        <!-- android:authorities="com.moutamid.pushnotifications." -->
 216        <!-- android:name="com.google.firebase.provider.FirebaseInitProvider" -->
 217        <meta-data
-217-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:137:9-139:69
+217-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:137:9-139:69
 218            android:name="com.google.android.gms.version"
-218-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:138:13-58
+218-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:138:13-58
 219            android:value="@integer/google_play_services_version" />
-219-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:139:13-66
+219-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:139:13-66
 220
 221        <service
-221-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:141:9-147:19
+221-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:141:9-147:19
 222            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-222-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:142:13-103
+222-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:142:13-103
 223            android:exported="false" >
-223-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:143:13-37
+223-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:143:13-37
 224            <meta-data
-224-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:144:13-146:39
+224-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:144:13-146:39
 225                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-225-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:145:17-94
+225-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:145:17-94
 226                android:value="cct" />
-226-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:146:17-36
+226-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:146:17-36
 227        </service>
 228        <service
-228-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:148:9-151:72
+228-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:148:9-151:72
 229            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-229-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:149:13-117
+229-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:149:13-117
 230            android:exported="false"
-230-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:150:13-37
+230-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:150:13-37
 231            android:permission="android.permission.BIND_JOB_SERVICE" />
-231-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:151:13-69
+231-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:151:13-69
 232
 233        <receiver
-233-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:153:9-155:40
+233-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:153:9-155:40
 234            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-234-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:154:13-132
+234-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:154:13-132
 235            android:exported="false" />
-235-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:155:13-37
+235-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:155:13-37
 236        <receiver
-236-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:156:9-159:40
+236-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:156:9-159:40
 237            android:name="com.moutamid.calenderapp.notifications.NotificationSchdule"
-237-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:157:13-62
+237-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:157:13-62
 238            android:enabled="true"
-238-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:158:13-35
+238-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:158:13-35
 239            android:exported="false" />
-239-->C:\Users\sunny\Documents\Projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:159:13-37
+239-->C:\Users\sunny\Documents\Recover_projects\CalendarTaskApp\app\src\main\AndroidManifest.xml:159:13-37
 240
 241        <activity
 241-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\sunny\.gradle\caches\transforms-3\c5b7263d54617198a14b061050ab60ca\transformed\jetified-imagepicker-2.1\AndroidManifest.xml:22:9-25:68

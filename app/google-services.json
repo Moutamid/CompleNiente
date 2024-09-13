@@ -1,71 +1,42 @@
 {
   "project_info": {
-    "project_number": "795152780860",
-    "firebase_url": "https://sajjad-7d412.firebaseio.com",
-    "project_id": "sajjad-7d412",
-    "storage_bucket": "sajjad-7d412.appspot.com"
+    "project_number": "347811869733",
+    "firebase_url": "https://recover-projects-default-rtdb.firebaseio.com",
+    "project_id": "recover-projects",
+    "storage_bucket": "recover-projects.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:fd975881d316fc64",
+        "mobilesdk_app_id": "1:347811869733:android:3d57e2e14bdabf59ae3bcc",
         "android_client_info": {
-          "package_name": "com.example.sajjadsaleem.firebasedatabase"
+          "package_name": "com.moutamid.airbnb"
         }
       },
       "oauth_client": [
         {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:2dd088afa2df5a7b",
-        "android_client_info": {
-          "package_name": "com.example.sajjadsaleem.firebasestorage"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "795152780860-ehhfcrobpu3qa0it44b81u5vi2nm7qs1.apps.googleusercontent.com",
+          "client_id": "347811869733-vuk0guk5v5r8ujpcrp19jjkbvkul6r00.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.sajjadsaleem.firebasestorage",
-            "certificate_hash": "f672fc0d04979f2e0fce82cac268a69534e0bdc2"
+            "package_name": "com.moutamid.airbnb",
+            "certificate_hash": "1e3a26a5f7cc069683db796efde1ab18eebe2a95"
           }
         },
         {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+          "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
+          "current_key": "AIzaSyC-KByd3rZ8tsUnBskYep8Y5lsuEExa5t0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+              "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -74,64 +45,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:c465088fcd82ad59",
-        "android_client_info": {
-          "package_name": "com.example.sajjadsaleem.newlogin"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "795152780860-sl7oblm0mcia37dmdijrkqnbjijkqcgk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sajjadsaleem.newlogin",
-            "certificate_hash": "f672fc0d04979f2e0fce82cac268a69534e0bdc2"
-          }
-        },
-        {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:064f273708f30b880f7d39",
+        "mobilesdk_app_id": "1:347811869733:android:e47bb4d31e0e4fecae3bcc",
         "android_client_info": {
           "package_name": "com.moutamid.calenderapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+          "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
+          "current_key": "AIzaSyC-KByd3rZ8tsUnBskYep8Y5lsuEExa5t0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+              "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -140,27 +74,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:8e80a1194806cd270f7d39",
+        "mobilesdk_app_id": "1:347811869733:android:12ca97a2456d3d8cae3bcc",
         "android_client_info": {
-          "package_name": "com.moutamid.gardeningapp"
+          "package_name": "com.moutamid.halalfoodadmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+          "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
+          "current_key": "AIzaSyC-KByd3rZ8tsUnBskYep8Y5lsuEExa5t0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+              "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -169,27 +103,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:f6ace461de8368e80f7d39",
+        "mobilesdk_app_id": "1:347811869733:android:bdbc4ce8e9d78d61ae3bcc",
         "android_client_info": {
-          "package_name": "com.moutamid.sprachelernen"
+          "package_name": "com.moutamid.halalfoodfinder"
         }
       },
       "oauth_client": [
         {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+          "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
+          "current_key": "AIzaSyC-KByd3rZ8tsUnBskYep8Y5lsuEExa5t0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+              "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -198,27 +132,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795152780860:android:9a63806a5528bdba0f7d39",
+        "mobilesdk_app_id": "1:347811869733:android:26055353bbcf286eae3bcc",
         "android_client_info": {
-          "package_name": "com.moutamid.sprachelernenadmin"
+          "package_name": "com.moutamid.justbee"
         }
       },
       "oauth_client": [
         {
-          "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+          "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp8WG9pPF1aOY1bBZRP0wLl9XiTr8TbXQ"
+          "current_key": "AIzaSyC-KByd3rZ8tsUnBskYep8Y5lsuEExa5t0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "795152780860-f7041psrvsae8o2fv7qsjtlnkbsj1bkg.apps.googleusercontent.com",
+              "client_id": "347811869733-3tqq77r3hrscqah1kj7trgormg5pceb4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

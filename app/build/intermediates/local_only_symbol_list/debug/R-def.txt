@@ -133,6 +133,7 @@ id newUI
 id next
 id noChatLayout
 id noItemLayout
+id noSendLayout
 id occurrence
 id participentsRC
 id password
@@ -150,6 +151,7 @@ id root
 id search
 id send
 id sendLayout
+id sendRC
 id start
 id status
 id statusText
@@ -245,6 +247,7 @@ string date
 string date_is_not_valid
 string date_of_birth
 string day
+string default_web_client_id
 string did_you_miss_the_event_hurry_up_and_participate_the_event_and_don_t_forgot_to_capture_share_relive
 string didn_t_receive_verification_email
 string dismiss
@@ -358,6 +361,7 @@ string username
 string username_is_not_available
 string username_only_contain_letters
 string verify_your_email
+string waiting_for_acceptance
 string weekly
 string with
 string year

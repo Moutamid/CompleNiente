@@ -10,10 +10,8 @@ import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.fxn.stash.Stash;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.material.chip.Chip;
@@ -27,19 +25,14 @@ import com.moutamid.calenderapp.models.CalendarDate;
 import com.moutamid.calenderapp.models.MonthType;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
-import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
+import com.moutamid.calenderapp.notifications.FCMNotificationHelper;
 import com.moutamid.calenderapp.utilis.Constants;
-
-import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
-
-import de.hdodenhof.circleimageview.CircleImageView;
-import noman.weekcalendar.listener.OnDateClickListener;
 
 public class NewEventActivity extends AppCompatActivity {
     ActivityNewEventBinding binding;
@@ -227,7 +220,7 @@ public class NewEventActivity extends AppCompatActivity {
                                             .addOnSuccessListener(unused -> {
                                                 Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(sendTaskModel)
                                                         .addOnSuccessListener(unused1 -> {
-                                                            new FcmNotificationsSender("/topics/" + userModel1.getID(), "Richiesta in arrivo", "Qualcuno vuole lavorare con te", this, this).SendNotifications();
+                                                            new FCMNotificationHelper(this).sendNotification(userModel1.getID(), "Richiesta in arrivo", "Qualcuno vuole lavorare con te");
                                                         }).addOnFailureListener(e -> {
                                                             Constants.dismissDialog();
                                                             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

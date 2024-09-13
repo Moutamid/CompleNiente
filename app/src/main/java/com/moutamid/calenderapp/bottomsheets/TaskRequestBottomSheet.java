@@ -22,7 +22,7 @@ import com.moutamid.calenderapp.databinding.TaskRequestBottomsheetBinding;
 import com.moutamid.calenderapp.models.ChatListModel;
 import com.moutamid.calenderapp.models.TaskModel;
 import com.moutamid.calenderapp.models.UserModel;
-import com.moutamid.calenderapp.notifications.FcmNotificationsSender;
+import com.moutamid.calenderapp.notifications.FCMNotificationHelper;
 import com.moutamid.calenderapp.utilis.Constants;
 
 import java.util.Locale;
@@ -105,7 +105,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
                                 Constants.databaseReference().child(Constants.CHAT_LIST).child(Constants.auth().getCurrentUser().getUid()).child(ID).setValue(receiver).addOnSuccessListener(unused3 -> {
                                     Constants.databaseReference().child(Constants.CHAT_LIST).child(model.getUser().get(1).getID()).child(ID).setValue(sender).addOnSuccessListener(unused4 -> {
                                         Constants.dismissDialog();
-                                        new FcmNotificationsSender("/topics/" + model.getUser().get(1).getID(), "Richiesta accettata", "La tua richiesta per '" + model.getName() + "' è stata accettata", context, requireActivity()).SendNotifications();
+                                        new FCMNotificationHelper(context).sendNotification(model.getUser().get(1).getID(), "Richiesta accettata", "La tua richiesta per '" + model.getName() + "' è stata accettata");
                                         dismiss();
                                     }).addOnFailureListener(e -> {
                                         Constants.dismissDialog();
@@ -159,7 +159,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
                         Constants.databaseReference().child(Constants.ACTIVE_TASKS).child(model.getUser().get(1).getID()).child(model.getID()).setValue(model)
                                 .addOnSuccessListener(unused2 -> {
                                     Constants.dismissDialog();
-                                    new FcmNotificationsSender("/topics/" + model.getUser().get(1).getID(), "Attività terminata", "La tua attività '" + model.getName() + "' è terminata", context, requireActivity()).SendNotifications();
+                                    new FCMNotificationHelper(context).sendNotification(model.getUser().get(1).getID(), "Attività terminata", "La tua attività '" + model.getName() + "' è terminata");
                                     Toast.makeText(context, "Attività terminata", Toast.LENGTH_SHORT).show();
                                     dismiss();
                                 }).addOnFailureListener(e -> {
@@ -183,7 +183,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
             Constants.databaseReference().child(Constants.SEND_REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused -> {
                 Constants.databaseReference().child(Constants.REQUESTS).child(model.getUser().get(1).getID()).child(model.getID()).removeValue().addOnSuccessListener(unused1 -> {
                     Constants.dismissDialog();
-                    new FcmNotificationsSender("/topics/" + model.getUser().get(1).getID(), "Attività terminata", "La tua attività '" + model.getName() + "' è terminata", context, requireActivity()).SendNotifications();
+                    new FCMNotificationHelper(context).sendNotification(model.getUser().get(1).getID(), "Attività terminata", "La tua attività '" + model.getName() + "' è terminata");
                     Toast.makeText(context, "Attività terminata", Toast.LENGTH_SHORT).show();
                     dismiss();
                 }).addOnFailureListener(e -> {
@@ -203,7 +203,7 @@ public class TaskRequestBottomSheet extends BottomSheetDialogFragment {
                 Constants.databaseReference().child(Constants.SEND_REQUESTS).child(userID).child(model.getID()).setValue(model).addOnSuccessListener(unused1 -> {
                     Constants.databaseReference().child(Constants.REQUESTS).child(Constants.auth().getCurrentUser().getUid()).child(model.getID()).removeValue().addOnSuccessListener(unused2 -> {
                         Constants.dismissDialog();
-                        new FcmNotificationsSender("/topics/" + userID, "Compito rifiutato", "La tua richiesta per '" + model.getName() + "' è stata respinta", context, requireActivity()).SendNotifications();
+                        new FCMNotificationHelper(context).sendNotification(userID, "Compito rifiutato", "La tua richiesta per '" + model.getName() + "' è stata respinta");
                         Toast.makeText(context, "Compito rifiutato", Toast.LENGTH_SHORT).show();
                         dismiss();
                     }).addOnFailureListener(e -> {

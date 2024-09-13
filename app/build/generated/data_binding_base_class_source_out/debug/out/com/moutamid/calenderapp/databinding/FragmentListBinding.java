@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class FragmentListBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final RecyclerView RC;
@@ -31,21 +31,30 @@ public final class FragmentListBinding implements ViewBinding {
   public final LinearLayout noItemLayout;
 
   @NonNull
+  public final LinearLayout noSendLayout;
+
+  @NonNull
+  public final RecyclerView sendRC;
+
+  @NonNull
   public final MaterialTextView title;
 
-  private FragmentListBinding(@NonNull RelativeLayout rootView, @NonNull RecyclerView RC,
+  private FragmentListBinding(@NonNull NestedScrollView rootView, @NonNull RecyclerView RC,
       @NonNull MaterialTextView des, @NonNull LinearLayout noItemLayout,
+      @NonNull LinearLayout noSendLayout, @NonNull RecyclerView sendRC,
       @NonNull MaterialTextView title) {
     this.rootView = rootView;
     this.RC = RC;
     this.des = des;
     this.noItemLayout = noItemLayout;
+    this.noSendLayout = noSendLayout;
+    this.sendRC = sendRC;
     this.title = title;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -88,13 +97,26 @@ public final class FragmentListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.noSendLayout;
+      LinearLayout noSendLayout = ViewBindings.findChildViewById(rootView, id);
+      if (noSendLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.sendRC;
+      RecyclerView sendRC = ViewBindings.findChildViewById(rootView, id);
+      if (sendRC == null) {
+        break missingId;
+      }
+
       id = R.id.title;
       MaterialTextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
         break missingId;
       }
 
-      return new FragmentListBinding((RelativeLayout) rootView, RC, des, noItemLayout, title);
+      return new FragmentListBinding((NestedScrollView) rootView, RC, des, noItemLayout,
+          noSendLayout, sendRC, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

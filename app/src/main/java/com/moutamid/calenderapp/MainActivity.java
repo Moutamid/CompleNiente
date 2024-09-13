@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -73,19 +74,28 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     private void initializeNotification() {
-        FirebaseMessaging.getInstance().subscribeToTopic(Constants.auth().getCurrentUser().getUid())
-                .addOnSuccessListener(unused -> {
-//                    new FcmNotificationsSender("/topics/" + "ALL", "Incoming Request", "Someone want to work with you", MainActivity.this, MainActivity.this).SendNotifications();
-//                       Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
-                }).addOnFailureListener(e -> {
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                });
-        Constants.databaseReference().child("serverKey").get().addOnSuccessListener(dataSnapshot -> {
-            String key = dataSnapshot.getValue().toString();
-            //  Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
-            Stash.put(Constants.KEY, key);
+//        FirebaseMessaging.getInstance().subscribeToTopic(Constants.auth().getCurrentUser().getUid())
+//                .addOnSuccessListener(unused -> {
+////                    new FcmNotificationsSender("/topics/" + "ALL", "Incoming Request", "Someone want to work with you", MainActivity.this, MainActivity.this).SendNotifications();
+////                       Toast.makeText(this, "Subscribed", Toast.LENGTH_SHORT).show();
+//                }).addOnFailureListener(e -> {
+//                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                    e.printStackTrace();
+//                });
+//        Constants.databaseReference().child("serverKey").get().addOnSuccessListener(dataSnapshot -> {
+//            String key = dataSnapshot.getValue().toString();
+//            //  Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
+//            Stash.put(Constants.KEY, key);
+//        });
+
+        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(s -> {
+            Log.d("NotificationHelper", "getToken: " + s);
+            Constants.databaseReference().child(Constants.USER).child(Constants.auth().getCurrentUser().getUid()).child("fcmToken").setValue(s);
+        }).addOnFailureListener(e -> {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         });
+
     }
 
     @Override
