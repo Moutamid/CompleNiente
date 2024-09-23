@@ -113,10 +113,15 @@ public class SignUpActivity extends AppCompatActivity {
                             .setValue(userModel)
                             .addOnSuccessListener(unused -> {
                                 Constants.dismissDialog();
-                                Intent intent = new Intent(this, EmailVerifyActivity.class);
-                                intent.putExtra("fromSplash", false);
+
+                                Intent intent = new Intent(this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
+
+//                                Intent intent = new Intent(this, EmailVerifyActivity.class);
+//                                intent.putExtra("fromSplash", false);
+//                                startActivity(intent);
+//                                finish();
                             }).addOnFailureListener(e -> {
                                 Constants.dismissDialog();
                                 Constants.createSnackbar(this, binding.create, e.getLocalizedMessage());

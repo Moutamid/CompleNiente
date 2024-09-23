@@ -36,6 +36,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:text="moutamid56@gmail.com / moutamidw@gmail.com"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -60,6 +61,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:text="123456789"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>

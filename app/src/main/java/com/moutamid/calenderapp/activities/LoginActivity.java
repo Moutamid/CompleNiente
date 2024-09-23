@@ -43,13 +43,15 @@ public class LoginActivity extends AppCompatActivity {
                 )
                 .addOnSuccessListener(authResult -> {
                     Constants.dismissDialog();
-                    if (Constants.auth().getCurrentUser().isEmailVerified()) {
-                        startActivity(new Intent(this, MainActivity.class));
-                        finish();
-                    } else {
-                        startActivity(new Intent(this, EmailVerifyActivity.class).putExtra("fromSplash", false));
-                        finish();
-                    }
+                    startActivity(new Intent(this, MainActivity.class));
+                    finish();
+//                    if (Constants.auth().getCurrentUser().isEmailVerified()) {
+//                        startActivity(new Intent(this, MainActivity.class));
+//                        finish();
+//                    } else {
+//                        startActivity(new Intent(this, EmailVerifyActivity.class).putExtra("fromSplash", false));
+//                        finish();
+//                    }
                 }).addOnFailureListener(e -> {
                     Constants.dismissDialog();
                     Log.d("LoginAccount", e.getLocalizedMessage());

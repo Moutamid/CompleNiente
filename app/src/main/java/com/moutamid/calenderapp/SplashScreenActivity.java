@@ -19,13 +19,15 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             if (Constants.auth().getCurrentUser() != null) {
-                if (Constants.auth().getCurrentUser().isEmailVerified()) {
-                    startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
-                    finish();
-                } else {
-                    startActivity(new Intent(SplashScreenActivity.this, EmailVerifyActivity.class).putExtra("fromSplash", true));
-                    finish();
-                }
+                startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                finish();
+//                if (Constants.auth().getCurrentUser().isEmailVerified()) {
+//                    startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+//                    finish();
+//                } else {
+//                    startActivity(new Intent(SplashScreenActivity.this, EmailVerifyActivity.class).putExtra("fromSplash", true));
+//                    finish();
+//                }
             } else {
                 startActivity(new Intent(SplashScreenActivity.this, WelcomeActivity.class));
                 finish();
